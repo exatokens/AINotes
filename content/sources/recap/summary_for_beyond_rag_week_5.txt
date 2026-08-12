@@ -1,0 +1,1534 @@
+--- page 1 ---
+Beyond RAG: Advanced Agentic
+Knowledge Architectures
+Week 5: Graphs
+Summary
+SupportVectors AI Lab
+Copyright Notice
+© SupportVectors. All rights reserved.
+This document is the intellectual property of SupportVectors, and part of
+its training material. Only the participants in SupportVectors workshops
+are allowed to study the document for educational purposes currently, but is
+prohibited from copying or using it for any other purposes without written
+permission.
+1
+
+
+--- page 2 ---
+Contents
+1
+The Paradigm Shift to Graph-Based Retrieval
+4
+1.1
+From Derivative Artifacts to Network Structures . . . . . . . . . . . . . .
+4
+1.2
+The Three Domains of Graph Science . . . . . . . . . . . . . . . . . . . .
+5
+2
+Emergent Phenomena in Complex Networks
+6
+2.1
+Scale and Emergence: The Boiling Ocean Analogy . . . . . . . . . . . . .
+6
+2.2
+The Small World Phenomenon and Network Diameter . . . . . . . . . . .
+6
+3
+Group Formation and Randomized Graphs
+7
+3.1
+The Erd˝os–R´enyi Randomized Model and Poisson Distributions . . . . .
+7
+3.2
+Preferential Attachment and Asymmetric Probabilities
+. . . . . . . . . .
+8
+4
+Fractals, Chaos Theory, and the Organization of Facts
+9
+4.1
+Scale Invariance, Fractals, and Chaos Theory . . . . . . . . . . . . . . . .
+9
+4.2
+The Natural Clustering of Human Knowledge
+. . . . . . . . . . . . . . .
+10
+4.3
+Embedding Spaces vs. Topological Graphs . . . . . . . . . . . . . . . . .
+10
+5
+Constructing Knowledge Graphs via Triplets
+11
+5.1
+Fact Triplets and Entities
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+5.2
+Abstraction via Ontological (Schema) Triplets . . . . . . . . . . . . . . .
+11
+5.3
+The Semantic Web and Large Language Model Extraction
+. . . . . . . .
+11
+6
+Formal Graph Theory and Power Law Distributions
+13
+6.1
+The Origins of Graph Theory: The Bridges of K¨onigsberg
+. . . . . . . .
+13
+6.2
+The Barab´asi–Albert Model and Power Laws . . . . . . . . . . . . . . . .
+14
+6.3
+Linearization and Log-Log Transformations . . . . . . . . . . . . . . . . .
+15
+7
+Real-World Small Worlds and Matrices
+16
+7.1
+Structural Bridges: Milgram, Interstates, and Hubs . . . . . . . . . . . .
+16
+7.2
+The Adjacency Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+7.3
+The Degree and Laplacian Matrices . . . . . . . . . . . . . . . . . . . . .
+17
+8
+Modularity and Community Detection
+18
+8.1
+Defining Community Cohesion: Modularity (Q) . . . . . . . . . . . . . .
+18
+8.2
+Visualizing Modularity in Complex Networks . . . . . . . . . . . . . . . .
+20
+8.3
+Algorithmic Detection: Louvain and Leiden Methods . . . . . . . . . . .
+20
+8.3.1
+The Louvain Algorithm (2008) . . . . . . . . . . . . . . . . . . . .
+20
+8.3.2
+The Leiden Algorithm
+. . . . . . . . . . . . . . . . . . . . . . . .
+21
+9
+The Relational Paradigm Shift in Knowledge Retrieval Systems
+22
+9.1
+Beyond Continuous Spatial Semantics . . . . . . . . . . . . . . . . . . . .
+22
+9.2
+The Geometry of Semantic Proximity vs. Topological Connectivity
+. . .
+22
+9.3
+Relational Semantics and Perfect Data Provenance
+. . . . . . . . . . . .
+23
+2
+
+
+--- page 3 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+9.4
+Hierarchical Clustering vs. Topological Extraction . . . . . . . . . . . . .
+23
+9.5
+The Collective Intelligence Paradigm . . . . . . . . . . . . . . . . . . . .
+24
+10 Production Implementations & The Sidecar Pipeline Blueprint
+25
+10.1 The Financial Reality of Global Summarization (The Dostoevsky Bench-
+mark)
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+25
+10.1.1 Token Multiplication in Dense Hierarchical Indexes . . . . . . . .
+25
+10.1.2 Development Phase Fragility and Re-Indexing Expenses . . . . . .
+25
+10.2 The Sidecar Architecture Pattern . . . . . . . . . . . . . . . . . . . . . .
+26
+10.2.1 Intelligent Query Classification Routing . . . . . . . . . . . . . . .
+26
+10.2.2 Private Infrastructure Optimization and Open-Source Models
+. .
+27
+11 Graph-Augmented RAG vs. True GraphRAG
+27
+11.1 Query Decoration Mechanics in Graph-Augmented Pipelines . . . . . . .
+28
+11.2 Precision-Recall Dynamics across Graph Implementations . . . . . . . . .
+28
+12 The MemGraphRAG Framework
+29
+12.1 The Three-Layer Topological Layout
+. . . . . . . . . . . . . . . . . . . .
+29
+12.1.1 The Class-Instance Analogy in Knowledge Indexing . . . . . . . .
+30
+12.2 Runtime Activation Mechanics . . . . . . . . . . . . . . . . . . . . . . . .
+31
+12.3 Personalized PageRank . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+32
+12.3.1 Step 1: Initial Activation (v0) . . . . . . . . . . . . . . . . . . . .
+32
+12.3.2 Step 2: Hub Suppression . . . . . . . . . . . . . . . . . . . . . . .
+32
+12.3.3 Step 3: Semantic Energy Diffusion
+. . . . . . . . . . . . . . . . .
+33
+12.3.4 Banach Fixed Point Applications in Diffusion Optimization . . . .
+33
+12.4 Academic Critique
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+34
+12.4.1 The Ingestion Frequency Fallacy . . . . . . . . . . . . . . . . . . .
+35
+12.4.2 The Conflict Between Filtration Mechanics and Search Metrics . .
+35
+12.4.3 Zipfian Long-Tail Excision . . . . . . . . . . . . . . . . . . . . . .
+35
+12.4.4 Designing Human-in-the-Loop Discrepancy Alerts . . . . . . . . .
+36
+13 Key Insights & Takeaways
+36
+3
+
+
+--- page 4 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+“
+Learn how to see. Realize that everything connects
+to everything else.
+”
+Leonardo da Vinci
+(1452–1519), Italian polymath of the High Renaissance.
+1
+The Paradigm Shift to Graph-Based Retrieval
+1.1
+From Derivative Artifacts to Network Structures
+The progression of Retrieval-Augmented Generation (RAG) involves moving beyond foun-
+dational derivative artifacts.
+Initial methodologies focus on generating question-and-
+answer pairs, abstractive summaries, and isolated factoids. Techniques like RAPTOR
+Sarthi et al. [2024] advance this by taking embeddings of text chunks to find clusters
+of semantically related points, returning to the source documents to explicitly define
+what those clusters represent. Because clusters are inherently hierarchical, this struc-
+tural approach reflects something deeply natural about human knowledge. Topics gen-
+erate subtopics, which feed into broader subjects, naturally forming vast, interconnected
+hierarchies.
+Graphs represent the ultimate evolution of this hierarchical structuring. While graph
+databases such as Neo4j1 and OrientDB2 have existed in the background of computer
+science for years, their integration into generative knowledge systems represents a massive
+leap forward. A rudimentary approach to Graph RAG involves using these standard
+databases to capture a user’s query, identify adjacent or related terms, and explicitly
+decorate the original query with these terms to retrieve a broader context. While this
+basic approach is functional, utilizing graphs to their full potential requires building
+robust theoretical foundations beyond simple keyword augmentation.
+1https://neo4j.com/
+2https://orientdb.org/
+4
+
+
+--- page 5 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+1.2
+The Three Domains of Graph Science
+The study of graphs is bucketed into three distinct evolutionary domains:
+1. Classical Graphs: The foundational models encountered in introductory algo-
+rithms and data structures courses, heavily documented in standard textbooks.
+This domain focuses on constructs like Dijkstra’s shortest path, breadth-first search,
+and minimum spanning trees. In this context, trees are simply viewed as specialized,
+hierarchical graphs.
+2. Complex Network Analysis (Network Science): The study of massive, real-
+world graphs. This vast and heavily researched field moves beyond small-scale algo-
+rithms to analyze the emergent structural properties of systems containing billions
+of nodes.
+3. Graph Neural Networks (GNNs) and Node Embeddings: The intersection
+of continuous embedding spaces and discrete topological graphs, utilizing graph
+convolutions and deep learning mechanisms applied directly to network structures.
+To truly understand Advanced Graph RAG, the focus must shift entirely to the second
+domain: Complex Network Analysis.
+Question: A retrieval system returns only passages that are semantically
+similar to a query. Which limitation is GraphRAG specifically designed to
+overcome?
+A) The inability to retrieve exact keyword matches from isolated documents.
+B) The inability to synthesize a zoomed-out, global perspective across an
+entire corpus for complex sense-making.
+C) The inability to generate continuous vector-space embeddings for raw
+text chunks.
+D) The inability to restrict search results to only the single most relevant
+document.
+2
+Emergent Phenomena in Complex Networks
+2.1
+Scale and Emergence: The Boiling Ocean Analogy
+When systems scale up, entirely new behaviors emerge that are completely absent at
+smaller scales. This concept of emergent phenomena is perfectly illustrated by the phys-
+ical process of boiling water. Boiling water in a small kitchen kettle produces a minor,
+predictable result: steam rising from the spout. Boiling more water in that same kitchen
+simply produces more steam.
+5
+
+
+--- page 6 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+However, when this exact same physical process happens at a planetary scale, when
+the sun heats and evaporates the ocean, the resulting water vapor rises into the upper
+atmosphere, meets cool air, and creates entirely new systems: clouds, massive thunder-
+storms, hurricanes, and snowfall. A vast variety of complex, dynamic natural phenomena
+emerges from the single basic ingredient of evaporating water, purely because of the
+massive shift in scale.
+This same wisdom applies to graph theory. Analyzing graphs in a standard undergrad-
+uate algorithms course limits the perspective to static, small-scale mechanics. However,
+scaling a graph up to the size of massive social media networks, Facebook, LinkedIn,
+or X (formerly Twitter), where billions of human beings form distinct nodes connected
+by edges (friendships or follows), reveals emergent structural phenomena that cannot be
+predicted by looking at a handful of nodes.
+2.2
+The Small World Phenomenon and Network Diameter
+When observing these scaled-up, billion-node graphs, a remarkable structural reality
+appears: the “Small World” phenomenon, popularly known as the Six Degrees of Sepa-
+ration. The diameter of a graph is defined mathematically as the maximum number of
+hops required to travel between any two remote nodes.
+Despite a global social network housing roughly two to three billion human beings
+(representing over a third of humanity), the average degree of separation is statistically
+not even six hops; it is consistently closer to three or four. This means that a standard
+individual is statistically only three or four introductions away from an international
+soccer champion or a Turing Award-winning computer scientist like Geoffrey Hinton.
+The reality that a massive system of billions of discrete entities can maintain a maximum
+network diameter of less than six hops is astounding. Understanding how this happens
+requires examining exactly how networks naturally form.
+Question: In an ontological triplet, which elements are represented as the
+nodes in a knowledge graph?
+A) Entityi only
+B) Relationshipij only
+C) Entityi and Entityj
+D) All three elements
+6
+
+
+--- page 7 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+3
+Group Formation and Randomized Graphs
+3.1
+The Erd˝os–R´enyi Randomized Model and Poisson Distributions
+If human connections were truly random, the probability of any one person being con-
+nected to any other person would be a finite, tiny constant. A mathematical model for
+this was posited by mathematicians Paul Erd˝os and Alfr´ed R´enyi. The Erd˝os–R´enyi
+randomized graph model Erd˝os and R´enyi [1959] assumes that nodes connect based on a
+flat, uniform probability.
+When observing random events over a massive scale, the data mathematically stabi-
+lizes into a Poisson distribution. The mathematician Henri Poincar´e illustrated this via
+a thought experiment regarding the probability that an innocent man is unfairly thrown
+into prison by a wrong judgment. Assuming this probability is a finite, tiny constant
+across a massive population, the total number of innocent people unfairly sentenced over
+time remains stable. This operates identically to flipping an unfair coin over a large num-
+ber of trials. Counting the number of cars exiting a busy parking lot, or the number of
+accidents occurring at a specific traffic intersection over time, perfectly forms a Poisson
+distribution.
+An Erd˝os–R´enyi graph, where the existence of an edge behaves exactly like this unfair
+coin toss, exhibits this precise distribution.
+A scattered network of n = 250 nodes,
+mapped with a mean degree ⟨k⟩= 7.9 and a maximum degree kmax = 15, reveals a highly
+disorganized web of brightly colored dots (red, blue, green, orange, purple) uniformly
+mixed together. Because connections are random, applying an optimization algorithm
+(like Louvain) yields a poor modularity score (Q = 0.32), confirming that the colors
+interleave and no real, cohesive neighborhoods exist. The degree distribution forms a
+standard, symmetrical Poisson bell curve peaking between the values of 5 and 10 on the
+k-axis, demonstrating that extreme high-degree nodes simply do not exist in this model.
+3.2
+Preferential Attachment and Asymmetric Probabilities
+The Erd˝os–R´enyi model fails to represent reality because humans share common at-
+tributes, interests, and identities that lead to dense community formations. The prob-
+abilities of connection are deeply asymmetric.
+For example, the probability (P) of a
+computer science freshman befriending a senior metallurgy student is incredibly low.
+Conversely, the probability (Q) of that same freshman befriending another computer
+science freshman in their own cohort is exponentially higher.
+Furthermore, real-world networks exhibit preferential attachment. Nodes inherently
+want to connect to highly active or popular hubs. In an academic class, students naturally
+gravitate toward the brightest, geekiest student. In a recreational college environment,
+connections accrete around the star basketball or cricket player. Friendships and connec-
+7
+
+
+--- page 8 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Figure 1: Illustration explaining the erd˝os–r´enyi randomized model and poisson distribu-
+tions.
+tions accrete asymmetrically.
+This structural reality is easily proven through a real-world classroom cohort exper-
+iment. If individuals are asked to mentally count the exact number of peers they know
+on a first-name basis, knowing where they work and their technical background, a dis-
+tinct gradient appears.
+The majority of individuals (e.g., participants Rosa, Marina,
+Parag, and Shilpa) will consistently count between two and four connections. Some (like
+Shanker) might reach five. However, a highly extroverted individual (like Sangeita) will
+count close to ten connections, knowing nearly everyone in the room. This occurs be-
+cause highly extroverted individuals make an active effort to reach out and network. The
+probability of any given node attaching to an extrovert is vastly higher than attaching
+to a silent introvert. These extroverts bridge disparate cohorts, acting as the connective
+hubs that dictate scale-free networks.
+8
+
+
+--- page 9 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Question: What specific type of query commonly causes traditional RAG
+systems to fail, making advanced approaches like GraphRAG necessary?
+A) Simple factoid questions that require explicit information retrieval.
+B) Queries that rely on basic keyword matching in a single document chunk.
+C) Local questions whose answers can be found within a small, defined
+context window.
+D) Global questions directed at an entire text corpus, requiring abstractive,
+query-focused summarization.
+4
+Fractals, Chaos Theory, and the Organization of Facts
+4.1
+Scale Invariance, Fractals, and Chaos Theory
+Because preferential attachment creates dense local communities bridged by highly con-
+nected hubs, these massive networks exhibit properties associated with fractals. Fractals
+are shapes characterized by self-similar replicating patterns. The most iconic mathe-
+matical representation is the Mandelbrot set. Starting with a complex number C on a
+complex plane, zooming into the boundary infinitely reveals the exact same structural
+shapes replicating endlessly.
+Fractals are ubiquitous in the physical world. A geographical coastline is an approxi-
+mate fractal; calculating its absolute length is impossible because zooming in continuously
+reveals ever-tinier microscopic wiggles and inlets. Similarly, taking a physical cauliflower
+and tearing apart the stem reveals that a single floret looks like a perfect, miniature
+cauliflower in its own right, which itself contains smaller florets. Snowflakes follow this
+identical self-similar geometry.
+These structures reside within the domain of Chaos Theory, the mathematical space
+bridging complete order (a rigid, crystalline lattice) and complete disorder (a random-
+ized Poisson graph).
+Because human relationships inhabit this exact chaotic middle
+ground, social graphs visually manifest as fractals: massive communities containing sub-
+communities, extending down until the fundamental atomic unit of a single family or
+classroom is reached.
+4.2
+The Natural Clustering of Human Knowledge
+Human knowledge behaves in the exact same manner. If millions of disconnected facts
+were scattered into a void, they would invariably cluster.
+The fact that a dog has four legs, and the fact that a furry, four-legged dog is friendly
+and wags its tail, possess an incredibly high probability of appearing together in docu-
+mentation. Conversely, a fact regarding traffic congestion on Highway 101 or Interstate
+9
+
+
+--- page 10 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+880 in the San Francisco Bay Area has near-zero probability of appearing alongside canine
+behavior.
+Knowledge naturally aggregates around core entities and concepts. If one searches
+for a massive entity like the Taj Mahal or Sacramento, a Knowledge Graph instantly
+provides a rich cluster of interconnected facts: population, weather, geography, culture,
+and hierarchical states (Sacramento is the capital of California; California is a state in
+the US).
+Within STEM, facts cluster into highly specific domains: classical mechanics, optics,
+thermal physics, fluid dynamics, quantum physics, and plasma physics. Within computer
+science, facts accrete around algorithms, data structures, compilers, networks, operating
+systems, distributed systems, and machine learning (which further sub-divides into com-
+puter vision, NLP, and anomaly detection). Even abstract mathematical distributions,
+such as the Exponential family of distributions, naturally have specific entities hanging
+off them as edges, including the Gaussian distribution and the Softmax function.
+4.3
+Embedding Spaces vs. Topological Graphs
+One method of capturing this organizational structure is utilizing vector embedding
+spaces. By chunking text and placing it into a high-dimensional continuous space, one
+can link every single data point to its K-nearest neighbors (e.g., K = 5).
+This can be heavily refined by introducing a threshold of similarity, geometrically
+defined as the “aperture” of a spherical cone. In this model, an entity will only connect
+to a neighbor if it falls within a strictly defined local radius. To use an analogy: a polar
+bear will only make friends with other points that physically exist within the Arctic cap.
+Applying this strict aperture threshold across an entire vector space might result in a
+multigraph consisting of entirely disconnected topological islands.
+However, a fundamental mathematical shift occurs during this spatial transformation.
+In a continuous embedding space, there is a strict, defined metric of physical distance.
+Once converted into a discrete graph space, the metric of Euclidean or cosine distance is
+permanently lost. It becomes a generalized topological structure where the system only
+knows that a point is connected by a certain number of edges (hops), not how physically
+far apart they are.
+10
+
+
+--- page 11 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Question: What distinguishes GraphRAG from approaches that organize
+information using only semantic similarity?
+A) GraphRAG relies on topological structure and explicit relational edges
+between entities, rather than continuous distance metrics.
+B) GraphRAG uses pure breadth-first search to find exact string matches
+in a document database.
+C) GraphRAG depends exclusively on human subject-matter experts to
+manually map all connections.
+D) GraphRAG operates solely on the frequency of word occurrences across
+the corpus.
+5
+Constructing Knowledge Graphs via Triplets
+5.1
+Fact Triplets and Entities
+To build a highly accurate topological structure of knowledge without relying solely on
+spatial embeddings, one must directly map the actual relationships between entities.
+The fundamental atomic unit of this mapping is the Fact Triplet. A triplet consists
+of a head entity and a tail entity, linked by a directional relationship. For example, the
+entity “Einstein” (the head) and the entity “Germany” (the tail) are connected by the
+historical relationship that Einstein was “born in” Germany. This generalized structure of
+<head, relationship, tail> defines all Fact Triplets, meaning disparate entities utilize
+identical relationship edges, whether linking “GraphRAG” as “a method of” “RAG”, or
+linking individuals to locations like <Mrinal, Patna born in,> and <Asif, Varanasi
+born in,>.
+5.2
+Abstraction via Ontological (Schema) Triplets
+Behind specific factual instances lies a broader, unifying abstraction. The specific facts
+regarding Einstein, Mrinal, or Asif all conform to a universal, underlying concept known
+as an Ontological Triplet or Schema Triplet, formalized as <person, born-in, place>.
+By defining these broad schemas, specific facts have a structural blueprint to attach
+to. Once established, these interlinked schemas form the foundation of a comprehen-
+sive KNOWLEDGE GRAPH, represented conceptually by physical edge lines connecting
+disparate entities into a cohesive network of information.
+5.3
+The Semantic Web and Large Language Model Extraction
+The aspiration to turn the internet from a web of servers into a true “web of knowl-
+edge” has existed for decades. Ten or fifteen years ago, thick textbooks dedicated to
+11
+
+
+--- page 12 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Figure 2: Illustration explaining fact triplets and entities.
+Figure 3: Illustration explaining abstraction via ontological (schema) triplets.
+the “Semantic Web” utilized early ontological web languages like OWL and RDF. These
+technologies were designed to explicitly map knowledge, but building them manually was
+a Herculean task. Formulating a high-fidelity graph required employing specialized sub-
+ject matter experts to painstakingly define ontological schemas and extract fact triplets
+line by line. Only massive entities like Google or the open-source community behind
+Wikidata3 possessed the human man-hours required to build them.
+Early attempts to automate this process utilizing NLP heuristics, such as Named En-
+3https://www.wikidata.org/
+12
+
+
+--- page 13 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+tity Recognition (NER) and parts-of-speech detection libraries like SpaCy4, were moder-
+ately successful but highly noisy. Detecting two entities in a sentence did not guarantee
+a valid relationship existed between them.
+The advent of Large Language Models (LLMs) completely altered this landscape,
+providing the semantic capability to read dense text and automatically extract both fact
+and ontological triplets instantly. However, even frontier-class LLMs introduce noise.
+When prompted to extract triplets from a raw text passage, an LLM might successfully
+map relationships regarding “derivative artifacts” and “clustering,” but it might also strip
+context to generate a logically useless triplet such as “City has mathematics,” or output
+literal metadata as a fact, such as “day explains knowledge graph.” This necessitates
+the modern Graph RAG workflow: rapid, automated extraction followed by aggressive
+algorithmic cleaning and repair.
+Question: Consider the sentence ‘I hate bananas’, what is its ontological
+triplet representation?
+A) <I, bananas, hate>
+B) <hate, bananas, I>
+C) <bananas, I, hate>
+D) <I, hate, bananas>
+6
+Formal Graph Theory and Power Law Distributions
+6.1
+The Origins of Graph Theory: The Bridges of K¨onigsberg
+Before analyzing the topology of extracted knowledge, the mathematical definitions of
+graphs must be formalized. The foundational origins of formal graph theory trace back to
+the 18th century and the remarkably prolific mathematician Leonhard Euler. Euler was
+so prolific that a long-standing mathematical legend suggests his peers had to playfully
+agree to stop naming theorems after him, opting instead to ascribe new theorems to
+the next person who happened to rediscover them, otherwise every textbook page would
+feature an “Euler’s Theorem.”
+In the city of K¨onigsberg, an intellectual puzzle involved attempting to traverse the
+city’s four distinct landmasses, connected by seven bridges across the river Pregel, without
+crossing the same bridge twice in one afternoon. Euler solved this by abstracting the
+physical geography. He mapped the four landmasses as singular points (vertices) and the
+seven bridges as connecting lines (edges). By simply observing the resulting mathematical
+graph, it became immediately obvious that traversing the structure without retracing a
+path was impossible.
+4https://spacy.io/
+13
+
+
+--- page 14 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Formally, a graph is defined as a collection of vertices and edges, denoted mathemat-
+ically as G = (V, E). Within this network, nodes (such as vi, vj, vk, vl, vm) connect with
+varying densities. A central hub, like vp, connects to multiple peripheral nodes. The
+absolute number of edges connected to a specific vertex is strictly defined as the node’s
+Degree, represented by the variable k.
+Figure 4: Illustration explaining the origins of graph theory: the bridges of k¨onigsberg.
+6.2
+The Barab´asi–Albert Model and Power Laws
+As networks scale, their degree distributions fundamentally shift. The mathematician
+Paul Erd˝os was so influential in early graph theory that the mathematical community
+invented the “Erd˝os Number”, a metric defining exactly how many topological links (co-
+authorships) a researcher is away from Erd˝os himself. Yet, the Erd˝os randomized model
+failed to describe the modern internet.
+In 1999, Albert-L´aszl´o Barab´asi and R´eka Albert Barab´asi and Albert [1999] at-
+tempted to study the structure of the World Wide Web. Barab´asi, acting as a traditional
+academic, wrote a highly formal letter to a newly emerging commercial company called
+Google, asking for their internet connectivity data. Receiving no reply from the busy
+commercial entity, he acquired the web link data elsewhere, finally proving that complex
+networks operate on preferential attachment.
+If a scientific research paper makes a massive breakthrough, every subsequent re-
+searcher must cite it. While a standard researcher might accrue a humble one hundred
+citations across their career, an outlier paper accrues a quarter of a million citations,
+accreting massive connectivity and becoming an undeniable hub.
+This results in a Power Law distribution. The probability P(k) of a node possessing
+a degree k is described by the equation P(k) = k−γ, where γ = (2 −3). Unlike the sym-
+metrical, bell-curve shape of a Poisson Distribution, the power law dictates an extreme
+decay. For instance, if γ = 2, then P(k) = k−2 =
+1
+k2. For a node to have 100 connections
+(k = 100), the probability drops drastically to
+1
+102 ∼( 1
+100). When plotted on a graph,
+this curve drops sharply on the y-axis but features a long, horizontal heavy tail. While
+14
+
+
+--- page 15 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+low-degree nodes (k = 1, 10) form the vast majority of the network, a persistent tail of
+exceptionally high-degree hubs (k = 100+) stretches onward infinitely.
+Figure 5: Illustration explaining the barab´asi–albert model and power laws.
+6.3
+Linearization and Log-Log Transformations
+The defining characteristic of a power law distribution is this heavy tail, populated by
+incredibly dense hubs like google.com or Wikipedia. Because these distributions indicate
+fractal-like, scale-invariant properties, physicists and mathematicians analyze them by
+linearizing the equation.
+By applying a logarithm to both sides of the power law, the equation transforms
+into log P(k) = −γ log k, where the constant −γ represents the strict slope. When this
+linearized equation is plotted on a log-log graph (with axes labeled log P and log K), the
+resulting shape is a perfectly straight, downward-sloping diagonal line, providing absolute
+mathematical confirmation of the scale-invariant nature of complex networks.
+Figure 6: Illustration explaining linearization and log-log transformations.
+15
+
+
+--- page 16 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Question: What is the primary purpose of the ”Hub Suppression Factor”
+in the MemGraphRAG inference equations?
+A) To eliminate redundant or duplicate triplets extracted by the language
+model.
+B) To mathematically resolve contradictory statements found in the source
+documents.
+C) To downplay highly generic entities with large numbers of connections
+so they do not dominate the results.
+D) To filter out irrelevant thematic noise such as copyright notices or margin
+notes.
+7
+Real-World Small Worlds and Matrices
+7.1
+Structural Bridges: Milgram, Interstates, and Hubs
+The presence of massive hubs within scale-invariant networks provides the definitive ex-
+planation for Stanley Milgram’s 1967 letter-forwarding experiment. By passing a physical
+letter through a chain of first-name acquaintances to reach a specific stockbroker near
+Boston, a nation of 200 million people generated a maximum network diameter of just
+six hops.
+This phenomenon directly mirrors physical infrastructure. Urban metropolitan areas
+feature incredibly dense, tightly clustered webs of local community roads. However, to
+travel cross-country, one utilizes a hub. Long-range interstate highways act as massive
+structural bridges connecting highly populated metropolitan hubs across vast, sparse
+distances. Traveling vertically across the massive landmass of the United States relies on
+only a handful of genuine interstates, starting with Interstate 5 on the Pacific coast and
+ending at Interstate 95 on the Atlantic, punctuated by billboards for isolated rest areas
+and diners.
+This exact topological efficiency formed the core of the thesis written by the founder of
+FedEx. The paper posited that overnight delivery anywhere in the country was possible
+by utilizing a hub-and-spoke model (origin to local hub, local hub to central hub, central
+hub to destination hub). Although initially rejected by a professor, this model perfectly
+utilizes the low-diameter properties of scale-free networks to revolutionize global logistics.
+7.2
+The Adjacency Matrix
+To computationally process these hubs, communities, and network diameters, graphs
+must be translated into mathematical matrices. The fundamental translation tool is the
+Adjacency Matrix (A).
+16
+
+
+--- page 17 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+The Adjacency Matrix (A) translates a visual graph into a computational grid. For
+a network of five distinct nodes (a, b, c, d, e), the matrix is constructed with rows and
+columns representing these specific entities. If node a connects to d and e, a 1 is placed
+in those exact columns, and 0 elsewhere. Summing all binary values horizontally across
+a specific row derives the exact degree (k) of that node (e.g., row a ⇒2, row b = 3, row
+d = 4).
+Figure 7: Illustration explaining the adjacency matrix.
+7.3
+The Degree and Laplacian Matrices
+Beyond the Adjacency Matrix lies the Degree Matrix (D). This is a simple diagonal
+matrix where every value is zero except for the central diagonal line, which contains the
+specific degree value of each corresponding node (e.g., values 2, 3, 4, 3 cascading down
+the center).
+Subtracting the Adjacency Matrix from the Degree Matrix yields one of the most
+vital structures in network science: the Laplacian Matrix (L = D −A).
+17
+
+
+--- page 18 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+The discrete Laplacian matrix serves a function highly analogous to a second deriva-
+tive in continuous mathematics (∇2 and ∂2). Just as the second derivative of a continuous
+function like f(x) = x2 (which derives to 2x, and then 2) evaluates how the value at a
+specific point deviates from its immediately surrounding points, the Laplacian matrix
+measures the structural “disagreement” or variance across connected nodes within a dis-
+crete graph.
+When evaluated as a quadratic form (xTLx), it literally calculates the
+sum of squared differences between connected entities. Furthermore, the second small-
+est eigenvector of the Laplacian matrix, known as the Fiedler vector, provides the exact
+mathematical insight required to find the weakest topological link in a network, revealing
+the optimal location to split a single graph into two distinct subgraphs.
+Figure 8: Illustration explaining the degree and laplacian matrices.
+Question: Why are factual triplets preferred over retaining only raw doc-
+ument text during graph construction?
+A) They retain the original formatting, paragraph structure, and margin
+notes of the source text.
+B) They decompose siloed text into explicit nodes and edges, enabling cross-
+document network connectivity.
+C) They guarantee that language models will never hallucinate or extract
+noisy information.
+D) They are computationally free to generate, unlike embedding vectors.
+8
+Modularity and Community Detection
+8.1
+Defining Community Cohesion: Modularity (Q)
+Visually, the human eye can easily detect clustered communities within a graph. Com-
+putationally, however, a system requires a strict mathematical metric to determine struc-
+tural cohesion. In traditional vector clustering algorithms, cohesion is measured using
+18
+
+
+--- page 19 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+within-cluster sum of squared distances (WCSS) or inertia. In network science, the equiv-
+alent metric for community cohesion is Modularity, denoted by the variable Q.
+Modularity quantifies the density of connections inside a specific community relative
+to a random baseline. The formula, posited by Mark Newman Newman [2006], is:
+Q =
+1
+2m
+X
+ij
+
+Aij −kikj
+2m
+
+δ(ci, cj)
+(1)
+This equation breaks down into specific logical components to isolate true community
+density:
+• Aij: The actual binary value pulled directly from the Adjacency Matrix. A value
+of 1 contributes positively to the cohesion score.
+•
+kikj
+2m : This fraction represents the baseline expected probability that an edge exists
+simply by chance. The entire equation normalizes against 2m, where m is the total
+number of edges.
+• δ(ci, cj): This is the Kronecker delta. It acts as a strict filtering mechanism. The
+rules of the Kronecker delta are plainly defined: δ(ci, ci) = 1 (if node i and j belong
+to the exact same community, calculate the value), and if j ̸= i, δ = 0 (if they
+belong to different communities, the output is zero).
+To conceptualize the baseline subtraction, consider a small clique graph that yields
+a modularity fraction of 6 −32
+8 ∼1. In larger networks, nodes with a high degree (e.g.,
+k = 4) projecting numerous edges outward possess a naturally higher probability of
+incidental connection, justifying the subtraction of the kikj
+2m baseline term to isolate true
+structural cohesion.
+8.2
+Visualizing Modularity in Complex Networks
+When calculating Modularity reveals an incredibly high score, it confirms the presence of
+stark, definitive communities. Unlike the randomized Erd˝os–R´enyi graph, highly mod-
+ular networks display distinct clusters that are intensely interconnected internally but
+maintain sparse, minimal bridging connections to outside groups.
+This absolute structural modularity is perfectly captured when mapping real-world
+human connections across distinct life stages. A highly modular network naturally forms
+distinct, tightly wound clusters separated by sparse bridging connections. Real-world
+communities, such as “Childhood”, “Undergraduate”, “Master’s Degree”, “PhD”, “First
+Job”, and “Family & Friends Through Partner”, each form a massive, tightly wound
+cluster of internal edges (green, blue, purple, and orange). Despite containing hundreds of
+dense internal connections within each respective life stage, only a few long-range, sparse
+19
+
+
+--- page 20 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Figure 9: Illustration explaining defining community cohesion: modularity (Q).
+edges bridge the gap between one cluster and the next, providing immediate mathematical
+and visual proof of high modularity.
+8.3
+Algorithmic Detection: Louvain and Leiden Methods
+Calculating the exact maximum Modularity (Q) for a massive network is mathematically
+proven to be an NP-hard problem. There is no deterministic algorithm capable of solving
+it exactly; exact maximization is structurally hopeless. Therefore, network science relies
+on fast, greedy approximation algorithms to detect communities.
+8.3.1
+The Louvain Algorithm (2008)
+The Louvain algorithm Blondel et al. [2008] is a fast, iterative method. It begins by
+randomly assigning nodes to communities. It then tests shifting an individual vertex
+from its current community into a neighboring one. If the shift results in a higher overall
+Modularity score (Q) for the graph, the shift is kept. Once this shuffling process sta-
+bilizes, the algorithm collapses every identified community into a single “super-vertex.”
+Because complex networks are scale-invariant fractals, zooming out and treating entire
+communities as singular nodes simply reveals a new layer of community structures, and
+the algorithm repeats on this smaller, zoomed-out graph.
+However, the Louvain method harbors a severe pathology. Because it operates greed-
+ily, it can occasionally output communities that are internally disconnected. It might
+bundle two entirely separate sub-graphs into one community label, even if those two sub-
+20
+
+
+--- page 21 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Figure 10: Illustration explaining visualizing modularity in complex networks.
+graphs share absolutely zero internal bridges. In a real-world corporate structure, this
+is identical to inheriting an engineering department overseen by two distinct directors
+whose respective teams simply refuse to communicate with each other. Without internal
+cohesion, it is not a functional team; it is two distinct entities falsely labeled as one.
+8.3.2
+The Leiden Algorithm
+To resolve this structural flaw, the Leiden algorithm Traag et al. [2019] was developed.
+Leiden introduces an aggressive repair phase. It enforces a strict definition of community
+that mathematically prevents the presence of disconnected internal sub-communities. If
+21
+
+
+--- page 22 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+it detects a broken internal structure, it actively splits the disjointed nodes into separate
+entities or forces a structural repair.
+Because it strictly prevents this pathology, the
+Leiden algorithm remains the standard, high-fidelity community detection method used
+in advanced Graph RAG architectures.
+Question: Two entities originating from different documents are eventually
+assigned to the same graph community. Which observation best explains
+this outcome?
+A) They share connected relationships within the knowledge graph.
+B) They appear with similar frequency across the entire corpus.
+C) They belong to identical source passages.
+D) They produce highly matching vector embeddings.
+9
+The Relational Paradigm Shift in Knowledge Retrieval Sys-
+tems
+9.1
+Beyond Continuous Spatial Semantics
+Traditional implementation frameworks in Retrieval-Augmented Generation (RAG) pro-
+cess a raw text corpus by relying heavily on multi-dimensional semantic text vector
+space models. In a standard vector pipeline, chunks of text—alongside auto-generated
+question-answer pairs or standalone abstractive summaries—are projected into a contin-
+uous coordinate system as geometric vectors (xi ∈Rd).
+While localized factoid retrieval is effective for handling narrow “point queries” (e.g.,
+retrieving an isolated asset value or a discrete timestamp), it struggles to preserve logical
+dependencies when managing complex relational constraints. Vector similarity opera-
+tions map textual components based on surface-level context co-occurrence rather than
+structural dependence. Birds of a feather flock together in an embedding field; however,
+close proximity does not mean there is a direct causal, historical, or transactional link
+between those nodes.
+Graph-based knowledge indexing changes this primitive by substituting continuous
+spatial angles with discrete topological maps built from explicit vertices (V ) and edges
+(E). Rather than identifying chunks based on broad keyword similarity, a graph pipeline
+focuses on explicit entity-relationship configurations. This relational structure converts
+hidden semantic connections into distinct elements, allowing the retrieval engine to trace
+complex, multi-hop logical paths across an entire enterprise dataset.
+22
+
+
+--- page 23 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+9.2
+The Geometry of Semantic Proximity vs. Topological Connectivity
+To fully understand why continuous spatial systems fail when tasked with deep thematic
+synthesis, one must dissect the mathematical constraints of high-dimensional dense vector
+spaces. When a passage is vectorized via an embedding model, its contextual meaning is
+compressed into a singular point in a bounded hypersphere. When a query is executed,
+top-k retrieval pulls back chunks that match the query’s broad vocabulary profile.
+However, because these chunks are returned as unlinked fragments, the system is
+fundamentally blind to structural lines of reasoning. If an analytical conclusion depends
+on a sequential path traversing three separate data silos, standard spatial retrieval forces
+the language generation model to organically guess the missing connections.
+By contrast, a graph architecture models connectivity as an explicit mathematical
+variable.
+If Entity A structurally impacts Entity B, this relationship is permanently
+preserved as a discrete edge (eAB ∈E). This formalization replaces loose contextual
+proximity with exact logical navigation, allowing the system to run deterministic graph
+traversals across vast semantic distances.
+9.3
+Relational Semantics and Perfect Data Provenance
+In enterprise systems where factual accuracy is non-negotiable, storing data as discrete
+entities provides a major operational advantage: perfect, multi-layered data provenance.
+In a standard vector pipeline, when an LLM synthesizes an answer from an amorphous
+pool of text chunks, verifying the explicit source of individual claims can be difficult.
+In a graph-based framework, every edge is anchored back to the specific text coordi-
+nates it emerged from during ingestion. When an answer is compiled, the system does
+not merely cite a broad file name; it charts the exact path of entities and relationships
+traversed to construct the response. This explicit trail provides an automated auditing
+loop, allowing operators to instantly verify the logical validity of any generated insight.
+9.4
+Hierarchical Clustering vs. Topological Extraction
+To bridge the gap between simple spatial lookups and complex relational reasoning,
+advanced RAG environments have evolved through clear structural stages.
+The first notable advance was the RAPTOR (Recursive Abstractive Processing for
+Tree-Organized Retrieval) framework. RAPTOR creates tree-like summaries by running
+soft-clustering operations on vector groups, compiling related text blocks into high-level
+thematic folders.
+While this preserves an approximate conceptual hierarchy, it keeps
+document boundaries intact.
+True GraphRAG Edge et al. [2024] systems, by contrast, break away from document
+boundaries. The system shreds an entire corpus down into raw Fact Triplets:
+23
+
+
+--- page 24 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Triplet =
+ Head Entity, Relationship, Tail Entity
+
+(2)
+Once extracted, these triplets are combined into a global knowledge map. During
+this step, the original file source or provenance becomes secondary to the topological
+connections between the entities.
+The network aggregates collective intelligence: individual author styles, structural
+fragmentation, and scattered data sources are organized into unified community clusters.
+When an extraction engine processes multiple conflicting or complementary source ma-
+terials, the resultant community map functions as a pre-compiled, highly accurate text
+asset on that specific topic.
+Deconstructing Document Superstructures: Traditional data ingestion treats
+documents as isolated, self-contained silos. If two authors analyze the same technical
+problem from different perspectives across different internal logs, a traditional vector
+search treats their text blocks as completely separate entities. Graph architectures re-
+move these artificial boundaries.
+When text is converted into fact triplets, matching
+entities automatically collapse into shared nodes across the global graph topology. This
+uncoupling of information from its original file structure allows the network to automat-
+ically group related facts. Insights from disparate manuals, lecture notes, and field logs
+merge into cohesive, multi-source knowledge clusters, providing a cross-document view
+of the data.
+9.5
+The Collective Intelligence Paradigm
+When information is grouped into unified communities, a powerful property emerges: the
+synthesis of collaborative knowledge asset maps. If Author X documents an operational
+system with extreme clarity but skips its safety parameters, while Author Y focuses heav-
+ily on the system’s safety layout using divergent terminology, their information merges
+seamlessly into a single graph community once the underlying entities are reconciled.
+The resulting community summaries act like custom-built, expert mini-textbooks,
+combining the strengths of multiple individual sources while balancing out their gaps.
+This structural synthesis provides a deep, collective perspective that would be difficult
+to assemble at query time using standard vector lookups.
+24
+
+
+--- page 25 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Question: How have Large Language Models (LLMs) fundamentally im-
+pacted the construction and scalability of knowledge graphs?
+A) LLMs are only used for the final stage of abstractive summarization and
+not for initial KG creation.
+B) LLMs automatically detect complex network properties but cannot ex-
+tract factoids.
+C) LLMs require human validation for every triplet, increasing manual ef-
+fort.
+D) They enable scalable and cheaper extraction of ontological triplets, re-
+ducing manual labor and time.
+10
+Production Implementations & The Sidecar Pipeline Blueprint
+10.1
+The Financial Reality of Global Summarization (The Dostoevsky Bench-
+mark)
+Automating global relationship indexing across large datasets using frontier LLMs in-
+troduces major operational cost challenges. During an evaluation project conducted at
+SupportVectors, a graduate intern was tasked with building a standard GraphRAG con-
+figuration over Fyodor Dostoevsky’s classic novel, The Brothers Karamazov.
+The pipeline ran automated triplet extraction and recursive community summariza-
+tion overnight via commercial frontier APIs.
+By the next morning, the pipeline had
+accumulated a $1,000 API bill for processing a single literary work.
+This massive compute expense stems from two main drivers:
+• Iterative Token Shredding: The system must repeatedly call the LLM to scan
+every overlapping text chunk to ensure it captures all entity linkages.
+• Recursive Summary Generation: The pipeline forces the LLM to read every
+discovered community cluster, sub-cluster, and node connection to write summary
+reports for every layer of the graph hierarchy.
+For an enterprise managing hundreds of thousands of documents, a naive global ex-
+traction pipeline is economically impractical. This high cost often makes full GraphRAG
+feel like a luxury vehicle—admired from a distance but too expensive for everyday oper-
+ational use.
+10.1.1
+Token Multiplication in Dense Hierarchical Indexes
+To map the cost mechanics of hierarchical summarization at scale, one must look at how
+tokens multiply during the graph-building phase. When a large corpus is converted into
+25
+
+
+--- page 26 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+communities, the system does not just call an LLM once per text block. After building the
+base fact map, it runs an iterative clustering process like the Leiden algorithm, grouping
+the data into an array of overlapping communities spanning multiple layers of depth.
+The system then loops through every single discovered group, feeds all internal entity
+assertions into the LLM, and prompts it to write a comprehensive community report.
+For a dense multi-volume library, this recursive looping forces the LLM to scan millions
+of context tokens repeatedly, causing orchestration and API costs to scale exponentially.
+10.1.2
+Development Phase Fragility and Re-Indexing Expenses
+In an enterprise deployment, data indexes are rarely static. Documents update, schemas
+evolve, and extraction parameters require regular tuning during development.
+In a
+naive GraphRAG architecture, changing an entry format or adding a new field often
+requires clearing the entire graph database and re-running the entire ingestion process
+from scratch.
+If indexing a small set of manuals costs thousands of dollars in compute calls, reg-
+ular updates become an unsustainable budget drain. This fragility makes it critical to
+design modular, cost-controlled indexing layers that protect the system from run-away
+compilation bills.
+10.2
+The Sidecar Architecture Pattern
+To make graph networks practical for enterprise applications, system architects avoid
+using GraphRAG as the primary search path. Instead, the graph layout is deployed as
+an isolated Sidecar Pipeline running alongside a standard vector RAG pipeline.
+A fast Query Router serves as the system’s entry point, evaluating incoming user
+prompts to determine the required response depth:
+• The High-Traffic Highway (98% of Prompts): If a user submits a localized
+point query (e.g., “What happens to Tom and Maggie at the end of George Eliot’s
+Mill on the Floss?”), the query router directs the request to the standard vector
+RAG highway. This handles the lookup efficiently using local chunk extractions,
+bypassing the graph entirely.
+• The Sidecar Circuit (2% of Prompts): If the prompt requires wider, global
+reasoning across the entire corpus (e.g., “What are the recurring thematic leitmo-
+tifs across George Eliot’s complete lifetime body of literature?”), the query router
+diverts the request to the GraphRAG sidecar.
+Furthermore, production systems tame these costs by replacing expensive commercial
+APIs with local, open-source models (such as 70B or 120B parameter setups) hosted on
+26
+
+
+--- page 27 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+internal workstations. Developers can also use low-cost aggregation endpoints like Open-
+Router to access alternative models (such as the Mixtral collection), keeping operational
+costs manageable.
+10.2.1
+Intelligent Query Classification Routing
+The efficiency of a sidecar architecture depends entirely on the accuracy of its query
+routing layer. If the query router misclassifies broad, global prompts and routes them
+to the standard vector database, the system will return fragmented, incomplete answers.
+Conversely, if it routes simple point queries to the graph sidecar, it wastes precious
+compute resources.
+To prevent this, production environments run lightweight, high-speed classification
+models—or specialized, low-temperature LLM routing prompts—trained to look for struc-
+tural indicators in the user’s input. Prompts containing terms like “leitmotif”, “global
+trend”, “systemic evolution”, or “cross-cutting analysis” match the global profile and are
+safely diverted to the graph sidecar, while explicit direct lookups stay on the standard
+vector RAG highway.
+10.2.2
+Private Infrastructure Optimization and Open-Source Models
+Hosting local open-source models on private hardware changes the economics of graph
+building. When a system uses local weights (such as a Llama-3 70B parameter model
+or an optimized Mixtral mixture-of-experts model), token processing costs drop to the
+baseline price of electricity and hardware depreciation.
+While commercial APIs charge per token, private instances can run text extractions
+indefinitely without accumulating marginal costs. This transition allows enterprise groups
+to perform deep graph construction, run multi-stage relationship audits, and re-index
+datasets during development without risking run-away commercial API bills.
+Question: Which sequence most accurately represents the GraphRAG in-
+dexing pipeline?
+A) Extracting factual triplets →Constructing the knowledge graph →De-
+tecting communities →Generating hierarchical summaries.
+B) Extracting factual triplets →Detecting communities →Generating hi-
+erarchical summaries →Constructing the knowledge graph.
+C) Extracting factual triplets →Generating hierarchical summaries →Con-
+structing the knowledge graph →Detecting communities.
+D) Extracting factual triplets →Detecting communities →Constructing
+the knowledge graph →Generating hierarchical summaries.
+27
+
+
+--- page 28 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+11
+Graph-Augmented RAG vs. True GraphRAG
+When developing a graph-based system, engineers must choose between two primary
+operational patterns:
+Operational Parameter
+Graph-Augmented
+RAG
+(Query
+Decora-
+tion)
+True GraphRAG (Com-
+munity Synthesis)
+Primary Mechanism
+Near-neighbor node extrac-
+tion for prompt expansion.
+Global community synthe-
+sis via multi-level summa-
+rization.
+Database Blueprint
+Standard
+Graph
+DB
+lookups
+(e.g.,
+Neo4j,
+OrientDB).
+Topological clustering lay-
+ers (e.g., Leiden algorithm).
+Compute Boundaries
+Low ingestion cost; mini-
+mal query-time expansion
+overhead.
+High upfront compilation
+cost;
+pre-compiled global
+summaries.
+Retrieval Focus
+High
+localized
+precision;
+limited thematic synthesis.
+High global recall; vulnera-
+ble to upstream extraction
+noise.
+11.1
+Query Decoration Mechanics in Graph-Augmented Pipelines
+Graph-Augmented RAG uses graph structures as an advanced, relational look-up index.
+During ingestion, the system builds an entity-relationship graph in a graph database, but
+stops short of running community detection or generating expensive summary reports.
+At query time, the system uses named entity recognition (NER) to locate core concepts
+within the user’s prompt.
+It then reaches into the graph database, extracts the immediate neighboring nodes,
+and appends these related keywords to decorate the user’s prompt before executing a
+standard vector search. This strategy provides a low-cost method for expanding a search
+query with immediate contextual terms, but it lacks the deep synthesis capabilities of full
+GraphRAG.
+11.2
+Precision-Recall Dynamics across Graph Implementations
+Choosing between query decoration and true community synthesis involves a clear trade-
+off between precision and recall metrics. Graph-Augmented pipelines offer high localized
+precision, returning clean, explicit neighbor terms that minimize search clutter. However,
+they lack the global scope needed for broad, thematic queries.
+28
+
+
+--- page 29 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+True GraphRAG captures widely distributed concepts across a text index, boosting
+overall recall metrics. However, this broad scanning can pull in irrelevant connections,
+introducing noise that lowers precision scores. To optimize this balance, enterprise ar-
+chitectures often apply a multi-stage retrieval design: using GraphRAG’s broad scan to
+capture a wide set of candidate insights, then filtering that set through a high-precision
+reranker model before final text generation.
+Question: In the Microsoft Graph RAG approach, what is the core al-
+gorithmic step that enables global, query-focused summarization across an
+entire corpus?
+A) Deriving basic entity–relationship–entity triplets (factoids) from source
+documents.
+B) Pre-generating hierarchical summaries for detected communities of
+closely related entities.
+C) Applying Depth-First Search (DFS) to locate nearest neighbor nodes for
+the query.
+D) Using a query router to classify the question as fact-based or abstractive.
+12
+The MemGraphRAG Framework
+12.1
+The Three-Layer Topological Layout
+To mitigate the high compilation costs of pre-generated community summaries, alterna-
+tive graph frameworks shift the computational workload between the ingestion phase and
+the real-time inference phase. Chief among these is MemGraphRAG, an architecture in-
+spired by memory storage mechanisms in human neuroscience that organizes information
+into three distinct topological layers:
+• Schema City (Ontological Layer): Houses high-level structural templates called
+schemas. These define relationships between types rather than explicit entries (e.g.,
+[Person] →(Place of Birth) →[Location]).
+• Fact City (Factual Layer): Houses explicit entities and real-world assertions
+(e.g., [Albert Einstein] →(Born in) →[Germany]).
+This structural separa-
+tion mirrors object-oriented programming concepts, where schemas act as global
+templates (Classes) and fact triplets act as the runtime data (Objects).
+• Passage Plane (Document Layer): Houses the raw text chunks extracted di-
+rectly from the corpus.
+29
+
+
+--- page 30 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Figure 11: Illustration explaining the three-layer topological layout.
+Figure 12: Illustration explaining the three-layer topological layout.
+MemGraphRAG decouples its data index into three separate, structured tracking
+cities. Schema City (GS) handles taxonomic properties and global definitions. Fact City
+(GF) manages specific historical facts and instance linkages. The Passage Plane (GP)
+preserves the exact paragraph sources. This modular segregation allows the system to
+evaluate broad structural constraints quickly at the schema layer before navigating to
+concrete entities and finally retrieving supporting passages.
+30
+
+
+--- page 31 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+12.1.1
+The Class-Instance Analogy in Knowledge Indexing
+The structural relationship between Schema City (GS) and Fact City (GF) mirrors the
+relationship between classes and instances in object-oriented programming.
+Schema City defines the global architecture templates and permissible relationship
+types. For example, it specifies that:
+[Device] →(implements) →[Protocol]
+(3)
+Fact City stores the actual instances satisfying these templates:
+[iPhone 16] →(implements) →[WiFi 7]
+(4)
+12.2
+Runtime Activation Mechanics
+Figure 13: Illustration explaining runtime activation mechanics.
+For each plane, the score is calculated as follows:
+• Entities: An entity belongs to many facts; each fact has a cosine similarity to the
+query; score the entity by the average similarity of its facts:
+Pinit(e) =
+1
+|Fe|
+X
+f∈Fe
+Sim(q, f).
+(5)
+• Types: Mirror-symmetric — score a type by the average query-similarity of its
+schemas — with one extra factor, delightfully named hub suppression:
+31
+
+
+--- page 32 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Pinit(t) =
+1
+|St|
+X
+s∈St
+Sim(q, s) ·
+1
+log(deg(t) + 1).
+(6)
+• Passages: A passage lives in no other passage, so there is no averaging; its natural
+first term is just the classic RAG score Sim(q, dp) and then two twists:
+Pinit(p) = αSim(q, dp).σ
+ P
+e∈Ep IDF(e)
+log(|Ep| + 1)
+!
+,
+α = 0.05.
+(7)
+First twist: the dampening α = 0.05 — direct query-to-passage similarity is dis-
+counted by ninety-five percent, deliberately undervalued relative to the fact and schema
+worlds. Second twist: an information density term. Recall the old friend IDF: the word
+“the” is in every document — be unimpressed. If Einstein turns up in a physics cor-
+pus: meh. But a passage dense with entities nobody has heard of — an unknown person
+named, say, Asif Kamal — yay, high value, who is this fellow? So: an IDF-weighted entity
+density, squashed through a sigmoid so ordinary passages sit low and rare-entity-dense
+passages saturate toward one.
+12.3
+Personalized PageRank
+We do not simply pick the brightest bulbs and call it retrieval. Concepts are related to
+concepts; a schema that produced many facts binds its types with strong edges; some
+of my meaning is out in my neighbors. The graph knows things the individual scores
+do not. So the paper runs one more phase — a redistribution — and it is personalized
+PageRank. Instead of precomputing expensive community summaries during ingestion,
+MemGraphRAG performs knowledge synthesis dynamically at query time using a Per-
+sonalized PageRank diffusion process.
+12.3.1
+Step 1: Initial Activation (v0)
+Given a user query Q, semantic similarity initializes the activation vector across all graph
+layers.
+The cosine similarity between the query embedding and each node embedding is:
+Pinit(v) =
+Q · v
+∥Q∥∥v∥
+(8)
+Vector lighting uses semantic similarity to activate graph nodes before diffusion. In-
+stead of searching linearly through a database, the query embedding activates semanti-
+cally related nodes across all graph layers. The initial activation vector becomes:
+v0 = [Pinit(v1), Pinit(v2), . . . , Pinit(vn)]T
+(9)
+32
+
+
+--- page 33 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+where each element represents the semantic activation score of a graph node.
+12.3.2
+Step 2: Hub Suppression
+Highly connected nodes (e.g., Person, Entity) naturally receive excessive activation be-
+cause of their large degree.
+Their activation is therefore dampened using:
+Phub =
+Pinit
+log(deg(v) + 1)
+(10)
+where:
+• deg(v) is the node degree.
+• Phub is the adjusted activation score.
+This suppresses generic hubs while preserving highly specific entities.
+12.3.3
+Step 3: Semantic Energy Diffusion
+The adjusted activation scores are propagated throughout the graph using Personalized
+PageRank:
+vk+1 = (1 −λ)Wvk + λv0
+(11)
+where:
+• W is the normalized transition matrix.
+• vk is the activation vector after iteration k.
+• v0 is the restart vector.
+• λ is the restart probability (typically 0.5).
+12.3.4
+Banach Fixed Point Applications in Diffusion Optimization
+The Banach Fixed Point Theorem guarantees convergence because the Personalized
+PageRank update is a contraction mapping when 0 < λ < 1.
+The remaining error after k iterations is:
+Ek = (1 −λ)k
+(12)
+For λ = 0.5:
+33
+
+
+--- page 34 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+E1 = 50%
+E2 = 25%
+E3 = 12.5%
+E4 = 6.25%
+E5 = 3.125%
+E6 = 1.5625%
+E7 = 0.78125%
+E8 = 0.390625%
+E9 = 0.1953125%
+E10 = 0.09765625%
+(13)
+This predictable geometric decay allows MemGraphRAG to terminate diffusion after
+approximately 10 iterations, achieving near-converged node activations while minimizing
+computational cost.
+12.4
+Academic Critique
+Applying the MemGraphRAG on its own paper, it did not perform very well and con-
+tradictions appeared.
+Figure 14: Illustration explaining academic critique.
+34
+
+
+--- page 35 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+12.4.1
+The Ingestion Frequency Fallacy
+Despite its optimization advantages, MemGraphRAG exhibits a critical structural flaw
+when applied to highly specialized technical domains, such as Science, Technology, Engi-
+neering, and Mathematics (STEM). This issue stems from an internal logical contradiction
+between its graph-building phase and its inference phase:
+• The Ingestion Rule: During graph construction, the system treats high frequency
+as a marker for importance, explicitly discarding low-frequency schemas (τ < 4) as
+irrelevant noise to clean up the graph.
+• The Inference Rule: During search routing, the system reverses this logic. It
+uses Hub Suppression and Inverse Document Frequency (IDF) to penalize high-
+frequency nodes as meaningless noise, while actively boosting rarer nodes to locate
+precise answers.
+12.4.2
+The Conflict Between Filtration Mechanics and Search Metrics
+The structural flaw in this architecture is the logical contradiction between its ingestion
+rules and its search metrics. During ingestion, the system assumes that frequency equals
+value, using that rule to strip out low-frequency connections. Yet at query time, the
+system does the exact opposite: its hub suppression and IDF sigmoids penalize high-
+frequency connections as generic noise while searching for rare, low-frequency nodes to
+answer specific questions.
+This means the ingestion filter systematically deletes the exact type of rare, highly
+specific connections that the search engine looks for at runtime, damaging the system’s
+ability to answer precise technical queries.
+12.4.3
+Zipfian Long-Tail Excision
+In technical documentation, information distribution follows a strict power-law trend
+known as Zipf’s Law. While generic boilerplate and foundational concepts appear con-
+stantly, the most critical details—such as groundbreaking formulas, specialized agent
+actions, or unique structural exceptions—are often articulated only once or twice in the
+entire text. These critical details reside entirely in the network’s long, heavy tail.
+An evaluation mapping this schema tracking table highlights how high-value structural
+parameters are systematically stripped away by simplistic frequency cutoffs. When a
+graph pipeline applies a rigid frequency filter (τ ≥4) to a technical corpus, it introduces
+a major system vulnerability:
+• What it keeps: Banal, high-frequency concepts that carry little specific informa-
+tional value (e.g., (method, uses, technique)).
+35
+
+
+--- page 36 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+• What it discards: High-value, low-frequency technical insights that appear only
+a few times across the text.
+The system accidentally wipes out the long tail of specialized knowledge, leaving it
+unable to answer deep technical questions.
+12.4.4
+Designing Human-in-the-Loop Discrepancy Alerts
+Advanced enterprise architectures handle these contradictions by treating them as system
+alerts rather than cleaning them up automatically. When a factual clash is detected, the
+pipeline logs the conflicting paths, preserves both variations within the graph, and raises
+an explicit system notification for human review.
+This visibility allows data operators to inspect the root documents, resolve the ambi-
+guity at the source, and continuously refine the underlying dataset. This design converts
+logical contradictions from processing errors into opportunities for maintaining data qual-
+ity.
+Question: In the MemGraphRAG architecture, what are the three layers,
+or ”cities,” used to organize information?
+A) The Keyword layer, the Vector Embedding layer, and the Graph
+Database layer.
+B) The Ontological (Schema) layer, the Fact Triplet layer, and the Passage
+layer.
+C) The Agentic layer, the Summary layer, and the Document layer.
+D) The Raw Text layer, the Community Detection layer, and the Personal
+PageRank layer.
+13
+Key Insights & Takeaways
+• The Graph RAG Shift: Advanced retrieval systems are moving beyond standard
+vector clustering into the realm of Complex Network Analysis.
+• Small World Emergence: Scaling networks to massive sizes paradoxically shrinks
+their diameter, resulting in the “Six Degrees of Separation” phenomenon.
+• Preferential Attachment: Human knowledge and connections do not form ran-
+domly; they naturally accrete around highly connected hubs (the “rich get richer”
+effect).
+• Fractal Power Laws: Complex networks follow power-law distributions, exhibit-
+ing scale-invariant, fractal-like structures with heavy tails.
+36
+
+
+--- page 37 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+• Triplets Map Knowledge: Information is strictly structured using Fact Triplets
+(specific entity relationships) and abstracted via Ontological Triplets (generalized
+schemas).
+• LLM Democratization: Large Language Models automate the historically ex-
+pensive extraction of graph triplets, shifting the workload from manual mapping to
+algorithmic cleaning.
+• Matrix Translation: Visual network graphs are translated computationally using
+Adjacency and Laplacian matrices to calculate structural variance.
+• Modularity and Leiden: Modularity measures true community cohesion, and
+the Leiden algorithm is the modern standard for accurately detecting and repairing
+these network clusters.
+• Paradigm Shift in Structural Retrieval Topologies : GraphRAG replaces
+pure vector similarity with explicit graph relationships, improving traceability and
+cross-document reasoning.
+• Paradigm Shift in Structural Retrieval Topologies : It merges related infor-
+mation from multiple documents into unified knowledge clusters or “mini-textbooks.”
+• Core Rules of Complex Network Systems : Knowledge graphs naturally form
+power-law, hub-based networks through preferential attachment, enabling efficient
+navigation.
+• Core Rules of Complex Network Systems : Enterprise knowledge graphs
+balance order and randomness, producing self-similar community structures across
+multiple scales.
+• Core Rules of Complex Network Systems : Newman Modularity evaluates
+community quality, while the Leiden algorithm improves cluster connectivity over
+Louvain.
+• Production Optimization & Deployment Frameworks : GraphRAG is most
+efficient as a sidecar pipeline, routing simple queries to vector search and reserving
+graph reasoning for complex tasks.
+• Production Optimization & Deployment Frameworks : Frameworks like
+Lazy GraphRAG, LightRAG Guo et al. [2024], and HippoRAG Guti´errez et al.
+[2024] reduce preprocessing by performing more computation at query time.
+• Production Optimization & Deployment Frameworks : MemGraphRAG
+XMU DeepLIT [2024] uses restart-based PageRank to guarantee fast convergence
+and efficient query-time graph traversal.
+37
+
+
+--- page 38 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+• Protection of the STEM Long Tail : Using term frequency alone can mistakenly
+discard important technical concepts during graph construction.
+• Protection of the STEM Long Tail : Since technical knowledge follows Zipf’s
+Law, rare but valuable concepts should be preserved using structural measures like
+Shannon entropy instead of frequency thresholds.
+• Protection of the STEM Long Tail : Conflicting information should be surfaced
+for human review rather than automatically resolved to preserve data integrity.
+Question: A system successfully extracts factual triplets but omits the
+community detection stage. Which downstream capability is most directly
+affected?
+A) The ability to parse raw text into entity-relationship schemas.
+B) The ability to route queries to a less expensive local Large Language
+Model.
+C) The ability to generate global, hierarchical summaries for corpus-wide
+sense-making.
+D) The ability to translate text chunks into vector embeddings.
+References
+Albert-L´aszl´o Barab´asi and R´eka Albert.
+Emergence of scaling in random networks.
+science, 286(5439):509–512, 1999.
+Vincent D Blondel, Jean-Loup Guillaume, Renaud Lambiotte, and Etienne Lefebvre. Fast
+unfolding of communities in large networks. Journal of statistical mechanics: theory
+and experiment, 2008(10):P10008, 2008.
+Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody,
+Steven Truitt, and Jonathan Larson. From local to global: A graph rag approach to
+query-focused summarization. arXiv preprint arXiv:2404.16130, 2024.
+Paul Erd˝os and Alfr´ed R´enyi. On random graphs i. Publicationes Mathematicae Debrecen,
+6:290–297, 1959.
+Zirui Guo, Lianghao Xia, Yanhua Yu, Tu Ao, and Chao Huang. Lightrag: Simple and
+fast retrieval-augmented generation. arXiv preprint arXiv:2410.05779, 2024.
+Bernal Jim´enez Guti´errez et al. Hipporag: Neurobiologically inspired long-term memory
+for large language models. arXiv preprint arXiv:2405.14831, 2024.
+38
+
+
+--- page 39 ---
+SupportVectors - Beyond RAG: Advanced Agentic Knowledge Architectures
+Week 5 Summary
+Mark EJ Newman. Modularity and community structure in networks. Proceedings of the
+national academy of sciences, 103(23):8577–8582, 2006.
+Parth Sarthi, Salman Abdullah, Aditi Aduli, Shervin Ozturk, et al. Raptor: Recursive
+abstractive processing for tree-organized retrieval. arXiv preprint arXiv:2401.18059,
+2024.
+Vincent A Traag, Ludo Waltman, and Nees Jan Van Eck. From louvain to leiden: guar-
+anteeing well-connected communities. Scientific reports, 9(1):5233, 2019.
+XMU DeepLIT. Memgraphrag: Memory-based multi-agent system for graph retrieval-
+augmented generation. GitHub, 2024.
+Note: This document is a summary of Week 5 of the Beyond RAG:
+Advanced Agentic Knowledge Architectures course.
+For complete details, refer to the course portal, lab notebooks, and
+session recordings.
+39

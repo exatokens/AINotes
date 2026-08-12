@@ -1,0 +1,7 @@
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.10
+requests>=2.31
+pymupdf>=1.27
+pyyaml>=6.0
+youtube-transcript-api>=1.2

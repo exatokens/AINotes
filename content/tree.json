@@ -1,0 +1,550 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "title": "When Meaning Becomes Geometry",
+      "topics": [
+        {
+          "title": "Act I: The Magic, and the Map",
+          "concepts": [
+            {
+              "id": "w1-01-retrieval-bottleneck",
+              "title": "Retrieval as the Epistemic Bottleneck",
+              "summary": "Organisations fail not from lack of information but lack of retrievability \u2014 and a RAG generator can only be as truthful as the evidence placed before it."
+            },
+            {
+              "id": "w1-02-semantic-vs-lexical",
+              "title": "Semantic vs Lexical Search & the Bi-Encoder",
+              "summary": "Lexical search matches strings; semantic search matches meaning rendered as position in a vector space \u2014 the bi-encoder picture, and the three query families where they diverge."
+            },
+            {
+              "id": "w1-03-course-map",
+              "title": "The Map: Fourteen Instruments, One Pipeline",
+              "summary": "The course is a single pipeline from raw document to measured, trustworthy answer \u2014 each week adds one instrument, and each instrument answers a specific pathology of naive RAG."
+            }
+          ]
+        },
+        {
+          "title": "Act II: How the Machine Sees",
+          "concepts": [
+            {
+              "id": "w1-04-language-models-seq2seq",
+              "title": "Language Models & the Seq2Seq Scaffold",
+              "summary": "A language model factorises sequence probability into next-token predictions; seq2seq splits understanding (encoder) from speaking (decoder) \u2014 and RAG systems use two different models for the two jobs."
+            },
+            {
+              "id": "w1-05-attention",
+              "title": "Attention: From Bahdanau's Alignment to 'All You Need'",
+              "summary": "Attention began as a cure for the seq2seq bottleneck \u2014 soft alignment over encoder states \u2014 and the transformer made alignment the whole machine: a soft, differentiable lookup over keys and values."
+            },
+            {
+              "id": "w1-06-machinese",
+              "title": "Machines Think in 'Machinese': Vectors & Cosine Similarity",
+              "summary": "The native currency of machine cognition is proximity, similarity, and probability \u2014 the distributional hypothesis, word2vec's directions of meaning, and why cosine similarity is the workhorse of retrieval."
+            },
+            {
+              "id": "w1-07-polysemy",
+              "title": "Polysemy: One Word, Many Points",
+              "summary": "Static embeddings strand ambiguous words between clusters; contextual embeddings read the sentence and move the point \u2014 and inside models, superposition is the same pressure one level deeper."
+            },
+            {
+              "id": "w1-08-querying-weights",
+              "title": "Querying Into the Model: LARQL & the Residual Stream",
+              "summary": "A model's knowledge is geometry in its weights, and tools like LARQL can query it almost like a database \u2014 the doorway to mechanistic interpretability, and why a RAG engineer should never treat the model as an oracle."
+            }
+          ]
+        },
+        {
+          "title": "Act III: The Geometry of Meaning",
+          "concepts": [
+            {
+              "id": "w1-09-embeddings-highdim",
+              "title": "Embeddings as Points in High-Dimensional Space",
+              "summary": "An embedding model maps text to points in \u211d\u1d48 where meaning is distributed holographically across coordinates; retrieval is nearest-neighbour search, made fast by ANN indexes like HNSW."
+            },
+            {
+              "id": "w1-10-curse-of-dimensionality",
+              "title": "The Curse of Dimensionality",
+              "summary": "As dimension grows, volume explodes, points become hopelessly sparse, and volume flees to the corners \u2014 the inscribed ball vanishes, naive spatial indexes degrade, and 'nearest' comes under pressure."
+            },
+            {
+              "id": "w1-11-concentration-of-measure",
+              "title": "Concentration of Measure",
+              "summary": "In high dimensions randomness becomes oddly orderly \u2014 pairwise distances concentrate, random vectors become nearly orthogonal, and useful structure must be put there by learning."
+            },
+            {
+              "id": "w1-12-anisotropy",
+              "title": "Anisotropy vs Isotropy: A Demonstration",
+              "summary": "Concentration of measure is a property of the space; anisotropy is a property of the learned distribution within it \u2014 raw BERT embeddings crowd into a narrow cone, while retrieval-trained embeddings spread out and separate."
+            },
+            {
+              "id": "w1-13-naive-rag-pathologies",
+              "title": "Naive RAG and Its Pathologies",
+              "summary": "The simplest possible RAG system \u2014 embed, store, retrieve top-k, paste into the prompt \u2014 and a geometry-grounded catalogue of exactly how and why it fails."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": "The Shape of a Decision",
+      "topics": [
+        {
+          "title": "Act I: The Shape of a Decision",
+          "concepts": [
+            {
+              "id": "w2-01-softmax-temperature",
+              "title": "Softmax, Built by Hand \u2014 and the Temperature Knob",
+              "summary": "The softmax turns a fistful of raw logits into a lawful probability distribution by exponentiating and normalizing, and one hidden knob, temperature, dials the result between a hard snap and a shrug without ever changing what the machine prefers."
+            },
+            {
+              "id": "w2-02-surprise-entropy-crossentropy",
+              "title": "Surprise, Negative Log-Likelihood, and the Cross-Entropy Family",
+              "summary": "Surprise is a decreasing function of the probability you assigned to what actually happened, and the logarithm is the repair that sends certainty to zero surprise \u2014 from there, entropy, cross-entropy, and perplexity are just this one quantity, averaged and re-dressed."
+            },
+            {
+              "id": "w2-03-mle-gradient-calibration",
+              "title": "Maximum Likelihood, the Gradient of Cross-Entropy, and Calibration",
+              "summary": "Softmax paired with negative log-likelihood yields a gradient of disarming simplicity, predicted minus actual, and that same logarithm turns out to be forced rather than chosen \u2014 the only continuous repair that keeps a billion-term likelihood product computable at all."
+            }
+          ]
+        },
+        {
+          "title": "Act II: The Lookup That Learns",
+          "concepts": [
+            {
+              "id": "w2-04-fuzzy-lookup",
+              "title": "Attention as Fuzzy Dictionary Lookup: Four Exercises",
+              "summary": "Attention is the fuzzy lookup you already perform every time you type a misspelled word into a dictionary \u2014 distribute a unit of attention over the nearby known words, weighted by proximity, and read off a blended meaning."
+            },
+            {
+              "id": "w2-05-tokenization-manifold",
+              "title": "Tokenization, and Why Meaning Needs a Manifold",
+              "summary": "A word is not the natural atom of text \u2014 a tokenizer chops it into subword pieces first \u2014 and machines must represent those pieces as points on a continuous manifold because gradient descent only ever makes infinitesimal moves."
+            },
+            {
+              "id": "w2-06-self-attention-qkv",
+              "title": "Self-Attention Revisited: Query, Key, Value, and a Worked Example",
+              "summary": "A word resolves its own ambiguity by scoring a query formed from itself against the keys of its sentence-mates and reading back a softmax-weighted blend of their values \u2014 the fuzzy dictionary lookup, turned inward and made differentiable."
+            },
+            {
+              "id": "w2-07-pooling-residual-stream",
+              "title": "Pooling, Layers, and the Residual Stream: From Tokens to One Vector",
+              "summary": "Self-attention gives one contextual vector per token, but a search index wants one vector per chunk \u2014 mean-pooling bridges the gap, and stacking many attention layers over a residual stream is how that vector's meaning deepens."
+            },
+            {
+              "id": "w2-08-masked-language-modelling",
+              "title": "Masked Language Modelling: Guess the Missing Word",
+              "summary": "BERT's training objective is the card game of guessing a blanked-out word, scored by exactly the negative log-likelihood built this morning \u2014 and a model that consistently wins that game across billions of novel sentences must have learned something real about language."
+            }
+          ]
+        },
+        {
+          "title": "Act III: The Geometry of Belief",
+          "concepts": [
+            {
+              "id": "w2-09-anisotropy-contrastive",
+              "title": "Anisotropy and Its Cure: Triplet Loss and InfoNCE",
+              "summary": "A model trained only to predict words learns a representation crammed into a narrow cone, because attraction with no repulsion has one stable end state \u2014 contrastive learning supplies the missing repulsive force, and its modern form, InfoNCE, is the softmax and negative log-likelihood again, now sculpting the globe itself."
+            },
+            {
+              "id": "w2-10-bi-cross-encoder-sphere",
+              "title": "Bi-Encoders, Cross-Encoders, and the Unit Sphere",
+              "summary": "There are exactly two ways to ask a BERT-like model how related two texts are, and the trade between them organizes the architecture of every retrieval system; both rely on cosine similarity, which is a dot product in disguise once vectors are normalized onto the unit sphere."
+            },
+            {
+              "id": "w2-11-search-motion-globe",
+              "title": "Search as Motion on a Curved Surface: KL Divergence, HNSW, and CLIP",
+              "summary": "Once meaning is geometry, search is navigation across a curved surface \u2014 the same view that reveals KL divergence as the natural distance between beliefs, explains why a vector database walks a graph instead of scanning every point, and lets a sentence retrieve a photograph through CLIP's shared space."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Measuring the Size of Thoughts: To Chunk, or Not to Chunk?",
+      "topics": [
+        {
+          "title": "Act I: The First Cut Is the Deepest",
+          "concepts": [
+            {
+              "id": "w3-01-first-projection-is-irreversible",
+              "title": "The First Projection Is Irreversible",
+              "summary": "Chunking is not preprocessing but the first lossy projection in the pipeline, and what the encoder never sees, the generator can never recover."
+            },
+            {
+              "id": "w3-02-why-we-chunk-atoms-of-thought",
+              "title": "Why We Chunk: Atoms of Thought",
+              "summary": "A document is an ensemble of thoughts, not one thought, and mixing two orthogonal ones in a single embedding creates a phantom point that answers neither."
+            },
+            {
+              "id": "w3-03-boundary-problem-512-default",
+              "title": "The Boundary Problem and the 512-Token Default",
+              "summary": "A document is a continuous stream of meaning with no ground-truth boundary, and the industry's default of 512 tokens is a baseline for expedience, not a considered choice."
+            }
+          ]
+        },
+        {
+          "title": "Act II: A Field Guide to What Chunking Destroys",
+          "concepts": [
+            {
+              "id": "w3-04-endophora-broken-references",
+              "title": "Endophora and Broken References",
+              "summary": "Language refers to itself through anaphora and cataphora, and cutting a chunk boundary between a pronoun and its antecedent leaves the fragment fluent but incoherent."
+            },
+            {
+              "id": "w3-05-discourse-structure-severed-relations",
+              "title": "Discourse Structure and the Severing of Relations",
+              "summary": "Documents are trees of rhetorical relations, not sequences of independent sentences, and severing them yields chunks that read true but mean the opposite of the whole."
+            },
+            {
+              "id": "w3-06-negation-trap-scope-failures",
+              "title": "The Negation Trap and Scope Failures",
+              "summary": "Scope failures do not just lose information, they invert it, and presupposition accommodation silently promotes a hedged hypothesis to certainty with no error signal at all."
+            },
+            {
+              "id": "w3-07-lexical-cohesion-definition-use-chains",
+              "title": "Lexical Cohesion and Definition\u2013Use Chains",
+              "summary": "Documents cohere through a sustained field of related words, and chunking dissolves that field, orphaning both disambiguating terms and legal definitions from their uses."
+            },
+            {
+              "id": "w3-08-bridging-inference-genre-blindness",
+              "title": "Bridging Inference and Genre Blindness",
+              "summary": "Some connections have nothing explicit to sever, and a uniform chunk size ignores that a contract, a novel, and a paper carry information at wildly different densities."
+            },
+            {
+              "id": "w3-09-pathologies-embedding-space",
+              "title": "Pathologies in Embedding Space",
+              "summary": "A chunk's embedding is the centroid of its content, so packing distinct thoughts into one chunk produces a phantom vector near none of them, and anisotropy makes it worse."
+            }
+          ]
+        },
+        {
+          "title": "Act III: Two Roads \u2014 Better Chunking, or No Chunking?",
+          "concepts": [
+            {
+              "id": "w3-10-taxonomy-of-chunking-strategies",
+              "title": "A Taxonomy of Chunking Strategies",
+              "summary": "From fixed-size to recursive to semantic to hierarchical chunking, each strategy improves where we cut but none heals what the cut severs."
+            },
+            {
+              "id": "w3-11-contextual-and-late-chunking",
+              "title": "Re-Contextualization: Contextual and Late Chunking",
+              "summary": "Rather than inflate chunks, restore context dynamically \u2014 contextual chunking repairs in text space with an LLM-written preface, while late chunking repairs in latent space by chunking after encoding."
+            },
+            {
+              "id": "w3-12-practical-chunking-pipeline",
+              "title": "A Practical Pipeline",
+              "summary": "The best systems layer markup, semantic hierarchy, contextualization, and late chunking as defense in depth, then let a tournament \u2014 not dogma \u2014 decide what to keep."
+            },
+            {
+              "id": "w3-13-no-chunking-visual-retrieval",
+              "title": "Road Two: Are We Barking Up the Wrong Tree?",
+              "summary": "Every chunking strategy shares the hidden premise that we should parse text at all, and vision-language models like ColPali suggest that for layout-rich documents, the page image is the better semantic unit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": "The Understudy: Search-Native Text & Derivative Artifacts",
+      "topics": [
+        {
+          "title": "Act I: The Purpose Problem",
+          "concepts": [
+            {
+              "id": "w4-01-search-native-text",
+              "title": "The Understudy: When the Text You Search Is Not the Text You Show",
+              "summary": "For three weeks we indexed the author's own words; this week we manufacture new text written for the searcher, search that instead, and show the reader the original."
+            },
+            {
+              "id": "w4-02-meera-and-ravi",
+              "title": "Meera and Ravi: Two Ways to Prepare for an Exam",
+              "summary": "A story about two exam-takers shows that representation follows purpose, and that a textbook built for understanding is the wrong shape for a system that must instantly match a query to an answer."
+            },
+            {
+              "id": "w4-03-six-costumes",
+              "title": "Every Text Wears a Costume",
+              "summary": "The same underlying fact is dressed differently for peer reviewers, adversaries, shareholders, and everyone else, and a user's naked query matches none of the costumes well."
+            },
+            {
+              "id": "w4-04-central-provocation",
+              "title": "The Central Provocation and the Geometry of Dilution",
+              "summary": "The design principle for the rest of the week, plus the geometric reason it is necessary \u2014 a multi-claim paragraph embeds near the average of its claims, which dilutes its similarity to any one pointed query."
+            }
+          ]
+        },
+        {
+          "title": "Act II: The Derivative Artifacts \u2014 and the Proof",
+          "concepts": [
+            {
+              "id": "w4-05-factoids",
+              "title": "Factoids: Distilling the Atoms of Meaning",
+              "summary": "A factoid is the smallest textual unit that still means something, the semantic molecule left after you pry every self-contained claim loose from a paragraph."
+            },
+            {
+              "id": "w4-06-prml-bakeoff",
+              "title": "The PRML Bake-Off: Measuring the Difference",
+              "summary": "A live experiment on Bishop's PRML textbook indexes raw chunks against factoids and QA pairs and asks why polynomial regression overfits, turning the week's claim from assertion into measurement."
+            },
+            {
+              "id": "w4-07-centroid-tug-of-war",
+              "title": "The Centroid Tug-of-War: Feeling the Geometry",
+              "summary": "A physical classroom demonstration with five students as fact-vertices and one marooned at their centroid makes the dilution inequality visible as a shrinking walk across the floor."
+            },
+            {
+              "id": "w4-08-passage-rewrites",
+              "title": "Passage Rewrites: The Source's Understudy",
+              "summary": "A passage rewrite reformulates a hostile span into plain search-friendly language while the original clause remains the only thing ever shown to the reader or cited to the model."
+            },
+            {
+              "id": "w4-09-qa-pairs",
+              "title": "QA Pairs: Planting Query-Shaped Objects",
+              "summary": "Generating candidate questions per chunk turns retrieval into a same-genre match, question against question, instead of a cross-genre one, and a pointer back to the source keeps the artifact honest."
+            },
+            {
+              "id": "w4-10-core-pattern",
+              "title": "The Core Pattern: Retrieve the Derivative, Generate from the Source",
+              "summary": "One pattern unifies every artifact in the toolkit \u2014 win the retrieval with the derivative but always generate and cite from the original, which bounds a bad derivative's damage to a missed retrieval, never a fabricated citation."
+            }
+          ]
+        },
+        {
+          "title": "Act III: Altitude \u2014 Summaries, RAPTOR, and the Corpus",
+          "concepts": [
+            {
+              "id": "w4-11-abstractive-summarization",
+              "title": "Abstractive Summarization: Trading Detail for Altitude",
+              "summary": "A summary is not a compression but a change of altitude, trading fine detail for large-scale structure and answering the thematic queries no single chunk can."
+            },
+            {
+              "id": "w4-12-raptor-construction",
+              "title": "RAPTOR: Building the Zoom Lens",
+              "summary": "RAPTOR gives summarization recursive structure, clustering and summarizing chunks over and over until a document becomes a tree searchable at every level of magnification."
+            },
+            {
+              "id": "w4-13-definitive-articles",
+              "title": "From One Book to a Library: RAPTOR's Definitive Articles",
+              "summary": "Run RAPTOR over a corpus rather than a document and its upper nodes stop summarizing one source, instead synthesizing a canonical answer across every document that touches the topic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "title": "When the Library Becomes a City: GraphRAG",
+      "topics": [
+        {
+          "title": "Act I: The Mathematics of the City",
+          "concepts": [
+            {
+              "id": "w5-01-seven-bridges-and-the-graph",
+              "title": "Seven Bridges, One Sunday Walk: What a Graph Actually Is",
+              "summary": "Euler's move on the bridges of K\u00f6nigsberg \u2014 discard geometry, keep connectivity \u2014 is the same move that turns a corpus into a knowledge graph."
+            },
+            {
+              "id": "w5-02-adjacency-matrix-and-degree",
+              "title": "The Adjacency Matrix: Where a Graph Becomes Calculable",
+              "summary": "Numbering the vertices and recording edges as a matrix turns a drawing into something you can compute with \u2014 degree, walk counts, and every algorithm that follows."
+            },
+            {
+              "id": "w5-03-erdos-renyi-vs-barabasi-albert",
+              "title": "Two Kinds of Randomness: Erd\u0151s\u2013R\u00e9nyi versus Barab\u00e1si",
+              "summary": "Fair-coin random graphs have no hubs; real networks do, because they grow by preferential attachment \u2014 and every knowledge graph inherits the same heavy tail."
+            },
+            {
+              "id": "w5-04-small-worlds-and-fractal-knowledge",
+              "title": "Small Worlds and the Fractal-but-Real City",
+              "summary": "Short paths plus tight clustering make a small world, and knowledge inherits the same self-similar, communities-within-communities architecture at a handful of real levels."
+            },
+            {
+              "id": "w5-05-modularity-louvain-leiden",
+              "title": "Communities, Modularity, and the Algorithm to Remember",
+              "summary": "Modularity measures density-over-chance; Louvain optimizes it fast but can leave disconnected communities, and Leiden is the fix that Microsoft GraphRAG runs verbatim."
+            },
+            {
+              "id": "w5-06-the-laplacian",
+              "title": "The Laplacian: One Definition, and a Door Left Ajar",
+              "summary": "L = D \u2212 A measures how rough a score looks across a graph's edges \u2014 the same smoothing operator that reappears this afternoon as personalized PageRank."
+            }
+          ]
+        },
+        {
+          "title": "Act II: The Web of Knowledge \u2014 Triplets, Types, and Three Layers",
+          "concepts": [
+            {
+              "id": "w5-07-knowledge-graphs-and-triplets",
+              "title": "Knowledge Is an Interconnected Web: Triplets and Their Types",
+              "summary": "A knowledge graph is a bag of head-relation-tail triplets, and every fact triplet has a schema triplet standing behind it \u2014 the three-layer reading a corpus can be given."
+            },
+            {
+              "id": "w5-08-extraction-noise-and-generic-hubs",
+              "title": "Who Extracts: The Scooby-Doo Problem and Generic-Entity Hubs",
+              "summary": "LLM extraction is cheap but indiscriminate, and the generic entities it inflates \u2014 United States, Person, Protein \u2014 become exactly the hubs Act I predicted, now with a name."
+            }
+          ]
+        },
+        {
+          "title": "Act III: The Many Meanings of GraphRAG",
+          "concepts": [
+            {
+              "id": "w5-09-neighbor-expansion-to-microsoft-graphrag",
+              "title": "From Neighbor Expansion to Microsoft GraphRAG",
+              "summary": "The oldest GraphRAG walks two hops from query entities and floods on hubs; Microsoft's 2024 pipeline instead harvests communities \u2014 at a real invoice."
+            },
+            {
+              "id": "w5-10-lazy-light-hippo-graphrag",
+              "title": "The In-Betweens: LazyGraphRAG, LightRAG, and HippoRAG",
+              "summary": "Three successors answer the invoice by deferring, slimming, or replacing community detection with personalized PageRank \u2014 the last one foreshadows tonight's centerpiece."
+            },
+            {
+              "id": "w5-11-memgraphrag-diseases-and-construction",
+              "title": "MemGraphRAG: Three Diseases and a Shared Memory",
+              "summary": "MemGraphRAG diagnoses isolated fragment-level extraction as GraphRAG's root defect, then builds its graph by promoting only schemas whose frequency clears a threshold."
+            },
+            {
+              "id": "w5-12-the-experiment-running-the-paper-on-itself",
+              "title": "The Experiment: Running the Paper on Itself",
+              "summary": "Running MemGraphRAG's own construction pipeline on a dozen passages of the paper itself produced a staircase of thresholds where no rung admits signal without noise."
+            },
+            {
+              "id": "w5-13-three-cities-and-the-honey",
+              "title": "Retrieval Without Communities: Three Cities of Lights and the Honey",
+              "summary": "MemGraphRAG scores each layer's embeddings against the query, then lets that semantic energy diffuse via personalized PageRank \u2014 the Laplacian's diffusion, leashed and named."
+            },
+            {
+              "id": "w5-14-three-critiques-preserve-then-decide",
+              "title": "Three Critiques, One Disease: Preserve, Then Decide",
+              "summary": "MemGraphRAG indicts isolated extraction for destroying information, then commits the same sin three times at construction time \u2014 the fix is to defer judgment to query time."
+            }
+          ]
+        },
+        {
+          "title": "The Practitioner's Ledger: Patterns, Anti-Patterns, and the Sidecar",
+          "concepts": [
+            {
+              "id": "w5-15-patterns-anti-patterns-and-the-sidecar",
+              "title": "The Practitioner's Ledger: Patterns, Anti-Patterns, and the Sidecar",
+              "summary": "GraphRAG is always a sidecar, never a replacement \u2014 it earns its keep on global sensemaking over a high-value sub-corpus, routed there by a local-versus-global query classifier."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "title": "The Two Gates of the Gatehouse: Guardrails, Grounding, Refusal & Humility",
+      "topics": [
+        {
+          "title": "Act I: The Gatehouse \u2014 Keeping Bad Questions Out",
+          "concepts": [
+            {
+              "id": "w6-01-two-gates-two-virtues",
+              "title": "Two Gates, Two Virtues: Why RAG Needs Both",
+              "summary": "A guardrailed RAG system needs two different gates guarding two different failures \u2014 a front gate that faces an adversary, and an exit gate that faces its own sincere machine."
+            },
+            {
+              "id": "w6-02-family-a-malformed-evasive-input",
+              "title": "Family A \u2014 Malformed and Evasive Input",
+              "summary": "The model reads far more than your filters do, so an attacker who wants past a toxicity classifier simply encodes the message the more capable reader downstream will decode and obey."
+            },
+            {
+              "id": "w6-03-family-b-adversarial-intent",
+              "title": "Family B \u2014 Adversarial Intent",
+              "summary": "There is no clean boundary between data and instructions in one token stream, so every prompt-injection defense is a way of re-drawing a boundary the architecture never had."
+            },
+            {
+              "id": "w6-04-indirect-injection-poisoned-retrieval",
+              "title": "The RAG-Native Threat: Indirect Injection via Poisoned Retrieval",
+              "summary": "The malicious instruction can lie dormant inside a document rather than the query, so the attacker never has to get past your gate at all \u2014 only into your index."
+            },
+            {
+              "id": "w6-05-family-c-access-and-identity",
+              "title": "Family C \u2014 Access and Identity",
+              "summary": "A query can be polite, on-topic, and injection-free and still be one this particular person must never have answered, because the failure is authorization, not content."
+            },
+            {
+              "id": "w6-06-family-d-abuse-economics-length-gate",
+              "title": "Family D \u2014 Abuse, Economics, and the Cheapest Structural Gate",
+              "summary": "The last request-side family needs no forbidden word at all \u2014 it abuses the system by using it too much, spending its wallet, or exploiting its credulity \u2014 and one comparison operator, the length cap, retires most of it before a single classifier runs."
+            },
+            {
+              "id": "w6-07-query-memory-duplicates-stuffing-frustration",
+              "title": "Giving the Gate a Memory: Duplicates, Keyword Stuffing, and Frustration",
+              "summary": "Every gate so far judges one query in isolation and forgets it instantly \u2014 but a whole class of pattern, from repeated jailbreak attempts to a frustrated user, is only visible across a sequence of queries."
+            },
+            {
+              "id": "w6-08-domain-gate-and-toxicity-layer",
+              "title": "The Cheap First Gate: Domain Classification and the Toxicity Layer",
+              "summary": "One cheap classifier asking 'is this even about our domain?' silently absorbs most off-topic malice for free, and a dedicated toxicity layer catches the on-topic malice the domain gate cannot see."
+            },
+            {
+              "id": "w6-09-false-positive-tax-and-orchestration",
+              "title": "The False-Positive Tax, and Orchestrating the Gatehouse",
+              "summary": "A suspicious posture is right at any single gate, but false-positive rates compound across a deep stack until the gatehouse quietly turns away one legitimate user in six."
+            }
+          ]
+        },
+        {
+          "title": "Act II: The Conscience \u2014 Keeping Bad Answers In",
+          "concepts": [
+            {
+              "id": "w6-10-wizards-curtain-ragas-triad",
+              "title": "The Wizard's Curtain: Groundedness, Faithfulness, and the RAGAS Triad",
+              "summary": "A RAG system speaks in the same confident voice whether or not there's real evidence behind it, so groundedness measures \u2014 claim by claim \u2014 whether the confidence was earned."
+            },
+            {
+              "id": "w6-11-assertion-evidence-bipartite-graph",
+              "title": "The Assertion\u2013Evidence Bipartite Graph",
+              "summary": "Turning the faithfulness definition into a graph \u2014 claims on one side, evidence on the other \u2014 turns a vague verdict of 'this answer seems off' into a pointer at the exact offending sentence."
+            },
+            {
+              "id": "w6-12-two-verifiers-escalation-ladder",
+              "title": "Two Verifiers and the Escalation Ladder of Conscience",
+              "summary": "An LLM judge is smarter than the cheap NLI model but carries its own documented biases, so production conscience is a cost-ordered cascade that spends the expensive verifier only on the residue the cheap one couldn't settle."
+            },
+            {
+              "id": "w6-13-citation-faithfulness-and-guarding-the-guard",
+              "title": "Citation Faithfulness, Caught Hallucinations, and Who Guards the Guard",
+              "summary": "A citation is itself a claim that can be false \u2014 and detecting a hallucination is worthless without a policy for what to do with it, which is where Act II confronts the recursive limits of its own machinery."
+            }
+          ]
+        },
+        {
+          "title": "Act III: Refusal and Humility",
+          "concepts": [
+            {
+              "id": "w6-14-three-doors-refusal-and-humility",
+              "title": "Refusal Is a First-Class Output: The Three Doors, and Why Humility Is Graded",
+              "summary": "Sometimes the honest output is no output at all \u2014 but refusal is a binary values decision through one of three doors, while humility is the graded, epistemic skill of saying how much of the rest is actually known."
+            },
+            {
+              "id": "w6-15-verbalized-uncertainty-signal-sources",
+              "title": "Verbalized Uncertainty: The Linguistics of an Honest Hedge",
+              "summary": "A hedge is only honest if a real, measured signal sits underneath it \u2014 which rules out both a fake-precise confidence number and the model's own self-report of how sure it is."
+            },
+            {
+              "id": "w6-16-conformal-abstention-and-calibration",
+              "title": "Conformal Abstention, Calibration, and the Positive Conscience",
+              "summary": "Conformal prediction turns a raw uncertainty score into a threshold with a provable, distribution-free error-rate guarantee \u2014 and the whole ethic of the week is stating that error rate out loud instead of guessing at it."
+            }
+          ]
+        },
+        {
+          "title": "Laboratory Sessions",
+          "concepts": [
+            {
+              "id": "w6-17-laboratory-sessions-overview",
+              "title": "Laboratory Sessions: What We Build and Measure",
+              "summary": "Eight labs turn this week's intuition into a deployed artifact in front of a real RAG system, building the gatehouse first, then the conscience, then the honest refusal \u2014 and measuring every detector rather than trusting it on faith."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

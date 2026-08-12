@@ -1,0 +1,5867 @@
+{
+  "video_id": "KFxi-ezE3yM",
+  "url": "https://www.youtube.com/watch?v=KFxi-ezE3yM",
+  "label": "Week_1_Summary_class",
+  "segments": [
+    {
+      "text": "So welcome everyone to the summary",
+      "start": 6.4,
+      "duration": 7.92
+    },
+    {
+      "text": "session and the quiz session for LLM and",
+      "start": 10.88,
+      "duration": 6.08
+    },
+    {
+      "text": "enterprise act. This is week one with",
+      "start": 14.32,
+      "duration": 5.44
+    },
+    {
+      "text": "focus on the foundations of [snorts]",
+      "start": 16.96,
+      "duration": 5.84
+    },
+    {
+      "text": "enterprise AI.",
+      "start": 19.76,
+      "duration": 5.759
+    },
+    {
+      "text": "So,",
+      "start": 22.8,
+      "duration": 5.76
+    },
+    {
+      "text": "so these are the contents the table of",
+      "start": 25.519,
+      "duration": 5.52
+    },
+    {
+      "text": "contents for this session.",
+      "start": 28.56,
+      "duration": 6.64
+    },
+    {
+      "text": "Give a read out to this uh whole uh uh",
+      "start": 31.039,
+      "duration": 8.161
+    },
+    {
+      "text": "document once on your own. We will start",
+      "start": 35.2,
+      "duration": 7.679
+    },
+    {
+      "text": "with the adage there about said by John",
+      "start": 39.2,
+      "duration": 8.08
+    },
+    {
+      "text": "Rupert Fth who was an English linguist",
+      "start": 42.879,
+      "duration": 10.0
+    },
+    {
+      "text": "and his theory uh uh uh uh inspired",
+      "start": 47.28,
+      "duration": 8.56
+    },
+    {
+      "text": "context dependent meaning and then",
+      "start": 52.879,
+      "duration": 5.041
+    },
+    {
+      "text": "modern word embeddings. So you shall",
+      "start": 55.84,
+      "duration": 4.96
+    },
+    {
+      "text": "know a word by the company it keeps",
+      "start": 57.92,
+      "duration": 6.239
+    },
+    {
+      "text": "right. We will see how this uh maps to",
+      "start": 60.8,
+      "duration": 5.76
+    },
+    {
+      "text": "the attention and everything that we",
+      "start": 64.159,
+      "duration": 5.361
+    },
+    {
+      "text": "will talk about today. Getting started",
+      "start": 66.56,
+      "duration": 5.04
+    },
+    {
+      "text": "with the summary. The first section is",
+      "start": 69.52,
+      "duration": 5.84
+    },
+    {
+      "text": "foundations of enterprise AI and rag. To",
+      "start": 71.6,
+      "duration": 6.8
+    },
+    {
+      "text": "build a true enterprise AI, we must move",
+      "start": 75.36,
+      "duration": 5.6
+    },
+    {
+      "text": "beyond the local scripts and laptops. We",
+      "start": 78.4,
+      "duration": 6.32
+    },
+    {
+      "text": "need more robust GPUs",
+      "start": 80.96,
+      "duration": 6.24
+    },
+    {
+      "text": "uh and secure GPU clusters to handle",
+      "start": 84.72,
+      "duration": 4.96
+    },
+    {
+      "text": "massive vector transformations.",
+      "start": 87.2,
+      "duration": 5.12
+    },
+    {
+      "text": "And when we do these things very well,",
+      "start": 89.68,
+      "duration": 5.759
+    },
+    {
+      "text": "we do a well architected system, then",
+      "start": 92.32,
+      "duration": 6.0
+    },
+    {
+      "text": "the real world impact is profound like",
+      "start": 95.439,
+      "duration": 5.921
+    },
+    {
+      "text": "transforming everything starting from",
+      "start": 98.32,
+      "duration": 5.839
+    },
+    {
+      "text": "public health health deployments to when",
+      "start": 101.36,
+      "duration": 5.6
+    },
+    {
+      "text": "data center infrastructure. So a lot of",
+      "start": 104.159,
+      "duration": 6.0
+    },
+    {
+      "text": "things can be achieved",
+      "start": 106.96,
+      "duration": 6.08
+    },
+    {
+      "text": "if uh",
+      "start": 110.159,
+      "duration": 5.28
+    },
+    {
+      "text": "is the font size okay or should I",
+      "start": 113.04,
+      "duration": 5.6
+    },
+    {
+      "text": "increase it?",
+      "start": 115.439,
+      "duration": 5.761
+    },
+    {
+      "text": "I hope I think this is better right?",
+      "start": 118.64,
+      "duration": 3.04
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 121.2,
+      "duration": 0.879
+    },
+    {
+      "text": ">> Okay.",
+      "start": 121.68,
+      "duration": 2.56
+    },
+    {
+      "text": ">> Yeah. I think better.",
+      "start": 122.079,
+      "duration": 3.36
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 124.24,
+      "duration": 3.76
+    },
+    {
+      "text": ">> Yeah. So there is a several stage",
+      "start": 125.439,
+      "duration": 7.041
+    },
+    {
+      "text": "pipeline right? Uh we start with the",
+      "start": 128.0,
+      "duration": 7.28
+    },
+    {
+      "text": "foundations and then we move to",
+      "start": 132.48,
+      "duration": 4.64
+    },
+    {
+      "text": "injection and document chunking,",
+      "start": 135.28,
+      "duration": 4.88
+    },
+    {
+      "text": "retrieval and query transformation",
+      "start": 137.12,
+      "duration": 5.119
+    },
+    {
+      "text": "and then enrichment with knowledge",
+      "start": 140.16,
+      "duration": 5.36
+    },
+    {
+      "text": "graphs and other related artifacts",
+      "start": 142.239,
+      "duration": 6.321
+    },
+    {
+      "text": "derived artifacts and then we focus on",
+      "start": 145.52,
+      "duration": 6.0
+    },
+    {
+      "text": "architecture for speed and caching and",
+      "start": 148.56,
+      "duration": 5.36
+    },
+    {
+      "text": "then safety",
+      "start": 151.52,
+      "duration": 5.52
+    },
+    {
+      "text": "uh guardrails for trust and finally",
+      "start": 153.92,
+      "duration": 7.28
+    },
+    {
+      "text": "about proof and uh evaluation metrics.",
+      "start": 157.04,
+      "duration": 7.52
+    },
+    {
+      "text": "So there are these uh",
+      "start": 161.2,
+      "duration": 6.96
+    },
+    {
+      "text": "uh three core pillars of generative AI.",
+      "start": 164.56,
+      "duration": 5.84
+    },
+    {
+      "text": "The first pillar is the agent for",
+      "start": 168.16,
+      "duration": 5.52
+    },
+    {
+      "text": "autonomous orchestration. Rag is for",
+      "start": 170.4,
+      "duration": 6.8
+    },
+    {
+      "text": "dynamic knowledge delivery and like uh",
+      "start": 173.68,
+      "duration": 8.08
+    },
+    {
+      "text": "for your own enterprise uh uh knowledge",
+      "start": 177.2,
+      "duration": 6.72
+    },
+    {
+      "text": "knowledge base that you have which is",
+      "start": 181.76,
+      "duration": 4.96
+    },
+    {
+      "text": "bit different from the outer world and",
+      "start": 183.92,
+      "duration": 4.959
+    },
+    {
+      "text": "third fine-tuning that is to teach the",
+      "start": 186.72,
+      "duration": 5.519
+    },
+    {
+      "text": "model on our specific corporate language",
+      "start": 188.879,
+      "duration": 5.201
+    },
+    {
+      "text": "for example",
+      "start": 192.239,
+      "duration": 6.481
+    },
+    {
+      "text": "uh pet does not means uh animal in in",
+      "start": 194.08,
+      "duration": 7.439
+    },
+    {
+      "text": "the medical term it is a pet scan right",
+      "start": 198.72,
+      "duration": 5.84
+    },
+    {
+      "text": "not an able. So we have those ter",
+      "start": 201.519,
+      "duration": 5.921
+    },
+    {
+      "text": "terminologies and we want the machine to",
+      "start": 204.56,
+      "duration": 4.399
+    },
+    {
+      "text": "understand that for that we use",
+      "start": 207.44,
+      "duration": 4.079
+    },
+    {
+      "text": "finetuning.",
+      "start": 208.959,
+      "duration": 6.401
+    },
+    {
+      "text": "There is a square cube law of system",
+      "start": 211.519,
+      "duration": 7.28
+    },
+    {
+      "text": "design just like biological evolution.",
+      "start": 215.36,
+      "duration": 5.519
+    },
+    {
+      "text": "Uh software architecture is also",
+      "start": 218.799,
+      "duration": 4.401
+    },
+    {
+      "text": "dictated by a scale like [snorts] an",
+      "start": 220.879,
+      "duration": 5.521
+    },
+    {
+      "text": "exoskeleton uh works for insect but that",
+      "start": 223.2,
+      "duration": 6.0
+    },
+    {
+      "text": "would crush a human. Similarly, a rag",
+      "start": 226.4,
+      "duration": 4.64
+    },
+    {
+      "text": "architecture which is built for one",
+      "start": 229.2,
+      "duration": 4.64
+    },
+    {
+      "text": "document will completely collapse if you",
+      "start": 231.04,
+      "duration": 4.4
+    },
+    {
+      "text": "try to scale it to a billion of",
+      "start": 233.84,
+      "duration": 3.679
+    },
+    {
+      "text": "documents.",
+      "start": 235.44,
+      "duration": 5.519
+    },
+    {
+      "text": "So also in order to",
+      "start": 237.519,
+      "duration": 6.321
+    },
+    {
+      "text": "be uh profitable in production there is",
+      "start": 240.959,
+      "duration": 6.56
+    },
+    {
+      "text": "a necessity for semantic caching. So we",
+      "start": 243.84,
+      "duration": 6.24
+    },
+    {
+      "text": "face uh massive repetition right in",
+      "start": 247.519,
+      "duration": 5.041
+    },
+    {
+      "text": "enterprise we we will face massive",
+      "start": 250.08,
+      "duration": 4.719
+    },
+    {
+      "text": "repetition and we use semantic caching",
+      "start": 252.56,
+      "duration": 4.72
+    },
+    {
+      "text": "to recognize the meaning behind a",
+      "start": 254.799,
+      "duration": 5.361
+    },
+    {
+      "text": "particular query not just exact not just",
+      "start": 257.28,
+      "duration": 6.0
+    },
+    {
+      "text": "the exact keywords. So this uh would let",
+      "start": 260.16,
+      "duration": 5.44
+    },
+    {
+      "text": "us serve instant some precomputed",
+      "start": 263.28,
+      "duration": 5.68
+    },
+    {
+      "text": "answers to deliver users asking the same",
+      "start": 265.6,
+      "duration": 5.84
+    },
+    {
+      "text": "question multiple times and even in",
+      "start": 268.96,
+      "duration": 5.12
+    },
+    {
+      "text": "different ways saving huge amounts of",
+      "start": 271.44,
+      "duration": 5.12
+    },
+    {
+      "text": "compute.",
+      "start": 274.08,
+      "duration": 5.839
+    },
+    {
+      "text": "Coming to the guardrails trust",
+      "start": 276.56,
+      "duration": 6.4
+    },
+    {
+      "text": "guardrails and evaluation. So there is",
+      "start": 279.919,
+      "duration": 6.961
+    },
+    {
+      "text": "this three H's and the legal compliances",
+      "start": 282.96,
+      "duration": 7.28
+    },
+    {
+      "text": "the helpful uh honest and harmless. So",
+      "start": 286.88,
+      "duration": 7.92
+    },
+    {
+      "text": "these are uh uh the the uh uh this these",
+      "start": 290.24,
+      "duration": 6.239
+    },
+    {
+      "text": "are the foundational things to which an",
+      "start": 294.8,
+      "duration": 5.36
+    },
+    {
+      "text": "AI must must adhere to. So this prevents",
+      "start": 296.479,
+      "duration": 6.16
+    },
+    {
+      "text": "automation bias where users would",
+      "start": 300.16,
+      "duration": 5.599
+    },
+    {
+      "text": "blindly trust a fluent but factually",
+      "start": 302.639,
+      "duration": 5.761
+    },
+    {
+      "text": "incorrect answer and thus keeping us",
+      "start": 305.759,
+      "duration": 5.201
+    },
+    {
+      "text": "legally compliant.",
+      "start": 308.4,
+      "duration": 5.84
+    },
+    {
+      "text": "And then we have evaluation metrics. Uh",
+      "start": 310.96,
+      "duration": 5.6
+    },
+    {
+      "text": "so as Lord Kelvin said if you can't",
+      "start": 314.24,
+      "duration": 4.239
+    },
+    {
+      "text": "measure it it is not science it is",
+      "start": 316.56,
+      "duration": 4.639
+    },
+    {
+      "text": "something else. So we must have some",
+      "start": 318.479,
+      "duration": 4.801
+    },
+    {
+      "text": "automated evaluation frameworks in place",
+      "start": 321.199,
+      "duration": 4.881
+    },
+    {
+      "text": "before deployment and furthermore since",
+      "start": 323.28,
+      "duration": 5.28
+    },
+    {
+      "text": "half of the enterprise data lives in",
+      "start": 326.08,
+      "duration": 4.399
+    },
+    {
+      "text": "databases",
+      "start": 328.56,
+      "duration": 4.8
+    },
+    {
+      "text": "and our systems must be seamless to",
+      "start": 330.479,
+      "duration": 5.121
+    },
+    {
+      "text": "handle structured data through text to",
+      "start": 333.36,
+      "duration": 5.279
+    },
+    {
+      "text": "SQL conversions and all. So [snorts]",
+      "start": 335.6,
+      "duration": 5.599
+    },
+    {
+      "text": "with this uh we have covered a bit of",
+      "start": 338.639,
+      "duration": 5.201
+    },
+    {
+      "text": "two three sections. So let me ask you a",
+      "start": 341.199,
+      "duration": 4.481
+    },
+    {
+      "text": "quick question based on what we just",
+      "start": 343.84,
+      "duration": 4.32
+    },
+    {
+      "text": "covered. So we talked about automation",
+      "start": 345.68,
+      "duration": 7.28
+    },
+    {
+      "text": "bias. So if an AI gives you a very",
+      "start": 348.16,
+      "duration": 6.64
+    },
+    {
+      "text": "beautifully written, highly confident",
+      "start": 352.96,
+      "duration": 4.64
+    },
+    {
+      "text": "answer but that answer you know is",
+      "start": 354.8,
+      "duration": 5.76
+    },
+    {
+      "text": "completely wrong. How many of you think",
+      "start": 357.6,
+      "duration": 5.439
+    },
+    {
+      "text": "you would catch it immediately or if you",
+      "start": 360.56,
+      "duration": 5.52
+    },
+    {
+      "text": "have any experience on it? Be open to",
+      "start": 363.039,
+      "duration": 6.041
+    },
+    {
+      "text": "answer.",
+      "start": 366.08,
+      "duration": 3.0
+    },
+    {
+      "text": "Okay. So uh it often takes uh some time",
+      "start": 373.28,
+      "duration": 6.96
+    },
+    {
+      "text": "to notice when the the answers are",
+      "start": 377.28,
+      "duration": 5.28
+    },
+    {
+      "text": "completely wrong. So we need to be",
+      "start": 380.24,
+      "duration": 2.64
+    },
+    {
+      "text": "strict.",
+      "start": 382.56,
+      "duration": 3.359
+    },
+    {
+      "text": ">> I think was planning to say something.",
+      "start": 382.88,
+      "duration": 3.84
+    },
+    {
+      "text": ">> Go ahead.",
+      "start": 385.919,
+      "duration": 2.321
+    },
+    {
+      "text": ">> Well, yeah, that yeah, you said it",
+      "start": 386.72,
+      "duration": 4.56
+    },
+    {
+      "text": "anyway. But yeah, sorry.",
+      "start": 388.24,
+      "duration": 4.959
+    },
+    {
+      "text": ">> Okay. Meaning if you don't have metrics",
+      "start": 391.28,
+      "duration": 4.639
+    },
+    {
+      "text": "like clearly showing like cases uh",
+      "start": 393.199,
+      "duration": 5.201
+    },
+    {
+      "text": "beforehand uh where you identify like",
+      "start": 395.919,
+      "duration": 4.641
+    },
+    {
+      "text": "some of the pitfalls it's it's it's very",
+      "start": 398.4,
+      "duration": 6.639
+    },
+    {
+      "text": "hard to find it immediately.",
+      "start": 400.56,
+      "duration": 8.24
+    },
+    {
+      "text": ">> It it is so convincing right",
+      "start": 405.039,
+      "duration": 8.401
+    },
+    {
+      "text": "so so it it happens to the best of us.",
+      "start": 408.8,
+      "duration": 7.519
+    },
+    {
+      "text": "Uh so we have built the foundation and",
+      "start": 413.44,
+      "duration": 4.72
+    },
+    {
+      "text": "established the rules. But before we get",
+      "start": 416.319,
+      "duration": 3.841
+    },
+    {
+      "text": "into this heavy lift lifting of how",
+      "start": 418.16,
+      "duration": 4.319
+    },
+    {
+      "text": "these systems search",
+      "start": 420.16,
+      "duration": 4.72
+    },
+    {
+      "text": "uh we have to ask one more philosophical",
+      "start": 422.479,
+      "duration": 6.0
+    },
+    {
+      "text": "question. So the question is how does a",
+      "start": 424.88,
+      "duration": 7.039
+    },
+    {
+      "text": "machine actually know something?",
+      "start": 428.479,
+      "duration": 6.241
+    },
+    {
+      "text": "So this brings us to this new section",
+      "start": 431.919,
+      "duration": 5.521
+    },
+    {
+      "text": "the next section the epistemology of",
+      "start": 434.72,
+      "duration": 4.8
+    },
+    {
+      "text": "language models.",
+      "start": 437.44,
+      "duration": 4.64
+    },
+    {
+      "text": "So we will try to understand how how",
+      "start": 439.52,
+      "duration": 5.679
+    },
+    {
+      "text": "knowledge is uh present in a language",
+      "start": 442.08,
+      "duration": 6.959
+    },
+    {
+      "text": "model. So",
+      "start": 445.199,
+      "duration": 6.801
+    },
+    {
+      "text": "there is this parametric memory and",
+      "start": 449.039,
+      "duration": 5.761
+    },
+    {
+      "text": "prior beliefs. So think of a model's",
+      "start": 452.0,
+      "duration": 5.28
+    },
+    {
+      "text": "parame the pretend weights of a models",
+      "start": 454.8,
+      "duration": 5.04
+    },
+    {
+      "text": "as the prior belief that is a very",
+      "start": 457.28,
+      "duration": 5.84
+    },
+    {
+      "text": "compressed static memory of the world",
+      "start": 459.84,
+      "duration": 5.52
+    },
+    {
+      "text": "knowledge that is frozen in time and",
+      "start": 463.12,
+      "duration": 6.4
+    },
+    {
+      "text": "stored in the model. Right? And then uh",
+      "start": 465.36,
+      "duration": 8.08
+    },
+    {
+      "text": "that is one thing one uh source of",
+      "start": 469.52,
+      "duration": 7.84
+    },
+    {
+      "text": "knowledge for the system. right that can",
+      "start": 473.44,
+      "duration": 8.159
+    },
+    {
+      "text": "be updated right there is this biasian",
+      "start": 477.36,
+      "duration": 7.279
+    },
+    {
+      "text": "uh basian updating through evidence. So",
+      "start": 481.599,
+      "duration": 6.0
+    },
+    {
+      "text": "rag is just simply basian updating in",
+      "start": 484.639,
+      "duration": 6.801
+    },
+    {
+      "text": "action. So we have some prior belief uh",
+      "start": 487.599,
+      "duration": 8.081
+    },
+    {
+      "text": "we give some uh um we retrieve some uh",
+      "start": 491.44,
+      "duration": 7.36
+    },
+    {
+      "text": "verified external facts and then inject",
+      "start": 495.68,
+      "duration": 5.44
+    },
+    {
+      "text": "them into the prompt that does shift the",
+      "start": 498.8,
+      "duration": 5.04
+    },
+    {
+      "text": "model to the highly accurate posterior",
+      "start": 501.12,
+      "duration": 4.4
+    },
+    {
+      "text": "belief.",
+      "start": 503.84,
+      "duration": 4.96
+    },
+    {
+      "text": "Then there are limitations uh of un",
+      "start": 505.52,
+      "duration": 6.879
+    },
+    {
+      "text": "augmented memory like it can be uh if we",
+      "start": 508.8,
+      "duration": 5.599
+    },
+    {
+      "text": "if you rely on model's internal memory",
+      "start": 512.399,
+      "duration": 5.601
+    },
+    {
+      "text": "and we don't augment it with a retrieval",
+      "start": 514.399,
+      "duration": 6.56
+    },
+    {
+      "text": "system the information will be outdated",
+      "start": 518.0,
+      "duration": 5.919
+    },
+    {
+      "text": "maybe hallucinate model may hallucinate",
+      "start": 520.959,
+      "duration": 6.88
+    },
+    {
+      "text": "to fill those gaps and then also it has",
+      "start": 523.919,
+      "duration": 5.92
+    },
+    {
+      "text": "zero access to our confidential",
+      "start": 527.839,
+      "duration": 4.721
+    },
+    {
+      "text": "corporate data.",
+      "start": 529.839,
+      "duration": 2.721
+    },
+    {
+      "text": "So yeah coming to the next section the",
+      "start": 534.959,
+      "duration": 6.721
+    },
+    {
+      "text": "evolution of mechanics and s of search.",
+      "start": 538.08,
+      "duration": 6.48
+    },
+    {
+      "text": "Uh so there is there are two ways of",
+      "start": 541.68,
+      "duration": 5.92
+    },
+    {
+      "text": "searching. Exhaustive scanning which is",
+      "start": 544.56,
+      "duration": 5.12
+    },
+    {
+      "text": "searching linearly through the documents",
+      "start": 547.6,
+      "duration": 6.4
+    },
+    {
+      "text": "that is this way is too too slow but",
+      "start": 549.68,
+      "duration": 7.04
+    },
+    {
+      "text": "then there are uh indexing methods like",
+      "start": 554.0,
+      "duration": 7.44
+    },
+    {
+      "text": "the DV uh decimal system in a library.",
+      "start": 556.72,
+      "duration": 8.239
+    },
+    {
+      "text": "So there are indexes available right uh",
+      "start": 561.44,
+      "duration": 6.399
+    },
+    {
+      "text": "like uh the in in libraries of",
+      "start": 564.959,
+      "duration": 4.56
+    },
+    {
+      "text": "Alexandria.",
+      "start": 567.839,
+      "duration": 4.161
+    },
+    {
+      "text": "So there are uh methods in which they",
+      "start": 569.519,
+      "duration": 5.681
+    },
+    {
+      "text": "will have uh an index which maps to",
+      "start": 572.0,
+      "duration": 6.72
+    },
+    {
+      "text": "certain books. So this gives you uh",
+      "start": 575.2,
+      "duration": 6.8
+    },
+    {
+      "text": "constant time lookups right that is much",
+      "start": 578.72,
+      "duration": 4.88
+    },
+    {
+      "text": "faster.",
+      "start": 582.0,
+      "duration": 3.68
+    },
+    {
+      "text": "And then there is the inverted index",
+      "start": 583.6,
+      "duration": 4.0
+    },
+    {
+      "text": "architecture.",
+      "start": 585.68,
+      "duration": 4.719
+    },
+    {
+      "text": "So traditional searches I mean before",
+      "start": 587.6,
+      "duration": 6.4
+    },
+    {
+      "text": "the prominence of semantic search",
+      "start": 590.399,
+      "duration": 6.0
+    },
+    {
+      "text": "traditional search uses inverted index",
+      "start": 594.0,
+      "duration": 6.08
+    },
+    {
+      "text": "which is which maps the unique words",
+      "start": 596.399,
+      "duration": 5.521
+    },
+    {
+      "text": "directly to the document that contain",
+      "start": 600.08,
+      "duration": 6.8
+    },
+    {
+      "text": "them and it it is not uh the the and",
+      "start": 601.92,
+      "duration": 7.359
+    },
+    {
+      "text": "these in these uh filler words are not",
+      "start": 606.88,
+      "duration": 6.72
+    },
+    {
+      "text": "not taken care of are left tipped.",
+      "start": 609.279,
+      "duration": 7.441
+    },
+    {
+      "text": "So we have some documents and then the",
+      "start": 613.6,
+      "duration": 6.239
+    },
+    {
+      "text": "keywords are extracted and we maintain a",
+      "start": 616.72,
+      "duration": 6.0
+    },
+    {
+      "text": "key value mapping and that is the",
+      "start": 619.839,
+      "duration": 6.321
+    },
+    {
+      "text": "inverted index right keys and then the",
+      "start": 622.72,
+      "duration": 6.08
+    },
+    {
+      "text": "documents in which they belong are are",
+      "start": 626.16,
+      "duration": 4.32
+    },
+    {
+      "text": "available.",
+      "start": 628.8,
+      "duration": 5.279
+    },
+    {
+      "text": "So this is the inverted index",
+      "start": 630.48,
+      "duration": 6.24
+    },
+    {
+      "text": "and there is something called polyme. So",
+      "start": 634.079,
+      "duration": 5.76
+    },
+    {
+      "text": "what is polyme? That is a linguistic",
+      "start": 636.72,
+      "duration": 6.64
+    },
+    {
+      "text": "phenomena where uh an identical alpha",
+      "start": 639.839,
+      "duration": 6.721
+    },
+    {
+      "text": "numeric word string possesses entirely",
+      "start": 643.36,
+      "duration": 4.719
+    },
+    {
+      "text": "different meanings depending on",
+      "start": 646.56,
+      "duration": 3.36
+    },
+    {
+      "text": "depending on the context in which it is",
+      "start": 648.079,
+      "duration": 5.041
+    },
+    {
+      "text": "placed. So the fatal flaw of keyword",
+      "start": 649.92,
+      "duration": 5.28
+    },
+    {
+      "text": "search is polymic. So words with",
+      "start": 653.12,
+      "duration": 5.279
+    },
+    {
+      "text": "multiple meanings like the like the word",
+      "start": 655.2,
+      "duration": 8.48
+    },
+    {
+      "text": "bank right uh like the word key the uh",
+      "start": 658.399,
+      "duration": 7.361
+    },
+    {
+      "text": "the word monarch.",
+      "start": 663.68,
+      "duration": 5.04
+    },
+    {
+      "text": "So a keyword uh they might have multiple",
+      "start": 665.76,
+      "duration": 5.12
+    },
+    {
+      "text": "meanings. A keyword search for Mona",
+      "start": 668.72,
+      "duration": 4.48
+    },
+    {
+      "text": "can't tell if you mean a king or a",
+      "start": 670.88,
+      "duration": 5.519
+    },
+    {
+      "text": "butterfly because it lacks the context.",
+      "start": 673.2,
+      "duration": 8.079
+    },
+    {
+      "text": "Right? So now we are now uh diving into",
+      "start": 676.399,
+      "duration": 6.721
+    },
+    {
+      "text": "I mean we are now constrained to look",
+      "start": 681.279,
+      "duration": 4.961
+    },
+    {
+      "text": "into the meaning right. So the next",
+      "start": 683.12,
+      "duration": 5.76
+    },
+    {
+      "text": "section is the geometry of meaning and",
+      "start": 686.24,
+      "duration": 4.56
+    },
+    {
+      "text": "vector embeddings.",
+      "start": 688.88,
+      "duration": 4.32
+    },
+    {
+      "text": "So this machines which are as talks",
+      "start": 690.8,
+      "duration": 5.36
+    },
+    {
+      "text": "about machines is the machine",
+      "start": 693.2,
+      "duration": 4.96
+    },
+    {
+      "text": "representation of a thought. It is a",
+      "start": 696.16,
+      "duration": 5.2
+    },
+    {
+      "text": "mathematical representation of thought.",
+      "start": 698.16,
+      "duration": 6.96
+    },
+    {
+      "text": "So to solve this problem of polyme and",
+      "start": 701.36,
+      "duration": 5.68
+    },
+    {
+      "text": "what and what is the actual meaning of",
+      "start": 705.12,
+      "duration": 4.08
+    },
+    {
+      "text": "that particular word or that particular",
+      "start": 707.04,
+      "duration": 5.6
+    },
+    {
+      "text": "thought to solve that what computers do",
+      "start": 709.2,
+      "duration": 6.879
+    },
+    {
+      "text": "they translate our text into machinies",
+      "start": 712.64,
+      "duration": 6.879
+    },
+    {
+      "text": "they translate uh they turn those",
+      "start": 716.079,
+      "duration": 6.32
+    },
+    {
+      "text": "concepts into a spatial coordinates or",
+      "start": 719.519,
+      "duration": 5.681
+    },
+    {
+      "text": "vectors on a massive highdimensional",
+      "start": 722.399,
+      "duration": 5.761
+    },
+    {
+      "text": "geometrical sphere.",
+      "start": 725.2,
+      "duration": 7.6
+    },
+    {
+      "text": "So, so in that u representation every",
+      "start": 728.16,
+      "duration": 6.96
+    },
+    {
+      "text": "dimension represents an in independent",
+      "start": 732.8,
+      "duration": 5.279
+    },
+    {
+      "text": "attribute. To map the full complexity of",
+      "start": 735.12,
+      "duration": 5.36
+    },
+    {
+      "text": "uh human language without",
+      "start": 738.079,
+      "duration": 4.32
+    },
+    {
+      "text": "uh concepts colliding, we would need",
+      "start": 740.48,
+      "duration": 5.12
+    },
+    {
+      "text": "thousands of uh dimensions.",
+      "start": 742.399,
+      "duration": 6.641
+    },
+    {
+      "text": "Right? So, uh there are examples of",
+      "start": 745.6,
+      "duration": 7.84
+    },
+    {
+      "text": "having uh distinguishing cow soa and",
+      "start": 749.04,
+      "duration": 7.88
+    },
+    {
+      "text": "duck and all.",
+      "start": 753.44,
+      "duration": 3.48
+    },
+    {
+      "text": "So how this uh",
+      "start": 756.959,
+      "duration": 5.68
+    },
+    {
+      "text": "this thing is computed how a particular",
+      "start": 759.68,
+      "duration": 5.76
+    },
+    {
+      "text": "vector representation or a mathematical",
+      "start": 762.639,
+      "duration": 5.121
+    },
+    {
+      "text": "repres representation or the machinies",
+      "start": 765.44,
+      "duration": 6.48
+    },
+    {
+      "text": "of particular thought is computed. So",
+      "start": 767.76,
+      "duration": 7.84
+    },
+    {
+      "text": "that is the method the method is uh self",
+      "start": 771.92,
+      "duration": 7.68
+    },
+    {
+      "text": "attention right so it allows uh the",
+      "start": 775.6,
+      "duration": 6.08
+    },
+    {
+      "text": "ambiguous words to dynamic dynamically",
+      "start": 779.6,
+      "duration": 5.359
+    },
+    {
+      "text": "drift toward their contextual neighbors.",
+      "start": 781.68,
+      "duration": 7.2
+    },
+    {
+      "text": "So the word monarch will drift toward",
+      "start": 784.959,
+      "duration": 7.521
+    },
+    {
+      "text": "the butterfly in the neighborhood if uh",
+      "start": 788.88,
+      "duration": 8.0
+    },
+    {
+      "text": "if if it sees the word cocoon nearby. So",
+      "start": 792.48,
+      "duration": 6.159
+    },
+    {
+      "text": "the",
+      "start": 796.88,
+      "duration": 4.32
+    },
+    {
+      "text": "uh if if if if there if there is",
+      "start": 798.639,
+      "duration": 6.0
+    },
+    {
+      "text": "sentence called she swam across the uh",
+      "start": 801.2,
+      "duration": 6.079
+    },
+    {
+      "text": "she swam to the other bank of the river",
+      "start": 804.639,
+      "duration": 4.64
+    },
+    {
+      "text": "or uh then the word bank would be",
+      "start": 807.279,
+      "duration": 4.961
+    },
+    {
+      "text": "different from the financial bank that",
+      "start": 809.279,
+      "duration": 5.761
+    },
+    {
+      "text": "the neighboring things the neighborhood",
+      "start": 812.24,
+      "duration": 5.039
+    },
+    {
+      "text": "will dictate what is the actual meaning",
+      "start": 815.04,
+      "duration": 5.44
+    },
+    {
+      "text": "of the word right.",
+      "start": 817.279,
+      "duration": 7.841
+    },
+    {
+      "text": "Okay. So we just uh talked about uh yeah",
+      "start": 820.48,
+      "duration": 7.28
+    },
+    {
+      "text": "so that that particular machines is is",
+      "start": 825.12,
+      "duration": 5.04
+    },
+    {
+      "text": "the actual semantic embedding right and",
+      "start": 827.76,
+      "duration": 4.4
+    },
+    {
+      "text": "that has a definitive point on the",
+      "start": 830.16,
+      "duration": 4.08
+    },
+    {
+      "text": "hypersphere",
+      "start": 832.16,
+      "duration": 5.359
+    },
+    {
+      "text": "um in the high dimension space. Now a",
+      "start": 834.24,
+      "duration": 6.88
+    },
+    {
+      "text": "question we just talked about",
+      "start": 837.519,
+      "duration": 7.281
+    },
+    {
+      "text": "uh machinies and semantic solution.",
+      "start": 841.12,
+      "duration": 5.6
+    },
+    {
+      "text": "If every concept gets its own",
+      "start": 844.8,
+      "duration": 4.0
+    },
+    {
+      "text": "coordinate, what happens when we",
+      "start": 846.72,
+      "duration": 5.28
+    },
+    {
+      "text": "introduce a completely new slang word or",
+      "start": 848.8,
+      "duration": 5.92
+    },
+    {
+      "text": "corporate acronym into our system? Does",
+      "start": 852.0,
+      "duration": 7.24
+    },
+    {
+      "text": "the sphere break or does it adapt?",
+      "start": 854.72,
+      "duration": 4.52
+    },
+    {
+      "text": "If you would like to answer anyone",
+      "start": 868.399,
+      "duration": 9.521
+    },
+    {
+      "text": "repeat the question. Uh so when we uh",
+      "start": 872.48,
+      "duration": 7.599
+    },
+    {
+      "text": "uh put a new introduce a new completely",
+      "start": 877.92,
+      "duration": 5.359
+    },
+    {
+      "text": "new word or some corporate acron acronym",
+      "start": 880.079,
+      "duration": 5.44
+    },
+    {
+      "text": "which is not outside not from the",
+      "start": 883.279,
+      "duration": 5.12
+    },
+    {
+      "text": "outside world. Does the sphere break or",
+      "start": 885.519,
+      "duration": 5.521
+    },
+    {
+      "text": "does it adapt the highdimensional sphere",
+      "start": 888.399,
+      "duration": 7.88
+    },
+    {
+      "text": "where all the embeddings are present?",
+      "start": 891.04,
+      "duration": 5.239
+    },
+    {
+      "text": "That new concept is not connected with",
+      "start": 897.199,
+      "duration": 3.921
+    },
+    {
+      "text": "the existing words. Is that what you're",
+      "start": 899.199,
+      "duration": 4.921
+    },
+    {
+      "text": "saying?",
+      "start": 901.12,
+      "duration": 3.0
+    },
+    {
+      "text": "So the surrounding context and then it",
+      "start": 904.56,
+      "duration": 4.719
+    },
+    {
+      "text": "would automatically pull the new word",
+      "start": 907.44,
+      "duration": 5.199
+    },
+    {
+      "text": "right next to the to its contextual",
+      "start": 909.279,
+      "duration": 6.321
+    },
+    {
+      "text": "neighbors on the geometric sphere.",
+      "start": 912.639,
+      "duration": 4.961
+    },
+    {
+      "text": ">> See why you were saying something",
+      "start": 915.6,
+      "duration": 3.84
+    },
+    {
+      "text": ">> it will adapt.",
+      "start": 917.6,
+      "duration": 4.96
+    },
+    {
+      "text": ">> Yeah. Yeah. It would adapt and where",
+      "start": 919.44,
+      "duration": 6.72
+    },
+    {
+      "text": "will it will it put the uh the embedding",
+      "start": 922.56,
+      "duration": 5.2
+    },
+    {
+      "text": "vector",
+      "start": 926.16,
+      "duration": 3.359
+    },
+    {
+      "text": ">> in the context only.",
+      "start": 927.76,
+      "duration": 4.639
+    },
+    {
+      "text": ">> Right. Right.",
+      "start": 929.519,
+      "duration": 5.921
+    },
+    {
+      "text": "So because it adapts so naturally so we",
+      "start": 932.399,
+      "duration": 5.68
+    },
+    {
+      "text": "can uh successfully map a human language",
+      "start": 935.44,
+      "duration": 6.0
+    },
+    {
+      "text": "into a onto a geometric sphere. I think",
+      "start": 938.079,
+      "duration": 5.76
+    },
+    {
+      "text": "that example the good example was what",
+      "start": 941.44,
+      "duration": 4.399
+    },
+    {
+      "text": "as if I think he covered it in the class",
+      "start": 943.839,
+      "duration": 5.041
+    },
+    {
+      "text": "in Jabberwocki the poem Jabberwocki",
+      "start": 945.839,
+      "duration": 5.92
+    },
+    {
+      "text": "where none of the words made sense",
+      "start": 948.88,
+      "duration": 5.6
+    },
+    {
+      "text": ">> yet the if you look in isolation those",
+      "start": 951.759,
+      "duration": 5.121
+    },
+    {
+      "text": "words actually mean nothing but because",
+      "start": 954.48,
+      "duration": 4.08
+    },
+    {
+      "text": "the way the words are structured",
+      "start": 956.88,
+      "duration": 5.28
+    },
+    {
+      "text": "together it was brilliant",
+      "start": 958.56,
+      "duration": 7.12
+    },
+    {
+      "text": "jimble in the way it you start getting",
+      "start": 962.16,
+      "duration": 5.52
+    },
+    {
+      "text": "meaning because of the way those words",
+      "start": 965.68,
+      "duration": 4.88
+    },
+    {
+      "text": "are positioned in the whole sentence. So",
+      "start": 967.68,
+      "duration": 5.839
+    },
+    {
+      "text": "um brille will get uh associated with",
+      "start": 970.56,
+      "duration": 4.56
+    },
+    {
+      "text": "the time of the day and all that even",
+      "start": 973.519,
+      "duration": 2.88
+    },
+    {
+      "text": "though there is no such word called",
+      "start": 975.12,
+      "duration": 4.279
+    },
+    {
+      "text": "brill.",
+      "start": 976.399,
+      "duration": 3.0
+    },
+    {
+      "text": ">> So that's I think it was an example as",
+      "start": 979.839,
+      "duration": 4.24
+    },
+    {
+      "text": "if covered.",
+      "start": 982.24,
+      "duration": 2.159
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 984.079,
+      "duration": 2.961
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 984.399,
+      "duration": 7.201
+    },
+    {
+      "text": "So um it adapts no it adapts so",
+      "start": 987.04,
+      "duration": 8.4
+    },
+    {
+      "text": "naturally. So we can map this uh human",
+      "start": 991.6,
+      "duration": 7.12
+    },
+    {
+      "text": "language into a geometric sphere. So but",
+      "start": 995.44,
+      "duration": 5.6
+    },
+    {
+      "text": "the problem is when the when we don't",
+      "start": 998.72,
+      "duration": 4.4
+    },
+    {
+      "text": "have just three dimension we have 3,000",
+      "start": 1001.04,
+      "duration": 5.84
+    },
+    {
+      "text": "of them right. So [snorts]",
+      "start": 1003.12,
+      "duration": 7.04
+    },
+    {
+      "text": "that that will uh make us go into some",
+      "start": 1006.88,
+      "duration": 5.519
+    },
+    {
+      "text": "applied physics",
+      "start": 1010.16,
+      "duration": 5.44
+    },
+    {
+      "text": "and then we go into the next section the",
+      "start": 1012.399,
+      "duration": 5.12
+    },
+    {
+      "text": "dimensionality conundrum and the",
+      "start": 1015.6,
+      "duration": 5.2
+    },
+    {
+      "text": "breakdown of proximity.",
+      "start": 1017.519,
+      "duration": 5.201
+    },
+    {
+      "text": "So you might think we should use",
+      "start": 1020.8,
+      "duration": 3.68
+    },
+    {
+      "text": "millions of dimensions for perfect",
+      "start": 1022.72,
+      "duration": 5.44
+    },
+    {
+      "text": "accuracy but uh that creates a paradox.",
+      "start": 1024.48,
+      "duration": 6.0
+    },
+    {
+      "text": "Too many dimensions actually destroy the",
+      "start": 1028.16,
+      "duration": 4.08
+    },
+    {
+      "text": "concept of a neighborhood pushing",
+      "start": 1030.48,
+      "duration": 4.559
+    },
+    {
+      "text": "everything equally apart.",
+      "start": 1032.24,
+      "duration": 5.36
+    },
+    {
+      "text": "So as you keep on adding dimensions",
+      "start": 1035.039,
+      "duration": 4.081
+    },
+    {
+      "text": "right",
+      "start": 1037.6,
+      "duration": 3.439
+    },
+    {
+      "text": "uh",
+      "start": 1039.12,
+      "duration": 4.48
+    },
+    {
+      "text": "uh math dictates that all data gets",
+      "start": 1041.039,
+      "duration": 4.4
+    },
+    {
+      "text": "pushed out to the very outer shell of",
+      "start": 1043.6,
+      "duration": 3.52
+    },
+    {
+      "text": "the sphere",
+      "start": 1045.439,
+      "duration": 3.921
+    },
+    {
+      "text": "right on a thousand dimensional space",
+      "start": 1047.12,
+      "duration": 4.64
+    },
+    {
+      "text": "50% of the entire volume exist in just",
+      "start": 1049.36,
+      "duration": 7.76
+    },
+    {
+      "text": "the [snorts] uh point one or 01% of the",
+      "start": 1051.76,
+      "duration": 8.72
+    },
+    {
+      "text": "distance to the edge. So that is that is",
+      "start": 1057.12,
+      "duration": 8.48
+    },
+    {
+      "text": "to say that the uh 99.9%",
+      "start": 1060.48,
+      "duration": 9.12
+    },
+    {
+      "text": "uh of the space inside the sphere is",
+      "start": 1065.6,
+      "duration": 7.199
+    },
+    {
+      "text": "empty right.",
+      "start": 1069.6,
+      "duration": 6.4
+    },
+    {
+      "text": "So all the uh points are pushed near to",
+      "start": 1072.799,
+      "duration": 5.921
+    },
+    {
+      "text": "the edge of the sphere",
+      "start": 1076.0,
+      "duration": 5.36
+    },
+    {
+      "text": "periphery of the sphere.",
+      "start": 1078.72,
+      "duration": 4.4
+    },
+    {
+      "text": "So",
+      "start": 1081.36,
+      "duration": 4.24
+    },
+    {
+      "text": "now comes the",
+      "start": 1083.12,
+      "duration": 5.439
+    },
+    {
+      "text": "how physics is relevant here. So there",
+      "start": 1085.6,
+      "duration": 5.28
+    },
+    {
+      "text": "are physical principles like energy",
+      "start": 1088.559,
+      "duration": 4.961
+    },
+    {
+      "text": "gradients, attraction and repulsion",
+      "start": 1090.88,
+      "duration": 5.36
+    },
+    {
+      "text": "which have a fundamental",
+      "start": 1093.52,
+      "duration": 7.84
+    },
+    {
+      "text": "contribution and uh they are u very much",
+      "start": 1096.24,
+      "duration": 8.72
+    },
+    {
+      "text": "used in the whole [snorts] uh AI uh",
+      "start": 1101.36,
+      "duration": 6.96
+    },
+    {
+      "text": "domain right so that is also a reason",
+      "start": 1104.96,
+      "duration": 5.76
+    },
+    {
+      "text": "why many physicists have become AI",
+      "start": 1108.32,
+      "duration": 4.8
+    },
+    {
+      "text": "scientists.",
+      "start": 1110.72,
+      "duration": 3.839
+    },
+    {
+      "text": "So this is the there is this whole",
+      "start": 1113.12,
+      "duration": 4.559
+    },
+    {
+      "text": "calculation where uh the volume of the",
+      "start": 1114.559,
+      "duration": 7.401
+    },
+    {
+      "text": "sphere is calculated and all.",
+      "start": 1117.679,
+      "duration": 4.281
+    },
+    {
+      "text": "So when we try to visualize the vector",
+      "start": 1122.08,
+      "duration": 6.0
+    },
+    {
+      "text": "space",
+      "start": 1125.2,
+      "duration": 7.2
+    },
+    {
+      "text": "uh it is like uh think of embedding um",
+      "start": 1128.08,
+      "duration": 7.92
+    },
+    {
+      "text": "um uh a vector embedding like pushing a",
+      "start": 1132.4,
+      "duration": 6.48
+    },
+    {
+      "text": "text raisin into a multi-dimensional",
+      "start": 1136.0,
+      "duration": 5.679
+    },
+    {
+      "text": "door. So we are just trying to find its",
+      "start": 1138.88,
+      "duration": 5.418
+    },
+    {
+      "text": "exact GPS coordinates in the space",
+      "start": 1141.679,
+      "duration": 4.88
+    },
+    {
+      "text": "[snorts] right. So",
+      "start": 1144.298,
+      "duration": 4.662
+    },
+    {
+      "text": "so context is the force that would pull",
+      "start": 1146.559,
+      "duration": 4.561
+    },
+    {
+      "text": "on that reason out of a semantic no",
+      "start": 1148.96,
+      "duration": 4.88
+    },
+    {
+      "text": "man's land and place it in a definitive",
+      "start": 1151.12,
+      "duration": 4.72
+    },
+    {
+      "text": "meaningful cluster near the where near",
+      "start": 1153.84,
+      "duration": 4.32
+    },
+    {
+      "text": "to its uh actual neighbors that it",
+      "start": 1155.84,
+      "duration": 6.4
+    },
+    {
+      "text": "should be right.",
+      "start": 1158.16,
+      "duration": 6.16
+    },
+    {
+      "text": "So",
+      "start": 1162.24,
+      "duration": 4.64
+    },
+    {
+      "text": "the grammarian's nightmare and perfect",
+      "start": 1164.32,
+      "duration": 5.44
+    },
+    {
+      "text": "democracy. One thing is that the vector",
+      "start": 1166.88,
+      "duration": 5.36
+    },
+    {
+      "text": "space is a perfect democracy. Whether",
+      "start": 1169.76,
+      "duration": 5.978
+    },
+    {
+      "text": "you embed one word or a 500page book",
+      "start": 1172.24,
+      "duration": 6.64
+    },
+    {
+      "text": "[snorts] or a very long sentence, right?",
+      "start": 1175.738,
+      "duration": 5.702
+    },
+    {
+      "text": "They exactly have one point. They",
+      "start": 1178.88,
+      "duration": 5.2
+    },
+    {
+      "text": "exactly get one vote or one coordinate",
+      "start": 1181.44,
+      "duration": 4.96
+    },
+    {
+      "text": "to say in that multi-dimen high",
+      "start": 1184.08,
+      "duration": 5.36
+    },
+    {
+      "text": "dimensional space. And that is the",
+      "start": 1186.4,
+      "duration": 6.0
+    },
+    {
+      "text": "reason why chunking is so important.",
+      "start": 1189.44,
+      "duration": 6.56
+    },
+    {
+      "text": "Right. And uh chunking is uh we we will",
+      "start": 1192.4,
+      "duration": 5.92
+    },
+    {
+      "text": "have uh more in of chunking in the",
+      "start": 1196.0,
+      "duration": 4.96
+    },
+    {
+      "text": "coming sessions. [snorts] Chunking our",
+      "start": 1198.32,
+      "duration": 4.88
+    },
+    {
+      "text": "data to the right size is very critical",
+      "start": 1200.96,
+      "duration": 4.64
+    },
+    {
+      "text": "to preserve the meaning of the text.",
+      "start": 1203.2,
+      "duration": 5.4
+    },
+    {
+      "text": "Right?",
+      "start": 1205.6,
+      "duration": 3.0
+    },
+    {
+      "text": "So",
+      "start": 1208.72,
+      "duration": 6.72
+    },
+    {
+      "text": "there is uh examples of uh uh voming",
+      "start": 1210.72,
+      "duration": 7.52
+    },
+    {
+      "text": "where the the",
+      "start": 1215.44,
+      "duration": 5.44
+    },
+    {
+      "text": "vast empty spaces are there and they are",
+      "start": 1218.24,
+      "duration": 4.96
+    },
+    {
+      "text": "cleanly [snorts] separate distinct",
+      "start": 1220.88,
+      "duration": 5.039
+    },
+    {
+      "text": "concepts where drastically",
+      "start": 1223.2,
+      "duration": 4.24
+    },
+    {
+      "text": "this also drastically reduces",
+      "start": 1225.919,
+      "duration": 4.081
+    },
+    {
+      "text": "hallucinations.",
+      "start": 1227.44,
+      "duration": 6.08
+    },
+    {
+      "text": "So uh next thing is optimization",
+      "start": 1230.0,
+      "duration": 7.12
+    },
+    {
+      "text": "dynamics. There are two things isotropy",
+      "start": 1233.52,
+      "duration": 6.32
+    },
+    {
+      "text": "and anisotropy.",
+      "start": 1237.12,
+      "duration": 5.439
+    },
+    {
+      "text": "So",
+      "start": 1239.84,
+      "duration": 4.88
+    },
+    {
+      "text": "but first uh have you heard of loss",
+      "start": 1242.559,
+      "duration": 5.885
+    },
+    {
+      "text": "functions? Loss functions are used by in",
+      "start": 1244.72,
+      "duration": 6.0
+    },
+    {
+      "text": "[snorts] all all over AI machine",
+      "start": 1248.444,
+      "duration": 6.676
+    },
+    {
+      "text": "learning and uh so they they act like uh",
+      "start": 1250.72,
+      "duration": 6.64
+    },
+    {
+      "text": "gravity during training. So they will",
+      "start": 1255.12,
+      "duration": 4.32
+    },
+    {
+      "text": "pull similar concepts together and they",
+      "start": 1257.36,
+      "duration": 4.16
+    },
+    {
+      "text": "would forcefully push dissimilar",
+      "start": 1259.44,
+      "duration": 4.08
+    },
+    {
+      "text": "concepts apart.",
+      "start": 1261.52,
+      "duration": 5.2
+    },
+    {
+      "text": "So what is this anisotropy? So a poorly",
+      "start": 1263.52,
+      "duration": 4.8
+    },
+    {
+      "text": "trained model suffers from this",
+      "start": 1266.72,
+      "duration": 4.48
+    },
+    {
+      "text": "anisotropy. That means that all the",
+      "start": 1268.32,
+      "duration": 5.68
+    },
+    {
+      "text": "vectors get squished into a narrow cone",
+      "start": 1271.2,
+      "duration": 4.56
+    },
+    {
+      "text": "failing to capture the subtle",
+      "start": 1274.0,
+      "duration": 5.84
+    },
+    {
+      "text": "differences. There is a image.",
+      "start": 1275.76,
+      "duration": 7.84
+    },
+    {
+      "text": "Yeah. So this is severely anisotropic.",
+      "start": 1279.84,
+      "duration": 7.52
+    },
+    {
+      "text": "So all the con all the uh vectors are",
+      "start": 1283.6,
+      "duration": 7.52
+    },
+    {
+      "text": "cluttered here. Right. heavily and and a",
+      "start": 1287.36,
+      "duration": 6.48
+    },
+    {
+      "text": "vast amount of a space is totally unut",
+      "start": 1291.12,
+      "duration": 4.4
+    },
+    {
+      "text": "unutilized",
+      "start": 1293.84,
+      "duration": 2.64
+    },
+    {
+      "text": "right",
+      "start": 1295.52,
+      "duration": 3.6
+    },
+    {
+      "text": ">> actually uh this one know the the idea",
+      "start": 1296.48,
+      "duration": 4.96
+    },
+    {
+      "text": "was a little different",
+      "start": 1299.12,
+      "duration": 5.679
+    },
+    {
+      "text": ">> uh I think this d this uh because I was",
+      "start": 1301.44,
+      "duration": 6.56
+    },
+    {
+      "text": "uh there in the LLM class we first",
+      "start": 1304.799,
+      "duration": 5.521
+    },
+    {
+      "text": "started with an anisotropic embedding",
+      "start": 1308.0,
+      "duration": 5.6
+    },
+    {
+      "text": "where everything is in a conical region",
+      "start": 1310.32,
+      "duration": 5.44
+    },
+    {
+      "text": "this one is after fine-tuning so",
+      "start": 1313.6,
+      "duration": 4.079
+    },
+    {
+      "text": "basically we had chunks of three",
+      "start": 1315.76,
+      "duration": 3.52
+    },
+    {
+      "text": "different subjects",
+      "start": 1317.679,
+      "duration": 5.281
+    },
+    {
+      "text": "which were uh physics, biology and uh",
+      "start": 1319.28,
+      "duration": 6.0
+    },
+    {
+      "text": "history. So there there must be more",
+      "start": 1322.96,
+      "duration": 6.4
+    },
+    {
+      "text": "diagrams I think uh uh I had",
+      "start": 1325.28,
+      "duration": 5.68
+    },
+    {
+      "text": "unfortunately I had not looked at this",
+      "start": 1329.36,
+      "duration": 3.52
+    },
+    {
+      "text": "summary earlier but it it is not",
+      "start": 1330.96,
+      "duration": 4.0
+    },
+    {
+      "text": "correctly explained here. I'll explain",
+      "start": 1332.88,
+      "duration": 4.4
+    },
+    {
+      "text": "maybe in words right now what was being",
+      "start": 1334.96,
+      "duration": 5.92
+    },
+    {
+      "text": "done was we without without doing this",
+      "start": 1337.28,
+      "duration": 6.24
+    },
+    {
+      "text": "uh uh if you just take standard BER",
+      "start": 1340.88,
+      "duration": 6.08
+    },
+    {
+      "text": "embeddings and try to represent those um",
+      "start": 1343.52,
+      "duration": 5.44
+    },
+    {
+      "text": "concepts that were in physics biology",
+      "start": 1346.96,
+      "duration": 5.28
+    },
+    {
+      "text": "and history into the vector space all",
+      "start": 1348.96,
+      "duration": 6.4
+    },
+    {
+      "text": "the vectors were in a",
+      "start": 1352.24,
+      "duration": 6.16
+    },
+    {
+      "text": "conical anisotropic region that was the",
+      "start": 1355.36,
+      "duration": 4.96
+    },
+    {
+      "text": "that I don't think that picture is there",
+      "start": 1358.4,
+      "duration": 4.159
+    },
+    {
+      "text": "in this summary yet we may need to bring",
+      "start": 1360.32,
+      "duration": 5.599
+    },
+    {
+      "text": "it Then the other second was when we",
+      "start": 1362.559,
+      "duration": 6.801
+    },
+    {
+      "text": "took in the sentence transformers based",
+      "start": 1365.919,
+      "duration": 5.601
+    },
+    {
+      "text": "uh embeddings.",
+      "start": 1369.36,
+      "duration": 7.04
+    },
+    {
+      "text": "Uh it was going into a uh more uh",
+      "start": 1371.52,
+      "duration": 8.32
+    },
+    {
+      "text": "distributed where uh the the the",
+      "start": 1376.4,
+      "duration": 6.08
+    },
+    {
+      "text": "anisotropy was addressed and they were",
+      "start": 1379.84,
+      "duration": 4.16
+    },
+    {
+      "text": "going into different directions like",
+      "start": 1382.48,
+      "duration": 3.679
+    },
+    {
+      "text": "physics was going in one direction,",
+      "start": 1384.0,
+      "duration": 4.0
+    },
+    {
+      "text": "biology was going in another direction",
+      "start": 1386.159,
+      "duration": 3.361
+    },
+    {
+      "text": "and history was going in a third",
+      "start": 1388.0,
+      "duration": 3.84
+    },
+    {
+      "text": "direction. So that was good but still",
+      "start": 1389.52,
+      "duration": 5.44
+    },
+    {
+      "text": "there was a lot of overlap in it. Okay.",
+      "start": 1391.84,
+      "duration": 5.44
+    },
+    {
+      "text": "Then the third visualization what you're",
+      "start": 1394.96,
+      "duration": 4.079
+    },
+    {
+      "text": "showing is actually a fine-tuned",
+      "start": 1397.28,
+      "duration": 4.879
+    },
+    {
+      "text": "embedding where we are making sure that",
+      "start": 1399.039,
+      "duration": 5.681
+    },
+    {
+      "text": "concepts related to physics get",
+      "start": 1402.159,
+      "duration": 5.041
+    },
+    {
+      "text": "clustered together concept related to",
+      "start": 1404.72,
+      "duration": 5.52
+    },
+    {
+      "text": "history get clustered together and with",
+      "start": 1407.2,
+      "duration": 5.76
+    },
+    {
+      "text": "respect to biology get so that way each",
+      "start": 1410.24,
+      "duration": 5.679
+    },
+    {
+      "text": "one of them so actually this is uh I",
+      "start": 1412.96,
+      "duration": 4.8
+    },
+    {
+      "text": "would say this is the best case where",
+      "start": 1415.919,
+      "duration": 3.681
+    },
+    {
+      "text": "after fine-tuning you have come to this",
+      "start": 1417.76,
+      "duration": 4.08
+    },
+    {
+      "text": "embedding where the vectors of these",
+      "start": 1419.6,
+      "duration": 4.0
+    },
+    {
+      "text": "three different subjects are really",
+      "start": 1421.84,
+      "duration": 3.36
+    },
+    {
+      "text": "really far apart.",
+      "start": 1423.6,
+      "duration": 4.4
+    },
+    {
+      "text": "So this is the caption is actually wrong",
+      "start": 1425.2,
+      "duration": 4.0
+    },
+    {
+      "text": "here.",
+      "start": 1428.0,
+      "duration": 4.4
+    },
+    {
+      "text": ">> Okay. Okay.",
+      "start": 1429.2,
+      "duration": 5.12
+    },
+    {
+      "text": ">> Anyway, uh I think we'll have to correct",
+      "start": 1432.4,
+      "duration": 4.159
+    },
+    {
+      "text": "it. I unfortunately I had not noticed",
+      "start": 1434.32,
+      "duration": 5.04
+    },
+    {
+      "text": "this earlier but yeah let's go ahead.",
+      "start": 1436.559,
+      "duration": 5.801
+    },
+    {
+      "text": ">> Okay.",
+      "start": 1439.36,
+      "duration": 3.0
+    },
+    {
+      "text": "So",
+      "start": 1442.48,
+      "duration": 6.16
+    },
+    {
+      "text": "isotropy right? So an isotropy is uh",
+      "start": 1444.96,
+      "duration": 5.839
+    },
+    {
+      "text": "when a poorly trained model suffers from",
+      "start": 1448.64,
+      "duration": 4.08
+    },
+    {
+      "text": "an isotropy",
+      "start": 1450.799,
+      "duration": 5.041
+    },
+    {
+      "text": "uh that all the vectors are into a",
+      "start": 1452.72,
+      "duration": 6.88
+    },
+    {
+      "text": "narrow cone and then isotropy is to",
+      "start": 1455.84,
+      "duration": 6.079
+    },
+    {
+      "text": "achieve optimal separation. A high",
+      "start": 1459.6,
+      "duration": 5.28
+    },
+    {
+      "text": "quality model achieves isotropy that",
+      "start": 1461.919,
+      "duration": 5.12
+    },
+    {
+      "text": "utilizes all available dimensions to",
+      "start": 1464.88,
+      "duration": 3.679
+    },
+    {
+      "text": "perfectly separate and distribute",
+      "start": 1467.039,
+      "duration": 4.401
+    },
+    {
+      "text": "concept across the entire sphere. Right?",
+      "start": 1468.559,
+      "duration": 4.801
+    },
+    {
+      "text": "And the third case which you showed, no",
+      "start": 1471.44,
+      "duration": 3.599
+    },
+    {
+      "text": "actually it is the even better case",
+      "start": 1473.36,
+      "duration": 4.48
+    },
+    {
+      "text": "because our goal was to separate out",
+      "start": 1475.039,
+      "duration": 6.801
+    },
+    {
+      "text": "concepts very clearly and it is no the",
+      "start": 1477.84,
+      "duration": 5.439
+    },
+    {
+      "text": "not this one.",
+      "start": 1481.84,
+      "duration": 1.839
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 1483.279,
+      "duration": 3.841
+    },
+    {
+      "text": ">> Here here the here is this is the best",
+      "start": 1483.679,
+      "duration": 5.281
+    },
+    {
+      "text": "case scenario where we have separated",
+      "start": 1487.12,
+      "duration": 4.64
+    },
+    {
+      "text": "out the concepts very clearly. It is not",
+      "start": 1488.96,
+      "duration": 5.36
+    },
+    {
+      "text": "anisotropic. This is actually the better",
+      "start": 1491.76,
+      "duration": 5.6
+    },
+    {
+      "text": "than isotropic.",
+      "start": 1494.32,
+      "duration": 6.88
+    },
+    {
+      "text": "in in anizotropic all these concepts are",
+      "start": 1497.36,
+      "duration": 5.919
+    },
+    {
+      "text": "merged together in one narrow conical",
+      "start": 1501.2,
+      "duration": 4.479
+    },
+    {
+      "text": "region.",
+      "start": 1503.279,
+      "duration": 2.721
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 1505.679,
+      "duration": 1.841
+    },
+    {
+      "text": ">> You got the difference?",
+      "start": 1506.0,
+      "duration": 2.64
+    },
+    {
+      "text": ">> Yeah. Yeah. Yeah.",
+      "start": 1507.52,
+      "duration": 5.039
+    },
+    {
+      "text": ">> Okay. So I hope uh Barat and Shiva I",
+      "start": 1508.64,
+      "duration": 5.76
+    },
+    {
+      "text": "think you guys are probably did you",
+      "start": 1512.559,
+      "duration": 4.321
+    },
+    {
+      "text": "understand the point here? You are",
+      "start": 1514.4,
+      "duration": 4.639
+    },
+    {
+      "text": "probably there in the class also.",
+      "start": 1516.88,
+      "duration": 3.679
+    },
+    {
+      "text": ">> Yeah. Yeah.",
+      "start": 1519.039,
+      "duration": 3.76
+    },
+    {
+      "text": ">> Okay. Anyway, we will correct this and",
+      "start": 1520.559,
+      "duration": 4.48
+    },
+    {
+      "text": "uh upload it. But uh uh I hope you",
+      "start": 1522.799,
+      "duration": 4.161
+    },
+    {
+      "text": "understood what I am trying to explain.",
+      "start": 1525.039,
+      "duration": 5.12
+    },
+    {
+      "text": "Uh the three concepts uh when you try to",
+      "start": 1526.96,
+      "duration": 5.44
+    },
+    {
+      "text": "create vectors like in this case we have",
+      "start": 1530.159,
+      "duration": 4.161
+    },
+    {
+      "text": "deliberately chosen just three concepts",
+      "start": 1532.4,
+      "duration": 4.24
+    },
+    {
+      "text": "physics, biology and history and we",
+      "start": 1534.32,
+      "duration": 4.64
+    },
+    {
+      "text": "created embeddings out of them. Now if",
+      "start": 1536.64,
+      "duration": 4.72
+    },
+    {
+      "text": "you took regular BERT embeddings you",
+      "start": 1538.96,
+      "duration": 4.4
+    },
+    {
+      "text": "will find that all of them are in a",
+      "start": 1541.36,
+      "duration": 5.199
+    },
+    {
+      "text": "narrow conical region. Okay. And uh in",
+      "start": 1543.36,
+      "duration": 6.08
+    },
+    {
+      "text": "fact uh I can show that uh but it's",
+      "start": 1546.559,
+      "duration": 4.881
+    },
+    {
+      "text": "okay. I don't want to digress. So they",
+      "start": 1549.44,
+      "duration": 3.68
+    },
+    {
+      "text": "were they are in a narrow conical region",
+      "start": 1551.44,
+      "duration": 3.359
+    },
+    {
+      "text": "where it is very difficult to separate",
+      "start": 1553.12,
+      "duration": 4.96
+    },
+    {
+      "text": "them out. Then you go to the next um one",
+      "start": 1554.799,
+      "duration": 5.201
+    },
+    {
+      "text": "level better rather than just BERT",
+      "start": 1558.08,
+      "duration": 4.32
+    },
+    {
+      "text": "embeddings which is where there is no",
+      "start": 1560.0,
+      "duration": 4.4
+    },
+    {
+      "text": "push between different concepts. You",
+      "start": 1562.4,
+      "duration": 5.2
+    },
+    {
+      "text": "take something like sentence B where uh",
+      "start": 1564.4,
+      "duration": 7.759
+    },
+    {
+      "text": "you can push apart uh uh concepts which",
+      "start": 1567.6,
+      "duration": 7.6
+    },
+    {
+      "text": "mean different uh you end up pushing",
+      "start": 1572.159,
+      "duration": 5.281
+    },
+    {
+      "text": "them apart. Then there you see a little",
+      "start": 1575.2,
+      "duration": 4.88
+    },
+    {
+      "text": "bit more isotropy. By isotropy it means",
+      "start": 1577.44,
+      "duration": 4.56
+    },
+    {
+      "text": "more directions are getting utilized in",
+      "start": 1580.08,
+      "duration": 4.079
+    },
+    {
+      "text": "the space. So there you see that the",
+      "start": 1582.0,
+      "duration": 5.36
+    },
+    {
+      "text": "physics u uh related embeddings are in",
+      "start": 1584.159,
+      "duration": 6.081
+    },
+    {
+      "text": "one direction biology related in another",
+      "start": 1587.36,
+      "duration": 4.96
+    },
+    {
+      "text": "direction and history related in yet",
+      "start": 1590.24,
+      "duration": 4.48
+    },
+    {
+      "text": "another direction. But what you notice",
+      "start": 1592.32,
+      "duration": 4.32
+    },
+    {
+      "text": "in that embedding is there is still a",
+      "start": 1594.72,
+      "duration": 4.72
+    },
+    {
+      "text": "lot of overlapping regions where all",
+      "start": 1596.64,
+      "duration": 4.639
+    },
+    {
+      "text": "three are combined. Even though they are",
+      "start": 1599.44,
+      "duration": 3.68
+    },
+    {
+      "text": "in different directions, there is a",
+      "start": 1601.279,
+      "duration": 3.681
+    },
+    {
+      "text": "cluster of points where they overlap",
+      "start": 1603.12,
+      "duration": 5.12
+    },
+    {
+      "text": "also with the sentence but",
+      "start": 1604.96,
+      "duration": 5.68
+    },
+    {
+      "text": "transformations. And then we go to this",
+      "start": 1608.24,
+      "duration": 4.319
+    },
+    {
+      "text": "uh fine-tuned models where we have",
+      "start": 1610.64,
+      "duration": 4.639
+    },
+    {
+      "text": "explicitly said anything which belongs",
+      "start": 1612.559,
+      "duration": 5.281
+    },
+    {
+      "text": "to physics bring them together but if",
+      "start": 1615.279,
+      "duration": 4.241
+    },
+    {
+      "text": "they are two different subjects push",
+      "start": 1617.84,
+      "duration": 3.92
+    },
+    {
+      "text": "them apart and once you do that",
+      "start": 1619.52,
+      "duration": 4.399
+    },
+    {
+      "text": "fine-tuning which may be required in",
+      "start": 1621.76,
+      "duration": 5.36
+    },
+    {
+      "text": "your domain depending on I mean uh it's",
+      "start": 1623.919,
+      "duration": 4.401
+    },
+    {
+      "text": "not necessary that you are in the",
+      "start": 1627.12,
+      "duration": 3.36
+    },
+    {
+      "text": "physics biology history domain. Let us",
+      "start": 1628.32,
+      "duration": 5.2
+    },
+    {
+      "text": "say you are in a very specific uh uh",
+      "start": 1630.48,
+      "duration": 5.52
+    },
+    {
+      "text": "cancer research domain. So within uh",
+      "start": 1633.52,
+      "duration": 5.039
+    },
+    {
+      "text": "cancer research all the concepts which",
+      "start": 1636.0,
+      "duration": 4.88
+    },
+    {
+      "text": "are similar should get pulled together",
+      "start": 1638.559,
+      "duration": 4.24
+    },
+    {
+      "text": "which are actually dissimilar should get",
+      "start": 1640.88,
+      "duration": 4.799
+    },
+    {
+      "text": "pushed apart. Uh if you do that kind of",
+      "start": 1642.799,
+      "duration": 6.321
+    },
+    {
+      "text": "a fine-tuning then you will find that u",
+      "start": 1645.679,
+      "duration": 7.6
+    },
+    {
+      "text": "the points which are really close by are",
+      "start": 1649.12,
+      "duration": 6.96
+    },
+    {
+      "text": "the ones which cluster together. uh like",
+      "start": 1653.279,
+      "duration": 6.161
+    },
+    {
+      "text": "for example if there is a in in cancer",
+      "start": 1656.08,
+      "duration": 4.88
+    },
+    {
+      "text": "research if there is something on",
+      "start": 1659.44,
+      "duration": 4.32
+    },
+    {
+      "text": "ovarian cancer something else on uh I",
+      "start": 1660.96,
+      "duration": 5.68
+    },
+    {
+      "text": "don't know breast cancer uh in a typical",
+      "start": 1663.76,
+      "duration": 4.64
+    },
+    {
+      "text": "embedding they may have got clumped",
+      "start": 1666.64,
+      "duration": 4.0
+    },
+    {
+      "text": "together but in a fine-tuned embedding",
+      "start": 1668.4,
+      "duration": 4.159
+    },
+    {
+      "text": "they will be in two different clusters",
+      "start": 1670.64,
+      "duration": 3.68
+    },
+    {
+      "text": "so that is the point that we are trying",
+      "start": 1672.559,
+      "duration": 4.24
+    },
+    {
+      "text": "to cover here",
+      "start": 1674.32,
+      "duration": 5.04
+    },
+    {
+      "text": "yeah",
+      "start": 1676.799,
+      "duration": 4.321
+    },
+    {
+      "text": "can go ahead pindu I don't know",
+      "start": 1679.36,
+      "duration": 4.48
+    },
+    {
+      "text": ">> yeah thank you thank you chand [snorts]",
+      "start": 1681.12,
+      "duration": 5.679
+    },
+    {
+      "text": "So",
+      "start": 1683.84,
+      "duration": 7.76
+    },
+    {
+      "text": "uh so we went into uh the whole isotropy",
+      "start": 1686.799,
+      "duration": 7.921
+    },
+    {
+      "text": "and isotropy discussion.",
+      "start": 1691.6,
+      "duration": 7.36
+    },
+    {
+      "text": "So the next topic is uh blessing of high",
+      "start": 1694.72,
+      "duration": 6.48
+    },
+    {
+      "text": "dimensions. So there is this thing",
+      "start": 1698.96,
+      "duration": 4.56
+    },
+    {
+      "text": "called the concentration of measures. In",
+      "start": 1701.2,
+      "duration": 5.04
+    },
+    {
+      "text": "this high dimensions the distances",
+      "start": 1703.52,
+      "duration": 5.279
+    },
+    {
+      "text": "actually normalize which is actually a",
+      "start": 1706.24,
+      "duration": 5.439
+    },
+    {
+      "text": "blessing because it makes our semantic",
+      "start": 1708.799,
+      "duration": 4.961
+    },
+    {
+      "text": "search highly predictable.",
+      "start": 1711.679,
+      "duration": 4.24
+    },
+    {
+      "text": "So",
+      "start": 1713.76,
+      "duration": 4.32
+    },
+    {
+      "text": "uh there is also a discussion on polar",
+      "start": 1715.919,
+      "duration": 4.801
+    },
+    {
+      "text": "beer analogy",
+      "start": 1718.08,
+      "duration": 4.24
+    },
+    {
+      "text": "uh",
+      "start": 1720.72,
+      "duration": 4.559
+    },
+    {
+      "text": "and the cosine similarity. So we use",
+      "start": 1722.32,
+      "duration": 4.8
+    },
+    {
+      "text": "cosine similarity to measure the angle",
+      "start": 1725.279,
+      "duration": 3.76
+    },
+    {
+      "text": "between vectors rather than their",
+      "start": 1727.12,
+      "duration": 3.439
+    },
+    {
+      "text": "length.",
+      "start": 1729.039,
+      "duration": 4.52
+    },
+    {
+      "text": "So",
+      "start": 1730.559,
+      "duration": 3.0
+    },
+    {
+      "text": "uh it is uh you can have this uh the",
+      "start": 1735.2,
+      "duration": 6.4
+    },
+    {
+      "text": "polar polar bear at the north pole of a",
+      "start": 1739.039,
+      "duration": 6.0
+    },
+    {
+      "text": "globe at second one as the north pole uh",
+      "start": 1741.6,
+      "duration": 5.12
+    },
+    {
+      "text": "which is alongside the first. So their",
+      "start": 1745.039,
+      "duration": 3.36
+    },
+    {
+      "text": "angular separation would be zero. The",
+      "start": 1746.72,
+      "duration": 5.36
+    },
+    {
+      "text": "cosine of zero is one and thus it is uh",
+      "start": 1748.399,
+      "duration": 6.88
+    },
+    {
+      "text": "perfect semantic alignment and and we",
+      "start": 1752.08,
+      "duration": 6.079
+    },
+    {
+      "text": "can have a penguin at the south pole. So",
+      "start": 1755.279,
+      "duration": 7.041
+    },
+    {
+      "text": "this the it is separated by 180\u00b0. So the",
+      "start": 1758.159,
+      "duration": 7.12
+    },
+    {
+      "text": "cosine is -1.",
+      "start": 1762.32,
+      "duration": 5.839
+    },
+    {
+      "text": "So that is semantic opposition and other",
+      "start": 1765.279,
+      "duration": 6.64
+    },
+    {
+      "text": "parakeet that is on the equator 90\u00b0",
+      "start": 1768.159,
+      "duration": 5.841
+    },
+    {
+      "text": "which is totally",
+      "start": 1771.919,
+      "duration": 6.64
+    },
+    {
+      "text": "uh orthogonal right semantic neutrality.",
+      "start": 1774.0,
+      "duration": 8.93
+    },
+    {
+      "text": "So there was also a task given and uh",
+      "start": 1778.559,
+      "duration": 7.84
+    },
+    {
+      "text": "[snorts] we had to calculate this uh",
+      "start": 1782.93,
+      "duration": 6.19
+    },
+    {
+      "text": "histogram",
+      "start": 1786.399,
+      "duration": 5.441
+    },
+    {
+      "text": "of the cosine similarity. So as we",
+      "start": 1789.12,
+      "duration": 5.76
+    },
+    {
+      "text": "increase the dimension from 10 to 100",
+      "start": 1791.84,
+      "duration": 7.439
+    },
+    {
+      "text": "to,000 we see this uh this curve is more",
+      "start": 1794.88,
+      "duration": 9.039
+    },
+    {
+      "text": "steep right more pointed uh at zero.",
+      "start": 1799.279,
+      "duration": 9.12
+    },
+    {
+      "text": "What this suggests is that uh",
+      "start": 1803.919,
+      "duration": 8.321
+    },
+    {
+      "text": "Uh it suggests that a lot of uh when we",
+      "start": 1808.399,
+      "duration": 6.721
+    },
+    {
+      "text": "have higher dimensions [snorts] uh we",
+      "start": 1812.24,
+      "duration": 5.84
+    },
+    {
+      "text": "have a lot of uh vectors that are uh",
+      "start": 1815.12,
+      "duration": 6.559
+    },
+    {
+      "text": "actually orthogonal and only the ones",
+      "start": 1818.08,
+      "duration": 7.599
+    },
+    {
+      "text": "that are uh meaningfully uh relevant or",
+      "start": 1821.679,
+      "duration": 5.841
+    },
+    {
+      "text": "neighbor should be the neighbor or",
+      "start": 1825.679,
+      "duration": 5.761
+    },
+    {
+      "text": "contextual neighbors that is the that is",
+      "start": 1827.52,
+      "duration": 8.24
+    },
+    {
+      "text": "they would be uh only only those would",
+      "start": 1831.44,
+      "duration": 7.28
+    },
+    {
+      "text": "be nearby Right.",
+      "start": 1835.76,
+      "duration": 7.2
+    },
+    {
+      "text": "So that is the spherical cone on of for",
+      "start": 1838.72,
+      "duration": 6.72
+    },
+    {
+      "text": "a particular vector and in that",
+      "start": 1842.96,
+      "duration": 6.64
+    },
+    {
+      "text": "spherical cone what we have anything",
+      "start": 1845.44,
+      "duration": 5.839
+    },
+    {
+      "text": "irrelevant we are not going to have",
+      "start": 1849.6,
+      "duration": 4.4
+    },
+    {
+      "text": "because most of the things would be",
+      "start": 1851.279,
+      "duration": 4.64
+    },
+    {
+      "text": "orthogonal. So they are not going to be",
+      "start": 1854.0,
+      "duration": 4.24
+    },
+    {
+      "text": "in the spherical cone and thus the",
+      "start": 1855.919,
+      "duration": 4.64
+    },
+    {
+      "text": "spherical cone only would have something",
+      "start": 1858.24,
+      "duration": 5.52
+    },
+    {
+      "text": "that is really totally relevant that is",
+      "start": 1860.559,
+      "duration": 6.081
+    },
+    {
+      "text": "this is uh the purity of uh this",
+      "start": 1863.76,
+      "duration": 6.399
+    },
+    {
+      "text": "spherical cone is guaranteed when you",
+      "start": 1866.64,
+      "duration": 6.639
+    },
+    {
+      "text": "have more number of dimensions.",
+      "start": 1870.159,
+      "duration": 5.681
+    },
+    {
+      "text": "There is also this uh thing called the",
+      "start": 1873.279,
+      "duration": 6.561
+    },
+    {
+      "text": "goldilocks region. So we have to uh",
+      "start": 1875.84,
+      "duration": 6.16
+    },
+    {
+      "text": "figure out right there are two competing",
+      "start": 1879.84,
+      "duration": 5.439
+    },
+    {
+      "text": "forces like the curse of dimensionality",
+      "start": 1882.0,
+      "duration": 5.52
+    },
+    {
+      "text": "uh which destroys proximity and the",
+      "start": 1885.279,
+      "duration": 4.0
+    },
+    {
+      "text": "concentration of measures which would",
+      "start": 1887.52,
+      "duration": 5.36
+    },
+    {
+      "text": "guarantee purity of the spherical coal.",
+      "start": 1889.279,
+      "duration": 5.841
+    },
+    {
+      "text": "So there is a goldilocks zone for",
+      "start": 1892.88,
+      "duration": 4.399
+    },
+    {
+      "text": "embeddings that is between several",
+      "start": 1895.12,
+      "duration": 4.64
+    },
+    {
+      "text": "hundreds and roughly 4,000 to 8,000",
+      "start": 1897.279,
+      "duration": 5.481
+    },
+    {
+      "text": "dimensions.",
+      "start": 1899.76,
+      "duration": 3.0
+    },
+    {
+      "text": "Coming to the next topic the sub subtext",
+      "start": 1902.96,
+      "duration": 6.079
+    },
+    {
+      "text": "of uh semantic search.",
+      "start": 1905.519,
+      "duration": 6.0
+    },
+    {
+      "text": "So because the",
+      "start": 1909.039,
+      "duration": 7.681
+    },
+    {
+      "text": "uh because of this this uh uh emotional",
+      "start": 1911.519,
+      "duration": 7.76
+    },
+    {
+      "text": "resonance right the machine extracts the",
+      "start": 1916.72,
+      "duration": 6.559
+    },
+    {
+      "text": "emotional resonance of the of two words",
+      "start": 1919.279,
+      "duration": 6.561
+    },
+    {
+      "text": "to figure out if they are similar or",
+      "start": 1923.279,
+      "duration": 6.24
+    },
+    {
+      "text": "not. Because of this uh geometry only",
+      "start": 1925.84,
+      "duration": 5.679
+    },
+    {
+      "text": "the vectors capture the underlying",
+      "start": 1929.519,
+      "duration": 5.441
+    },
+    {
+      "text": "emotional tone and the subtext of an of",
+      "start": 1931.519,
+      "duration": 6.321
+    },
+    {
+      "text": "a sentence that is going for going that",
+      "start": 1934.96,
+      "duration": 4.8
+    },
+    {
+      "text": "is going beyond the literal keyword",
+      "start": 1937.84,
+      "duration": 4.0
+    },
+    {
+      "text": "matching.",
+      "start": 1939.76,
+      "duration": 5.039
+    },
+    {
+      "text": "So resourcerich languages",
+      "start": 1941.84,
+      "duration": 5.199
+    },
+    {
+      "text": "uh so there are languages which are",
+      "start": 1944.799,
+      "duration": 5.841
+    },
+    {
+      "text": "resourc that uh the machines are trained",
+      "start": 1947.039,
+      "duration": 6.64
+    },
+    {
+      "text": "mostly on those resourcerich languages.",
+      "start": 1950.64,
+      "duration": 5.279
+    },
+    {
+      "text": "Uh so embeddings can also act as a",
+      "start": 1953.679,
+      "duration": 4.641
+    },
+    {
+      "text": "universal translation translation bridge",
+      "start": 1955.919,
+      "duration": 4.48
+    },
+    {
+      "text": "which naturally maps concept across",
+      "start": 1958.32,
+      "duration": 4.4
+    },
+    {
+      "text": "different human languages without",
+      "start": 1960.399,
+      "duration": 6.4
+    },
+    {
+      "text": "needing the traditional dictionaries. So",
+      "start": 1962.72,
+      "duration": 7.439
+    },
+    {
+      "text": "that is also one use of uh this whole",
+      "start": 1966.799,
+      "duration": 5.76
+    },
+    {
+      "text": "embeddings.",
+      "start": 1970.159,
+      "duration": 5.12
+    },
+    {
+      "text": "Now we can then we have multimodel",
+      "start": 1972.559,
+      "duration": 6.081
+    },
+    {
+      "text": "embeddings as well. So we can even map",
+      "start": 1975.279,
+      "duration": 6.721
+    },
+    {
+      "text": "images and text into the same uh the",
+      "start": 1978.64,
+      "duration": 6.56
+    },
+    {
+      "text": "same spatial coordinates, the same uh uh",
+      "start": 1982.0,
+      "duration": 5.279
+    },
+    {
+      "text": "vector space that allows us to search",
+      "start": 1985.2,
+      "duration": 5.52
+    },
+    {
+      "text": "for pictures using text right and",
+      "start": 1987.279,
+      "duration": 6.921
+    },
+    {
+      "text": "abstract ideas.",
+      "start": 1990.72,
+      "duration": 3.48
+    },
+    {
+      "text": "Now coming to the architecture of a",
+      "start": 1995.36,
+      "duration": 6.559
+    },
+    {
+      "text": "retrieval augmented generation system.",
+      "start": 1997.679,
+      "duration": 5.84
+    },
+    {
+      "text": "It is like given knowledge giving",
+      "start": 2001.919,
+      "duration": 4.081
+    },
+    {
+      "text": "knowledge of voice. Ultimately drag is",
+      "start": 2003.519,
+      "duration": 5.04
+    },
+    {
+      "text": "about taking a dormant static databases",
+      "start": 2006.0,
+      "duration": 4.799
+    },
+    {
+      "text": "and give them to giving them an",
+      "start": 2008.559,
+      "duration": 4.934
+    },
+    {
+      "text": "articulate voice and that voice is given",
+      "start": 2010.799,
+      "duration": 5.441
+    },
+    {
+      "text": "[snorts] by the generator. So there is",
+      "start": 2013.493,
+      "duration": 7.147
+    },
+    {
+      "text": "this uh Galileo's square cube law and uh",
+      "start": 2016.24,
+      "duration": 6.48
+    },
+    {
+      "text": "you can buy a simple drag system off the",
+      "start": 2020.64,
+      "duration": 4.639
+    },
+    {
+      "text": "shelf like a car but uh for enterprise",
+      "start": 2022.72,
+      "duration": 6.079
+    },
+    {
+      "text": "scale you will need to build the engine",
+      "start": 2025.279,
+      "duration": 6.161
+    },
+    {
+      "text": "from a scratch",
+      "start": 2028.799,
+      "duration": 5.041
+    },
+    {
+      "text": "that uh I mean you cannot just get out",
+      "start": 2031.44,
+      "duration": 6.32
+    },
+    {
+      "text": "of the box rack frameworks for your",
+      "start": 2033.84,
+      "duration": 6.959
+    },
+    {
+      "text": "enterprise system.",
+      "start": 2037.76,
+      "duration": 5.84
+    },
+    {
+      "text": "So uh models must be taught epistemic",
+      "start": 2040.799,
+      "duration": 5.12
+    },
+    {
+      "text": "humility and that is the ability to",
+      "start": 2043.6,
+      "duration": 6.64
+    },
+    {
+      "text": "admit that they don't know without it uh",
+      "start": 2045.919,
+      "duration": 7.361
+    },
+    {
+      "text": "they will even hallucinate things and",
+      "start": 2050.24,
+      "duration": 6.48
+    },
+    {
+      "text": "say something that they don't know right",
+      "start": 2053.28,
+      "duration": 9.04
+    },
+    {
+      "text": "uh there is also an example of uh I mean",
+      "start": 2056.72,
+      "duration": 9.84
+    },
+    {
+      "text": "uh this uh there is a of uh uh system",
+      "start": 2062.32,
+      "duration": 7.839
+    },
+    {
+      "text": "that suggest uh some competitors uh",
+      "start": 2066.56,
+      "duration": 6.16
+    },
+    {
+      "text": "products, right?",
+      "start": 2070.159,
+      "duration": 6.401
+    },
+    {
+      "text": "And the necessity of citations. So, we",
+      "start": 2072.72,
+      "duration": 5.76
+    },
+    {
+      "text": "have to enforce this humility by",
+      "start": 2076.56,
+      "duration": 4.0
+    },
+    {
+      "text": "requiring strict citations. If the model",
+      "start": 2078.48,
+      "duration": 4.56
+    },
+    {
+      "text": "can't site the retrieved context, it",
+      "start": 2080.56,
+      "duration": 6.799
+    },
+    {
+      "text": "should not be allowed to speak. And uh",
+      "start": 2083.04,
+      "duration": 7.92
+    },
+    {
+      "text": "this this is also related to uh a famous",
+      "start": 2087.359,
+      "duration": 5.52
+    },
+    {
+      "text": "philosopher",
+      "start": 2090.96,
+      "duration": 4.719
+    },
+    {
+      "text": "uh Lewig Vidgerstein who said what",
+      "start": 2092.879,
+      "duration": 5.361
+    },
+    {
+      "text": "wherever we do not know there uh there",
+      "start": 2095.679,
+      "duration": 5.121
+    },
+    {
+      "text": "we must be silent. So the model should",
+      "start": 2098.24,
+      "duration": 5.76
+    },
+    {
+      "text": "also behave similarly that is epistemic",
+      "start": 2100.8,
+      "duration": 6.0
+    },
+    {
+      "text": "humility.",
+      "start": 2104.0,
+      "duration": 5.599
+    },
+    {
+      "text": "So",
+      "start": 2106.8,
+      "duration": 6.16
+    },
+    {
+      "text": "uh advice for uh gaining mastery over",
+      "start": 2109.599,
+      "duration": 8.24
+    },
+    {
+      "text": "the topic be uh like uh Oliver twist and",
+      "start": 2112.96,
+      "duration": 7.84
+    },
+    {
+      "text": "uh ask for more right [snorts] uh read",
+      "start": 2117.839,
+      "duration": 6.561
+    },
+    {
+      "text": "more and uh try to read the whole study",
+      "start": 2120.8,
+      "duration": 6.72
+    },
+    {
+      "text": "materials that are shared and all.",
+      "start": 2124.4,
+      "duration": 6.0
+    },
+    {
+      "text": "So next is cognitive and mathematical",
+      "start": 2127.52,
+      "duration": 5.12
+    },
+    {
+      "text": "foundations of attention.",
+      "start": 2130.4,
+      "duration": 5.28
+    },
+    {
+      "text": "So we have uh this uh sensory noise and",
+      "start": 2132.64,
+      "duration": 5.68
+    },
+    {
+      "text": "the mechanics of isolation. The [snorts]",
+      "start": 2135.68,
+      "duration": 5.52
+    },
+    {
+      "text": "biological attention also works by",
+      "start": 2138.32,
+      "duration": 5.2
+    },
+    {
+      "text": "filtering out the sensory sensory noise",
+      "start": 2141.2,
+      "duration": 6.159
+    },
+    {
+      "text": "and allocating our finite processing",
+      "start": 2143.52,
+      "duration": 7.2
+    },
+    {
+      "text": "power to a single signal.",
+      "start": 2147.359,
+      "duration": 5.361
+    },
+    {
+      "text": "Uh and that is how we are able to even",
+      "start": 2150.72,
+      "duration": 4.48
+    },
+    {
+      "text": "listen or talk on phone when we are in a",
+      "start": 2152.72,
+      "duration": 5.44
+    },
+    {
+      "text": "crowded crowded space.",
+      "start": 2155.2,
+      "duration": 5.12
+    },
+    {
+      "text": "Um the",
+      "start": 2158.16,
+      "duration": 6.0
+    },
+    {
+      "text": "in machines what happens is attention we",
+      "start": 2160.32,
+      "duration": 6.48
+    },
+    {
+      "text": "calculate attention and that attention",
+      "start": 2164.16,
+      "duration": 6.16
+    },
+    {
+      "text": "is actually uh attention score of uh",
+      "start": 2166.8,
+      "duration": 6.559
+    },
+    {
+      "text": "suppose we have a discrete inputs i1",
+      "start": 2170.32,
+      "duration": 6.56
+    },
+    {
+      "text": "through ik and we calculate this uh how",
+      "start": 2173.359,
+      "duration": 6.881
+    },
+    {
+      "text": "much emphasis is given to each of them",
+      "start": 2176.88,
+      "duration": 6.16
+    },
+    {
+      "text": "and that would be between 0 and 1 and",
+      "start": 2180.24,
+      "duration": 5.44
+    },
+    {
+      "text": "the sum of the whole uh of all the",
+      "start": 2183.04,
+      "duration": 5.6
+    },
+    {
+      "text": "scores would be one. So attention is",
+      "start": 2185.68,
+      "duration": 5.6
+    },
+    {
+      "text": "this uh zero sum game",
+      "start": 2188.64,
+      "duration": 5.635
+    },
+    {
+      "text": "and the attention scores of a sentence",
+      "start": 2191.28,
+      "duration": 3.04
+    },
+    {
+      "text": ">> [snorts]",
+      "start": 2194.275,
+      "duration": 3.804
+    },
+    {
+      "text": ">> um must always sum to exactly one.",
+      "start": 2194.32,
+      "duration": 9.039
+    },
+    {
+      "text": "So we do context uh uh dist driven",
+      "start": 2198.079,
+      "duration": 7.921
+    },
+    {
+      "text": "distribution shifting.",
+      "start": 2203.359,
+      "duration": 6.0
+    },
+    {
+      "text": "So uh there are examples that ASF has",
+      "start": 2206.0,
+      "duration": 6.88
+    },
+    {
+      "text": "given attention uh like a hiker whose",
+      "start": 2209.359,
+      "duration": 7.76
+    },
+    {
+      "text": "focus moves from the stars to the dawn's",
+      "start": 2212.88,
+      "duration": 8.56
+    },
+    {
+      "text": "uh uh morning light right dawn landscape",
+      "start": 2217.119,
+      "duration": 7.761
+    },
+    {
+      "text": "the hills and all and then uh when uh",
+      "start": 2221.44,
+      "duration": 7.36
+    },
+    {
+      "text": "the hiker hears a predator's growl so",
+      "start": 2224.88,
+      "duration": 7.28
+    },
+    {
+      "text": "the survival in instinct kicks up and",
+      "start": 2228.8,
+      "duration": 5.76
+    },
+    {
+      "text": "then the whole attention is in goes to",
+      "start": 2232.16,
+      "duration": 6.56
+    },
+    {
+      "text": "the bushes where the predator presumably",
+      "start": 2234.56,
+      "duration": 6.48
+    },
+    {
+      "text": "is so the machine sifts attention",
+      "start": 2238.72,
+      "duration": 4.879
+    },
+    {
+      "text": "attention that is based on the immediate",
+      "start": 2241.04,
+      "duration": 4.799
+    },
+    {
+      "text": "goal.",
+      "start": 2243.599,
+      "duration": 4.081
+    },
+    {
+      "text": "So we just saw that attention is",
+      "start": 2245.839,
+      "duration": 5.041
+    },
+    {
+      "text": "machines is a zero sum game it must sum",
+      "start": 2247.68,
+      "duration": 6.8
+    },
+    {
+      "text": "to exactly 100%. If a sentence is 500",
+      "start": 2250.88,
+      "duration": 6.16
+    },
+    {
+      "text": "word long uh what do you think happens",
+      "start": 2254.48,
+      "duration": 4.32
+    },
+    {
+      "text": "to the attention score of the very first",
+      "start": 2257.04,
+      "duration": 4.64
+    },
+    {
+      "text": "word by the time we reach the end? A",
+      "start": 2258.8,
+      "duration": 4.48
+    },
+    {
+      "text": "question",
+      "start": 2261.68,
+      "duration": 4.64
+    },
+    {
+      "text": "for you. If it is a very long sentence",
+      "start": 2263.28,
+      "duration": 6.64
+    },
+    {
+      "text": "like 500 words and what happens to the",
+      "start": 2266.32,
+      "duration": 5.6
+    },
+    {
+      "text": "attention of the very first word by the",
+      "start": 2269.92,
+      "duration": 5.439
+    },
+    {
+      "text": "time we reach calculating the attention",
+      "start": 2271.92,
+      "duration": 6.84
+    },
+    {
+      "text": "to the end.",
+      "start": 2275.359,
+      "duration": 3.401
+    },
+    {
+      "text": "Oh.",
+      "start": 2285.359,
+      "duration": 3.0
+    },
+    {
+      "text": "Oh, it's lost in the middle.",
+      "start": 2288.4,
+      "duration": 6.719
+    },
+    {
+      "text": "Uh it would be yeah you're correct it",
+      "start": 2291.839,
+      "duration": 6.24
+    },
+    {
+      "text": "would be diluted to almost zero",
+      "start": 2295.119,
+      "duration": 4.96
+    },
+    {
+      "text": ">> right unless the word is absolutely",
+      "start": 2298.079,
+      "duration": 4.801
+    },
+    {
+      "text": "critical it is its mathematical",
+      "start": 2300.079,
+      "duration": 5.201
+    },
+    {
+      "text": "importance would be washed out by the",
+      "start": 2302.88,
+      "duration": 5.52
+    },
+    {
+      "text": "noise of the other 499 words that are",
+      "start": 2305.28,
+      "duration": 6.0
+    },
+    {
+      "text": "coming.",
+      "start": 2308.4,
+      "duration": 5.52
+    },
+    {
+      "text": "So because it gets diluted the machine",
+      "start": 2311.28,
+      "duration": 6.319
+    },
+    {
+      "text": "has to aggressively filter out the noise",
+      "start": 2313.92,
+      "duration": 6.4
+    },
+    {
+      "text": "just like a human in the wild.",
+      "start": 2317.599,
+      "duration": 6.0
+    },
+    {
+      "text": "Um uh but how did we actually teach",
+      "start": 2320.32,
+      "duration": 5.92
+    },
+    {
+      "text": "computers to do this?",
+      "start": 2323.599,
+      "duration": 6.081
+    },
+    {
+      "text": "So that is what the next section is that",
+      "start": 2326.24,
+      "duration": 7.599
+    },
+    {
+      "text": "uh epiphany that happened in 2017 during",
+      "start": 2329.68,
+      "duration": 8.0
+    },
+    {
+      "text": "a Google experiment and that is the",
+      "start": 2333.839,
+      "duration": 6.161
+    },
+    {
+      "text": "the famous landmark paper attention is",
+      "start": 2337.68,
+      "duration": 6.64
+    },
+    {
+      "text": "all you need. Let us discuss about that.",
+      "start": 2340.0,
+      "duration": 7.32
+    },
+    {
+      "text": "So",
+      "start": 2344.32,
+      "duration": 3.0
+    },
+    {
+      "text": "we had an era of sequential processing",
+      "start": 2347.359,
+      "duration": 5.76
+    },
+    {
+      "text": "and classical orthodoxy",
+      "start": 2350.16,
+      "duration": 6.8
+    },
+    {
+      "text": "uh where we historically we process text",
+      "start": 2353.119,
+      "duration": 7.281
+    },
+    {
+      "text": "sequentially using RNN the recurrent",
+      "start": 2356.96,
+      "duration": 6.399
+    },
+    {
+      "text": "neural networks but they suffered from",
+      "start": 2360.4,
+      "duration": 5.6
+    },
+    {
+      "text": "those bottlenecks and would forget early",
+      "start": 2363.359,
+      "duration": 5.841
+    },
+    {
+      "text": "words in long text. So that was a",
+      "start": 2366.0,
+      "duration": 5.119
+    },
+    {
+      "text": "problem right and then Google",
+      "start": 2369.2,
+      "duration": 4.8
+    },
+    {
+      "text": "researchers were working on some caronet",
+      "start": 2371.119,
+      "duration": 6.161
+    },
+    {
+      "text": "experiment and uh they did some ablation",
+      "start": 2374.0,
+      "duration": 7.839
+    },
+    {
+      "text": "studies. So what they had is uh they put",
+      "start": 2377.28,
+      "duration": 6.319
+    },
+    {
+      "text": "everything convolution attention",
+      "start": 2381.839,
+      "duration": 5.52
+    },
+    {
+      "text": "mechanism RNNs uh and build the cargo",
+      "start": 2383.599,
+      "duration": 5.281
+    },
+    {
+      "text": "net.",
+      "start": 2387.359,
+      "duration": 4.081
+    },
+    {
+      "text": "So they wanted to test test every",
+      "start": 2388.88,
+      "duration": 4.959
+    },
+    {
+      "text": "technique. So they did uh uh",
+      "start": 2391.44,
+      "duration": 4.399
+    },
+    {
+      "text": "systematically remove parts and they",
+      "start": 2393.839,
+      "duration": 4.24
+    },
+    {
+      "text": "made a shocking shocking discovery that",
+      "start": 2395.839,
+      "duration": 5.681
+    },
+    {
+      "text": "the sequential RNNs they were a",
+      "start": 2398.079,
+      "duration": 4.961
+    },
+    {
+      "text": "bottleneck and they were holding the",
+      "start": 2401.52,
+      "duration": 3.68
+    },
+    {
+      "text": "system back",
+      "start": 2403.04,
+      "duration": 4.559
+    },
+    {
+      "text": "and then they shifted they kept uh they",
+      "start": 2405.2,
+      "duration": 4.56
+    },
+    {
+      "text": "did ablation studies and they figured",
+      "start": 2407.599,
+      "duration": 4.881
+    },
+    {
+      "text": "out that attention is all you need and",
+      "start": 2409.76,
+      "duration": 8.079
+    },
+    {
+      "text": "that came as a paper in 2017",
+      "start": 2412.48,
+      "duration": 7.359
+    },
+    {
+      "text": "uh that did par processing with",
+      "start": 2417.839,
+      "duration": 4.801
+    },
+    {
+      "text": "attention uh that and proved to be very",
+      "start": 2419.839,
+      "duration": 6.081
+    },
+    {
+      "text": "vastly superior.",
+      "start": 2422.64,
+      "duration": 5.36
+    },
+    {
+      "text": "So",
+      "start": 2425.92,
+      "duration": 4.8
+    },
+    {
+      "text": "what they have is they have uh interled",
+      "start": 2428.0,
+      "duration": 4.88
+    },
+    {
+      "text": "multi head attention and feed for",
+      "start": 2430.72,
+      "duration": 4.48
+    },
+    {
+      "text": "forward network.",
+      "start": 2432.88,
+      "duration": 6.16
+    },
+    {
+      "text": "So uh the modern models uh stack multi",
+      "start": 2435.2,
+      "duration": 7.04
+    },
+    {
+      "text": "attention due to to route the context",
+      "start": 2439.04,
+      "duration": 6.4
+    },
+    {
+      "text": "and uh use the feed forward networks to",
+      "start": 2442.24,
+      "duration": 5.839
+    },
+    {
+      "text": "store factual word knowledge.",
+      "start": 2445.44,
+      "duration": 5.2
+    },
+    {
+      "text": "Now coming to the sequence to sequence",
+      "start": 2448.079,
+      "duration": 6.561
+    },
+    {
+      "text": "paradigms and latit representations.",
+      "start": 2450.64,
+      "duration": 6.64
+    },
+    {
+      "text": "So there is this intermediate",
+      "start": 2454.64,
+      "duration": 5.12
+    },
+    {
+      "text": "representation framework. So encoders.",
+      "start": 2457.28,
+      "duration": 4.319
+    },
+    {
+      "text": "So there are two things encoders and",
+      "start": 2459.76,
+      "duration": 5.28
+    },
+    {
+      "text": "decoders. Encoders work by translating",
+      "start": 2461.599,
+      "duration": 6.561
+    },
+    {
+      "text": "human language into a hidden language",
+      "start": 2465.04,
+      "duration": 5.92
+    },
+    {
+      "text": "agnostic conceptual state in the middle",
+      "start": 2468.16,
+      "duration": 6.32
+    },
+    {
+      "text": "that you can call as machines.",
+      "start": 2470.96,
+      "duration": 6.159
+    },
+    {
+      "text": "And the goal is to have a lossless",
+      "start": 2474.48,
+      "duration": 6.56
+    },
+    {
+      "text": "semantic capture so that the meaning",
+      "start": 2477.119,
+      "duration": 6.321
+    },
+    {
+      "text": "uh the emotional content or the context",
+      "start": 2481.04,
+      "duration": 4.48
+    },
+    {
+      "text": "of that particular",
+      "start": 2483.44,
+      "duration": 6.159
+    },
+    {
+      "text": "uh text is preserved in its machinies in",
+      "start": 2485.52,
+      "duration": 7.44
+    },
+    {
+      "text": "its uh intermediate representation.",
+      "start": 2489.599,
+      "duration": 7.041
+    },
+    {
+      "text": "So that is the job of an encoder right.",
+      "start": 2492.96,
+      "duration": 7.04
+    },
+    {
+      "text": "And then we have a decoder which uh",
+      "start": 2496.64,
+      "duration": 5.488
+    },
+    {
+      "text": "whose job is to",
+      "start": 2500.0,
+      "duration": 2.24
+    },
+    {
+      "text": ">> [snorts]",
+      "start": 2502.128,
+      "duration": 3.951
+    },
+    {
+      "text": ">> uh read this hidden hidden state this uh",
+      "start": 2502.24,
+      "duration": 8.72
+    },
+    {
+      "text": "vector you can say uh and uh the this",
+      "start": 2506.079,
+      "duration": 7.121
+    },
+    {
+      "text": "inter intermediate representation and",
+      "start": 2510.96,
+      "duration": 5.76
+    },
+    {
+      "text": "should translate to uh to to a human",
+      "start": 2513.2,
+      "duration": 6.48
+    },
+    {
+      "text": "language. Right?",
+      "start": 2516.72,
+      "duration": 5.28
+    },
+    {
+      "text": "The goal of this encoder is to have",
+      "start": 2519.68,
+      "duration": 5.12
+    },
+    {
+      "text": "lossless semantic capture.",
+      "start": 2522.0,
+      "duration": 5.92
+    },
+    {
+      "text": "Right? So that is important because we",
+      "start": 2524.8,
+      "duration": 7.039
+    },
+    {
+      "text": "don't want to leave the meaning behind",
+      "start": 2527.92,
+      "duration": 8.159
+    },
+    {
+      "text": "right. So the word language model or",
+      "start": 2531.839,
+      "duration": 9.921
+    },
+    {
+      "text": "large language model is uh actually the",
+      "start": 2536.079,
+      "duration": 9.441
+    },
+    {
+      "text": "the representation of the language in",
+      "start": 2541.76,
+      "duration": 8.96
+    },
+    {
+      "text": "machines right but now it is uh uh",
+      "start": 2545.52,
+      "duration": 9.12
+    },
+    {
+      "text": "uh generally used for the whole model or",
+      "start": 2550.72,
+      "duration": 6.16
+    },
+    {
+      "text": "the whole system as they call it",
+      "start": 2554.64,
+      "duration": 6.84
+    },
+    {
+      "text": "language model or large language model.",
+      "start": 2556.88,
+      "duration": 4.6
+    },
+    {
+      "text": "Uh so we are I mean gravitating towards",
+      "start": 2561.92,
+      "duration": 5.439
+    },
+    {
+      "text": "decoder only architectures. So which uh",
+      "start": 2564.8,
+      "duration": 7.44
+    },
+    {
+      "text": "which allow which uh does this uh uh",
+      "start": 2567.359,
+      "duration": 8.96
+    },
+    {
+      "text": "uh uh auto reggressive uses author auto",
+      "start": 2572.24,
+      "duration": 6.32
+    },
+    {
+      "text": "reggressive methods to predict the next",
+      "start": 2576.319,
+      "duration": 5.241
+    },
+    {
+      "text": "token.",
+      "start": 2578.56,
+      "duration": 3.0
+    },
+    {
+      "text": "Next section scale emergent complexity",
+      "start": 2583.28,
+      "duration": 5.92
+    },
+    {
+      "text": "and mechanistic interpretability.",
+      "start": 2586.24,
+      "duration": 6.32
+    },
+    {
+      "text": "So there is uh the more is different",
+      "start": 2589.2,
+      "duration": 6.0
+    },
+    {
+      "text": "right. So as model scales to billions of",
+      "start": 2592.56,
+      "duration": 6.16
+    },
+    {
+      "text": "parameters models become different.",
+      "start": 2595.2,
+      "duration": 6.399
+    },
+    {
+      "text": "Um they exhibit unprogrammed reasoning",
+      "start": 2598.72,
+      "duration": 6.8
+    },
+    {
+      "text": "skills like complex weather patterns",
+      "start": 2601.599,
+      "duration": 5.76
+    },
+    {
+      "text": "naturally emerge from simple water",
+      "start": 2605.52,
+      "duration": 6.64
+    },
+    {
+      "text": "molecules at uh planetary scale.",
+      "start": 2607.359,
+      "duration": 9.201
+    },
+    {
+      "text": "uh the machines also have been seen to",
+      "start": 2612.16,
+      "duration": 8.08
+    },
+    {
+      "text": "uh have those uh reasoning capabilities",
+      "start": 2616.56,
+      "duration": 5.759
+    },
+    {
+      "text": "right and uh actually being able to",
+      "start": 2620.24,
+      "duration": 4.879
+    },
+    {
+      "text": "solve difficult problems",
+      "start": 2622.319,
+      "duration": 5.841
+    },
+    {
+      "text": "and so that is the phenomenon of scale",
+      "start": 2625.119,
+      "duration": 7.521
+    },
+    {
+      "text": "right uh then we have uh a discussion on",
+      "start": 2628.16,
+      "duration": 11.919
+    },
+    {
+      "text": "uh uh probing poly semanticity right so",
+      "start": 2632.64,
+      "duration": 9.76
+    },
+    {
+      "text": "we can have a sparse this autoenccoder",
+      "start": 2640.079,
+      "duration": 4.321
+    },
+    {
+      "text": "microscope.",
+      "start": 2642.4,
+      "duration": 6.08
+    },
+    {
+      "text": "Uh so to understand how poly semanticity",
+      "start": 2644.4,
+      "duration": 6.4
+    },
+    {
+      "text": "happens and how the machine works",
+      "start": 2648.48,
+      "duration": 3.92
+    },
+    {
+      "text": "actually",
+      "start": 2650.8,
+      "duration": 6.16
+    },
+    {
+      "text": "uh we can uh untangle the polymantic",
+      "start": 2652.4,
+      "duration": 8.32
+    },
+    {
+      "text": "neurons. A neurons does a particular",
+      "start": 2656.96,
+      "duration": 5.76
+    },
+    {
+      "text": "neuron does not represent a particular",
+      "start": 2660.72,
+      "duration": 5.599
+    },
+    {
+      "text": "thing. They are polymantic. I mean that",
+      "start": 2662.72,
+      "duration": 6.16
+    },
+    {
+      "text": "is to say that the",
+      "start": 2666.319,
+      "duration": 7.28
+    },
+    {
+      "text": "uh neuron may be may be fired in",
+      "start": 2668.88,
+      "duration": 6.8
+    },
+    {
+      "text": "different scenarios.",
+      "start": 2673.599,
+      "duration": 5.76
+    },
+    {
+      "text": "So, so in order to figure out which uh",
+      "start": 2675.68,
+      "duration": 7.52
+    },
+    {
+      "text": "parts of the uh of the model",
+      "start": 2679.359,
+      "duration": 7.041
+    },
+    {
+      "text": "uh are related to which uh which",
+      "start": 2683.2,
+      "duration": 6.24
+    },
+    {
+      "text": "knowledge right so",
+      "start": 2686.4,
+      "duration": 5.52
+    },
+    {
+      "text": "they act like a microscope to untangle",
+      "start": 2689.44,
+      "duration": 5.04
+    },
+    {
+      "text": "polymantic neurons the sparse",
+      "start": 2691.92,
+      "duration": 4.399
+    },
+    {
+      "text": "autoenccoders and they separate out",
+      "start": 2694.48,
+      "duration": 4.24
+    },
+    {
+      "text": "distinct human concept from the machine",
+      "start": 2696.319,
+      "duration": 5.601
+    },
+    {
+      "text": "tense memory and they did some causal",
+      "start": 2698.72,
+      "duration": 5.119
+    },
+    {
+      "text": "interventions",
+      "start": 2701.92,
+      "duration": 4.8
+    },
+    {
+      "text": "via circuit amplif ific amplification.",
+      "start": 2703.839,
+      "duration": 6.161
+    },
+    {
+      "text": "Once we map a circuit, we can intervene",
+      "start": 2706.72,
+      "duration": 5.28
+    },
+    {
+      "text": "amplifying the psychopensic circuit. For",
+      "start": 2710.0,
+      "duration": 7.2
+    },
+    {
+      "text": "example, they completely um overrides",
+      "start": 2712.0,
+      "duration": 7.359
+    },
+    {
+      "text": "the model's normal logic and forces it",
+      "start": 2717.2,
+      "duration": 5.28
+    },
+    {
+      "text": "to blindly flatten the flatter the user.",
+      "start": 2719.359,
+      "duration": 5.041
+    },
+    {
+      "text": "Also, there is one more example about",
+      "start": 2722.48,
+      "duration": 4.96
+    },
+    {
+      "text": "the golden gate bridge. So when that",
+      "start": 2724.4,
+      "duration": 5.679
+    },
+    {
+      "text": "particular circuitry was amplified",
+      "start": 2727.44,
+      "duration": 6.72
+    },
+    {
+      "text": "everything was uh all the answers the",
+      "start": 2730.079,
+      "duration": 6.801
+    },
+    {
+      "text": "model would give had to have a the",
+      "start": 2734.16,
+      "duration": 6.08
+    },
+    {
+      "text": "golden gate bridge",
+      "start": 2736.88,
+      "duration": 7.6
+    },
+    {
+      "text": "and uh then there is uh one one profound",
+      "start": 2740.24,
+      "duration": 7.2
+    },
+    {
+      "text": "thing that the self-awareness anomalies",
+      "start": 2744.48,
+      "duration": 6.96
+    },
+    {
+      "text": "and the limits of a stoastic mimicry. So",
+      "start": 2747.44,
+      "duration": 6.32
+    },
+    {
+      "text": "if you force a model to output a wrong",
+      "start": 2751.44,
+      "duration": 6.08
+    },
+    {
+      "text": "answer, right? If you force it to answer",
+      "start": 2753.76,
+      "duration": 6.319
+    },
+    {
+      "text": "42 and responds to every single",
+      "start": 2757.52,
+      "duration": 4.559
+    },
+    {
+      "text": "mathematical problem and you can do this",
+      "start": 2760.079,
+      "duration": 6.081
+    },
+    {
+      "text": "by u modifying the",
+      "start": 2762.079,
+      "duration": 5.921
+    },
+    {
+      "text": "uh",
+      "start": 2766.16,
+      "duration": 6.4
+    },
+    {
+      "text": "the uh activations of the internal some",
+      "start": 2768.0,
+      "duration": 8.96
+    },
+    {
+      "text": "some parts of the neural network. So",
+      "start": 2772.56,
+      "duration": 9.16
+    },
+    {
+      "text": "even when when it is uh",
+      "start": 2776.96,
+      "duration": 4.76
+    },
+    {
+      "text": "results in this uh CV and TY FIV it will",
+      "start": 2787.28,
+      "duration": 7.039
+    },
+    {
+      "text": "it it wrote like this. So this shows",
+      "start": 2791.599,
+      "duration": 5.601
+    },
+    {
+      "text": "that the machines are self-aware.",
+      "start": 2794.319,
+      "duration": 5.441
+    },
+    {
+      "text": "The internal layers still hold the true",
+      "start": 2797.2,
+      "duration": 5.919
+    },
+    {
+      "text": "calculation. Right? This uh proves that",
+      "start": 2799.76,
+      "duration": 5.52
+    },
+    {
+      "text": "they are coordinating deep semantic",
+      "start": 2803.119,
+      "duration": 6.161
+    },
+    {
+      "text": "indent in intent not just uh blindly",
+      "start": 2805.28,
+      "duration": 6.559
+    },
+    {
+      "text": "pariting statistics.",
+      "start": 2809.28,
+      "duration": 5.36
+    },
+    {
+      "text": "So we just discussed how models [snorts]",
+      "start": 2811.839,
+      "duration": 5.441
+    },
+    {
+      "text": "can have uh",
+      "start": 2814.64,
+      "duration": 5.36
+    },
+    {
+      "text": "uh self-awareness anomalies and where",
+      "start": 2817.28,
+      "duration": 5.36
+    },
+    {
+      "text": "they internally know the true answer but",
+      "start": 2820.0,
+      "duration": 5.52
+    },
+    {
+      "text": "are forced to output a false one.",
+      "start": 2822.64,
+      "duration": 5.36
+    },
+    {
+      "text": "So does this mean that they're actually",
+      "start": 2825.52,
+      "duration": 5.68
+    },
+    {
+      "text": "lying to us or they are just following a",
+      "start": 2828.0,
+      "duration": 8.64
+    },
+    {
+      "text": "mathematical pattern we force upon them?",
+      "start": 2831.2,
+      "duration": 7.68
+    },
+    {
+      "text": "What do you think",
+      "start": 2836.64,
+      "duration": 5.76
+    },
+    {
+      "text": "when we are uh uh",
+      "start": 2838.88,
+      "duration": 6.8
+    },
+    {
+      "text": "forcing to them to output a false one?",
+      "start": 2842.4,
+      "duration": 5.84
+    },
+    {
+      "text": "What do they do? They are just following",
+      "start": 2845.68,
+      "duration": 5.04
+    },
+    {
+      "text": "a mathematical pattern we force upon",
+      "start": 2848.24,
+      "duration": 7.0
+    },
+    {
+      "text": "them or they are actually lying to us.",
+      "start": 2850.72,
+      "duration": 4.52
+    },
+    {
+      "text": "Uh",
+      "start": 2861.44,
+      "duration": 3.76
+    },
+    {
+      "text": "so the fact that they are actually",
+      "start": 2863.28,
+      "duration": 3.76
+    },
+    {
+      "text": "maintaining the crew true concept",
+      "start": 2865.2,
+      "duration": 3.36
+    },
+    {
+      "text": "underneath",
+      "start": 2867.04,
+      "duration": 3.44
+    },
+    {
+      "text": "uh that proves they are coordinating",
+      "start": 2868.56,
+      "duration": 4.0
+    },
+    {
+      "text": "deep semantic intent and they are not",
+      "start": 2870.48,
+      "duration": 7.119
+    },
+    {
+      "text": "just uh blindly blindly paring the text.",
+      "start": 2872.56,
+      "duration": 7.039
+    },
+    {
+      "text": "So this proves that they are they are",
+      "start": 2877.599,
+      "duration": 4.48
+    },
+    {
+      "text": "not stoastic parrots. We have seen that",
+      "start": 2879.599,
+      "duration": 5.52
+    },
+    {
+      "text": "these models are incred incredibly",
+      "start": 2882.079,
+      "duration": 7.04
+    },
+    {
+      "text": "powerful but they can't act like uh",
+      "start": 2885.119,
+      "duration": 6.24
+    },
+    {
+      "text": "mysterious that they can even sometimes",
+      "start": 2889.119,
+      "duration": 5.281
+    },
+    {
+      "text": "act like mysterious black boxes with",
+      "start": 2891.359,
+      "duration": 6.321
+    },
+    {
+      "text": "some unprogrammed behaviors.",
+      "start": 2894.4,
+      "duration": 6.48
+    },
+    {
+      "text": "So imagine if we can perform awake brain",
+      "start": 2897.68,
+      "duration": 5.679
+    },
+    {
+      "text": "surgery on an AI to see exactly what",
+      "start": 2900.88,
+      "duration": 6.0
+    },
+    {
+      "text": "it's thinking in real time. Well uh that",
+      "start": 2903.359,
+      "duration": 6.72
+    },
+    {
+      "text": "is what the next section is about. the",
+      "start": 2906.88,
+      "duration": 5.76
+    },
+    {
+      "text": "Lazarus query language.",
+      "start": 2910.079,
+      "duration": 5.76
+    },
+    {
+      "text": "So [snorts] they are uh treating uh so",
+      "start": 2912.64,
+      "duration": 6.8
+    },
+    {
+      "text": "they they what they do is they have uh",
+      "start": 2915.839,
+      "duration": 6.48
+    },
+    {
+      "text": "this is a new concept very recent one",
+      "start": 2919.44,
+      "duration": 5.119
+    },
+    {
+      "text": "and they are treating the open weight",
+      "start": 2922.319,
+      "duration": 5.361
+    },
+    {
+      "text": "networks as relational databases.",
+      "start": 2924.559,
+      "duration": 6.641
+    },
+    {
+      "text": "So tools like this LQL",
+      "start": 2927.68,
+      "duration": 5.919
+    },
+    {
+      "text": "they let us pause the model and query",
+      "start": 2931.2,
+      "duration": 4.639
+    },
+    {
+      "text": "its internal weights just like a static",
+      "start": 2933.599,
+      "duration": 5.281
+    },
+    {
+      "text": "relational database. So they have this",
+      "start": 2935.839,
+      "duration": 7.681
+    },
+    {
+      "text": "three uh three tier layer life cycle.",
+      "start": 2938.88,
+      "duration": 8.4
+    },
+    {
+      "text": "So the early layers are they handle",
+      "start": 2943.52,
+      "duration": 6.0
+    },
+    {
+      "text": "basic syntax.",
+      "start": 2947.28,
+      "duration": 5.24
+    },
+    {
+      "text": "Uh",
+      "start": 2949.52,
+      "duration": 3.0
+    },
+    {
+      "text": "so [snorts] once so we have to uh first",
+      "start": 2952.559,
+      "duration": 7.361
+    },
+    {
+      "text": "install these uh uh this tool. We have",
+      "start": 2956.319,
+      "duration": 9.441
+    },
+    {
+      "text": "to first uh clone it and then do this uh",
+      "start": 2959.92,
+      "duration": 8.24
+    },
+    {
+      "text": "uh uh certain installation steps have to",
+      "start": 2965.76,
+      "duration": 5.04
+    },
+    {
+      "text": "be done like compilation we have to",
+      "start": 2968.16,
+      "duration": 5.919
+    },
+    {
+      "text": "build those and then uh then we have to",
+      "start": 2970.8,
+      "duration": 6.279
+    },
+    {
+      "text": "acquisition",
+      "start": 2974.079,
+      "duration": 3.0
+    },
+    {
+      "text": "and the steps are available here. So",
+      "start": 2977.359,
+      "duration": 8.081
+    },
+    {
+      "text": "what they do is they have uh this uh",
+      "start": 2980.16,
+      "duration": 10.8
+    },
+    {
+      "text": "uh they treat the whole uh uh this uh",
+      "start": 2985.44,
+      "duration": 7.76
+    },
+    {
+      "text": "model as a relational database and they",
+      "start": 2990.96,
+      "duration": 4.56
+    },
+    {
+      "text": "would query right and we can query into",
+      "start": 2993.2,
+      "duration": 7.119
+    },
+    {
+      "text": "it. So for example a uh using this",
+      "start": 2995.52,
+      "duration": 7.36
+    },
+    {
+      "text": "particular v index first of all we are",
+      "start": 3000.319,
+      "duration": 5.681
+    },
+    {
+      "text": "going to have a get a v index from a",
+      "start": 3002.88,
+      "duration": 5.6
+    },
+    {
+      "text": "model and using this v index we can",
+      "start": 3006.0,
+      "duration": 5.76
+    },
+    {
+      "text": "infer a baby dog is called a and then we",
+      "start": 3008.48,
+      "duration": 6.56
+    },
+    {
+      "text": "will we want the top five results.",
+      "start": 3011.76,
+      "duration": 6.24
+    },
+    {
+      "text": "So this uh this gives you a trace that",
+      "start": 3015.04,
+      "duration": 5.76
+    },
+    {
+      "text": "the model's 34 layers are divided into",
+      "start": 3018.0,
+      "duration": 5.28
+    },
+    {
+      "text": "three distinct functional tiers. So that",
+      "start": 3020.8,
+      "duration": 4.08
+    },
+    {
+      "text": "is what the discussion about the three",
+      "start": 3023.28,
+      "duration": 5.12
+    },
+    {
+      "text": "three tiers are. Uh layer layer 0 to six",
+      "start": 3024.88,
+      "duration": 6.64
+    },
+    {
+      "text": "they give you surface level syntax and",
+      "start": 3028.4,
+      "duration": 5.919
+    },
+    {
+      "text": "the layers 3 to 26 give concept",
+      "start": 3031.52,
+      "duration": 4.799
+    },
+    {
+      "text": "crystallization",
+      "start": 3034.319,
+      "duration": 3.841
+    },
+    {
+      "text": "and they have crystallized the deep",
+      "start": 3036.319,
+      "duration": 4.561
+    },
+    {
+      "text": "semantic meaning and then the later",
+      "start": 3038.16,
+      "duration": 6.32
+    },
+    {
+      "text": "layers the layers 27 to 33 [snorts] they",
+      "start": 3040.88,
+      "duration": 5.76
+    },
+    {
+      "text": "gives you detoization and they do",
+      "start": 3044.48,
+      "duration": 5.92
+    },
+    {
+      "text": "decorization and the handle formatting.",
+      "start": 3046.64,
+      "duration": 6.32
+    },
+    {
+      "text": "So,",
+      "start": 3050.4,
+      "duration": 5.84
+    },
+    {
+      "text": "so that is uh one observation from the",
+      "start": 3052.96,
+      "duration": 6.159
+    },
+    {
+      "text": "trace that they have.",
+      "start": 3056.24,
+      "duration": 4.96
+    },
+    {
+      "text": "Uh",
+      "start": 3059.119,
+      "duration": 4.24
+    },
+    {
+      "text": "so the rest is the picture that the",
+      "start": 3061.2,
+      "duration": 5.76
+    },
+    {
+      "text": "model has a vertical highway uh sorry",
+      "start": 3063.359,
+      "duration": 6.321
+    },
+    {
+      "text": "this uh system interest introspection",
+      "start": 3066.96,
+      "duration": 5.92
+    },
+    {
+      "text": "setup and advanced quering. So local",
+      "start": 3069.68,
+      "duration": 5.6
+    },
+    {
+      "text": "environment architecture compilation and",
+      "start": 3072.88,
+      "duration": 4.479
+    },
+    {
+      "text": "vindex extraction. So these auditing",
+      "start": 3075.28,
+      "duration": 5.44
+    },
+    {
+      "text": "tools are in rust and they use uh local",
+      "start": 3077.359,
+      "duration": 8.0
+    },
+    {
+      "text": "memory map mapped files called v indexes",
+      "start": 3080.72,
+      "duration": 6.879
+    },
+    {
+      "text": "uh to ensure data security and high",
+      "start": 3085.359,
+      "duration": 4.401
+    },
+    {
+      "text": "speeded accesses.",
+      "start": 3087.599,
+      "duration": 7.52
+    },
+    {
+      "text": "So there are this uh query uh p patterns",
+      "start": 3089.76,
+      "duration": 8.24
+    },
+    {
+      "text": "which uh we have to follow certain query",
+      "start": 3095.119,
+      "duration": 5.841
+    },
+    {
+      "text": "paradigms that is relational filtering",
+      "start": 3098.0,
+      "duration": 6.079
+    },
+    {
+      "text": "and activation inter interventions.",
+      "start": 3100.96,
+      "duration": 5.76
+    },
+    {
+      "text": "So we can simply use describe commands",
+      "start": 3104.079,
+      "duration": 5.361
+    },
+    {
+      "text": "to passively see where the concept lives",
+      "start": 3106.72,
+      "duration": 4.879
+    },
+    {
+      "text": "or we can use active interventions to",
+      "start": 3109.44,
+      "duration": 4.24
+    },
+    {
+      "text": "surgically remove a specific behavior",
+      "start": 3111.599,
+      "duration": 5.041
+    },
+    {
+      "text": "from the model entirely",
+      "start": 3113.68,
+      "duration": 6.8
+    },
+    {
+      "text": "or we can uh uh use insert to add uh",
+      "start": 3116.64,
+      "duration": 7.959
+    },
+    {
+      "text": "some information to the model.",
+      "start": 3120.48,
+      "duration": 4.119
+    },
+    {
+      "text": "So coming to the internal mechanics and",
+      "start": 3125.2,
+      "duration": 7.2
+    },
+    {
+      "text": ">> pun where exactly are those uh the three",
+      "start": 3128.64,
+      "duration": 5.679
+    },
+    {
+      "text": "layer distinction made because I have",
+      "start": 3132.4,
+      "duration": 4.56
+    },
+    {
+      "text": "not seen this tool. Uh do you know what",
+      "start": 3134.319,
+      "duration": 4.561
+    },
+    {
+      "text": "this uh first you are saying that",
+      "start": 3136.96,
+      "duration": 4.48
+    },
+    {
+      "text": ">> is",
+      "start": 3138.88,
+      "duration": 5.439
+    },
+    {
+      "text": "uh that is uh when you",
+      "start": 3141.44,
+      "duration": 6.159
+    },
+    {
+      "text": "do infer and then it gives you a trace",
+      "start": 3144.319,
+      "duration": 6.641
+    },
+    {
+      "text": "of the models layers",
+      "start": 3147.599,
+      "duration": 6.161
+    },
+    {
+      "text": "what happens in those layers. I exactly",
+      "start": 3150.96,
+      "duration": 5.04
+    },
+    {
+      "text": "do not uh I have not seen that exactly",
+      "start": 3153.76,
+      "duration": 3.839
+    },
+    {
+      "text": "where it happens.",
+      "start": 3156.0,
+      "duration": 4.48
+    },
+    {
+      "text": ">> Okay. Okay. Maybe was this demo done in",
+      "start": 3157.599,
+      "duration": 8.161
+    },
+    {
+      "text": "class? Uh anyone knows Barat or Shiva?",
+      "start": 3160.48,
+      "duration": 8.48
+    },
+    {
+      "text": ">> Yeah, it was done towards the end. Yeah.",
+      "start": 3165.76,
+      "duration": 5.68
+    },
+    {
+      "text": ">> Okay. So maybe we should look at that",
+      "start": 3168.96,
+      "duration": 3.04
+    },
+    {
+      "text": "video.",
+      "start": 3171.44,
+      "duration": 4.119
+    },
+    {
+      "text": ">> Yeah. Yeah.",
+      "start": 3172.0,
+      "duration": 3.559
+    },
+    {
+      "text": "So uh",
+      "start": 3179.28,
+      "duration": 3.88
+    },
+    {
+      "text": "so internal mechanics and transformer",
+      "start": 3188.4,
+      "duration": 7.52
+    },
+    {
+      "text": "plumbing. So the residual uh uh so we",
+      "start": 3191.359,
+      "duration": 6.48
+    },
+    {
+      "text": "can picture the model as a vertical",
+      "start": 3195.92,
+      "duration": 5.04
+    },
+    {
+      "text": "highway. The tokens ride up as this of",
+      "start": 3197.839,
+      "duration": 5.921
+    },
+    {
+      "text": "this residual stream. they pick up the",
+      "start": 3200.96,
+      "duration": 5.52
+    },
+    {
+      "text": "the metadata layer by layer without",
+      "start": 3203.76,
+      "duration": 4.4
+    },
+    {
+      "text": "having their original identity",
+      "start": 3206.48,
+      "duration": 6.639
+    },
+    {
+      "text": "destroyed. And uh inside",
+      "start": 3208.16,
+      "duration": 8.0
+    },
+    {
+      "text": "uh we have this uh mathematical",
+      "start": 3213.119,
+      "duration": 7.281
+    },
+    {
+      "text": "mechanics of this QV. The query vector",
+      "start": 3216.16,
+      "duration": 7.28
+    },
+    {
+      "text": "is to represent what the token is",
+      "start": 3220.4,
+      "duration": 6.8
+    },
+    {
+      "text": "actively looking for or the requesting",
+      "start": 3223.44,
+      "duration": 6.32
+    },
+    {
+      "text": "from the rest of the sentence. And then",
+      "start": 3227.2,
+      "duration": 5.84
+    },
+    {
+      "text": "the query the key vector is represents",
+      "start": 3229.76,
+      "duration": 5.839
+    },
+    {
+      "text": "what information uh that is to advertise",
+      "start": 3233.04,
+      "duration": 5.12
+    },
+    {
+      "text": "what they know and the value vector is",
+      "start": 3235.599,
+      "duration": 4.321
+    },
+    {
+      "text": "to actually transfer data back to the",
+      "start": 3238.16,
+      "duration": 8.0
+    },
+    {
+      "text": "highway if the match is found. So the",
+      "start": 3239.92,
+      "duration": 9.76
+    },
+    {
+      "text": "output embedding uh output unmbedding uh",
+      "start": 3246.16,
+      "duration": 5.84
+    },
+    {
+      "text": "soft max and optimization",
+      "start": 3249.68,
+      "duration": 4.8
+    },
+    {
+      "text": "uh softmax optimization and runtime",
+      "start": 3252.0,
+      "duration": 6.559
+    },
+    {
+      "text": "benchmarks are done at the end. So first",
+      "start": 3254.48,
+      "duration": 6.4
+    },
+    {
+      "text": "of all the abstract vector is mapped",
+      "start": 3258.559,
+      "duration": 4.721
+    },
+    {
+      "text": "back to the human words and then we have",
+      "start": 3260.88,
+      "duration": 5.679
+    },
+    {
+      "text": "a soft max that turns those numbers into",
+      "start": 3263.28,
+      "duration": 6.799
+    },
+    {
+      "text": "a clean 0 to 100% probability curve to",
+      "start": 3266.559,
+      "duration": 6.401
+    },
+    {
+      "text": "choose the next word and this is how the",
+      "start": 3270.079,
+      "duration": 6.24
+    },
+    {
+      "text": "whole thing is happening. So we have the",
+      "start": 3272.96,
+      "duration": 5.44
+    },
+    {
+      "text": "suppose example",
+      "start": 3276.319,
+      "duration": 4.081
+    },
+    {
+      "text": "we have this example data visualization",
+      "start": 3278.4,
+      "duration": 4.4
+    },
+    {
+      "text": "empowers users to visualize this",
+      "start": 3280.4,
+      "duration": 4.8
+    },
+    {
+      "text": "visualize is the one next word that is",
+      "start": 3282.8,
+      "duration": 5.12
+    },
+    {
+      "text": "predicted the input is data",
+      "start": 3285.2,
+      "duration": 5.6
+    },
+    {
+      "text": "visualization empowers users too. So",
+      "start": 3287.92,
+      "duration": 5.439
+    },
+    {
+      "text": "that then we have the embedding for it",
+      "start": 3290.8,
+      "duration": 7.217
+    },
+    {
+      "text": "and then we have this uh KQV [snorts]",
+      "start": 3293.359,
+      "duration": 4.658
+    },
+    {
+      "text": "and then uh all the calculations are",
+      "start": 3299.92,
+      "duration": 4.639
+    },
+    {
+      "text": "done. Attention is calculated and then",
+      "start": 3301.76,
+      "duration": 7.2
+    },
+    {
+      "text": "at the end we have this uh uh softmax",
+      "start": 3304.559,
+      "duration": 8.56
+    },
+    {
+      "text": "layer which uh gives the highest",
+      "start": 3308.96,
+      "duration": 8.8
+    },
+    {
+      "text": "probability to visualize. Right? So that",
+      "start": 3313.119,
+      "duration": 8.081
+    },
+    {
+      "text": "is how the whole uh whole transformer uh",
+      "start": 3317.76,
+      "duration": 6.319
+    },
+    {
+      "text": "works.",
+      "start": 3321.2,
+      "duration": 6.72
+    },
+    {
+      "text": "Uh so that is it. Uh for insights we",
+      "start": 3324.079,
+      "duration": 6.24
+    },
+    {
+      "text": "have uh seen a rag is fundamentally a",
+      "start": 3327.92,
+      "duration": 5.199
+    },
+    {
+      "text": "basian update that grounds the model. In",
+      "start": 3330.319,
+      "duration": 5.441
+    },
+    {
+      "text": "fact, semantic search lies on geometric",
+      "start": 3333.119,
+      "duration": 7.041
+    },
+    {
+      "text": "mapping to solve polyme and we must",
+      "start": 3335.76,
+      "duration": 6.559
+    },
+    {
+      "text": "enforce epistemic imagery to prevent",
+      "start": 3340.16,
+      "duration": 3.679
+    },
+    {
+      "text": "hallucinations.",
+      "start": 3342.319,
+      "duration": 3.04
+    },
+    {
+      "text": "And finally, through mechanistic",
+      "start": 3343.839,
+      "duration": 4.161
+    },
+    {
+      "text": "interpretability, we are unlocking the",
+      "start": 3345.359,
+      "duration": 5.921
+    },
+    {
+      "text": "black box of emergent phenomena in these",
+      "start": 3348.0,
+      "duration": 8.319
+    },
+    {
+      "text": "massive language understanding machines.",
+      "start": 3351.28,
+      "duration": 7.76
+    },
+    {
+      "text": "So any questions please go ahead. Uh",
+      "start": 3356.319,
+      "duration": 6.681
+    },
+    {
+      "text": "that is it for the summary.",
+      "start": 3359.04,
+      "duration": 3.96
+    },
+    {
+      "text": "There's a quiz also.",
+      "start": 3378.24,
+      "duration": 4.559
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 3380.24,
+      "duration": 3.92
+    },
+    {
+      "text": ">> Um,",
+      "start": 3382.799,
+      "duration": 3.28
+    },
+    {
+      "text": ">> please go ahead and",
+      "start": 3384.16,
+      "duration": 3.36
+    },
+    {
+      "text": ">> do you know where the quiz would be?",
+      "start": 3386.079,
+      "duration": 3.121
+    },
+    {
+      "text": "Maybe you can show it.",
+      "start": 3387.52,
+      "duration": 3.76
+    },
+    {
+      "text": ">> Yeah, let me show it. Let me show you",
+      "start": 3389.2,
+      "duration": 5.48
+    },
+    {
+      "text": "that is best.",
+      "start": 3391.28,
+      "duration": 3.4
+    },
+    {
+      "text": "You can take your time to do go through",
+      "start": 3396.799,
+      "duration": 5.681
+    },
+    {
+      "text": "the quiz right away and uh and it can be",
+      "start": 3398.72,
+      "duration": 7.76
+    },
+    {
+      "text": "attempted any number of times.",
+      "start": 3402.48,
+      "duration": 6.639
+    },
+    {
+      "text": "It's not like uh and it is for your own",
+      "start": 3406.48,
+      "duration": 4.48
+    },
+    {
+      "text": "assessment. It is not we are not going",
+      "start": 3409.119,
+      "duration": 5.361
+    },
+    {
+      "text": "to assess you there. it is for you to go",
+      "start": 3410.96,
+      "duration": 4.08
+    },
+    {
+      "text": "and uh",
+      "start": 3414.48,
+      "duration": 3.04
+    },
+    {
+      "text": ">> so this is the week one summary which is",
+      "start": 3415.04,
+      "duration": 6.319
+    },
+    {
+      "text": "the PDF that I was going through and we",
+      "start": 3417.52,
+      "duration": 6.559
+    },
+    {
+      "text": "have week one quiz",
+      "start": 3421.359,
+      "duration": 5.681
+    },
+    {
+      "text": "so you can preview the quiz and then you",
+      "start": 3424.079,
+      "duration": 6.321
+    },
+    {
+      "text": "can start attempting the questions",
+      "start": 3427.04,
+      "duration": 6.319
+    },
+    {
+      "text": "right",
+      "start": 3430.4,
+      "duration": 6.399
+    },
+    {
+      "text": "here you can find the quiz also you can",
+      "start": 3433.359,
+      "duration": 5.44
+    },
+    {
+      "text": "find if you go to the homepage of this",
+      "start": 3436.799,
+      "duration": 4.32
+    },
+    {
+      "text": "for this particular course",
+      "start": 3438.799,
+      "duration": 4.56
+    },
+    {
+      "text": "uh Uh",
+      "start": 3441.119,
+      "duration": 4.881
+    },
+    {
+      "text": "yeah. So here here is the quiz. There's",
+      "start": 3443.359,
+      "duration": 6.841
+    },
+    {
+      "text": "only one place left side.",
+      "start": 3446.0,
+      "duration": 4.2
+    },
+    {
+      "text": "Uh-huh.",
+      "start": 3455.76,
+      "duration": 2.24
+    }
+  ]
+}

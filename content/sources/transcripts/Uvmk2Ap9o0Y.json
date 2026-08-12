@@ -1,0 +1,8147 @@
+{
+  "video_id": "Uvmk2Ap9o0Y",
+  "url": "https://www.youtube.com/watch?v=Uvmk2Ap9o0Y",
+  "label": "Week_5_Main_class",
+  "segments": [
+    {
+      "text": "All right folks, welcome back from our",
+      "start": 2.639,
+      "duration": 4.24
+    },
+    {
+      "text": "break. Now we finished the theory in the",
+      "start": 4.64,
+      "duration": 6.56
+    },
+    {
+      "text": "morning and now is the time to cash it",
+      "start": 6.879,
+      "duration": 7.92
+    },
+    {
+      "text": "in. All this theory, what does it all",
+      "start": 11.2,
+      "duration": 6.159
+    },
+    {
+      "text": "mean?",
+      "start": 14.799,
+      "duration": 4.801
+    },
+    {
+      "text": "See folks,",
+      "start": 17.359,
+      "duration": 5.521
+    },
+    {
+      "text": "we have been so far learning how to do",
+      "start": 19.6,
+      "duration": 7.36
+    },
+    {
+      "text": "embedding of chunks of question answers",
+      "start": 22.88,
+      "duration": 7.04
+    },
+    {
+      "text": "of this. They all have been",
+      "start": 26.96,
+      "duration": 5.759
+    },
+    {
+      "text": "answering point queries.",
+      "start": 29.92,
+      "duration": 4.4
+    },
+    {
+      "text": "A factoid it's very good at point",
+      "start": 32.719,
+      "duration": 3.601
+    },
+    {
+      "text": "queries.",
+      "start": 34.32,
+      "duration": 4.88
+    },
+    {
+      "text": "Question answers a little bit better",
+      "start": 36.32,
+      "duration": 4.48
+    },
+    {
+      "text": "resolution",
+      "start": 39.2,
+      "duration": 3.359
+    },
+    {
+      "text": "summarizations, abstractive",
+      "start": 40.8,
+      "duration": 4.8
+    },
+    {
+      "text": "summarizations better. Raptor takes it",
+      "start": 42.559,
+      "duration": 7.84
+    },
+    {
+      "text": "further. You do summarizations of uh uh",
+      "start": 45.6,
+      "duration": 7.36
+    },
+    {
+      "text": "clusters.",
+      "start": 50.399,
+      "duration": 6.081
+    },
+    {
+      "text": "Graphs take a different approach because",
+      "start": 52.96,
+      "duration": 5.439
+    },
+    {
+      "text": "they look at relationship between",
+      "start": 56.48,
+      "duration": 4.919
+    },
+    {
+      "text": "entities.",
+      "start": 58.399,
+      "duration": 3.0
+    },
+    {
+      "text": "So semantically they are not",
+      "start": 62.079,
+      "duration": 6.241
+    },
+    {
+      "text": "semantically just similar things. Birds",
+      "start": 65.519,
+      "duration": 4.96
+    },
+    {
+      "text": "of a feather flock together but they're",
+      "start": 68.32,
+      "duration": 5.119
+    },
+    {
+      "text": "also looking at semantic relationships.",
+      "start": 70.479,
+      "duration": 6.96
+    },
+    {
+      "text": "Remember the graphs have edges.",
+      "start": 73.439,
+      "duration": 7.201
+    },
+    {
+      "text": "So that gives us a powerful way. What",
+      "start": 77.439,
+      "duration": 5.601
+    },
+    {
+      "text": "can we do? As you would have imagined,",
+      "start": 80.64,
+      "duration": 6.88
+    },
+    {
+      "text": "if we can detect communities of graphs,",
+      "start": 83.04,
+      "duration": 8.8
+    },
+    {
+      "text": "all we have to do is decompose a text or",
+      "start": 87.52,
+      "duration": 8.0
+    },
+    {
+      "text": "the chunks and everything into its fat",
+      "start": 91.84,
+      "duration": 6.56
+    },
+    {
+      "text": "fact triplets. Do all the community",
+      "start": 95.52,
+      "duration": 5.12
+    },
+    {
+      "text": "detection",
+      "start": 98.4,
+      "duration": 4.96
+    },
+    {
+      "text": "lay in community detection and do what?",
+      "start": 100.64,
+      "duration": 5.36
+    },
+    {
+      "text": "take the smallest unit of community and",
+      "start": 103.36,
+      "duration": 6.56
+    },
+    {
+      "text": "write a summary of it",
+      "start": 106.0,
+      "duration": 6.24
+    },
+    {
+      "text": "and write their summary and keep merging",
+      "start": 109.92,
+      "duration": 5.76
+    },
+    {
+      "text": "summaries all the way to the top.",
+      "start": 112.24,
+      "duration": 6.239
+    },
+    {
+      "text": "You see how powerful the idea is and",
+      "start": 115.68,
+      "duration": 4.479
+    },
+    {
+      "text": "because a summary is built from",
+      "start": 118.479,
+      "duration": 4.64
+    },
+    {
+      "text": "summaries it gives you a more global",
+      "start": 120.159,
+      "duration": 4.721
+    },
+    {
+      "text": "perspective",
+      "start": 123.119,
+      "duration": 4.32
+    },
+    {
+      "text": "over the entire corpus not just a",
+      "start": 124.88,
+      "duration": 5.439
+    },
+    {
+      "text": "document. Now here is the beauty of it.",
+      "start": 127.439,
+      "duration": 4.401
+    },
+    {
+      "text": "Imagine that you're talking about",
+      "start": 130.319,
+      "duration": 4.521
+    },
+    {
+      "text": "thermodynamics",
+      "start": 131.84,
+      "duration": 3.0
+    },
+    {
+      "text": "or physics or anything. Now to that pool",
+      "start": 134.959,
+      "duration": 8.241
+    },
+    {
+      "text": "or let's take just this topic network",
+      "start": 138.4,
+      "duration": 7.839
+    },
+    {
+      "text": "science or uh",
+      "start": 143.2,
+      "duration": 6.16
+    },
+    {
+      "text": "complex network analysis.",
+      "start": 146.239,
+      "duration": 5.681
+    },
+    {
+      "text": "If you take a couple of hundred",
+      "start": 149.36,
+      "duration": 7.04
+    },
+    {
+      "text": "textbooks, articles, papers, this that",
+      "start": 151.92,
+      "duration": 9.28
+    },
+    {
+      "text": "and you shred all of them into the uh",
+      "start": 156.4,
+      "duration": 6.64
+    },
+    {
+      "text": "triplets and then you do knowledge",
+      "start": 161.2,
+      "duration": 4.24
+    },
+    {
+      "text": "graph,",
+      "start": 163.04,
+      "duration": 6.0
+    },
+    {
+      "text": "you realize that the provenence",
+      "start": 165.44,
+      "duration": 6.72
+    },
+    {
+      "text": "does not matter for community detection.",
+      "start": 169.04,
+      "duration": 4.96
+    },
+    {
+      "text": "Just the entities and relationships",
+      "start": 172.16,
+      "duration": 5.28
+    },
+    {
+      "text": "matter. Where each entity relationship,",
+      "start": 174.0,
+      "duration": 6.56
+    },
+    {
+      "text": "where any triplet came from,",
+      "start": 177.44,
+      "duration": 5.04
+    },
+    {
+      "text": "which document, which book, which",
+      "start": 180.56,
+      "duration": 4.48
+    },
+    {
+      "text": "article it came from, doesn't matter.",
+      "start": 182.48,
+      "duration": 4.96
+    },
+    {
+      "text": "Doesn't that is lost. Community",
+      "start": 185.04,
+      "duration": 7.36
+    },
+    {
+      "text": "detection. We will take a community",
+      "start": 187.44,
+      "duration": 7.12
+    },
+    {
+      "text": "of nodes",
+      "start": 192.4,
+      "duration": 4.4
+    },
+    {
+      "text": "and entities and relationships, nodes",
+      "start": 194.56,
+      "duration": 4.72
+    },
+    {
+      "text": "and edges that actually has been",
+      "start": 196.8,
+      "duration": 5.12
+    },
+    {
+      "text": "nourished by many different documents in",
+      "start": 199.28,
+      "duration": 5.76
+    },
+    {
+      "text": "the corpus. Some good, some really good,",
+      "start": 201.92,
+      "duration": 5.84
+    },
+    {
+      "text": "some not so good, etc., etc. Lots of",
+      "start": 205.04,
+      "duration": 5.919
+    },
+    {
+      "text": "information has come together.",
+      "start": 207.76,
+      "duration": 5.36
+    },
+    {
+      "text": "So observe one thing. When you read a",
+      "start": 210.959,
+      "duration": 3.441
+    },
+    {
+      "text": "textbook, have you noticed that",
+      "start": 213.12,
+      "duration": 3.6
+    },
+    {
+      "text": "something one author will explain very",
+      "start": 214.4,
+      "duration": 4.96
+    },
+    {
+      "text": "clearly and the other but in some but on",
+      "start": 216.72,
+      "duration": 4.079
+    },
+    {
+      "text": "a different topic that same author",
+      "start": 219.36,
+      "duration": 3.439
+    },
+    {
+      "text": "wouldn't do as good a job. So you refer",
+      "start": 220.799,
+      "duration": 4.401
+    },
+    {
+      "text": "to the other textbook or you refer to",
+      "start": 222.799,
+      "duration": 4.0
+    },
+    {
+      "text": "somebody's blog or you refer to",
+      "start": 225.2,
+      "duration": 4.319
+    },
+    {
+      "text": "something else, some article or the",
+      "start": 226.799,
+      "duration": 5.44
+    },
+    {
+      "text": "professor's notes. But look at the",
+      "start": 229.519,
+      "duration": 4.64
+    },
+    {
+      "text": "beauty of it. Suppose you want to",
+      "start": 232.239,
+      "duration": 4.64
+    },
+    {
+      "text": "understand a topic and all their",
+      "start": 234.159,
+      "duration": 6.64
+    },
+    {
+      "text": "textbooks and lecture notes and um blogs",
+      "start": 236.879,
+      "duration": 7.041
+    },
+    {
+      "text": "and everything has been nourishing a",
+      "start": 240.799,
+      "duration": 5.921
+    },
+    {
+      "text": "single knowledge gra",
+      "start": 243.92,
+      "duration": 4.959
+    },
+    {
+      "text": "then when I go to that topic because",
+      "start": 246.72,
+      "duration": 4.719
+    },
+    {
+      "text": "that's a community",
+      "start": 248.879,
+      "duration": 7.041
+    },
+    {
+      "text": "that topic the knowledge there becomes a",
+      "start": 251.439,
+      "duration": 7.2
+    },
+    {
+      "text": "definitive in some sense mini textbook",
+      "start": 255.92,
+      "duration": 5.439
+    },
+    {
+      "text": "on the topic that is nourished by so",
+      "start": 258.639,
+      "duration": 5.12
+    },
+    {
+      "text": "many authors.",
+      "start": 261.359,
+      "duration": 2.4
+    },
+    {
+      "text": "You see, you see the power of that in a",
+      "start": 263.919,
+      "duration": 4.881
+    },
+    {
+      "text": "way it brings the power of collective",
+      "start": 266.96,
+      "duration": 4.4
+    },
+    {
+      "text": "intelligence onto that topic to bear.",
+      "start": 268.8,
+      "duration": 4.56
+    },
+    {
+      "text": "The whole corpus is shedding light on",
+      "start": 271.36,
+      "duration": 6.16
+    },
+    {
+      "text": "that topic. That is the potentiality",
+      "start": 273.36,
+      "duration": 5.68
+    },
+    {
+      "text": "inherent",
+      "start": 277.52,
+      "duration": 5.88
+    },
+    {
+      "text": "with this kind of an approach.",
+      "start": 279.04,
+      "duration": 4.36
+    },
+    {
+      "text": "Now it is not to say that such a thing",
+      "start": 284.4,
+      "duration": 4.0
+    },
+    {
+      "text": "wouldn't be true if you were doing",
+      "start": 286.8,
+      "duration": 3.839
+    },
+    {
+      "text": "normal drag. Suppose you were doing",
+      "start": 288.4,
+      "duration": 5.12
+    },
+    {
+      "text": "normal right what would happen is lots",
+      "start": 290.639,
+      "duration": 7.921
+    },
+    {
+      "text": "of chunks would show up the job of",
+      "start": 293.52,
+      "duration": 7.84
+    },
+    {
+      "text": "stitching them together and making sense",
+      "start": 298.56,
+      "duration": 8.04
+    },
+    {
+      "text": "would be at inference time at query time",
+      "start": 301.36,
+      "duration": 5.24
+    },
+    {
+      "text": "but by community detection and writing",
+      "start": 307.6,
+      "duration": 6.08
+    },
+    {
+      "text": "the definitive articles if you so wish",
+      "start": 310.16,
+      "duration": 7.28
+    },
+    {
+      "text": "right at the time of uh pro",
+      "start": 313.68,
+      "duration": 6.4
+    },
+    {
+      "text": "building the graph if You do that",
+      "start": 317.44,
+      "duration": 5.92
+    },
+    {
+      "text": "building the graph rack. What happens is",
+      "start": 320.08,
+      "duration": 5.36
+    },
+    {
+      "text": "at inference time you just hit upon the",
+      "start": 323.36,
+      "duration": 5.44
+    },
+    {
+      "text": "community pick up the summary and return",
+      "start": 325.44,
+      "duration": 5.12
+    },
+    {
+      "text": "it as a search result. So those",
+      "start": 328.8,
+      "duration": 4.8
+    },
+    {
+      "text": "summaries become high value",
+      "start": 330.56,
+      "duration": 5.28
+    },
+    {
+      "text": "derivative artifacts.",
+      "start": 333.6,
+      "duration": 4.64
+    },
+    {
+      "text": "The write up on the communities become",
+      "start": 335.84,
+      "duration": 5.199
+    },
+    {
+      "text": "high value derivative artifacts. You see",
+      "start": 338.24,
+      "duration": 5.679
+    },
+    {
+      "text": "that and they give you global sense",
+      "start": 341.039,
+      "duration": 6.641
+    },
+    {
+      "text": "making. If you were to ask this question",
+      "start": 343.919,
+      "duration": 6.641
+    },
+    {
+      "text": "for example and we posed this question",
+      "start": 347.68,
+      "duration": 6.0
+    },
+    {
+      "text": "last time how does the story I took one",
+      "start": 350.56,
+      "duration": 5.6
+    },
+    {
+      "text": "story a mill on the floors by George",
+      "start": 353.68,
+      "duration": 6.4
+    },
+    {
+      "text": "Elliot how what happens to Tom to Tom",
+      "start": 356.16,
+      "duration": 5.759
+    },
+    {
+      "text": "and Maggie deliver at the end of the",
+      "start": 360.08,
+      "duration": 4.399
+    },
+    {
+      "text": "story you can answer that by looking at",
+      "start": 361.919,
+      "duration": 7.601
+    },
+    {
+      "text": "the a chunk it's a point query",
+      "start": 364.479,
+      "duration": 7.601
+    },
+    {
+      "text": "but if you were to ask what are the late",
+      "start": 369.52,
+      "duration": 5.36
+    },
+    {
+      "text": "motive in her stories",
+      "start": 372.08,
+      "duration": 4.72
+    },
+    {
+      "text": "George Juliet's stories. Now you need to",
+      "start": 374.88,
+      "duration": 5.599
+    },
+    {
+      "text": "know all her stories, all her novels and",
+      "start": 376.8,
+      "duration": 6.0
+    },
+    {
+      "text": "be able to see the pattern across all of",
+      "start": 380.479,
+      "duration": 4.881
+    },
+    {
+      "text": "them. But those things the abstractive",
+      "start": 382.8,
+      "duration": 6.239
+    },
+    {
+      "text": "summaries give you or help you form.",
+      "start": 385.36,
+      "duration": 5.119
+    },
+    {
+      "text": "You see that or at least has the",
+      "start": 389.039,
+      "duration": 3.521
+    },
+    {
+      "text": "potential to give you if you do it",
+      "start": 390.479,
+      "duration": 4.241
+    },
+    {
+      "text": "right.",
+      "start": 392.56,
+      "duration": 5.199
+    },
+    {
+      "text": "So that's the power of graphite.",
+      "start": 394.72,
+      "duration": 7.919
+    },
+    {
+      "text": "Now when Microsoft's paper came out uh",
+      "start": 397.759,
+      "duration": 7.601
+    },
+    {
+      "text": "something else was happening before",
+      "start": 402.639,
+      "duration": 4.961
+    },
+    {
+      "text": "Microsoft's paper Microsoft wrote the",
+      "start": 405.36,
+      "duration": 4.559
+    },
+    {
+      "text": "first influential paper on graph rank",
+      "start": 407.6,
+      "duration": 5.52
+    },
+    {
+      "text": "with community detection but before that",
+      "start": 409.919,
+      "duration": 4.881
+    },
+    {
+      "text": "people had created some sort of a",
+      "start": 413.12,
+      "duration": 3.28
+    },
+    {
+      "text": "knowledge graphs what they would do is",
+      "start": 414.8,
+      "duration": 4.799
+    },
+    {
+      "text": "they would extract entities from text",
+      "start": 416.4,
+      "duration": 6.48
+    },
+    {
+      "text": "and have this relation and store it in a",
+      "start": 419.599,
+      "duration": 5.6
+    },
+    {
+      "text": "new forj or some graph database. So when",
+      "start": 422.88,
+      "duration": 5.439
+    },
+    {
+      "text": "a user query came and you can detect",
+      "start": 425.199,
+      "duration": 5.44
+    },
+    {
+      "text": "entities in the user query go to the",
+      "start": 428.319,
+      "duration": 5.44
+    },
+    {
+      "text": "graph and find the nearest neighbors",
+      "start": 430.639,
+      "duration": 5.361
+    },
+    {
+      "text": "entities and nodes you find the nearest",
+      "start": 433.759,
+      "duration": 3.921
+    },
+    {
+      "text": "and then augment the query with those",
+      "start": 436.0,
+      "duration": 3.919
+    },
+    {
+      "text": "extra keywords also you see how it can",
+      "start": 437.68,
+      "duration": 4.88
+    },
+    {
+      "text": "enrich the search process.",
+      "start": 439.919,
+      "duration": 7.801
+    },
+    {
+      "text": "So I would call it graph augmented drag.",
+      "start": 442.56,
+      "duration": 5.16
+    },
+    {
+      "text": "Graph augmented drag is not graph drag",
+      "start": 448.16,
+      "duration": 6.0
+    },
+    {
+      "text": "the way we think of it today. It's a",
+      "start": 451.36,
+      "duration": 5.679
+    },
+    {
+      "text": "very basic form of graph but we don't",
+      "start": 454.16,
+      "duration": 4.8
+    },
+    {
+      "text": "usually consider that. Now it is a",
+      "start": 457.039,
+      "duration": 3.841
+    },
+    {
+      "text": "nuance that is often missed and I'm",
+      "start": 458.96,
+      "duration": 3.84
+    },
+    {
+      "text": "mentioning it to you because a lot of",
+      "start": 460.88,
+      "duration": 5.599
+    },
+    {
+      "text": "articles and even written by vendors of",
+      "start": 462.8,
+      "duration": 6.799
+    },
+    {
+      "text": "uh graph databases they conflate the",
+      "start": 466.479,
+      "duration": 4.801
+    },
+    {
+      "text": "two.",
+      "start": 469.599,
+      "duration": 4.081
+    },
+    {
+      "text": "This is so easy. Look at this. We have a",
+      "start": 471.28,
+      "duration": 4.8
+    },
+    {
+      "text": "graph in the database. Here's a query.",
+      "start": 473.68,
+      "duration": 4.639
+    },
+    {
+      "text": "We can return you some augmentation. Now",
+      "start": 476.08,
+      "duration": 4.559
+    },
+    {
+      "text": "you do your rack.",
+      "start": 478.319,
+      "duration": 4.481
+    },
+    {
+      "text": "Graph rag examples are there. Those are",
+      "start": 480.639,
+      "duration": 4.321
+    },
+    {
+      "text": "not graph rag in the technical sense.",
+      "start": 482.8,
+      "duration": 6.44
+    },
+    {
+      "text": "They're graph augmented racks.",
+      "start": 484.96,
+      "duration": 4.28
+    },
+    {
+      "text": "Are we following that? That distinction",
+      "start": 489.44,
+      "duration": 5.439
+    },
+    {
+      "text": "matters. It's graph augmented rag.",
+      "start": 491.28,
+      "duration": 5.68
+    },
+    {
+      "text": "Now",
+      "start": 494.879,
+      "duration": 4.88
+    },
+    {
+      "text": "what is graph rag? The way we mean it.",
+      "start": 496.96,
+      "duration": 7.239
+    },
+    {
+      "text": "The first work came out of Microsoft.",
+      "start": 499.759,
+      "duration": 4.44
+    },
+    {
+      "text": "It is literally called the graph rag",
+      "start": 505.199,
+      "duration": 4.761
+    },
+    {
+      "text": "paper.",
+      "start": 506.96,
+      "duration": 3.0
+    },
+    {
+      "text": "I've given it as a reading material to",
+      "start": 511.199,
+      "duration": 3.441
+    },
+    {
+      "text": "you because I've already explained to",
+      "start": 512.959,
+      "duration": 4.08
+    },
+    {
+      "text": "you at greater depth than the paper",
+      "start": 514.64,
+      "duration": 5.44
+    },
+    {
+      "text": "goes. How to do it? How do we do it? Who",
+      "start": 517.039,
+      "duration": 5.92
+    },
+    {
+      "text": "would like to give me an idea? How do we",
+      "start": 520.08,
+      "duration": 7.16
+    },
+    {
+      "text": "do the graph rag?",
+      "start": 522.959,
+      "duration": 4.281
+    },
+    {
+      "text": "anyone",
+      "start": 529.6,
+      "duration": 5.679
+    },
+    {
+      "text": ">> take the corpus. How do how the way I",
+      "start": 532.24,
+      "duration": 4.64
+    },
+    {
+      "text": "explained to you using community",
+      "start": 535.279,
+      "duration": 4.161
+    },
+    {
+      "text": "detection and writing their summaries?",
+      "start": 536.88,
+      "duration": 6.72
+    },
+    {
+      "text": "Could somebody recap the whole approach?",
+      "start": 539.44,
+      "duration": 7.519
+    },
+    {
+      "text": ">> Build the triplets entities and then let",
+      "start": 543.6,
+      "duration": 3.76
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 546.959,
+      "duration": 1.761
+    },
+    {
+      "text": ">> Keep on building them.",
+      "start": 547.36,
+      "duration": 2.24
+    },
+    {
+      "text": ">> Yes.",
+      "start": 548.72,
+      "duration": 1.52
+    },
+    {
+      "text": ">> And",
+      "start": 549.6,
+      "duration": 1.679
+    },
+    {
+      "text": ">> make a graph.",
+      "start": 550.24,
+      "duration": 3.92
+    },
+    {
+      "text": ">> Make a graph. Take summaries.",
+      "start": 551.279,
+      "duration": 4.961
+    },
+    {
+      "text": ">> Community detection. Detect community",
+      "start": 554.16,
+      "duration": 2.88
+    },
+    {
+      "text": "detection.",
+      "start": 556.24,
+      "duration": 3.36
+    },
+    {
+      "text": ">> Then do community summaries.",
+      "start": 557.04,
+      "duration": 4.239
+    },
+    {
+      "text": "hierarchically make summaries of",
+      "start": 559.6,
+      "duration": 4.4
+    },
+    {
+      "text": "summaries and go up. [clears throat]",
+      "start": 561.279,
+      "duration": 7.841
+    },
+    {
+      "text": "So that was the graph rag. This graph",
+      "start": 564.0,
+      "duration": 9.519
+    },
+    {
+      "text": "rag when it came out it's literally",
+      "start": 569.12,
+      "duration": 6.32
+    },
+    {
+      "text": "showed the potential for being the",
+      "start": 573.519,
+      "duration": 3.921
+    },
+    {
+      "text": "state-of-the-art.",
+      "start": 575.44,
+      "duration": 4.32
+    },
+    {
+      "text": "What people notice that the recall one",
+      "start": 577.44,
+      "duration": 4.16
+    },
+    {
+      "text": "of the metrics of lag and when we do the",
+      "start": 579.76,
+      "duration": 4.32
+    },
+    {
+      "text": "evaluation metrics you realize recall in",
+      "start": 581.6,
+      "duration": 3.679
+    },
+    {
+      "text": "other words not missing something",
+      "start": 584.08,
+      "duration": 3.52
+    },
+    {
+      "text": "important an important document",
+      "start": 585.279,
+      "duration": 6.481
+    },
+    {
+      "text": "importance that went up significantly",
+      "start": 587.6,
+      "duration": 9.28
+    },
+    {
+      "text": "but the price we paid was in precision",
+      "start": 591.76,
+      "duration": 6.72
+    },
+    {
+      "text": "it would bring up a lot of false",
+      "start": 596.88,
+      "duration": 3.6
+    },
+    {
+      "text": "positives remember precision gets",
+      "start": 598.48,
+      "duration": 4.799
+    },
+    {
+      "text": "affected when false positives became",
+      "start": 600.48,
+      "duration": 4.799
+    },
+    {
+      "text": "noisy results",
+      "start": 603.279,
+      "duration": 6.161
+    },
+    {
+      "text": "so it was a sort a mixed blessing.",
+      "start": 605.279,
+      "duration": 8.401
+    },
+    {
+      "text": "Now, generally in search,",
+      "start": 609.44,
+      "duration": 8.639
+    },
+    {
+      "text": "missing a good document, vital document",
+      "start": 613.68,
+      "duration": 6.24
+    },
+    {
+      "text": "is considered far more serious than",
+      "start": 618.079,
+      "duration": 4.481
+    },
+    {
+      "text": "having some not so relevant document in",
+      "start": 619.92,
+      "duration": 5.2
+    },
+    {
+      "text": "your search result. So, it's always a",
+      "start": 622.56,
+      "duration": 7.2
+    },
+    {
+      "text": "slight bend of recall over precision",
+      "start": 625.12,
+      "duration": 8.88
+    },
+    {
+      "text": "approach, right? And sometimes we can",
+      "start": 629.76,
+      "duration": 6.56
+    },
+    {
+      "text": "work on the precision in secondary",
+      "start": 634.0,
+      "duration": 5.36
+    },
+    {
+      "text": "stages after that post filtering stages.",
+      "start": 636.32,
+      "duration": 5.92
+    },
+    {
+      "text": "Nevertheless, it was a problem.",
+      "start": 639.36,
+      "duration": 5.76
+    },
+    {
+      "text": "What is the problem? Irrelevance of",
+      "start": 642.24,
+      "duration": 7.2
+    },
+    {
+      "text": "significant noise comes in. The other",
+      "start": 645.12,
+      "duration": 6.56
+    },
+    {
+      "text": "problem that it had was the sheer",
+      "start": 649.44,
+      "duration": 4.079
+    },
+    {
+      "text": "compute cost.",
+      "start": 651.68,
+      "duration": 4.64
+    },
+    {
+      "text": "Here's something.",
+      "start": 653.519,
+      "duration": 5.521
+    },
+    {
+      "text": "When graph paper came out, I did a paper",
+      "start": 656.32,
+      "duration": 4.56
+    },
+    {
+      "text": "reading that you guys know I do every",
+      "start": 659.04,
+      "duration": 4.479
+    },
+    {
+      "text": "Wednesday on it years ago. It's been a",
+      "start": 660.88,
+      "duration": 4.56
+    },
+    {
+      "text": "while now. I think I forgot the year",
+      "start": 663.519,
+      "duration": 3.921
+    },
+    {
+      "text": "graph rack came out. Microsoft graph",
+      "start": 665.44,
+      "duration": 3.6
+    },
+    {
+      "text": "rack. You can look up the actual year.",
+      "start": 667.44,
+      "duration": 2.88
+    },
+    {
+      "text": "It should be there in the",
+      "start": 669.04,
+      "duration": 3.359
+    },
+    {
+      "text": ">> I think it's 200.",
+      "start": 670.32,
+      "duration": 3.44
+    },
+    {
+      "text": ">> 20.",
+      "start": 672.399,
+      "duration": 4.56
+    },
+    {
+      "text": ">> No, no, not 20. Not so far back. It is",
+      "start": 673.76,
+      "duration": 6.079
+    },
+    {
+      "text": "uh",
+      "start": 676.959,
+      "duration": 6.12
+    },
+    {
+      "text": "it is",
+      "start": 679.839,
+      "duration": 3.24
+    },
+    {
+      "text": "that was way back. Uh this one was",
+      "start": 686.56,
+      "duration": 6.959
+    },
+    {
+      "text": "turn.",
+      "start": 691.6,
+      "duration": 6.72
+    },
+    {
+      "text": "Okay. Microsoft paper is",
+      "start": 693.519,
+      "duration": 6.0
+    },
+    {
+      "text": ">> 2024.",
+      "start": 698.32,
+      "duration": 3.68
+    },
+    {
+      "text": ">> 2024 seems more like it. Yeah.",
+      "start": 699.519,
+      "duration": 2.961
+    },
+    {
+      "text": ">> 2020.",
+      "start": 702.0,
+      "duration": 2.16
+    },
+    {
+      "text": ">> Page 19.",
+      "start": 702.48,
+      "duration": 2.479
+    },
+    {
+      "text": ">> Page",
+      "start": 704.16,
+      "duration": 4.48
+    },
+    {
+      "text": ">> 19. Ah, page 19. That's right. So 2024",
+      "start": 704.959,
+      "duration": 8.641
+    },
+    {
+      "text": "is when it came out and it was quite a",
+      "start": 708.64,
+      "duration": 8.16
+    },
+    {
+      "text": "from local to global. Yeah. It was quite",
+      "start": 713.6,
+      "duration": 5.6
+    },
+    {
+      "text": "a powerful result. We started",
+      "start": 716.8,
+      "duration": 4.88
+    },
+    {
+      "text": "implementing it here at support vectors.",
+      "start": 719.2,
+      "duration": 5.12
+    },
+    {
+      "text": "There was a graduate student.",
+      "start": 721.68,
+      "duration": 5.92
+    },
+    {
+      "text": "I gave him a simple task. I said he was",
+      "start": 724.32,
+      "duration": 5.759
+    },
+    {
+      "text": "interning here for the summer. I gave",
+      "start": 727.6,
+      "duration": 5.919
+    },
+    {
+      "text": "him the book brothers Karamazov",
+      "start": 730.079,
+      "duration": 6.641
+    },
+    {
+      "text": "by a writer named Dhasttovski was quite",
+      "start": 733.519,
+      "duration": 5.521
+    },
+    {
+      "text": "popular he's great considered one of the",
+      "start": 736.72,
+      "duration": 4.88
+    },
+    {
+      "text": "great masters of world literature is",
+      "start": 739.04,
+      "duration": 4.88
+    },
+    {
+      "text": "Russian",
+      "start": 741.6,
+      "duration": 4.56
+    },
+    {
+      "text": "and brother Scarv is considered one of",
+      "start": 743.92,
+      "duration": 6.08
+    },
+    {
+      "text": "the masterpieces of world literature",
+      "start": 746.16,
+      "duration": 5.679
+    },
+    {
+      "text": "next day he asked me okay I'm going to",
+      "start": 750.0,
+      "duration": 3.68
+    },
+    {
+      "text": "do graph right by the way I need to make",
+      "start": 751.839,
+      "duration": 5.521
+    },
+    {
+      "text": "LLM calls can I uh have your open AI key",
+      "start": 753.68,
+      "duration": 7.04
+    },
+    {
+      "text": "so I gave him an open AI",
+      "start": 757.36,
+      "duration": 8.24
+    },
+    {
+      "text": "And next morning I look at it and he has",
+      "start": 760.72,
+      "duration": 9.0
+    },
+    {
+      "text": "raked up a $1,000 bill,",
+      "start": 765.6,
+      "duration": 4.12
+    },
+    {
+      "text": "right? It was a bit of a shock. How do",
+      "start": 770.0,
+      "duration": 4.639
+    },
+    {
+      "text": "you do that? Maybe he ran it. He did the",
+      "start": 772.48,
+      "duration": 5.12
+    },
+    {
+      "text": "graph building a couple of times.",
+      "start": 774.639,
+      "duration": 6.521
+    },
+    {
+      "text": "But the point is",
+      "start": 777.6,
+      "duration": 3.56
+    },
+    {
+      "text": "likewise when people will do",
+      "start": 781.2,
+      "duration": 2.639
+    },
+    {
+      "text": "development, they'll screw up. They'll",
+      "start": 782.32,
+      "duration": 4.8
+    },
+    {
+      "text": "again recreate the graph etc. That is",
+      "start": 783.839,
+      "duration": 5.281
+    },
+    {
+      "text": "not very different from the development",
+      "start": 787.12,
+      "duration": 4.24
+    },
+    {
+      "text": "approach.",
+      "start": 789.12,
+      "duration": 5.12
+    },
+    {
+      "text": "So if it costs $1,000 to do one book,",
+      "start": 791.36,
+      "duration": 4.4
+    },
+    {
+      "text": "let's say that he did it twice or",
+      "start": 794.24,
+      "duration": 5.279
+    },
+    {
+      "text": "thrice, let's say one, $300, $400 to do",
+      "start": 795.76,
+      "duration": 7.68
+    },
+    {
+      "text": "one book. It's still very expensive. If",
+      "start": 799.519,
+      "duration": 6.401
+    },
+    {
+      "text": "you have a corpus",
+      "start": 803.44,
+      "duration": 6.56
+    },
+    {
+      "text": "with hundreds of thousands of pages,",
+      "start": 805.92,
+      "duration": 7.2
+    },
+    {
+      "text": "that would be prohibitively expensive.",
+      "start": 810.0,
+      "duration": 5.2
+    },
+    {
+      "text": "You see that?",
+      "start": 813.12,
+      "duration": 5.6
+    },
+    {
+      "text": "So people looked at",
+      "start": 815.2,
+      "duration": 5.04
+    },
+    {
+      "text": "graph",
+      "start": 818.72,
+      "duration": 4.239
+    },
+    {
+      "text": "a little bit like",
+      "start": 820.24,
+      "duration": 4.96
+    },
+    {
+      "text": "great to have something beyond your",
+      "start": 822.959,
+      "duration": 3.841
+    },
+    {
+      "text": "reach.",
+      "start": 825.2,
+      "duration": 4.4
+    },
+    {
+      "text": "It it just felt like a Lamborghini that",
+      "start": 826.8,
+      "duration": 4.96
+    },
+    {
+      "text": "you can look at but you can't actually",
+      "start": 829.6,
+      "duration": 3.679
+    },
+    {
+      "text": "drive",
+      "start": 831.76,
+      "duration": 3.519
+    },
+    {
+      "text": "right there was a bit of a a feeling for",
+      "start": 833.279,
+      "duration": 4.961
+    },
+    {
+      "text": "that. So that's a bit unfair. We used",
+      "start": 835.279,
+      "duration": 6.0
+    },
+    {
+      "text": "graph quite a lot. There are two ways to",
+      "start": 838.24,
+      "duration": 6.8
+    },
+    {
+      "text": "do that. We used our own cluster",
+      "start": 841.279,
+      "duration": 5.92
+    },
+    {
+      "text": "support vectors cluster rather than",
+      "start": 845.04,
+      "duration": 4.64
+    },
+    {
+      "text": "making open AI calls we would use the",
+      "start": 847.199,
+      "duration": 4.64
+    },
+    {
+      "text": "LLM locally. Then of course the cost is",
+      "start": 849.68,
+      "duration": 6.24
+    },
+    {
+      "text": "tamed and what we found is the results",
+      "start": 851.839,
+      "duration": 6.401
+    },
+    {
+      "text": "were amazing but we didn't use it as the",
+      "start": 855.92,
+      "duration": 4.88
+    },
+    {
+      "text": "primary vehicle. What we did and this is",
+      "start": 858.24,
+      "duration": 4.719
+    },
+    {
+      "text": "my recommendation. Suppose you're doing",
+      "start": 860.8,
+      "duration": 4.56
+    },
+    {
+      "text": "rag and this is your main pathway the",
+      "start": 862.959,
+      "duration": 5.361
+    },
+    {
+      "text": "main highway",
+      "start": 865.36,
+      "duration": 6.88
+    },
+    {
+      "text": "rag pipeline. What we did is and this is",
+      "start": 868.32,
+      "duration": 8.92
+    },
+    {
+      "text": "a technology you learn query routing.",
+      "start": 872.24,
+      "duration": 5.0
+    },
+    {
+      "text": "We would see whether the query needs",
+      "start": 878.639,
+      "duration": 6.241
+    },
+    {
+      "text": "wider scope, more global scope, right?",
+      "start": 881.44,
+      "duration": 6.16
+    },
+    {
+      "text": "And whether it would benefit from a",
+      "start": 884.88,
+      "duration": 5.28
+    },
+    {
+      "text": "graph rag situation. And what we would",
+      "start": 887.6,
+      "duration": 6.64
+    },
+    {
+      "text": "do is we shunt it through a sidecar.",
+      "start": 890.16,
+      "duration": 7.76
+    },
+    {
+      "text": "And here we had a graph rag",
+      "start": 894.24,
+      "duration": 5.92
+    },
+    {
+      "text": "as a sidecar",
+      "start": 897.92,
+      "duration": 5.359
+    },
+    {
+      "text": "to the main and then we would feed it",
+      "start": 900.16,
+      "duration": 5.76
+    },
+    {
+      "text": "forward",
+      "start": 903.279,
+      "duration": 4.721
+    },
+    {
+      "text": "right and into the graph rack. We",
+      "start": 905.92,
+      "duration": 4.159
+    },
+    {
+      "text": "wouldn't throw all the documents. We",
+      "start": 908.0,
+      "duration": 4.399
+    },
+    {
+      "text": "would throw those documents that made",
+      "start": 910.079,
+      "duration": 4.801
+    },
+    {
+      "text": "sense where you would need a little",
+      "start": 912.399,
+      "duration": 5.281
+    },
+    {
+      "text": "wider perspective zoomed out perspective",
+      "start": 914.88,
+      "duration": 6.16
+    },
+    {
+      "text": "sense making over zoomed out. Right? Uh",
+      "start": 917.68,
+      "duration": 5.92
+    },
+    {
+      "text": "only those we would put in graph. So we",
+      "start": 921.04,
+      "duration": 5.12
+    },
+    {
+      "text": "tamed it by multiple means. Our typical",
+      "start": 923.6,
+      "duration": 6.239
+    },
+    {
+      "text": "query routing was 1 to 2% through the",
+      "start": 926.16,
+      "duration": 7.6
+    },
+    {
+      "text": "graph ra side car.",
+      "start": 929.839,
+      "duration": 6.961
+    },
+    {
+      "text": "99% of the traffic or 98% of the traffic",
+      "start": 933.76,
+      "duration": 6.4
+    },
+    {
+      "text": "went by the highway without touching the",
+      "start": 936.8,
+      "duration": 6.8
+    },
+    {
+      "text": "side car. The other thing we did to tame",
+      "start": 940.16,
+      "duration": 6.799
+    },
+    {
+      "text": "it again was to use a local LM. Our",
+      "start": 943.6,
+      "duration": 5.76
+    },
+    {
+      "text": "experience is that",
+      "start": 946.959,
+      "duration": 6.761
+    },
+    {
+      "text": "you don't need a frontier LLM.",
+      "start": 949.36,
+      "duration": 4.36
+    },
+    {
+      "text": "We obviously I don't mean that you use a",
+      "start": 954.079,
+      "duration": 4.721
+    },
+    {
+      "text": "1 billion parameter model might be too",
+      "start": 956.88,
+      "duration": 6.72
+    },
+    {
+      "text": "small. Uh what we find is that using a",
+      "start": 958.8,
+      "duration": 7.12
+    },
+    {
+      "text": "70 billion parameter or 120 billion",
+      "start": 963.6,
+      "duration": 6.0
+    },
+    {
+      "text": "parameter model is good enough things",
+      "start": 965.92,
+      "duration": 6.0
+    },
+    {
+      "text": "that you can host on a reasonable",
+      "start": 969.6,
+      "duration": 5.28
+    },
+    {
+      "text": "reasonably powerful workstation,",
+      "start": 971.92,
+      "duration": 4.159
+    },
+    {
+      "text": "right?",
+      "start": 974.88,
+      "duration": 2.879
+    },
+    {
+      "text": "The other advice I'll give you is if",
+      "start": 976.079,
+      "duration": 4.481
+    },
+    {
+      "text": "you're used to open router,",
+      "start": 977.759,
+      "duration": 5.121
+    },
+    {
+      "text": "how many of you know open router? Open",
+      "start": 980.56,
+      "duration": 5.68
+    },
+    {
+      "text": "router is a way in which the company",
+      "start": 982.88,
+      "duration": 6.56
+    },
+    {
+      "text": "that has connection to data centers that",
+      "start": 986.24,
+      "duration": 6.959
+    },
+    {
+      "text": "will host a lot of open-source models.",
+      "start": 989.44,
+      "duration": 6.88
+    },
+    {
+      "text": "So a lot of open source models",
+      "start": 993.199,
+      "duration": 7.121
+    },
+    {
+      "text": "come free. Mixtrals are there from",
+      "start": 996.32,
+      "duration": 6.4
+    },
+    {
+      "text": "France. Then from China there are a lot",
+      "start": 1000.32,
+      "duration": 4.48
+    },
+    {
+      "text": "of models",
+      "start": 1002.72,
+      "duration": 4.799
+    },
+    {
+      "text": "and from open AAI there is open AAI GPT",
+      "start": 1004.8,
+      "duration": 4.959
+    },
+    {
+      "text": "OSS",
+      "start": 1007.519,
+      "duration": 6.161
+    },
+    {
+      "text": "they are priced far far lower than the",
+      "start": 1009.759,
+      "duration": 5.281
+    },
+    {
+      "text": "frontier models you don't need a",
+      "start": 1013.68,
+      "duration": 3.36
+    },
+    {
+      "text": "frontier model",
+      "start": 1015.04,
+      "duration": 4.4
+    },
+    {
+      "text": "if you can't host anything on your own",
+      "start": 1017.04,
+      "duration": 4.08
+    },
+    {
+      "text": "after this course is over you'll lose",
+      "start": 1019.44,
+      "duration": 4.639
+    },
+    {
+      "text": "access to support vectors data cluster",
+      "start": 1021.12,
+      "duration": 4.559
+    },
+    {
+      "text": "so",
+      "start": 1024.079,
+      "duration": 5.521
+    },
+    {
+      "text": "use open router or it's equivalent",
+      "start": 1025.679,
+      "duration": 7.601
+    },
+    {
+      "text": "prices are far fall over",
+      "start": 1029.6,
+      "duration": 8.0
+    },
+    {
+      "text": "and so you can build these things up.",
+      "start": 1033.28,
+      "duration": 6.399
+    },
+    {
+      "text": "Are we together?",
+      "start": 1037.6,
+      "duration": 4.239
+    },
+    {
+      "text": "Use the LLM for your triplet extraction",
+      "start": 1039.679,
+      "duration": 6.24
+    },
+    {
+      "text": "and so forth and that's that you and",
+      "start": 1041.839,
+      "duration": 6.561
+    },
+    {
+      "text": "again again I would say my experience is",
+      "start": 1045.919,
+      "duration": 4.561
+    },
+    {
+      "text": "you don't need a frontier class model",
+      "start": 1048.4,
+      "duration": 4.8
+    },
+    {
+      "text": "for this",
+      "start": 1050.48,
+      "duration": 5.12
+    },
+    {
+      "text": "relatively powerful but inexpensive",
+      "start": 1053.2,
+      "duration": 5.04
+    },
+    {
+      "text": "models are good especially open source",
+      "start": 1055.6,
+      "duration": 5.439
+    },
+    {
+      "text": "models do very well.",
+      "start": 1058.24,
+      "duration": 3.84
+    },
+    {
+      "text": "Yeah.",
+      "start": 1061.039,
+      "duration": 4.401
+    },
+    {
+      "text": ">> So the cost the cost is in creating the",
+      "start": 1062.08,
+      "duration": 4.959
+    },
+    {
+      "text": "rag or um",
+      "start": 1065.44,
+      "duration": 4.08
+    },
+    {
+      "text": ">> creating the most of the cost is in",
+      "start": 1067.039,
+      "duration": 4.801
+    },
+    {
+      "text": "creating the graph rack.",
+      "start": 1069.52,
+      "duration": 4.32
+    },
+    {
+      "text": "In fact it's a lot of it is triplet",
+      "start": 1071.84,
+      "duration": 5.6
+    },
+    {
+      "text": "extraction and so forth and the uh",
+      "start": 1073.84,
+      "duration": 6.88
+    },
+    {
+      "text": "community detection which is expensive.",
+      "start": 1077.44,
+      "duration": 7.4
+    },
+    {
+      "text": "We do that later.",
+      "start": 1080.72,
+      "duration": 4.12
+    },
+    {
+      "text": "Are we are we together? Right.",
+      "start": 1086.4,
+      "duration": 5.519
+    },
+    {
+      "text": "So",
+      "start": 1089.679,
+      "duration": 6.641
+    },
+    {
+      "text": "having said that people were still they",
+      "start": 1091.919,
+      "duration": 6.0
+    },
+    {
+      "text": "still looked at graph rag as the",
+      "start": 1096.32,
+      "duration": 5.12
+    },
+    {
+      "text": "Lamborghini that they couldn't drive",
+      "start": 1097.919,
+      "duration": 8.201
+    },
+    {
+      "text": "right. So what do you do?",
+      "start": 1101.44,
+      "duration": 4.68
+    },
+    {
+      "text": "Microsoft intern themselves came out",
+      "start": 1106.16,
+      "duration": 5.68
+    },
+    {
+      "text": "with a variant that mitigated the cost",
+      "start": 1108.72,
+      "duration": 6.56
+    },
+    {
+      "text": "quite a bit by almost a factor of what",
+      "start": 1111.84,
+      "duration": 5.92
+    },
+    {
+      "text": "was I would in my mind the number 100",
+      "start": 1115.28,
+      "duration": 4.24
+    },
+    {
+      "text": "comes",
+      "start": 1117.76,
+      "duration": 3.68
+    },
+    {
+      "text": "right by two orders of magnitude they",
+      "start": 1119.52,
+      "duration": 5.039
+    },
+    {
+      "text": "improved the decrease the cost but I may",
+      "start": 1121.44,
+      "duration": 4.479
+    },
+    {
+      "text": "be wrong you have to check the exact",
+      "start": 1124.559,
+      "duration": 4.641
+    },
+    {
+      "text": "number lazy graph rag",
+      "start": 1125.919,
+      "duration": 5.441
+    },
+    {
+      "text": "then other people came up with graph rag",
+      "start": 1129.2,
+      "duration": 5.92
+    },
+    {
+      "text": "light graph rag or graph light etc then",
+      "start": 1131.36,
+      "duration": 7.12
+    },
+    {
+      "text": "came Another pretty good paper called",
+      "start": 1135.12,
+      "duration": 6.36
+    },
+    {
+      "text": "hippoorak.",
+      "start": 1138.48,
+      "duration": 3.0
+    },
+    {
+      "text": "See while lazy graph rack actually did a",
+      "start": 1142.4,
+      "duration": 6.159
+    },
+    {
+      "text": "compromise. It would defer something to",
+      "start": 1145.919,
+      "duration": 5.681
+    },
+    {
+      "text": "the inference time and look at a",
+      "start": 1148.559,
+      "duration": 5.441
+    },
+    {
+      "text": "subcluster or some neighborhood of the",
+      "start": 1151.6,
+      "duration": 5.84
+    },
+    {
+      "text": "graph only to come up with an answer. So",
+      "start": 1154.0,
+      "duration": 5.84
+    },
+    {
+      "text": "you could lose something.",
+      "start": 1157.44,
+      "duration": 5.119
+    },
+    {
+      "text": "Sometimes an information is too diffused",
+      "start": 1159.84,
+      "duration": 5.44
+    },
+    {
+      "text": "then you might lose it.",
+      "start": 1162.559,
+      "duration": 4.881
+    },
+    {
+      "text": "Hippoorad",
+      "start": 1165.28,
+      "duration": 5.44
+    },
+    {
+      "text": "was inspired by neuroscience.",
+      "start": 1167.44,
+      "duration": 7.2
+    },
+    {
+      "text": "Um the hiccam campus",
+      "start": 1170.72,
+      "duration": 6.959
+    },
+    {
+      "text": "in some sense",
+      "start": 1174.64,
+      "duration": 6.399
+    },
+    {
+      "text": "organizes memory",
+      "start": 1177.679,
+      "duration": 5.841
+    },
+    {
+      "text": "right the belief is that memories are",
+      "start": 1181.039,
+      "duration": 6.64
+    },
+    {
+      "text": "organized formed stored knowledge in a",
+      "start": 1183.52,
+      "duration": 6.159
+    },
+    {
+      "text": "certain way so I won't go into the whole",
+      "start": 1187.679,
+      "duration": 3.841
+    },
+    {
+      "text": "neuroscience of it. So they came up with",
+      "start": 1189.679,
+      "duration": 5.041
+    },
+    {
+      "text": "that with good effect and they they",
+      "start": 1191.52,
+      "duration": 5.68
+    },
+    {
+      "text": "popularized an algorithm that I'll teach",
+      "start": 1194.72,
+      "duration": 5.68
+    },
+    {
+      "text": "you now. It is called personalized page",
+      "start": 1197.2,
+      "duration": 5.839
+    },
+    {
+      "text": "rank. You all know what page rank is.",
+      "start": 1200.4,
+      "duration": 6.76
+    },
+    {
+      "text": "How many of you remember page rank?",
+      "start": 1203.039,
+      "duration": 4.121
+    },
+    {
+      "text": ">> Interview question.",
+      "start": 1207.28,
+      "duration": 1.92
+    },
+    {
+      "text": ">> Come again.",
+      "start": 1208.4,
+      "duration": 1.92
+    },
+    {
+      "text": ">> Interview question.",
+      "start": 1209.2,
+      "duration": 3.28
+    },
+    {
+      "text": ">> Interview question. Page rank. Yeah. By",
+      "start": 1210.32,
+      "duration": 3.76
+    },
+    {
+      "text": "the way, what does page and page rank",
+      "start": 1212.48,
+      "duration": 4.84
+    },
+    {
+      "text": "stand for?",
+      "start": 1214.08,
+      "duration": 3.24
+    },
+    {
+      "text": "I think how important how do you want to",
+      "start": 1217.76,
+      "duration": 5.039
+    },
+    {
+      "text": "display your page",
+      "start": 1220.559,
+      "duration": 4.721
+    },
+    {
+      "text": "the",
+      "start": 1222.799,
+      "duration": 4.801
+    },
+    {
+      "text": ">> so your nagaraji says that the page in",
+      "start": 1225.28,
+      "duration": 4.8
+    },
+    {
+      "text": "page rank is the importance of the web",
+      "start": 1227.6,
+      "duration": 5.6
+    },
+    {
+      "text": "page the rank of the web page anybody",
+      "start": 1230.08,
+      "duration": 6.599
+    },
+    {
+      "text": "would like to disagree",
+      "start": 1233.2,
+      "duration": 3.479
+    },
+    {
+      "text": ">> number of links the page has",
+      "start": 1237.6,
+      "duration": 5.04
+    },
+    {
+      "text": ">> sort of yeah see that is the technical",
+      "start": 1240.159,
+      "duration": 5.665
+    },
+    {
+      "text": "thing actually it's Larry page",
+      "start": 1242.64,
+      "duration": 3.2
+    },
+    {
+      "text": "[laughter]",
+      "start": 1245.824,
+      "duration": 2.176
+    },
+    {
+      "text": ">> fine",
+      "start": 1245.84,
+      "duration": 2.16
+    },
+    {
+      "text": "the founders of that one of the",
+      "start": 1249.44,
+      "duration": 4.479
+    },
+    {
+      "text": "co-creators of that algorithm and",
+      "start": 1251.679,
+      "duration": 5.88
+    },
+    {
+      "text": "founders of Google.",
+      "start": 1253.919,
+      "duration": 3.64
+    },
+    {
+      "text": ">> [laughter]",
+      "start": 1257.614,
+      "duration": 2.626
+    },
+    {
+      "text": ">> So it's a little bit of history that",
+      "start": 1257.679,
+      "duration": 4.561
+    },
+    {
+      "text": "gets lost because the name ultimately",
+      "start": 1260.24,
+      "duration": 5.76
+    },
+    {
+      "text": "it's the pages importance in some sense",
+      "start": 1262.24,
+      "duration": 6.0
+    },
+    {
+      "text": "right so",
+      "start": 1266.0,
+      "duration": 5.28
+    },
+    {
+      "text": "I will explain that to you a little bit",
+      "start": 1268.24,
+      "duration": 5.76
+    },
+    {
+      "text": "what personalized page rank is so now",
+      "start": 1271.28,
+      "duration": 5.84
+    },
+    {
+      "text": "that we understood Microsoft graph rag I",
+      "start": 1274.0,
+      "duration": 6.32
+    },
+    {
+      "text": "will directly jump to the another paper",
+      "start": 1277.12,
+      "duration": 5.439
+    },
+    {
+      "text": "that recently came out which is called",
+      "start": 1280.32,
+      "duration": 5.28
+    },
+    {
+      "text": "memory page rack me page I'm sorry mem",
+      "start": 1282.559,
+      "duration": 6.641
+    },
+    {
+      "text": "graph rag mem",
+      "start": 1285.6,
+      "duration": 3.6
+    },
+    {
+      "text": "Uh may I request you one thing?",
+      "start": 1292.72,
+      "duration": 5.04
+    },
+    {
+      "text": "Uh I know that today I won't hold you",
+      "start": 1295.679,
+      "duration": 4.161
+    },
+    {
+      "text": "back for too long because the World Cup",
+      "start": 1297.76,
+      "duration": 4.0
+    },
+    {
+      "text": "is going on",
+      "start": 1299.84,
+      "duration": 4.56
+    },
+    {
+      "text": "and uh",
+      "start": 1301.76,
+      "duration": 5.76
+    },
+    {
+      "text": "so and it is 4th of July. You have to go",
+      "start": 1304.4,
+      "duration": 6.08
+    },
+    {
+      "text": "home and celebrate.",
+      "start": 1307.52,
+      "duration": 5.92
+    },
+    {
+      "text": "This Wednesday, was it this Wednesday?",
+      "start": 1310.48,
+      "duration": 5.12
+    },
+    {
+      "text": "This Wednesday I did a research paper",
+      "start": 1313.44,
+      "duration": 3.76
+    },
+    {
+      "text": "reading",
+      "start": 1315.6,
+      "duration": 5.36
+    },
+    {
+      "text": "on me graph where just to this topic we",
+      "start": 1317.2,
+      "duration": 6.479
+    },
+    {
+      "text": "gave two three hours.",
+      "start": 1320.96,
+      "duration": 6.4
+    },
+    {
+      "text": "May I request you that you watch that",
+      "start": 1323.679,
+      "duration": 6.0
+    },
+    {
+      "text": "video",
+      "start": 1327.36,
+      "duration": 5.92
+    },
+    {
+      "text": "and uh I'm going to do the a more aged",
+      "start": 1329.679,
+      "duration": 6.48
+    },
+    {
+      "text": "version of that so you guys can go home.",
+      "start": 1333.28,
+      "duration": 6.32
+    },
+    {
+      "text": "Uh but it's worth doing that the course",
+      "start": 1336.159,
+      "duration": 6.081
+    },
+    {
+      "text": "portal will have the video from the",
+      "start": 1339.6,
+      "duration": 6.079
+    },
+    {
+      "text": "YouTube It will also have the there's",
+      "start": 1342.24,
+      "duration": 5.28
+    },
+    {
+      "text": "some notebook experiment that I did",
+      "start": 1345.679,
+      "duration": 4.721
+    },
+    {
+      "text": "which I'll show you today",
+      "start": 1347.52,
+      "duration": 5.12
+    },
+    {
+      "text": "illustrating a point in that. The mem",
+      "start": 1350.4,
+      "duration": 5.44
+    },
+    {
+      "text": "graph rag is an interesting paper. It",
+      "start": 1352.64,
+      "duration": 5.919
+    },
+    {
+      "text": "introduces some really good ideas but it",
+      "start": 1355.84,
+      "duration": 6.319
+    },
+    {
+      "text": "also has what I felt was a flaw that",
+      "start": 1358.559,
+      "duration": 5.12
+    },
+    {
+      "text": "needs to be remedied. It's not that the",
+      "start": 1362.159,
+      "duration": 2.961
+    },
+    {
+      "text": "paper is not good. It's a very good",
+      "start": 1363.679,
+      "duration": 5.681
+    },
+    {
+      "text": "paper very well thought through. But in",
+      "start": 1365.12,
+      "duration": 7.2
+    },
+    {
+      "text": "real life for STEM fields it has",
+      "start": 1369.36,
+      "duration": 5.6
+    },
+    {
+      "text": "something missing which needs to be",
+      "start": 1372.32,
+      "duration": 5.52
+    },
+    {
+      "text": "remedied. But I will let us first do",
+      "start": 1374.96,
+      "duration": 5.199
+    },
+    {
+      "text": "justice to the paper because it has some",
+      "start": 1377.84,
+      "duration": 5.199
+    },
+    {
+      "text": "really good ideas. So we are now going",
+      "start": 1380.159,
+      "duration": 6.081
+    },
+    {
+      "text": "to talk about mem",
+      "start": 1383.039,
+      "duration": 5.601
+    },
+    {
+      "text": "and I have not done justice to the",
+      "start": 1386.24,
+      "duration": 5.919
+    },
+    {
+      "text": "lovely paper hippog hippag hippograph or",
+      "start": 1388.64,
+      "duration": 7.279
+    },
+    {
+      "text": "hippor. Can I please request you to",
+      "start": 1392.159,
+      "duration": 7.601
+    },
+    {
+      "text": "study hippoag on your own?",
+      "start": 1395.919,
+      "duration": 6.481
+    },
+    {
+      "text": "In fact, this builds upon that the",
+      "start": 1399.76,
+      "duration": 5.919
+    },
+    {
+      "text": "personalized page rank was introduced in",
+      "start": 1402.4,
+      "duration": 6.639
+    },
+    {
+      "text": "hippo rag.",
+      "start": 1405.679,
+      "duration": 5.841
+    },
+    {
+      "text": "Right? It's a very interesting concept.",
+      "start": 1409.039,
+      "duration": 5.52
+    },
+    {
+      "text": "I'm going to focus on this but I will",
+      "start": 1411.52,
+      "duration": 4.8
+    },
+    {
+      "text": "just talk about the deficiencies in",
+      "start": 1414.559,
+      "duration": 4.081
+    },
+    {
+      "text": "Microsoft Java.",
+      "start": 1416.32,
+      "duration": 5.92
+    },
+    {
+      "text": "One of them is thematic irrelevance.",
+      "start": 1418.64,
+      "duration": 5.279
+    },
+    {
+      "text": "So think about a document that has",
+      "start": 1422.24,
+      "duration": 5.24
+    },
+    {
+      "text": "copyright notice.",
+      "start": 1423.919,
+      "duration": 3.561
+    },
+    {
+      "text": "The book is about the document is about",
+      "start": 1428.24,
+      "duration": 7.919
+    },
+    {
+      "text": "let us say rag enterprise rag and",
+      "start": 1433.039,
+      "duration": 5.361
+    },
+    {
+      "text": "there's a copyright notice when you do",
+      "start": 1436.159,
+      "duration": 5.201
+    },
+    {
+      "text": "triplet extraction using an LLM as you",
+      "start": 1438.4,
+      "duration": 5.519
+    },
+    {
+      "text": "guys did an experiment and saw L&M will",
+      "start": 1441.36,
+      "duration": 5.199
+    },
+    {
+      "text": "do it blindly it will treat copyright",
+      "start": 1443.919,
+      "duration": 5.281
+    },
+    {
+      "text": "notice also as a text worth converting",
+      "start": 1446.559,
+      "duration": 4.48
+    },
+    {
+      "text": "into triplets",
+      "start": 1449.2,
+      "duration": 3.52
+    },
+    {
+      "text": "but you realize that that triplet is",
+      "start": 1451.039,
+      "duration": 5.12
+    },
+    {
+      "text": "somewhat irrelevant to your pursuit",
+      "start": 1452.72,
+      "duration": 3.439
+    },
+    {
+      "text": "You see that right copyright notice or",
+      "start": 1457.44,
+      "duration": 5.52
+    },
+    {
+      "text": "somewhere there is a statement on the",
+      "start": 1460.24,
+      "duration": 5.2
+    },
+    {
+      "text": "margins. You notice that when I give you",
+      "start": 1462.96,
+      "duration": 5.92
+    },
+    {
+      "text": "notes there are lot of margin notes.",
+      "start": 1465.44,
+      "duration": 5.92
+    },
+    {
+      "text": "So somewhere there is a in your document",
+      "start": 1468.88,
+      "duration": 5.039
+    },
+    {
+      "text": "that in the office how many of you use a",
+      "start": 1471.36,
+      "duration": 5.52
+    },
+    {
+      "text": "Google doc or word doc in which you guys",
+      "start": 1473.919,
+      "duration": 5.601
+    },
+    {
+      "text": "put comments in the margin your feedback",
+      "start": 1476.88,
+      "duration": 6.56
+    },
+    {
+      "text": "reviews in the margin on a shared doc.",
+      "start": 1479.52,
+      "duration": 6.72
+    },
+    {
+      "text": "We all do that. Suppose there is a",
+      "start": 1483.44,
+      "duration": 5.92
+    },
+    {
+      "text": "review comment a pending or there's a",
+      "start": 1486.24,
+      "duration": 4.96
+    },
+    {
+      "text": "comment sitting there at a paragraph",
+      "start": 1489.36,
+      "duration": 4.48
+    },
+    {
+      "text": "that's saying pending Scooby-Doo's",
+      "start": 1491.2,
+      "duration": 5.64
+    },
+    {
+      "text": "review,",
+      "start": 1493.84,
+      "duration": 3.0
+    },
+    {
+      "text": "right?",
+      "start": 1497.279,
+      "duration": 4.161
+    },
+    {
+      "text": "Machine is going to treat it as text.",
+      "start": 1499.36,
+      "duration": 4.48
+    },
+    {
+      "text": "Text is text and it is going to make a",
+      "start": 1501.44,
+      "duration": 5.68
+    },
+    {
+      "text": "triplet out of those",
+      "start": 1503.84,
+      "duration": 6.4
+    },
+    {
+      "text": "things. So they are schematically",
+      "start": 1507.12,
+      "duration": 4.799
+    },
+    {
+      "text": "relevant",
+      "start": 1510.24,
+      "duration": 5.039
+    },
+    {
+      "text": "to the main thrust of the document isn't",
+      "start": 1511.919,
+      "duration": 6.161
+    },
+    {
+      "text": "it? So it contains a lot of extraneous",
+      "start": 1515.279,
+      "duration": 4.961
+    },
+    {
+      "text": "information",
+      "start": 1518.08,
+      "duration": 4.959
+    },
+    {
+      "text": "right or",
+      "start": 1520.24,
+      "duration": 6.799
+    },
+    {
+      "text": "about the author books have usually",
+      "start": 1523.039,
+      "duration": 5.601
+    },
+    {
+      "text": "textbooks will have a little page for",
+      "start": 1527.039,
+      "duration": 4.721
+    },
+    {
+      "text": "the author's life and things like that.",
+      "start": 1528.64,
+      "duration": 6.0
+    },
+    {
+      "text": "Now obviously the authors worked very",
+      "start": 1531.76,
+      "duration": 5.279
+    },
+    {
+      "text": "hard to write the textbook. But how many",
+      "start": 1534.64,
+      "duration": 3.84
+    },
+    {
+      "text": "of you honestly have ever read that",
+      "start": 1537.039,
+      "duration": 3.441
+    },
+    {
+      "text": "author's page?",
+      "start": 1538.48,
+      "duration": 4.96
+    },
+    {
+      "text": "No hands. No one ever reads right. So",
+      "start": 1540.48,
+      "duration": 5.439
+    },
+    {
+      "text": "well valuable as it is, it again speaks",
+      "start": 1543.44,
+      "duration": 5.599
+    },
+    {
+      "text": "to thematic irrelevance.",
+      "start": 1545.919,
+      "duration": 5.36
+    },
+    {
+      "text": "So just as a show of hands, how many of",
+      "start": 1549.039,
+      "duration": 3.76
+    },
+    {
+      "text": "you would like to read the author's page",
+      "start": 1551.279,
+      "duration": 3.76
+    },
+    {
+      "text": "for my book?",
+      "start": 1552.799,
+      "duration": 4.401
+    },
+    {
+      "text": "Even now, no show of hands. Okay, there",
+      "start": 1555.039,
+      "duration": 4.401
+    },
+    {
+      "text": "we go.",
+      "start": 1557.2,
+      "duration": 4.8
+    },
+    {
+      "text": "I might as well not put that page.",
+      "start": 1559.44,
+      "duration": 5.92
+    },
+    {
+      "text": ">> Question regarding uh we use LLM to",
+      "start": 1562.0,
+      "duration": 4.64
+    },
+    {
+      "text": "extract the triplets right?",
+      "start": 1565.36,
+      "duration": 3.679
+    },
+    {
+      "text": ">> Yes. So",
+      "start": 1566.64,
+      "duration": 4.32
+    },
+    {
+      "text": "we designed based on that our system",
+      "start": 1569.039,
+      "duration": 4.64
+    },
+    {
+      "text": "based on the triplets and all but those",
+      "start": 1570.96,
+      "duration": 5.199
+    },
+    {
+      "text": "can change right because LLM is uh it's",
+      "start": 1573.679,
+      "duration": 4.401
+    },
+    {
+      "text": "not the next time again if I do the",
+      "start": 1576.159,
+      "duration": 2.721
+    },
+    {
+      "text": "triplet again",
+      "start": 1578.08,
+      "duration": 2.88
+    },
+    {
+      "text": ">> yeah there's some stoastic variation a",
+      "start": 1578.88,
+      "duration": 4.08
+    },
+    {
+      "text": "very good point Shiva says that the same",
+      "start": 1580.96,
+      "duration": 4.719
+    },
+    {
+      "text": "document pass through that channel will",
+      "start": 1582.96,
+      "duration": 5.12
+    },
+    {
+      "text": "pass through to the LLM for a triplet",
+      "start": 1585.679,
+      "duration": 4.801
+    },
+    {
+      "text": "extraction next time the triplets that",
+      "start": 1588.08,
+      "duration": 3.92
+    },
+    {
+      "text": "it extracts there may be minor",
+      "start": 1590.48,
+      "duration": 4.079
+    },
+    {
+      "text": "variations some triplet may be missing",
+      "start": 1592.0,
+      "duration": 4.88
+    },
+    {
+      "text": "some new may pop up and so forth The",
+      "start": 1594.559,
+      "duration": 6.321
+    },
+    {
+      "text": "answer to that is yes, it happens. But",
+      "start": 1596.88,
+      "duration": 5.52
+    },
+    {
+      "text": "generally",
+      "start": 1600.88,
+      "duration": 3.84
+    },
+    {
+      "text": "that is a sub threshold in the sense",
+      "start": 1602.4,
+      "duration": 6.32
+    },
+    {
+      "text": "that how much it affects the overall",
+      "start": 1604.72,
+      "duration": 6.319
+    },
+    {
+      "text": "knowledge graph.",
+      "start": 1608.72,
+      "duration": 5.04
+    },
+    {
+      "text": "It is not significant in that. That is",
+      "start": 1611.039,
+      "duration": 4.961
+    },
+    {
+      "text": "one way. The other way I mean see here",
+      "start": 1613.76,
+      "duration": 4.399
+    },
+    {
+      "text": "are things that you should probably not",
+      "start": 1616.0,
+      "duration": 4.0
+    },
+    {
+      "text": "do. One is to set the temperature to",
+      "start": 1618.159,
+      "duration": 3.441
+    },
+    {
+      "text": "zero.",
+      "start": 1620.0,
+      "duration": 4.88
+    },
+    {
+      "text": "then you go into greedy decoding",
+      "start": 1621.6,
+      "duration": 6.24
+    },
+    {
+      "text": "right mode",
+      "start": 1624.88,
+      "duration": 4.64
+    },
+    {
+      "text": "do that I wouldn't advise you to keep",
+      "start": 1627.84,
+      "duration": 4.16
+    },
+    {
+      "text": "the temperature reasonable give the LLM",
+      "start": 1629.52,
+      "duration": 5.279
+    },
+    {
+      "text": "some leeway to reason and think and if",
+      "start": 1632.0,
+      "duration": 4.72
+    },
+    {
+      "text": "you so wish you can just run it twice",
+      "start": 1634.799,
+      "duration": 4.561
+    },
+    {
+      "text": "over",
+      "start": 1636.72,
+      "duration": 5.199
+    },
+    {
+      "text": "uh but generally problem is not whether",
+      "start": 1639.36,
+      "duration": 4.559
+    },
+    {
+      "text": "it will find all the triplets the",
+      "start": 1641.919,
+      "duration": 3.601
+    },
+    {
+      "text": "problem usually is the other way around",
+      "start": 1643.919,
+      "duration": 4.801
+    },
+    {
+      "text": "it finds too many triplets",
+      "start": 1645.52,
+      "duration": 6.72
+    },
+    {
+      "text": "right and you have to ddup and rational",
+      "start": 1648.72,
+      "duration": 5.36
+    },
+    {
+      "text": "So in real life what this paper doesn't",
+      "start": 1652.24,
+      "duration": 3.919
+    },
+    {
+      "text": "mention but in real life when you do the",
+      "start": 1654.08,
+      "duration": 3.68
+    },
+    {
+      "text": "production like in in our case when we",
+      "start": 1656.159,
+      "duration": 3.52
+    },
+    {
+      "text": "did when we do this what we do is we",
+      "start": 1657.76,
+      "duration": 4.24
+    },
+    {
+      "text": "have a in between phase",
+      "start": 1659.679,
+      "duration": 5.681
+    },
+    {
+      "text": "in which we rationalize the language",
+      "start": 1662.0,
+      "duration": 8.0
+    },
+    {
+      "text": "like for example use and utilize",
+      "start": 1665.36,
+      "duration": 7.439
+    },
+    {
+      "text": "A uses B A utilizes B. Do you really",
+      "start": 1670.0,
+      "duration": 6.32
+    },
+    {
+      "text": "want to have two triplets?",
+      "start": 1672.799,
+      "duration": 7.76
+    },
+    {
+      "text": "You see that right as a a schema?",
+      "start": 1676.32,
+      "duration": 6.16
+    },
+    {
+      "text": "Yeah, you don't want to have that. You",
+      "start": 1680.559,
+      "duration": 3.921
+    },
+    {
+      "text": "want to have just one and hang",
+      "start": 1682.48,
+      "duration": 4.4
+    },
+    {
+      "text": "everything off that.",
+      "start": 1684.48,
+      "duration": 4.72
+    },
+    {
+      "text": "Yeah. So, you do have to do some cleanup",
+      "start": 1686.88,
+      "duration": 4.88
+    },
+    {
+      "text": "of that kind. So, those those are of",
+      "start": 1689.2,
+      "duration": 5.199
+    },
+    {
+      "text": "course getting to real life",
+      "start": 1691.76,
+      "duration": 4.24
+    },
+    {
+      "text": "and you'll learn it as you do the",
+      "start": 1694.399,
+      "duration": 4.561
+    },
+    {
+      "text": "projects your own uh capstone projects.",
+      "start": 1696.0,
+      "duration": 6.64
+    },
+    {
+      "text": "You will do all of this.",
+      "start": 1698.96,
+      "duration": 6.16
+    },
+    {
+      "text": "So, first is thematic. The other problem",
+      "start": 1702.64,
+      "duration": 4.56
+    },
+    {
+      "text": "is",
+      "start": 1705.12,
+      "duration": 4.08
+    },
+    {
+      "text": "inherent sometimes they're contradictory",
+      "start": 1707.2,
+      "duration": 4.64
+    },
+    {
+      "text": "statements.",
+      "start": 1709.2,
+      "duration": 2.64
+    },
+    {
+      "text": "When those contradictory statements",
+      "start": 1713.36,
+      "duration": 4.799
+    },
+    {
+      "text": "bubble all the way to the top,",
+      "start": 1715.039,
+      "duration": 5.601
+    },
+    {
+      "text": "they can cause problems.",
+      "start": 1718.159,
+      "duration": 5.361
+    },
+    {
+      "text": "You see that? So for example if you look",
+      "start": 1720.64,
+      "duration": 6.96
+    },
+    {
+      "text": "at Tolto's war and peace",
+      "start": 1723.52,
+      "duration": 6.399
+    },
+    {
+      "text": "the whole story is about Napoleon's",
+      "start": 1727.6,
+      "duration": 5.84
+    },
+    {
+      "text": "Napoleon attacks Russia and in the",
+      "start": 1729.919,
+      "duration": 7.281
+    },
+    {
+      "text": "process a lot of uh human you know the",
+      "start": 1733.44,
+      "duration": 6.4
+    },
+    {
+      "text": "human response the whole story is about",
+      "start": 1737.2,
+      "duration": 6.56
+    },
+    {
+      "text": "how people living their lives they take",
+      "start": 1739.84,
+      "duration": 7.199
+    },
+    {
+      "text": "the impact of war uh princes get excited",
+      "start": 1743.76,
+      "duration": 5.519
+    },
+    {
+      "text": "about war they in the beginning they are",
+      "start": 1747.039,
+      "duration": 4.721
+    },
+    {
+      "text": "quite gung-ho later on they're weary of",
+      "start": 1749.279,
+      "duration": 4.241
+    },
+    {
+      "text": "it and so on and so forth the whole",
+      "start": 1751.76,
+      "duration": 4.72
+    },
+    {
+      "text": "tragedy and drama of human life. But if",
+      "start": 1753.52,
+      "duration": 4.48
+    },
+    {
+      "text": "you read the book and if you just go",
+      "start": 1756.48,
+      "duration": 3.36
+    },
+    {
+      "text": "with this and I'm carry catching it so",
+      "start": 1758.0,
+      "duration": 3.84
+    },
+    {
+      "text": "don't take it too seriously. You might",
+      "start": 1759.84,
+      "duration": 3.92
+    },
+    {
+      "text": "come to the conclusion at the top level",
+      "start": 1761.84,
+      "duration": 6.88
+    },
+    {
+      "text": "summary that Napoleon attacked Russia",
+      "start": 1763.76,
+      "duration": 9.48
+    },
+    {
+      "text": "which was good which was bad.",
+      "start": 1768.72,
+      "duration": 4.52
+    },
+    {
+      "text": "You see that right?",
+      "start": 1774.32,
+      "duration": 5.04
+    },
+    {
+      "text": "So you don't want something like that.",
+      "start": 1777.679,
+      "duration": 4.561
+    },
+    {
+      "text": "It's it it might be not terribly useful.",
+      "start": 1779.36,
+      "duration": 5.76
+    },
+    {
+      "text": "Might be poetic but not terribly useful.",
+      "start": 1782.24,
+      "duration": 4.48
+    },
+    {
+      "text": "The contradictions keep bubb",
+      "start": 1785.12,
+      "duration": 4.72
+    },
+    {
+      "text": "accumulating and bubbling up. So another",
+      "start": 1786.72,
+      "duration": 5.28
+    },
+    {
+      "text": "way of saying it is that all of this",
+      "start": 1789.84,
+      "duration": 5.04
+    },
+    {
+      "text": "noise you need to filter the noise out",
+      "start": 1792.0,
+      "duration": 5.039
+    },
+    {
+      "text": "somehow.",
+      "start": 1794.88,
+      "duration": 3.679
+    },
+    {
+      "text": "You have to remove thematically",
+      "start": 1797.039,
+      "duration": 3.76
+    },
+    {
+      "text": "irrelevant parts. You need to have a way",
+      "start": 1798.559,
+      "duration": 4.641
+    },
+    {
+      "text": "to deal with contradictions. And the",
+      "start": 1800.799,
+      "duration": 5.281
+    },
+    {
+      "text": "standard graph does not address this",
+      "start": 1803.2,
+      "duration": 4.959
+    },
+    {
+      "text": "limit. So three that's a second big",
+      "start": 1806.08,
+      "duration": 3.599
+    },
+    {
+      "text": "pathology",
+      "start": 1808.159,
+      "duration": 3.921
+    },
+    {
+      "text": "with the or disease with the standard",
+      "start": 1809.679,
+      "duration": 5.681
+    },
+    {
+      "text": "approach and the third is that there is",
+      "start": 1812.08,
+      "duration": 6.88
+    },
+    {
+      "text": "a structural fragmentation.",
+      "start": 1815.36,
+      "duration": 6.96
+    },
+    {
+      "text": "What happens is that",
+      "start": 1818.96,
+      "duration": 5.92
+    },
+    {
+      "text": "it creates these communities",
+      "start": 1822.32,
+      "duration": 5.76
+    },
+    {
+      "text": "but despite your best effort there are",
+      "start": 1824.88,
+      "duration": 4.799
+    },
+    {
+      "text": "not very good bridges between the",
+      "start": 1828.08,
+      "duration": 4.0
+    },
+    {
+      "text": "communities and there are concepts that",
+      "start": 1829.679,
+      "duration": 4.88
+    },
+    {
+      "text": "straddle multiple things but if you pull",
+      "start": 1832.08,
+      "duration": 4.16
+    },
+    {
+      "text": "it into one then it doesn't go to the",
+      "start": 1834.559,
+      "duration": 3.521
+    },
+    {
+      "text": "other that has always been a problem",
+      "start": 1836.24,
+      "duration": 4.24
+    },
+    {
+      "text": "with clustering think of k means",
+      "start": 1838.08,
+      "duration": 5.52
+    },
+    {
+      "text": "clustering and lighten and so forth if",
+      "start": 1840.48,
+      "duration": 5.28
+    },
+    {
+      "text": "you insist on putting a node here then",
+      "start": 1843.6,
+      "duration": 3.52
+    },
+    {
+      "text": "you're not putting a node there what",
+      "start": 1845.76,
+      "duration": 4.159
+    },
+    {
+      "text": "about the thing that contributes to What",
+      "start": 1847.12,
+      "duration": 7.12
+    },
+    {
+      "text": "you see those issues are always there.",
+      "start": 1849.919,
+      "duration": 7.321
+    },
+    {
+      "text": "So",
+      "start": 1854.24,
+      "duration": 3.0
+    },
+    {
+      "text": "and you also have the con fragmentation",
+      "start": 1858.48,
+      "duration": 5.199
+    },
+    {
+      "text": "also comes from the fact that you're",
+      "start": 1861.039,
+      "duration": 4.88
+    },
+    {
+      "text": "chunking. Chunking is a knife that cuts",
+      "start": 1863.679,
+      "duration": 4.72
+    },
+    {
+      "text": "through a dog.",
+      "start": 1865.919,
+      "duration": 7.24
+    },
+    {
+      "text": "What is worse than a worm in an apple?",
+      "start": 1868.399,
+      "duration": 4.76
+    },
+    {
+      "text": ">> Half a worm. Right? So you will have",
+      "start": 1873.2,
+      "duration": 5.68
+    },
+    {
+      "text": "structural problems that are there. Now",
+      "start": 1876.32,
+      "duration": 4.719
+    },
+    {
+      "text": "the previous one that I mentioned that",
+      "start": 1878.88,
+      "duration": 4.0
+    },
+    {
+      "text": "lighten actually does a reasonably good",
+      "start": 1881.039,
+      "duration": 4.161
+    },
+    {
+      "text": "job. So it's not all that pronounced",
+      "start": 1882.88,
+      "duration": 4.48
+    },
+    {
+      "text": "that communities will be that separated.",
+      "start": 1885.2,
+      "duration": 5.04
+    },
+    {
+      "text": "But you do see what happens is that we",
+      "start": 1887.36,
+      "duration": 6.0
+    },
+    {
+      "text": "talked about a modularity measure.",
+      "start": 1890.24,
+      "duration": 5.12
+    },
+    {
+      "text": "But what happens when the the clusters",
+      "start": 1893.36,
+      "duration": 4.559
+    },
+    {
+      "text": "are not very modular in spite of the",
+      "start": 1895.36,
+      "duration": 4.64
+    },
+    {
+      "text": "your best effort at clustering I mean",
+      "start": 1897.919,
+      "duration": 5.041
+    },
+    {
+      "text": "your community detection.",
+      "start": 1900.0,
+      "duration": 5.76
+    },
+    {
+      "text": "uh then what happens",
+      "start": 1902.96,
+      "duration": 4.559
+    },
+    {
+      "text": "you have a diffused community that",
+      "start": 1905.76,
+      "duration": 4.0
+    },
+    {
+      "text": "you're still sort of separating out and",
+      "start": 1907.519,
+      "duration": 4.321
+    },
+    {
+      "text": "there'll be a lot of things in between",
+      "start": 1909.76,
+      "duration": 3.6
+    },
+    {
+      "text": "structurally that is that go",
+      "start": 1911.84,
+      "duration": 3.76
+    },
+    {
+      "text": "unsatisfactory very much what you do",
+      "start": 1913.36,
+      "duration": 4.0
+    },
+    {
+      "text": "with clustering",
+      "start": 1915.6,
+      "duration": 3.28
+    },
+    {
+      "text": "right",
+      "start": 1917.36,
+      "duration": 5.28
+    },
+    {
+      "text": "so something like that so memrap",
+      "start": 1918.88,
+      "duration": 6.56
+    },
+    {
+      "text": "proposes a three-step approach it",
+      "start": 1922.64,
+      "duration": 5.919
+    },
+    {
+      "text": "addresses all three now this paper can",
+      "start": 1925.44,
+      "duration": 6.0
+    },
+    {
+      "text": "be divided into two halves the graph",
+      "start": 1928.559,
+      "duration": 6.48
+    },
+    {
+      "text": "building part and the inference part.",
+      "start": 1931.44,
+      "duration": 6.4
+    },
+    {
+      "text": "The inference part will use the",
+      "start": 1935.039,
+      "duration": 5.921
+    },
+    {
+      "text": "personalized page.",
+      "start": 1937.84,
+      "duration": 6.0
+    },
+    {
+      "text": "Right? We'll come to that but we'll",
+      "start": 1940.96,
+      "duration": 7.559
+    },
+    {
+      "text": "first focus on the graph building part",
+      "start": 1943.84,
+      "duration": 4.679
+    },
+    {
+      "text": "now. The graph building part has a very",
+      "start": 1949.919,
+      "duration": 5.921
+    },
+    {
+      "text": "simple thing to do. You take your",
+      "start": 1954.08,
+      "duration": 3.68
+    },
+    {
+      "text": "passages and for the sake of this",
+      "start": 1955.84,
+      "duration": 3.839
+    },
+    {
+      "text": "discussion we will treat chunks and",
+      "start": 1957.76,
+      "duration": 4.399
+    },
+    {
+      "text": "passages as synonymous. So just take",
+      "start": 1959.679,
+      "duration": 6.401
+    },
+    {
+      "text": "passages chuck you take that you now",
+      "start": 1962.159,
+      "duration": 7.841
+    },
+    {
+      "text": "have a bucket full of passages",
+      "start": 1966.08,
+      "duration": 6.719
+    },
+    {
+      "text": "every passage now. So given a passage P",
+      "start": 1970.0,
+      "duration": 7.44
+    },
+    {
+      "text": "I I can do I can extract a lot of fact",
+      "start": 1972.799,
+      "duration": 7.641
+    },
+    {
+      "text": "triplets.",
+      "start": 1977.44,
+      "duration": 3.0
+    },
+    {
+      "text": "Does that make sense guys?",
+      "start": 1983.679,
+      "duration": 4.801
+    },
+    {
+      "text": "We can do a lot of fact triplets. It",
+      "start": 1986.24,
+      "duration": 6.0
+    },
+    {
+      "text": "will be like Einstein",
+      "start": 1988.48,
+      "duration": 6.799
+    },
+    {
+      "text": "born in",
+      "start": 1992.24,
+      "duration": 6.48
+    },
+    {
+      "text": "Germany. Yes.",
+      "start": 1995.279,
+      "duration": 6.88
+    },
+    {
+      "text": "Now you stare at the pack triplet and",
+      "start": 1998.72,
+      "duration": 6.88
+    },
+    {
+      "text": "you ask what could be the onlogical",
+      "start": 2002.159,
+      "duration": 6.64
+    },
+    {
+      "text": "triplet behind it that you can infer off",
+      "start": 2005.6,
+      "duration": 8.52
+    },
+    {
+      "text": "it. What would be that? A person",
+      "start": 2008.799,
+      "duration": 5.321
+    },
+    {
+      "text": "born in",
+      "start": 2014.32,
+      "duration": 5.239
+    },
+    {
+      "text": "place",
+      "start": 2016.559,
+      "duration": 3.0
+    },
+    {
+      "text": "right or country something like that.",
+      "start": 2020.08,
+      "duration": 5.0
+    },
+    {
+      "text": "So see one passage can produce multiple",
+      "start": 2025.519,
+      "duration": 6.561
+    },
+    {
+      "text": "fact triplets and multiple",
+      "start": 2028.64,
+      "duration": 5.84
+    },
+    {
+      "text": "schema triplets ontological triplets. So",
+      "start": 2032.08,
+      "duration": 4.8
+    },
+    {
+      "text": "the word ontological triplets and schema",
+      "start": 2034.48,
+      "duration": 4.72
+    },
+    {
+      "text": "triplets or schemas we'll use",
+      "start": 2036.88,
+      "duration": 4.159
+    },
+    {
+      "text": "interchangeably. This paper calls it",
+      "start": 2039.2,
+      "duration": 6.959
+    },
+    {
+      "text": "schemas. So we'll also call it schemas.",
+      "start": 2041.039,
+      "duration": 8.161
+    },
+    {
+      "text": "Now do you see there is a resonance of",
+      "start": 2046.159,
+      "duration": 4.641
+    },
+    {
+      "text": "object-oriented programming somewhere",
+      "start": 2049.2,
+      "duration": 4.24
+    },
+    {
+      "text": "lurking in the background classes and",
+      "start": 2050.8,
+      "duration": 5.279
+    },
+    {
+      "text": "objects right? Don't take that thing too",
+      "start": 2053.44,
+      "duration": 4.56
+    },
+    {
+      "text": "literally but yes there's a little",
+      "start": 2056.079,
+      "duration": 4.961
+    },
+    {
+      "text": "resonance to that familial similarity to",
+      "start": 2058.0,
+      "duration": 6.8
+    },
+    {
+      "text": "that. Right? So for example dog is a",
+      "start": 2061.04,
+      "duration": 5.599
+    },
+    {
+      "text": "class",
+      "start": 2064.8,
+      "duration": 7.44
+    },
+    {
+      "text": "and my dogs brookie and son a kaju are",
+      "start": 2066.639,
+      "duration": 8.48
+    },
+    {
+      "text": "two instances of dogs.",
+      "start": 2072.24,
+      "duration": 6.08
+    },
+    {
+      "text": "In the same way person born in place is",
+      "start": 2075.119,
+      "duration": 6.96
+    },
+    {
+      "text": "a schema is an antlogical trip of which",
+      "start": 2078.32,
+      "duration": 6.4
+    },
+    {
+      "text": "Einstein born in Germany",
+      "start": 2082.079,
+      "duration": 5.28
+    },
+    {
+      "text": "is a instance menal born patna is an",
+      "start": 2084.72,
+      "duration": 6.159
+    },
+    {
+      "text": "instance as born in vani is an instance",
+      "start": 2087.359,
+      "duration": 5.841
+    },
+    {
+      "text": "right so there's a familial resemblance",
+      "start": 2090.879,
+      "duration": 4.561
+    },
+    {
+      "text": "but don't go beyond that just keep it at",
+      "start": 2093.2,
+      "duration": 5.44
+    },
+    {
+      "text": "the level of familiar presence",
+      "start": 2095.44,
+      "duration": 7.919
+    },
+    {
+      "text": "so this and this",
+      "start": 2098.64,
+      "duration": 7.28
+    },
+    {
+      "text": "ontological",
+      "start": 2103.359,
+      "duration": 2.561
+    },
+    {
+      "text": "So now what happens? I shred through the",
+      "start": 2109.44,
+      "duration": 6.8
+    },
+    {
+      "text": "corpus. I have one bucket of passages,",
+      "start": 2112.4,
+      "duration": 6.8
+    },
+    {
+      "text": "one bucket of pack triplets, one bucket",
+      "start": 2116.24,
+      "duration": 4.72
+    },
+    {
+      "text": "of ontological triplets, three big",
+      "start": 2119.2,
+      "duration": 4.76
+    },
+    {
+      "text": "buckets,",
+      "start": 2120.96,
+      "duration": 3.0
+    },
+    {
+      "text": "three baskets.",
+      "start": 2124.56,
+      "duration": 5.2
+    },
+    {
+      "text": "So far so good guys. Now let let",
+      "start": 2126.4,
+      "duration": 7.28
+    },
+    {
+      "text": "passages be keep a keep a link from a",
+      "start": 2129.76,
+      "duration": 5.92
+    },
+    {
+      "text": "fact triplet back to the passage it came",
+      "start": 2133.68,
+      "duration": 4.8
+    },
+    {
+      "text": "from",
+      "start": 2135.68,
+      "duration": 4.8
+    },
+    {
+      "text": "which means that every entities you can",
+      "start": 2138.48,
+      "duration": 5.76
+    },
+    {
+      "text": "have a edge to the passage",
+      "start": 2140.48,
+      "duration": 7.2
+    },
+    {
+      "text": "I can have that",
+      "start": 2144.24,
+      "duration": 5.839
+    },
+    {
+      "text": "likewise the onlogical triplets also I",
+      "start": 2147.68,
+      "duration": 4.96
+    },
+    {
+      "text": "can have that but we'll keep that now",
+      "start": 2150.079,
+      "duration": 4.481
+    },
+    {
+      "text": "what happens",
+      "start": 2152.64,
+      "duration": 5.52
+    },
+    {
+      "text": "look at the top layer the ontological",
+      "start": 2154.56,
+      "duration": 4.559
+    },
+    {
+      "text": "layer",
+      "start": 2158.16,
+      "duration": 4.24
+    },
+    {
+      "text": "This is a world of only ontological",
+      "start": 2159.119,
+      "duration": 6.281
+    },
+    {
+      "text": "triplets.",
+      "start": 2162.4,
+      "duration": 3.0
+    },
+    {
+      "text": "It will create a graph.",
+      "start": 2166.0,
+      "duration": 5.52
+    },
+    {
+      "text": "Let us call this graph. They I believe",
+      "start": 2168.56,
+      "duration": 4.559
+    },
+    {
+      "text": "the paper calls it the schema graph.",
+      "start": 2171.52,
+      "duration": 5.68
+    },
+    {
+      "text": "They keep calling it the schema. Arlo",
+      "start": 2173.119,
+      "duration": 6.48
+    },
+    {
+      "text": "schema schema graph. There will be a",
+      "start": 2177.2,
+      "duration": 4.56
+    },
+    {
+      "text": "layer of",
+      "start": 2179.599,
+      "duration": 5.52
+    },
+    {
+      "text": "another world or another city. I call it",
+      "start": 2181.76,
+      "duration": 4.88
+    },
+    {
+      "text": "cities.",
+      "start": 2185.119,
+      "duration": 4.401
+    },
+    {
+      "text": "Right? Say ontological city, packed",
+      "start": 2186.64,
+      "duration": 5.52
+    },
+    {
+      "text": "city.",
+      "start": 2189.52,
+      "duration": 5.28
+    },
+    {
+      "text": "It will have lots of packed triplets",
+      "start": 2192.16,
+      "duration": 6.199
+    },
+    {
+      "text": "with their relationships.",
+      "start": 2194.8,
+      "duration": 3.559
+    },
+    {
+      "text": "A graph. So a graph of facts.",
+      "start": 2202.32,
+      "duration": 6.72
+    },
+    {
+      "text": "So far so good. And then there is a",
+      "start": 2206.4,
+      "duration": 7.56
+    },
+    {
+      "text": "third city of just plain old passages.",
+      "start": 2209.04,
+      "duration": 4.92
+    },
+    {
+      "text": "Passages. This is the third city",
+      "start": 2215.2,
+      "duration": 6.52
+    },
+    {
+      "text": "passages.",
+      "start": 2218.72,
+      "duration": 3.0
+    },
+    {
+      "text": "And now be there is a relationship",
+      "start": 2222.16,
+      "duration": 5.76
+    },
+    {
+      "text": "between these three cities interlink",
+      "start": 2225.04,
+      "duration": 5.28
+    },
+    {
+      "text": "because an ontological",
+      "start": 2227.92,
+      "duration": 5.04
+    },
+    {
+      "text": "triplet a schema owns many of the fact",
+      "start": 2230.32,
+      "duration": 4.4
+    },
+    {
+      "text": "triplets.",
+      "start": 2232.96,
+      "duration": 3.6
+    },
+    {
+      "text": "Isn't it?",
+      "start": 2234.72,
+      "duration": 4.32
+    },
+    {
+      "text": "Likewise all these fact triplets boil",
+      "start": 2236.56,
+      "duration": 5.76
+    },
+    {
+      "text": "down to underlying or refer back to have",
+      "start": 2239.04,
+      "duration": 5.36
+    },
+    {
+      "text": "back pointers to the passages they",
+      "start": 2242.32,
+      "duration": 5.12
+    },
+    {
+      "text": "emerge from.",
+      "start": 2244.4,
+      "duration": 3.04
+    },
+    {
+      "text": "So far so good.",
+      "start": 2248.24,
+      "duration": 6.4
+    },
+    {
+      "text": "Now in the graph building phase they the",
+      "start": 2251.119,
+      "duration": 8.48
+    },
+    {
+      "text": "paper suggests that we do this",
+      "start": 2254.64,
+      "duration": 7.28
+    },
+    {
+      "text": "we give importance",
+      "start": 2259.599,
+      "duration": 5.921
+    },
+    {
+      "text": "to the ontological triplets because see",
+      "start": 2261.92,
+      "duration": 5.679
+    },
+    {
+      "text": "those concepts are the underlying fabric",
+      "start": 2265.52,
+      "duration": 4.319
+    },
+    {
+      "text": "connecting the facts. That's how we",
+      "start": 2267.599,
+      "duration": 5.561
+    },
+    {
+      "text": "think of knowledge.",
+      "start": 2269.839,
+      "duration": 3.321
+    },
+    {
+      "text": "So that's the underlying deeper root. So",
+      "start": 2274.4,
+      "duration": 6.4
+    },
+    {
+      "text": "let's focus on those.",
+      "start": 2278.079,
+      "duration": 6.481
+    },
+    {
+      "text": "And what we do is we will first create a",
+      "start": 2280.8,
+      "duration": 6.08
+    },
+    {
+      "text": "frequency table.",
+      "start": 2284.56,
+      "duration": 4.32
+    },
+    {
+      "text": "How often",
+      "start": 2286.88,
+      "duration": 4.479
+    },
+    {
+      "text": "was",
+      "start": 2288.88,
+      "duration": 7.719
+    },
+    {
+      "text": "an ontological triplet encountered?",
+      "start": 2291.359,
+      "duration": 5.24
+    },
+    {
+      "text": "If an onlogical triplet was encountered,",
+      "start": 2299.04,
+      "duration": 5.6
+    },
+    {
+      "text": "you have a threshold to I I'll take the",
+      "start": 2302.32,
+      "duration": 5.12
+    },
+    {
+      "text": "threshold as four. If it was encountered",
+      "start": 2304.64,
+      "duration": 7.28
+    },
+    {
+      "text": "four times or more then keep it.",
+      "start": 2307.44,
+      "duration": 8.24
+    },
+    {
+      "text": "Otherwise what you do is so you you you",
+      "start": 2311.92,
+      "duration": 6.4
+    },
+    {
+      "text": "make a table of frequencies ontological",
+      "start": 2315.68,
+      "duration": 7.72
+    },
+    {
+      "text": "triplet onto and its frequency",
+      "start": 2318.32,
+      "duration": 5.08
+    },
+    {
+      "text": "and at some point now set a cutff put it",
+      "start": 2324.56,
+      "duration": 6.32
+    },
+    {
+      "text": "in decreasing order of frequency and put",
+      "start": 2328.4,
+      "duration": 6.4
+    },
+    {
+      "text": "a cutff and now do one thing these",
+      "start": 2330.88,
+      "duration": 6.88
+    },
+    {
+      "text": "buckets that you created of ontological",
+      "start": 2334.8,
+      "duration": 5.92
+    },
+    {
+      "text": "triplets fact triplets and passages",
+      "start": 2337.76,
+      "duration": 5.04
+    },
+    {
+      "text": "passages bucket It remains passage one.",
+      "start": 2340.72,
+      "duration": 5.76
+    },
+    {
+      "text": "Simple. But what you do is the ones that",
+      "start": 2342.8,
+      "duration": 7.92
+    },
+    {
+      "text": "fell that meet your threshold",
+      "start": 2346.48,
+      "duration": 7.84
+    },
+    {
+      "text": "are frequent enough. Promote it to the",
+      "start": 2350.72,
+      "duration": 6.24
+    },
+    {
+      "text": "real production bucket in some sense.",
+      "start": 2354.32,
+      "duration": 7.4
+    },
+    {
+      "text": "Promote it. There is a promoted bucket",
+      "start": 2356.96,
+      "duration": 4.76
+    },
+    {
+      "text": "and we'll do the search only in the",
+      "start": 2362.88,
+      "duration": 6.08
+    },
+    {
+      "text": "promoted bucket. So you have the onto",
+      "start": 2365.119,
+      "duration": 7.361
+    },
+    {
+      "text": "you have a because those ontos will have",
+      "start": 2368.96,
+      "duration": 7.119
+    },
+    {
+      "text": "fat triplets associated with them.",
+      "start": 2372.48,
+      "duration": 7.28
+    },
+    {
+      "text": "On the drag in from the previous bucket",
+      "start": 2376.079,
+      "duration": 6.241
+    },
+    {
+      "text": "raw bucket to the promoted bucket those",
+      "start": 2379.76,
+      "duration": 4.4
+    },
+    {
+      "text": "triplets",
+      "start": 2382.32,
+      "duration": 4.24
+    },
+    {
+      "text": "which belong to fact triplets that",
+      "start": 2384.16,
+      "duration": 6.64
+    },
+    {
+      "text": "belong to qualified ontological triplets",
+      "start": 2386.56,
+      "duration": 6.64
+    },
+    {
+      "text": "right promoted ontological triplets. So",
+      "start": 2390.8,
+      "duration": 4.4
+    },
+    {
+      "text": "you will have a subset of fact triplet",
+      "start": 2393.2,
+      "duration": 4.32
+    },
+    {
+      "text": "facts",
+      "start": 2395.2,
+      "duration": 5.879
+    },
+    {
+      "text": "promoted facts",
+      "start": 2397.52,
+      "duration": 3.559
+    },
+    {
+      "text": "so far so good",
+      "start": 2403.119,
+      "duration": 3.641
+    },
+    {
+      "text": "and your process is done graph building",
+      "start": 2406.8,
+      "duration": 6.72
+    },
+    {
+      "text": "is done you have this three cities graph",
+      "start": 2410.4,
+      "duration": 4.959
+    },
+    {
+      "text": "with interlinks",
+      "start": 2413.52,
+      "duration": 6.96
+    },
+    {
+      "text": "right I've depicted that on page",
+      "start": 2415.359,
+      "duration": 7.441
+    },
+    {
+      "text": "if you look at it.",
+      "start": 2420.48,
+      "duration": 6.04
+    },
+    {
+      "text": "You'll see a diagram",
+      "start": 2422.8,
+      "duration": 3.72
+    },
+    {
+      "text": "26",
+      "start": 2434.88,
+      "duration": 5.64
+    },
+    {
+      "text": "26.",
+      "start": 2437.52,
+      "duration": 3.0
+    },
+    {
+      "text": "So look at 26 and tell me if it makes",
+      "start": 2441.04,
+      "duration": 5.52
+    },
+    {
+      "text": "sense to you.",
+      "start": 2443.52,
+      "duration": 5.28
+    },
+    {
+      "text": "The schema city, the fact city, and the",
+      "start": 2446.56,
+      "duration": 5.039
+    },
+    {
+      "text": "facet city. Remember",
+      "start": 2448.8,
+      "duration": 6.0
+    },
+    {
+      "text": "the the schema city is the promoted city",
+      "start": 2451.599,
+      "duration": 6.601
+    },
+    {
+      "text": "at this moment.",
+      "start": 2454.8,
+      "duration": 3.4
+    },
+    {
+      "text": "Does that make sense? And a pro the just",
+      "start": 2461.119,
+      "duration": 6.48
+    },
+    {
+      "text": "to name it",
+      "start": 2465.68,
+      "duration": 5.679
+    },
+    {
+      "text": "while the fact is made up of entity",
+      "start": 2467.599,
+      "duration": 6.24
+    },
+    {
+      "text": "like a person Einstein born in Germany.",
+      "start": 2471.359,
+      "duration": 5.041
+    },
+    {
+      "text": "The ontological is made up of a type",
+      "start": 2473.839,
+      "duration": 6.881
+    },
+    {
+      "text": "person born in a type relation",
+      "start": 2476.4,
+      "duration": 10.0
+    },
+    {
+      "text": "person uh and type type relation type.",
+      "start": 2480.72,
+      "duration": 9.2
+    },
+    {
+      "text": "So the the schema city is populated with",
+      "start": 2486.4,
+      "duration": 7.76
+    },
+    {
+      "text": "these typed triplets. The fact cities",
+      "start": 2489.92,
+      "duration": 6.88
+    },
+    {
+      "text": "are entities and fact triplets. And then",
+      "start": 2494.16,
+      "duration": 4.64
+    },
+    {
+      "text": "they have the passage city the chunks",
+      "start": 2496.8,
+      "duration": 5.84
+    },
+    {
+      "text": "themselves three these cities and you do",
+      "start": 2498.8,
+      "duration": 6.08
+    },
+    {
+      "text": "now is this a good idea to do this or",
+      "start": 2502.64,
+      "duration": 5.679
+    },
+    {
+      "text": "not it's a question we are going to ask",
+      "start": 2504.88,
+      "duration": 8.76
+    },
+    {
+      "text": "what is it doing it's saying frequency",
+      "start": 2508.319,
+      "duration": 5.321
+    },
+    {
+      "text": "determines whether something is relevant",
+      "start": 2513.839,
+      "duration": 6.161
+    },
+    {
+      "text": "or not you see that",
+      "start": 2515.599,
+      "duration": 7.041
+    },
+    {
+      "text": "right now",
+      "start": 2520.0,
+      "duration": 5.44
+    },
+    {
+      "text": "we will it makes sense won't it filter",
+      "start": 2522.64,
+      "duration": 4.88
+    },
+    {
+      "text": "out the copyright write notice and the",
+      "start": 2525.44,
+      "duration": 4.08
+    },
+    {
+      "text": "fact that Scooby-Doo reference pending",
+      "start": 2527.52,
+      "duration": 4.48
+    },
+    {
+      "text": "review pending",
+      "start": 2529.52,
+      "duration": 5.36
+    },
+    {
+      "text": "that's a basic intuition you see that a",
+      "start": 2532.0,
+      "duration": 6.48
+    },
+    {
+      "text": "lot of the thematic noise will get",
+      "start": 2534.88,
+      "duration": 6.8
+    },
+    {
+      "text": "removed now",
+      "start": 2538.48,
+      "duration": 5.599
+    },
+    {
+      "text": "so it sounds good on paper let's see",
+      "start": 2541.68,
+      "duration": 5.28
+    },
+    {
+      "text": "what it does",
+      "start": 2544.079,
+      "duration": 7.601
+    },
+    {
+      "text": "uh one second yeah now",
+      "start": 2546.96,
+      "duration": 10.159
+    },
+    {
+      "text": "comes the part about inference inference",
+      "start": 2551.68,
+      "duration": 7.6
+    },
+    {
+      "text": "part is straightforward",
+      "start": 2557.119,
+      "duration": 5.041
+    },
+    {
+      "text": "and it goes back to the page",
+      "start": 2559.28,
+      "duration": 5.039
+    },
+    {
+      "text": "personalized page rank algorithm. So let",
+      "start": 2562.16,
+      "duration": 5.6
+    },
+    {
+      "text": "me do that. See what happens is",
+      "start": 2564.319,
+      "duration": 6.321
+    },
+    {
+      "text": "you you have created each of these",
+      "start": 2567.76,
+      "duration": 5.28
+    },
+    {
+      "text": "triplets go do the standard vector",
+      "start": 2570.64,
+      "duration": 5.28
+    },
+    {
+      "text": "embedding.",
+      "start": 2573.04,
+      "duration": 4.64
+    },
+    {
+      "text": "We have all done vector embedding in the",
+      "start": 2575.92,
+      "duration": 3.6
+    },
+    {
+      "text": "previous thing right? Write out the",
+      "start": 2577.68,
+      "duration": 4.399
+    },
+    {
+      "text": "triplet as text. You can do vector",
+      "start": 2579.52,
+      "duration": 4.16
+    },
+    {
+      "text": "embedding.",
+      "start": 2582.079,
+      "duration": 6.481
+    },
+    {
+      "text": "Now do one thing. I can find similarity",
+      "start": 2583.68,
+      "duration": 8.56
+    },
+    {
+      "text": "between a query",
+      "start": 2588.56,
+      "duration": 6.96
+    },
+    {
+      "text": "and a triplet. Fact triplet. Let me call",
+      "start": 2592.24,
+      "duration": 7.119
+    },
+    {
+      "text": "it fact triplet. I can find a similarity",
+      "start": 2595.52,
+      "duration": 7.44
+    },
+    {
+      "text": "between a query and a",
+      "start": 2599.359,
+      "duration": 6.161
+    },
+    {
+      "text": "uh onto triplet.",
+      "start": 2602.96,
+      "duration": 5.52
+    },
+    {
+      "text": "Now I can find a similarity between a",
+      "start": 2605.52,
+      "duration": 7.52
+    },
+    {
+      "text": "query and a passage that is standard",
+      "start": 2608.48,
+      "duration": 7.28
+    },
+    {
+      "text": "embedding similarities for to make it",
+      "start": 2613.04,
+      "duration": 4.799
+    },
+    {
+      "text": "concretize in your mind just look at",
+      "start": 2615.76,
+      "duration": 4.64
+    },
+    {
+      "text": "cosign similarity",
+      "start": 2617.839,
+      "duration": 5.76
+    },
+    {
+      "text": "and they have used a standard emitter.",
+      "start": 2620.4,
+      "duration": 6.48
+    },
+    {
+      "text": "Now with that in mind now comes a very",
+      "start": 2623.599,
+      "duration": 6.561
+    },
+    {
+      "text": "basic thing I want to know",
+      "start": 2626.88,
+      "duration": 6.88
+    },
+    {
+      "text": "which entity should I a query comes. So",
+      "start": 2630.16,
+      "duration": 7.52
+    },
+    {
+      "text": "query is like a magic wand.",
+      "start": 2633.76,
+      "duration": 8.0
+    },
+    {
+      "text": "What it does is you ask this question I",
+      "start": 2637.68,
+      "duration": 7.76
+    },
+    {
+      "text": "want the city of entities the entity",
+      "start": 2641.76,
+      "duration": 6.8
+    },
+    {
+      "text": "triplets. It was all in dark. So imagine",
+      "start": 2645.44,
+      "duration": 6.159
+    },
+    {
+      "text": "that query is like a magic wand.",
+      "start": 2648.56,
+      "duration": 5.519
+    },
+    {
+      "text": "It lights up the city lights up the",
+      "start": 2651.599,
+      "duration": 4.72
+    },
+    {
+      "text": "entities.",
+      "start": 2654.079,
+      "duration": 4.801
+    },
+    {
+      "text": "You want those entities to light up",
+      "start": 2656.319,
+      "duration": 4.881
+    },
+    {
+      "text": "which are semantically closest to this",
+      "start": 2658.88,
+      "duration": 4.239
+    },
+    {
+      "text": "query.",
+      "start": 2661.2,
+      "duration": 5.119
+    },
+    {
+      "text": "Right? That makes sense. So now which so",
+      "start": 2663.119,
+      "duration": 7.2
+    },
+    {
+      "text": "there is a equation here",
+      "start": 2666.319,
+      "duration": 6.0
+    },
+    {
+      "text": "the amount of importance or think of it",
+      "start": 2670.319,
+      "duration": 4.481
+    },
+    {
+      "text": "as the light energy of that entity how",
+      "start": 2672.319,
+      "duration": 5.921
+    },
+    {
+      "text": "much it's lit up to be given by this",
+      "start": 2674.8,
+      "duration": 7.12
+    },
+    {
+      "text": "equation. And we will now",
+      "start": 2678.24,
+      "duration": 8.76
+    },
+    {
+      "text": "see whether uh to us it makes sense.",
+      "start": 2681.92,
+      "duration": 5.08
+    },
+    {
+      "text": "What does it say?",
+      "start": 2692.96,
+      "duration": 5.28
+    },
+    {
+      "text": "Let's parse this equation. We are saying",
+      "start": 2695.599,
+      "duration": 5.361
+    },
+    {
+      "text": "that see this entity will be in many",
+      "start": 2698.24,
+      "duration": 5.04
+    },
+    {
+      "text": "fact triplets.",
+      "start": 2700.96,
+      "duration": 4.56
+    },
+    {
+      "text": "Einstein was born in Germany. Einstein",
+      "start": 2703.28,
+      "duration": 4.4
+    },
+    {
+      "text": "won the Nobel Prize. Einstein was a",
+      "start": 2705.52,
+      "duration": 3.92
+    },
+    {
+      "text": "physicist. Einstein created the theory",
+      "start": 2707.68,
+      "duration": 4.0
+    },
+    {
+      "text": "of relativity. So many fact triplets",
+      "start": 2709.44,
+      "duration": 4.24
+    },
+    {
+      "text": "about Einstein.",
+      "start": 2711.68,
+      "duration": 5.36
+    },
+    {
+      "text": "So I need but I am doing similarity",
+      "start": 2713.68,
+      "duration": 5.84
+    },
+    {
+      "text": "between the query and the fact triplets",
+      "start": 2717.04,
+      "duration": 3.92
+    },
+    {
+      "text": "because fact triplets have been made",
+      "start": 2719.52,
+      "duration": 4.24
+    },
+    {
+      "text": "into text and done that. So what I can",
+      "start": 2720.96,
+      "duration": 7.76
+    },
+    {
+      "text": "do is I can take the average similarity",
+      "start": 2723.76,
+      "duration": 7.52
+    },
+    {
+      "text": "whatever the cosine similarities are and",
+      "start": 2728.72,
+      "duration": 5.04
+    },
+    {
+      "text": "let us say I found four triplets. I can",
+      "start": 2731.28,
+      "duration": 5.039
+    },
+    {
+      "text": "one add them up and divide by four. I",
+      "start": 2733.76,
+      "duration": 5.04
+    },
+    {
+      "text": "can get the average similarity. So that",
+      "start": 2736.319,
+      "duration": 5.681
+    },
+    {
+      "text": "will tell me how important with respect",
+      "start": 2738.8,
+      "duration": 7.84
+    },
+    {
+      "text": "to this query is Einstein the entity",
+      "start": 2742.0,
+      "duration": 6.8
+    },
+    {
+      "text": "does this thing now this equation now",
+      "start": 2746.64,
+      "duration": 5.04
+    },
+    {
+      "text": "look obvious summed over similarity",
+      "start": 2748.8,
+      "duration": 5.36
+    },
+    {
+      "text": "between Q and fact",
+      "start": 2751.68,
+      "duration": 4.88
+    },
+    {
+      "text": "triplet and the fact has to contain the",
+      "start": 2754.16,
+      "duration": 4.8
+    },
+    {
+      "text": "entity not any random fact it has to",
+      "start": 2756.56,
+      "duration": 4.64
+    },
+    {
+      "text": "contain the entity all the triplets that",
+      "start": 2758.96,
+      "duration": 5.04
+    },
+    {
+      "text": "contain the entity",
+      "start": 2761.2,
+      "duration": 4.96
+    },
+    {
+      "text": "so this is at the level of the so now",
+      "start": 2764.0,
+      "duration": 4.72
+    },
+    {
+      "text": "what has happened the faxity",
+      "start": 2766.16,
+      "duration": 5.84
+    },
+    {
+      "text": "has differentially lit up",
+      "start": 2768.72,
+      "duration": 6.96
+    },
+    {
+      "text": "right with the query's magic wand these",
+      "start": 2772.0,
+      "duration": 6.4
+    },
+    {
+      "text": "entities have lit up the now can I do",
+      "start": 2775.68,
+      "duration": 6.48
+    },
+    {
+      "text": "the same thing with respect to the",
+      "start": 2778.4,
+      "duration": 6.16
+    },
+    {
+      "text": "onlogical city",
+      "start": 2782.16,
+      "duration": 4.959
+    },
+    {
+      "text": "right schema city I could do the same",
+      "start": 2784.56,
+      "duration": 4.96
+    },
+    {
+      "text": "thing but there is a little bit of a",
+      "start": 2787.119,
+      "duration": 5.121
+    },
+    {
+      "text": "extra issue that you do so first let the",
+      "start": 2789.52,
+      "duration": 4.319
+    },
+    {
+      "text": "write the equation the way we would have",
+      "start": 2792.24,
+      "duration": 5.04
+    },
+    {
+      "text": "written of a given type so this This is",
+      "start": 2793.839,
+      "duration": 5.28
+    },
+    {
+      "text": "the init value. There's a reason why we",
+      "start": 2797.28,
+      "duration": 4.16
+    },
+    {
+      "text": "were calling it the init value, initial",
+      "start": 2799.119,
+      "duration": 4.801
+    },
+    {
+      "text": "value, initial letter. We do again all",
+      "start": 2801.44,
+      "duration": 4.56
+    },
+    {
+      "text": "the schemas",
+      "start": 2803.92,
+      "duration": 6.199
+    },
+    {
+      "text": "that contain the type.",
+      "start": 2806.0,
+      "duration": 4.119
+    },
+    {
+      "text": "Now Einstein is a type person,",
+      "start": 2810.16,
+      "duration": 7.679
+    },
+    {
+      "text": "right? How many triplets contain person?",
+      "start": 2814.319,
+      "duration": 5.28
+    },
+    {
+      "text": "We can figure those out. Ontological",
+      "start": 2817.839,
+      "duration": 6.961
+    },
+    {
+      "text": "triplets. So I can go and say once again",
+      "start": 2819.599,
+      "duration": 6.801
+    },
+    {
+      "text": "similarity",
+      "start": 2824.8,
+      "duration": 5.519
+    },
+    {
+      "text": "and this becomes S belongs to ST. How",
+      "start": 2826.4,
+      "duration": 6.719
+    },
+    {
+      "text": "many the types that contain this query",
+      "start": 2830.319,
+      "duration": 5.681
+    },
+    {
+      "text": "and S?",
+      "start": 2833.119,
+      "duration": 5.681
+    },
+    {
+      "text": "All the triplets that contain person in",
+      "start": 2836.0,
+      "duration": 6.4
+    },
+    {
+      "text": "it make sense. This is just a mirror",
+      "start": 2838.8,
+      "duration": 5.92
+    },
+    {
+      "text": "image of what we did in the entity",
+      "start": 2842.4,
+      "duration": 5.04
+    },
+    {
+      "text": "setting. But there is a there is",
+      "start": 2844.72,
+      "duration": 4.24
+    },
+    {
+      "text": "something called a hub suppression",
+      "start": 2847.44,
+      "duration": 4.96
+    },
+    {
+      "text": "factor. you divide it, you multiply it",
+      "start": 2848.96,
+      "duration": 9.2
+    },
+    {
+      "text": "by a a term called",
+      "start": 2852.4,
+      "duration": 10.24
+    },
+    {
+      "text": "degree of t of the type + one. So let's",
+      "start": 2858.16,
+      "duration": 6.72
+    },
+    {
+      "text": "explain this. This factor is called hub",
+      "start": 2862.64,
+      "duration": 5.719
+    },
+    {
+      "text": "separation factor.",
+      "start": 2864.88,
+      "duration": 3.479
+    },
+    {
+      "text": "What does that mean? See an entity like",
+      "start": 2872.96,
+      "duration": 6.399
+    },
+    {
+      "text": "person is very common",
+      "start": 2876.4,
+      "duration": 5.76
+    },
+    {
+      "text": "and what will happen is it will",
+      "start": 2879.359,
+      "duration": 4.641
+    },
+    {
+      "text": "accumulate a lot of triplets it'll light",
+      "start": 2882.16,
+      "duration": 5.36
+    },
+    {
+      "text": "up etc but you know it's too generic",
+      "start": 2884.0,
+      "duration": 6.079
+    },
+    {
+      "text": "the higher the degree the more sort of",
+      "start": 2887.52,
+      "duration": 4.799
+    },
+    {
+      "text": "in a way",
+      "start": 2890.079,
+      "duration": 4.961
+    },
+    {
+      "text": "uh common it is.",
+      "start": 2892.319,
+      "duration": 5.201
+    },
+    {
+      "text": "So now let's look at the that's why you",
+      "start": 2895.04,
+      "duration": 6.079
+    },
+    {
+      "text": "suppress it by you scale it down",
+      "start": 2897.52,
+      "duration": 6.96
+    },
+    {
+      "text": "by not the degree itself it's too strong",
+      "start": 2901.119,
+      "duration": 5.681
+    },
+    {
+      "text": "but by the log of degrees gentle muting",
+      "start": 2904.48,
+      "duration": 4.079
+    },
+    {
+      "text": "down log of some number is small thing",
+      "start": 2906.8,
+      "duration": 4.72
+    },
+    {
+      "text": "right so if the degree of a node is 100",
+      "start": 2908.559,
+      "duration": 5.921
+    },
+    {
+      "text": "log of 100 on base 10 would be just two",
+      "start": 2911.52,
+      "duration": 6.24
+    },
+    {
+      "text": "right a smaller number but uh whatever",
+      "start": 2914.48,
+      "duration": 5.359
+    },
+    {
+      "text": "based on your base you'll get different",
+      "start": 2917.76,
+      "duration": 4.16
+    },
+    {
+      "text": "numbers but you agree that log of a",
+      "start": 2919.839,
+      "duration": 3.921
+    },
+    {
+      "text": "number is much smaller number so you're",
+      "start": 2921.92,
+      "duration": 3.439
+    },
+    {
+      "text": "dividing by a much smaller number and",
+      "start": 2923.76,
+      "duration": 4.72
+    },
+    {
+      "text": "why is there plus one",
+      "start": 2925.359,
+      "duration": 4.0
+    },
+    {
+      "text": ">> zero?",
+      "start": 2928.48,
+      "duration": 3.2
+    },
+    {
+      "text": ">> Yeah. To prevent zero,",
+      "start": 2929.359,
+      "duration": 3.921
+    },
+    {
+      "text": "right?",
+      "start": 2931.68,
+      "duration": 5.28
+    },
+    {
+      "text": "So you don't want that. Uh that is just",
+      "start": 2933.28,
+      "duration": 6.48
+    },
+    {
+      "text": "so now this makes sense. It is more or",
+      "start": 2936.96,
+      "duration": 4.399
+    },
+    {
+      "text": "less the same equation with a hub",
+      "start": 2939.76,
+      "duration": 4.24
+    },
+    {
+      "text": "suppression factor.",
+      "start": 2941.359,
+      "duration": 5.121
+    },
+    {
+      "text": "What about P?",
+      "start": 2944.0,
+      "duration": 4.24
+    },
+    {
+      "text": "Likewise, we can come up with the light",
+      "start": 2946.48,
+      "duration": 5.68
+    },
+    {
+      "text": "how much we light up the passage",
+      "start": 2948.24,
+      "duration": 6.48
+    },
+    {
+      "text": "of a passage.",
+      "start": 2952.16,
+      "duration": 4.959
+    },
+    {
+      "text": "Can we write a similar equation? That is",
+      "start": 2954.72,
+      "duration": 8.8
+    },
+    {
+      "text": "very easy. You can say we apply a factor",
+      "start": 2957.119,
+      "duration": 9.641
+    },
+    {
+      "text": "which is",
+      "start": 2963.52,
+      "duration": 3.24
+    },
+    {
+      "text": "this. Interesting. Actually, there's no",
+      "start": 2967.28,
+      "duration": 3.92
+    },
+    {
+      "text": "plus here. That's a please take that",
+      "start": 2969.28,
+      "duration": 6.4
+    },
+    {
+      "text": "plus out. That plus is a typo.",
+      "start": 2971.2,
+      "duration": 7.2
+    },
+    {
+      "text": "I'll explain what that plus is. Now,",
+      "start": 2975.68,
+      "duration": 4.72
+    },
+    {
+      "text": "passage is very simple. There is no",
+      "start": 2978.4,
+      "duration": 4.48
+    },
+    {
+      "text": "summation of anything. We have been",
+      "start": 2980.4,
+      "duration": 5.36
+    },
+    {
+      "text": "doing this baseline drag all the time.",
+      "start": 2982.88,
+      "duration": 4.959
+    },
+    {
+      "text": "Given a query and a passage, there is a",
+      "start": 2985.76,
+      "duration": 6.839
+    },
+    {
+      "text": "cosine similarity directly between them.",
+      "start": 2987.839,
+      "duration": 4.76
+    },
+    {
+      "text": "Now this alpha is set to 0.05.",
+      "start": 2994.319,
+      "duration": 6.321
+    },
+    {
+      "text": "What does it mean?",
+      "start": 2997.839,
+      "duration": 5.76
+    },
+    {
+      "text": "That give much less importance to",
+      "start": 3000.64,
+      "duration": 6.56
+    },
+    {
+      "text": "passages. Passage similarity. What it is",
+      "start": 3003.599,
+      "duration": 6.401
+    },
+    {
+      "text": "saying is that the entity and type",
+      "start": 3007.2,
+      "duration": 5.2
+    },
+    {
+      "text": "similarities",
+      "start": 3010.0,
+      "duration": 5.2
+    },
+    {
+      "text": "right are much stronger louder signals",
+      "start": 3012.4,
+      "duration": 4.64
+    },
+    {
+      "text": "to look at",
+      "start": 3015.2,
+      "duration": 5.28
+    },
+    {
+      "text": "mute down the passive similarity. So",
+      "start": 3017.04,
+      "duration": 6.559
+    },
+    {
+      "text": "remark remark this they are saying that",
+      "start": 3020.48,
+      "duration": 6.079
+    },
+    {
+      "text": "your baseline rag which is passive",
+      "start": 3023.599,
+      "duration": 6.0
+    },
+    {
+      "text": "similarity downplay it because it's too",
+      "start": 3026.559,
+      "duration": 5.28
+    },
+    {
+      "text": "noisy",
+      "start": 3029.599,
+      "duration": 4.801
+    },
+    {
+      "text": "right don't do that but they also add",
+      "start": 3031.839,
+      "duration": 4.081
+    },
+    {
+      "text": "another",
+      "start": 3034.4,
+      "duration": 2.88
+    },
+    {
+      "text": "factor to it by the way remove that",
+      "start": 3035.92,
+      "duration": 6.439
+    },
+    {
+      "text": "bless from there it is sigmoid of",
+      "start": 3037.28,
+      "duration": 5.079
+    },
+    {
+      "text": "it is it is called the information",
+      "start": 3043.119,
+      "duration": 6.081
+    },
+    {
+      "text": "density term do you remember the sigmoid",
+      "start": 3045.76,
+      "duration": 8.24
+    },
+    {
+      "text": "sigmoid goes from 0 to 1",
+      "start": 3049.2,
+      "duration": 8.32
+    },
+    {
+      "text": "right and it is giving you a term which",
+      "start": 3054.0,
+      "duration": 5.359
+    },
+    {
+      "text": "basically in the numerator contains it's",
+      "start": 3057.52,
+      "duration": 3.92
+    },
+    {
+      "text": "a mathematical expression it contains",
+      "start": 3059.359,
+      "duration": 7.081
+    },
+    {
+      "text": "IDF how many of you remember what IDF is",
+      "start": 3061.44,
+      "duration": 5.0
+    },
+    {
+      "text": "inverse document frequency excellent of",
+      "start": 3066.64,
+      "duration": 4.959
+    },
+    {
+      "text": "the entities and then there's a scaling",
+      "start": 3069.52,
+      "duration": 4.96
+    },
+    {
+      "text": "factor of log",
+      "start": 3071.599,
+      "duration": 4.96
+    },
+    {
+      "text": "number of passages that contain it plus",
+      "start": 3074.48,
+      "duration": 3.839
+    },
+    {
+      "text": "one but okay I'll give you the whole",
+      "start": 3076.559,
+      "duration": 4.161
+    },
+    {
+      "text": "sense intuitive sense",
+      "start": 3078.319,
+      "duration": 6.8
+    },
+    {
+      "text": "how information rich it is",
+      "start": 3080.72,
+      "duration": 7.68
+    },
+    {
+      "text": "the passages. So, and if it contains",
+      "start": 3085.119,
+      "duration": 5.841
+    },
+    {
+      "text": "terms that are not all over the place,",
+      "start": 3088.4,
+      "duration": 6.679
+    },
+    {
+      "text": "for example, the word and",
+      "start": 3090.96,
+      "duration": 4.119
+    },
+    {
+      "text": "you would not want the idea will be very",
+      "start": 3097.2,
+      "duration": 4.159
+    },
+    {
+      "text": "low.",
+      "start": 3099.839,
+      "duration": 4.961
+    },
+    {
+      "text": "All right? But even if a term if it is a",
+      "start": 3101.359,
+      "duration": 6.24
+    },
+    {
+      "text": "uh let's say uh machine learning",
+      "start": 3104.8,
+      "duration": 4.96
+    },
+    {
+      "text": "textbook",
+      "start": 3107.599,
+      "duration": 3.921
+    },
+    {
+      "text": "the word label will be all over the",
+      "start": 3109.76,
+      "duration": 3.599
+    },
+    {
+      "text": "place.",
+      "start": 3111.52,
+      "duration": 5.44
+    },
+    {
+      "text": "But a very specific word hinge or term",
+      "start": 3113.359,
+      "duration": 5.76
+    },
+    {
+      "text": "hinge laws",
+      "start": 3116.96,
+      "duration": 4.96
+    },
+    {
+      "text": "should be weighed a little bit more",
+      "start": 3119.119,
+      "duration": 5.361
+    },
+    {
+      "text": "because it is less common.",
+      "start": 3121.92,
+      "duration": 5.04
+    },
+    {
+      "text": "That's the meaning of right or let us",
+      "start": 3124.48,
+      "duration": 5.2
+    },
+    {
+      "text": "say that specifically",
+      "start": 3126.96,
+      "duration": 4.32
+    },
+    {
+      "text": "you",
+      "start": 3129.68,
+      "duration": 4.08
+    },
+    {
+      "text": "put a term somewhere",
+      "start": 3131.28,
+      "duration": 6.0
+    },
+    {
+      "text": "right you are talking about",
+      "start": 3133.76,
+      "duration": 5.76
+    },
+    {
+      "text": "uh commitment loss which is a very",
+      "start": 3137.28,
+      "duration": 5.12
+    },
+    {
+      "text": "specific term now commitment loss",
+      "start": 3139.52,
+      "duration": 5.12
+    },
+    {
+      "text": "doesn't show up everywhere",
+      "start": 3142.4,
+      "duration": 4.48
+    },
+    {
+      "text": "it shows up in a vector quantiz",
+      "start": 3144.64,
+      "duration": 5.52
+    },
+    {
+      "text": "variation or to encode a special thing",
+      "start": 3146.88,
+      "duration": 7.04
+    },
+    {
+      "text": "just a fact take it as a fact uh should",
+      "start": 3150.16,
+      "duration": 6.56
+    },
+    {
+      "text": "The rarer something is the more",
+      "start": 3153.92,
+      "duration": 6.0
+    },
+    {
+      "text": "importance you give.",
+      "start": 3156.72,
+      "duration": 5.839
+    },
+    {
+      "text": "Now generally",
+      "start": 3159.92,
+      "duration": 5.919
+    },
+    {
+      "text": "sigma of uh",
+      "start": 3162.559,
+      "duration": 6.881
+    },
+    {
+      "text": "zero is half. So this thing sigma most",
+      "start": 3165.839,
+      "duration": 5.76
+    },
+    {
+      "text": "terms will be at half but things that",
+      "start": 3169.44,
+      "duration": 6.08
+    },
+    {
+      "text": "are rarer will blow up and go to one. So",
+      "start": 3171.599,
+      "duration": 6.72
+    },
+    {
+      "text": "they'll get slightly amplified. Other",
+      "start": 3175.52,
+      "duration": 4.799
+    },
+    {
+      "text": "things only half contributions will be",
+      "start": 3178.319,
+      "duration": 4.081
+    },
+    {
+      "text": "there. That is what the information",
+      "start": 3180.319,
+      "duration": 6.04
+    },
+    {
+      "text": "density term does.",
+      "start": 3182.4,
+      "duration": 3.959
+    },
+    {
+      "text": "So the passage thing is like this.",
+      "start": 3189.119,
+      "duration": 5.921
+    },
+    {
+      "text": "Are we together? And then you say well",
+      "start": 3192.559,
+      "duration": 4.241
+    },
+    {
+      "text": "that is good. So now what has happened?",
+      "start": 3195.04,
+      "duration": 4.079
+    },
+    {
+      "text": "Think about it this way. Three cities",
+      "start": 3196.8,
+      "duration": 5.279
+    },
+    {
+      "text": "have lit up.",
+      "start": 3199.119,
+      "duration": 8.48
+    },
+    {
+      "text": "The schema city, the fat city and the",
+      "start": 3202.079,
+      "duration": 8.48
+    },
+    {
+      "text": "passage city. They have all lit up to",
+      "start": 3207.599,
+      "duration": 4.881
+    },
+    {
+      "text": "different degrees, right? Different",
+      "start": 3210.559,
+      "duration": 4.881
+    },
+    {
+      "text": "passages have different amount of light.",
+      "start": 3212.48,
+      "duration": 7.04
+    },
+    {
+      "text": "Then comes here's the approach",
+      "start": 3215.44,
+      "duration": 6.56
+    },
+    {
+      "text": "as an triplet in themselves. They are",
+      "start": 3219.52,
+      "duration": 5.839
+    },
+    {
+      "text": "okay. But the the what does the adjacy",
+      "start": 3222.0,
+      "duration": 6.0
+    },
+    {
+      "text": "matrix tell you?",
+      "start": 3225.359,
+      "duration": 5.521
+    },
+    {
+      "text": "It gives you the degree of relationships",
+      "start": 3228.0,
+      "duration": 5.599
+    },
+    {
+      "text": "and importances of each of the entities",
+      "start": 3230.88,
+      "duration": 7.6
+    },
+    {
+      "text": "in the graph in that city.",
+      "start": 3233.599,
+      "duration": 7.281
+    },
+    {
+      "text": "And so suppose",
+      "start": 3238.48,
+      "duration": 5.52
+    },
+    {
+      "text": "there is a lot of information at this",
+      "start": 3240.88,
+      "duration": 6.16
+    },
+    {
+      "text": "entity and",
+      "start": 3244.0,
+      "duration": 6.4
+    },
+    {
+      "text": "in a way other entities around it just",
+      "start": 3247.04,
+      "duration": 5.44
+    },
+    {
+      "text": "neighboring entities they have something",
+      "start": 3250.4,
+      "duration": 4.88
+    },
+    {
+      "text": "to share",
+      "start": 3252.48,
+      "duration": 5.68
+    },
+    {
+      "text": "because they're connected by edges.",
+      "start": 3255.28,
+      "duration": 4.72
+    },
+    {
+      "text": "Doesn't it make sense to borrow some of",
+      "start": 3258.16,
+      "duration": 5.84
+    },
+    {
+      "text": "the semantic from those",
+      "start": 3260.0,
+      "duration": 8.24
+    },
+    {
+      "text": "right from those notes that is meant by",
+      "start": 3264.0,
+      "duration": 6.559
+    },
+    {
+      "text": "the personalized patient. So what you do",
+      "start": 3268.24,
+      "duration": 4.96
+    },
+    {
+      "text": "is imagine that there is concentrated",
+      "start": 3270.559,
+      "duration": 6.481
+    },
+    {
+      "text": "semantic energy like in a manner of",
+      "start": 3273.2,
+      "duration": 5.359
+    },
+    {
+      "text": "speaking",
+      "start": 3277.04,
+      "duration": 4.88
+    },
+    {
+      "text": "what happens is that each of the nodes",
+      "start": 3278.559,
+      "duration": 7.56
+    },
+    {
+      "text": "you can think of it as a spring.",
+      "start": 3281.92,
+      "duration": 4.199
+    },
+    {
+      "text": "How every time it bubbles up to the top",
+      "start": 3286.72,
+      "duration": 4.879
+    },
+    {
+      "text": "imagine that it's bubbled up like energy",
+      "start": 3288.88,
+      "duration": 4.56
+    },
+    {
+      "text": "has gone all the way to the top or there",
+      "start": 3291.599,
+      "duration": 3.76
+    },
+    {
+      "text": "think of it as a honey like you know",
+      "start": 3293.44,
+      "duration": 5.119
+    },
+    {
+      "text": "that's a closer metaphor it bubbles up",
+      "start": 3295.359,
+      "duration": 5.76
+    },
+    {
+      "text": "how much honey depends on the this",
+      "start": 3298.559,
+      "duration": 5.841
+    },
+    {
+      "text": "calculations now what you do is at each",
+      "start": 3301.119,
+      "duration": 5.521
+    },
+    {
+      "text": "step",
+      "start": 3304.4,
+      "duration": 7.36
+    },
+    {
+      "text": "you give half of it only half of it",
+      "start": 3306.64,
+      "duration": 7.52
+    },
+    {
+      "text": "distributed to your neighbors",
+      "start": 3311.76,
+      "duration": 4.16
+    },
+    {
+      "text": "little bit I'm giving some of my",
+      "start": 3314.16,
+      "duration": 3.36
+    },
+    {
+      "text": "semantic energy to you some of my",
+      "start": 3315.92,
+      "duration": 3.679
+    },
+    {
+      "text": "meaning to you to you also to you also",
+      "start": 3317.52,
+      "duration": 4.88
+    },
+    {
+      "text": "in proportion to uh to something based",
+      "start": 3319.599,
+      "duration": 6.561
+    },
+    {
+      "text": "on the adjacy matrix right it is related",
+      "start": 3322.4,
+      "duration": 7.199
+    },
+    {
+      "text": "to D I mean uh well let's just say it",
+      "start": 3326.16,
+      "duration": 5.679
+    },
+    {
+      "text": "gets back into network theory it's",
+      "start": 3329.599,
+      "duration": 6.401
+    },
+    {
+      "text": "inverse D * adjacency matrix it's called",
+      "start": 3331.839,
+      "duration": 7.76
+    },
+    {
+      "text": "W right but ignore that just think",
+      "start": 3336.0,
+      "duration": 5.76
+    },
+    {
+      "text": "intuitively that you share some of the",
+      "start": 3339.599,
+      "duration": 6.561
+    },
+    {
+      "text": "energies to your half you share And then",
+      "start": 3341.76,
+      "duration": 7.68
+    },
+    {
+      "text": "it bubble you you are restored",
+      "start": 3346.16,
+      "duration": 6.08
+    },
+    {
+      "text": "fully half you keep and you're restored",
+      "start": 3349.44,
+      "duration": 5.04
+    },
+    {
+      "text": "and you keep repeating this step after a",
+      "start": 3352.24,
+      "duration": 5.68
+    },
+    {
+      "text": "few times. So what happens is that soon",
+      "start": 3354.48,
+      "duration": 4.879
+    },
+    {
+      "text": "the others are getting a little bit",
+      "start": 3357.92,
+      "duration": 3.679
+    },
+    {
+      "text": "colored by your semantic energy and you",
+      "start": 3359.359,
+      "duration": 4.0
+    },
+    {
+      "text": "are being colored by your neighbor's",
+      "start": 3361.599,
+      "duration": 4.401
+    },
+    {
+      "text": "semantic energy but you don't go too far",
+      "start": 3363.359,
+      "duration": 5.2
+    },
+    {
+      "text": "you just do the ideal state says I mean",
+      "start": 3366.0,
+      "duration": 4.24
+    },
+    {
+      "text": "the theoretical says keep doing it",
+      "start": 3368.559,
+      "duration": 4.401
+    },
+    {
+      "text": "forever till you equilibriate till the",
+      "start": 3370.24,
+      "duration": 4.8
+    },
+    {
+      "text": "colors don't change. I mean the semantic",
+      "start": 3372.96,
+      "duration": 6.24
+    },
+    {
+      "text": "energies don't move anymore right",
+      "start": 3375.04,
+      "duration": 6.96
+    },
+    {
+      "text": "in reality doing it three four times or",
+      "start": 3379.2,
+      "duration": 4.8
+    },
+    {
+      "text": "10 going doing it 10 times is more than",
+      "start": 3382.0,
+      "duration": 4.079
+    },
+    {
+      "text": "enough",
+      "start": 3384.0,
+      "duration": 6.16
+    },
+    {
+      "text": "and uh there is a reason for that there",
+      "start": 3386.079,
+      "duration": 7.201
+    },
+    {
+      "text": "is a theorem a fixed point theorem uh",
+      "start": 3390.16,
+      "duration": 4.72
+    },
+    {
+      "text": "banak fixed point it's a bit of",
+      "start": 3393.28,
+      "duration": 5.44
+    },
+    {
+      "text": "mathematics last bit of math for today",
+      "start": 3394.88,
+      "duration": 5.52
+    },
+    {
+      "text": "uh should I claim last bit of math for",
+      "start": 3398.72,
+      "duration": 5.68
+    },
+    {
+      "text": "the course probably not",
+      "start": 3400.4,
+      "duration": 4.0
+    },
+    {
+      "text": "that says that instead of going",
+      "start": 3410.64,
+      "duration": 4.719
+    },
+    {
+      "text": "infinitely many steps if you went only k",
+      "start": 3412.48,
+      "duration": 5.76
+    },
+    {
+      "text": "steps your error will be 1 minus lambda",
+      "start": 3415.359,
+      "duration": 5.2
+    },
+    {
+      "text": "to the power k.",
+      "start": 3418.24,
+      "duration": 5.359
+    },
+    {
+      "text": "So in this paper they take lambda to be",
+      "start": 3420.559,
+      "duration": 5.201
+    },
+    {
+      "text": "half remember half the energy you're",
+      "start": 3423.599,
+      "duration": 5.841
+    },
+    {
+      "text": "sharing. So then comes a interesting",
+      "start": 3425.76,
+      "duration": 7.12
+    },
+    {
+      "text": "fact. What is half ^ 10?",
+      "start": 3429.44,
+      "duration": 9.119
+    },
+    {
+      "text": "1 / 2 to the^ 10 is 1 / 1024",
+      "start": 3432.88,
+      "duration": 8.679
+    },
+    {
+      "text": "approximately",
+      "start": 3438.559,
+      "duration": 3.0
+    },
+    {
+      "text": "0.1%.",
+      "start": 3441.599,
+      "duration": 6.52
+    },
+    {
+      "text": "Or specifically 0.09%.",
+      "start": 3444.16,
+      "duration": 3.959
+    },
+    {
+      "text": "Right? Means instead of forever doing it",
+      "start": 3449.359,
+      "duration": 6.561
+    },
+    {
+      "text": "which is computationally hard or rather",
+      "start": 3452.799,
+      "duration": 5.52
+    },
+    {
+      "text": "wasteful if you just do it 10 times",
+      "start": 3455.92,
+      "duration": 5.28
+    },
+    {
+      "text": "it'll be good enough. So at inference",
+      "start": 3458.319,
+      "duration": 5.121
+    },
+    {
+      "text": "time what you do is you get the queue",
+      "start": 3461.2,
+      "duration": 5.359
+    },
+    {
+      "text": "light up the three cities and then you",
+      "start": 3463.44,
+      "duration": 5.28
+    },
+    {
+      "text": "do something interesting. We will do",
+      "start": 3466.559,
+      "duration": 5.361
+    },
+    {
+      "text": "this game in which we create we go over",
+      "start": 3468.72,
+      "duration": 5.04
+    },
+    {
+      "text": "all the three cities and we play this",
+      "start": 3471.92,
+      "duration": 3.679
+    },
+    {
+      "text": "game. Mathematically the way you do it",
+      "start": 3473.76,
+      "duration": 4.48
+    },
+    {
+      "text": "is you create a vector V which is and",
+      "start": 3475.599,
+      "duration": 5.2
+    },
+    {
+      "text": "this is the personalized rate uh page",
+      "start": 3478.24,
+      "duration": 5.359
+    },
+    {
+      "text": "rank algorithm. It contains the long",
+      "start": 3480.799,
+      "duration": 7.76
+    },
+    {
+      "text": "vector of the P of the entities P of the",
+      "start": 3483.599,
+      "duration": 8.96
+    },
+    {
+      "text": "types semantic city P of the passages.",
+      "start": 3488.559,
+      "duration": 6.56
+    },
+    {
+      "text": "Why why is this P itself a vector?",
+      "start": 3492.559,
+      "duration": 4.161
+    },
+    {
+      "text": "Because there are so many entities in",
+      "start": 3495.119,
+      "duration": 5.44
+    },
+    {
+      "text": "the first city entity city there are so",
+      "start": 3496.72,
+      "duration": 7.52
+    },
+    {
+      "text": "many types in the type city and there",
+      "start": 3500.559,
+      "duration": 6.161
+    },
+    {
+      "text": "are so many passages in the passage city",
+      "start": 3504.24,
+      "duration": 5.04
+    },
+    {
+      "text": "you create one giant column vector that",
+      "start": 3506.72,
+      "duration": 4.399
+    },
+    {
+      "text": "is your V and then there is a",
+      "start": 3509.28,
+      "duration": 3.519
+    },
+    {
+      "text": "mathematical expression that brings",
+      "start": 3511.119,
+      "duration": 4.161
+    },
+    {
+      "text": "about what I just talked what I just",
+      "start": 3512.799,
+      "duration": 4.961
+    },
+    {
+      "text": "explained right that mathematical",
+      "start": 3515.28,
+      "duration": 5.519
+    },
+    {
+      "text": "expression is called the personalized",
+      "start": 3517.76,
+      "duration": 6.0
+    },
+    {
+      "text": "page rank algorithm right and it is",
+      "start": 3520.799,
+      "duration": 4.8
+    },
+    {
+      "text": "given",
+      "start": 3523.76,
+      "duration": 4.799
+    },
+    {
+      "text": "uh",
+      "start": 3525.599,
+      "duration": 6.641
+    },
+    {
+      "text": "in the p in in your page 28. Right? So",
+      "start": 3528.559,
+      "duration": 7.76
+    },
+    {
+      "text": "you notice that this is uh vk + 1. The",
+      "start": 3532.24,
+      "duration": 9.28
+    },
+    {
+      "text": "next step is 1 minus lambda",
+      "start": 3536.319,
+      "duration": 8.881
+    },
+    {
+      "text": "w remember w is",
+      "start": 3541.52,
+      "duration": 7.599
+    },
+    {
+      "text": "modulates the degree of sharing times vk",
+      "start": 3545.2,
+      "duration": 7.52
+    },
+    {
+      "text": "the previous value plus lambda v 0. Now",
+      "start": 3549.119,
+      "duration": 5.761
+    },
+    {
+      "text": "remember the initial",
+      "start": 3552.72,
+      "duration": 8.16
+    },
+    {
+      "text": "energy that you kept is V 0 to yourself",
+      "start": 3554.88,
+      "duration": 9.12
+    },
+    {
+      "text": "right you keep half forever for yourself",
+      "start": 3560.88,
+      "duration": 5.28
+    },
+    {
+      "text": "and then you keep playing this game over",
+      "start": 3564.0,
+      "duration": 5.2
+    },
+    {
+      "text": "and over again right keep shifting it",
+      "start": 3566.16,
+      "duration": 7.639
+    },
+    {
+      "text": "around so this equation",
+      "start": 3569.2,
+      "duration": 4.599
+    },
+    {
+      "text": "it's a little hard to see what it means",
+      "start": 3574.4,
+      "duration": 4.32
+    },
+    {
+      "text": "unless you see the intuition behind it",
+      "start": 3576.72,
+      "duration": 4.079
+    },
+    {
+      "text": "so it is that each of the nodes are",
+      "start": 3578.72,
+      "duration": 3.92
+    },
+    {
+      "text": "sharing their semantic He says you know",
+      "start": 3580.799,
+      "duration": 3.921
+    },
+    {
+      "text": "what let me share some of my meaning",
+      "start": 3582.64,
+      "duration": 5.36
+    },
+    {
+      "text": "with you with you etc. And now what",
+      "start": 3584.72,
+      "duration": 5.92
+    },
+    {
+      "text": "happens is so all of them once they",
+      "start": 3588.0,
+      "duration": 5.28
+    },
+    {
+      "text": "equilibrate they all are burning as",
+      "start": 3590.64,
+      "duration": 4.24
+    },
+    {
+      "text": "bulbs. Let's get back to the bulb",
+      "start": 3593.28,
+      "duration": 4.48
+    },
+    {
+      "text": "metaphor because it's harder to share",
+      "start": 3594.88,
+      "duration": 4.719
+    },
+    {
+      "text": "light so I brought in honey but let's",
+      "start": 3597.76,
+      "duration": 4.88
+    },
+    {
+      "text": "get back to bulbs. Now",
+      "start": 3599.599,
+      "duration": 5.76
+    },
+    {
+      "text": "they are all lit up to slightly",
+      "start": 3602.64,
+      "duration": 6.0
+    },
+    {
+      "text": "different degrees than initial isn't it?",
+      "start": 3605.359,
+      "duration": 5.041
+    },
+    {
+      "text": "You just pick up the brightest bulbs and",
+      "start": 3608.64,
+      "duration": 3.76
+    },
+    {
+      "text": "you're done.",
+      "start": 3610.4,
+      "duration": 4.48
+    },
+    {
+      "text": "Brightest buls are your query results,",
+      "start": 3612.4,
+      "duration": 4.64
+    },
+    {
+      "text": "the retrieval results. Out of them you",
+      "start": 3614.88,
+      "duration": 5.8
+    },
+    {
+      "text": "can answer your question.",
+      "start": 3617.04,
+      "duration": 3.64
+    },
+    {
+      "text": "So this is the idea of this paper that",
+      "start": 3622.24,
+      "duration": 7.04
+    },
+    {
+      "text": "this idea the was first personalized",
+      "start": 3626.0,
+      "duration": 6.88
+    },
+    {
+      "text": "page first came from",
+      "start": 3629.28,
+      "duration": 6.799
+    },
+    {
+      "text": "which I invite you to read. Now, now",
+      "start": 3632.88,
+      "duration": 5.919
+    },
+    {
+      "text": "let's step back and ask",
+      "start": 3636.079,
+      "duration": 4.321
+    },
+    {
+      "text": "the second part of the paper is",
+      "start": 3638.799,
+      "duration": 3.76
+    },
+    {
+      "text": "wonderful the way it is done. Retrieval",
+      "start": 3640.4,
+      "duration": 4.88
+    },
+    {
+      "text": "is fine with the first part there was a",
+      "start": 3642.559,
+      "duration": 4.961
+    },
+    {
+      "text": "little bit of a",
+      "start": 3645.28,
+      "duration": 4.319
+    },
+    {
+      "text": "problem.",
+      "start": 3647.52,
+      "duration": 4.799
+    },
+    {
+      "text": "Can anybody spot the problem here? What",
+      "start": 3649.599,
+      "duration": 6.081
+    },
+    {
+      "text": "could be the problem in which we say",
+      "start": 3652.319,
+      "duration": 5.441
+    },
+    {
+      "text": "create a frequency table of the type",
+      "start": 3655.68,
+      "duration": 5.919
+    },
+    {
+      "text": "triplets or schema triplets and only",
+      "start": 3657.76,
+      "duration": 9.039
+    },
+    {
+      "text": "keep the frequent triplets in your game?",
+      "start": 3661.599,
+      "duration": 8.641
+    },
+    {
+      "text": "What could be wrong with that?",
+      "start": 3666.799,
+      "duration": 7.361
+    },
+    {
+      "text": "Not wrong or suboptimal with that.",
+      "start": 3670.24,
+      "duration": 6.8
+    },
+    {
+      "text": ">> I was there on Wednesday speak.",
+      "start": 3674.16,
+      "duration": 3.76
+    },
+    {
+      "text": ">> Come again.",
+      "start": 3677.04,
+      "duration": 2.72
+    },
+    {
+      "text": ">> I was there in Wednesday's class. No,",
+      "start": 3677.92,
+      "duration": 3.28
+    },
+    {
+      "text": "you're not allowed to speak if you were",
+      "start": 3679.76,
+      "duration": 2.64
+    },
+    {
+      "text": "there in Wednesday. So,",
+      "start": 3681.2,
+      "duration": 3.359
+    },
+    {
+      "text": ">> the low frequency ones get suppressed.",
+      "start": 3682.4,
+      "duration": 4.399
+    },
+    {
+      "text": ">> Yeah. So, what's wrong? I mean, then",
+      "start": 3684.559,
+      "duration": 5.52
+    },
+    {
+      "text": "this will get suppressed. The",
+      "start": 3686.799,
+      "duration": 5.121
+    },
+    {
+      "text": "uh",
+      "start": 3690.079,
+      "duration": 6.081
+    },
+    {
+      "text": ">> scalability, large vocabulary size,",
+      "start": 3691.92,
+      "duration": 7.679
+    },
+    {
+      "text": ">> large vocabulary size,",
+      "start": 3696.16,
+      "duration": 6.439
+    },
+    {
+      "text": "uh",
+      "start": 3699.599,
+      "duration": 3.0
+    },
+    {
+      "text": ">> large number of the count of word or",
+      "start": 3703.28,
+      "duration": 4.72
+    },
+    {
+      "text": "frequency of word increases.",
+      "start": 3705.599,
+      "duration": 4.48
+    },
+    {
+      "text": ">> Yeah.",
+      "start": 3708.0,
+      "duration": 5.04
+    },
+    {
+      "text": "So when it is highly important but it it",
+      "start": 3710.079,
+      "duration": 5.201
+    },
+    {
+      "text": "is not talked about very often.",
+      "start": 3713.04,
+      "duration": 4.16
+    },
+    {
+      "text": ">> When it is highly important but not",
+      "start": 3715.28,
+      "duration": 5.6
+    },
+    {
+      "text": "talked about often. Does that happen?",
+      "start": 3717.2,
+      "duration": 5.359
+    },
+    {
+      "text": "Like if you carry the inclusion of",
+      "start": 3720.88,
+      "duration": 4.479
+    },
+    {
+      "text": "copyrights and uh Scooby-Doo's review",
+      "start": 3722.559,
+      "duration": 5.441
+    },
+    {
+      "text": "pending th those are infrequent things.",
+      "start": 3725.359,
+      "duration": 6.321
+    },
+    {
+      "text": "They go away. But give me an example",
+      "start": 3728.0,
+      "duration": 7.04
+    },
+    {
+      "text": "of something that's important but not",
+      "start": 3731.68,
+      "duration": 4.56
+    },
+    {
+      "text": "frequent.",
+      "start": 3735.04,
+      "duration": 4.16
+    },
+    {
+      "text": ">> Something that is niche.",
+      "start": 3736.24,
+      "duration": 5.119
+    },
+    {
+      "text": "You're right. Absolutely. You you got",
+      "start": 3739.2,
+      "duration": 4.639
+    },
+    {
+      "text": "the main idea right. So one of the",
+      "start": 3741.359,
+      "duration": 4.24
+    },
+    {
+      "text": "experiments I did on reading this paper",
+      "start": 3743.839,
+      "duration": 4.0
+    },
+    {
+      "text": "is I said why not apply the method of",
+      "start": 3745.599,
+      "duration": 5.121
+    },
+    {
+      "text": "this paper on the paper itself. Treat",
+      "start": 3747.839,
+      "duration": 6.24
+    },
+    {
+      "text": "the paper as a corpus. Right? So if this",
+      "start": 3750.72,
+      "duration": 5.04
+    },
+    {
+      "text": "method is true, it should work on the",
+      "start": 3754.079,
+      "duration": 4.801
+    },
+    {
+      "text": "corpus itself. So here is the result. I",
+      "start": 3755.76,
+      "duration": 5.44
+    },
+    {
+      "text": "we took 12 passages",
+      "start": 3758.88,
+      "duration": 5.04
+    },
+    {
+      "text": "good passages from the",
+      "start": 3761.2,
+      "duration": 4.24
+    },
+    {
+      "text": "and it is worth walking through because",
+      "start": 3763.92,
+      "duration": 3.84
+    },
+    {
+      "text": "you'll see this algorithm in action.",
+      "start": 3765.44,
+      "duration": 4.879
+    },
+    {
+      "text": "Let's take a passage abstract. Rag has",
+      "start": 3767.76,
+      "duration": 4.16
+    },
+    {
+      "text": "become an essential method for",
+      "start": 3770.319,
+      "duration": 4.161
+    },
+    {
+      "text": "mitigating hallucinations in L&M by",
+      "start": 3771.92,
+      "duration": 5.36
+    },
+    {
+      "text": "leveraging external knowledge. What are",
+      "start": 3774.48,
+      "duration": 4.72
+    },
+    {
+      "text": "the fact triplets we can extract? Rack",
+      "start": 3777.28,
+      "duration": 4.64
+    },
+    {
+      "text": "mitigates hallucination. Rack leverages",
+      "start": 3779.2,
+      "duration": 5.2
+    },
+    {
+      "text": "external knowledge.",
+      "start": 3781.92,
+      "duration": 5.679
+    },
+    {
+      "text": "Does that look reasonable?",
+      "start": 3784.4,
+      "duration": 4.88
+    },
+    {
+      "text": "Now",
+      "start": 3787.599,
+      "duration": 5.121
+    },
+    {
+      "text": "what schemas can we derive from it? Rag",
+      "start": 3789.28,
+      "duration": 5.839
+    },
+    {
+      "text": "mitigates hallucination means rag is a",
+      "start": 3792.72,
+      "duration": 6.079
+    },
+    {
+      "text": "method. A method mitigates problem.",
+      "start": 3795.119,
+      "duration": 5.92
+    },
+    {
+      "text": "Does that look reasonable?",
+      "start": 3798.799,
+      "duration": 5.121
+    },
+    {
+      "text": "Method leverages resource in which lag",
+      "start": 3801.039,
+      "duration": 4.881
+    },
+    {
+      "text": "leverages external knowledge. Another",
+      "start": 3803.92,
+      "duration": 4.24
+    },
+    {
+      "text": "abstract.",
+      "start": 3805.92,
+      "duration": 6.32
+    },
+    {
+      "text": "So we go on and keep extracting",
+      "start": 3808.16,
+      "duration": 8.879
+    },
+    {
+      "text": "the things from 12 passages. After that",
+      "start": 3812.24,
+      "duration": 8.16
+    },
+    {
+      "text": "we make a table of how frequent it is.",
+      "start": 3817.039,
+      "duration": 6.481
+    },
+    {
+      "text": "We choose a threshold of four. that that",
+      "start": 3820.4,
+      "duration": 5.6
+    },
+    {
+      "text": "ontological triplet schema should have",
+      "start": 3823.52,
+      "duration": 4.64
+    },
+    {
+      "text": "happened at least four times to be",
+      "start": 3826.0,
+      "duration": 5.2
+    },
+    {
+      "text": "relevant greater greater than equal to",
+      "start": 3828.16,
+      "duration": 6.72
+    },
+    {
+      "text": "four. Right? So look at that. Here's a",
+      "start": 3831.2,
+      "duration": 7.119
+    },
+    {
+      "text": "frequency table. And this speaks a lot.",
+      "start": 3834.88,
+      "duration": 7.64
+    },
+    {
+      "text": "What is the most frequent schema?",
+      "start": 3838.319,
+      "duration": 4.201
+    },
+    {
+      "text": "Method uses technology.",
+      "start": 3842.559,
+      "duration": 3.881
+    },
+    {
+      "text": "Can you think of a statement more banal?",
+      "start": 3848.24,
+      "duration": 5.68
+    },
+    {
+      "text": "Imagine a headline news",
+      "start": 3850.72,
+      "duration": 7.119
+    },
+    {
+      "text": "method uses technology.",
+      "start": 3853.92,
+      "duration": 6.0
+    },
+    {
+      "text": "How many of you would would be say,",
+      "start": 3857.839,
+      "duration": 4.881
+    },
+    {
+      "text": "\"Wow, big news today.\"",
+      "start": 3859.92,
+      "duration": 6.639
+    },
+    {
+      "text": "It's a rather banal statement, isn't it?",
+      "start": 3862.72,
+      "duration": 6.879
+    },
+    {
+      "text": "And methods all use techniques. Have you",
+      "start": 3866.559,
+      "duration": 4.401
+    },
+    {
+      "text": "encountered a method without a",
+      "start": 3869.599,
+      "duration": 4.361
+    },
+    {
+      "text": "technique?",
+      "start": 3870.96,
+      "duration": 3.0
+    },
+    {
+      "text": "So, it qualifies.",
+      "start": 3874.0,
+      "duration": 5.359
+    },
+    {
+      "text": "Look at the ones that didn't qualify at",
+      "start": 3876.0,
+      "duration": 4.96
+    },
+    {
+      "text": "three.",
+      "start": 3879.359,
+      "duration": 4.321
+    },
+    {
+      "text": "you get some more and look at some core",
+      "start": 3880.96,
+      "duration": 5.119
+    },
+    {
+      "text": "ideas of the paper itself. The big",
+      "start": 3883.68,
+      "duration": 4.8
+    },
+    {
+      "text": "contributions of this paper falls below",
+      "start": 3886.079,
+      "duration": 8.401
+    },
+    {
+      "text": "the threshold. Now look carefully at",
+      "start": 3888.48,
+      "duration": 8.24
+    },
+    {
+      "text": "this paper. Oh by the way uh I forgot to",
+      "start": 3894.48,
+      "duration": 4.639
+    },
+    {
+      "text": "mention two more core ideas in the",
+      "start": 3896.72,
+      "duration": 4.24
+    },
+    {
+      "text": "paper. Let me go back to that. Oh my god",
+      "start": 3899.119,
+      "duration": 3.841
+    },
+    {
+      "text": "this is important. So when you extract",
+      "start": 3900.96,
+      "duration": 5.24
+    },
+    {
+      "text": "the triplets",
+      "start": 3902.96,
+      "duration": 3.24
+    },
+    {
+      "text": "there is also conflict detection and",
+      "start": 3906.48,
+      "duration": 6.639
+    },
+    {
+      "text": "conflict resolution. So for example the",
+      "start": 3909.599,
+      "duration": 5.921
+    },
+    {
+      "text": "president",
+      "start": 3913.119,
+      "duration": 5.521
+    },
+    {
+      "text": "Biden president of US",
+      "start": 3915.52,
+      "duration": 5.839
+    },
+    {
+      "text": "Trump president of US there's a",
+      "start": 3918.64,
+      "duration": 4.32
+    },
+    {
+      "text": "contradiction",
+      "start": 3921.359,
+      "duration": 5.121
+    },
+    {
+      "text": "potentially. So how do you resolve it?",
+      "start": 3922.96,
+      "duration": 5.92
+    },
+    {
+      "text": "You read the text, the corpus, and then",
+      "start": 3926.48,
+      "duration": 5.44
+    },
+    {
+      "text": "you realize that Biden was the 45th",
+      "start": 3928.88,
+      "duration": 4.56
+    },
+    {
+      "text": "president,",
+      "start": 3931.92,
+      "duration": 3.6
+    },
+    {
+      "text": "Trump was the 46th president or the",
+      "start": 3933.44,
+      "duration": 5.84
+    },
+    {
+      "text": "other way around, 47th and 45th whatever",
+      "start": 3935.52,
+      "duration": 9.599
+    },
+    {
+      "text": "president. So you can resolve conflicts.",
+      "start": 3939.28,
+      "duration": 7.36
+    },
+    {
+      "text": "How do you do that? You create three",
+      "start": 3945.119,
+      "duration": 4.0
+    },
+    {
+      "text": "agents. one agent to do the job of",
+      "start": 3946.64,
+      "duration": 4.0
+    },
+    {
+      "text": "extraction,",
+      "start": 3949.119,
+      "duration": 3.44
+    },
+    {
+      "text": "one agent to do the job of conflict",
+      "start": 3950.64,
+      "duration": 4.719
+    },
+    {
+      "text": "detection and one agent to do the job of",
+      "start": 3952.559,
+      "duration": 4.961
+    },
+    {
+      "text": "conflict resolution. So the first two",
+      "start": 3955.359,
+      "duration": 5.601
+    },
+    {
+      "text": "are fine. Extraction of uh conflict,",
+      "start": 3957.52,
+      "duration": 5.68
+    },
+    {
+      "text": "extraction of triplets,",
+      "start": 3960.96,
+      "duration": 3.76
+    },
+    {
+      "text": "the conflict detection is",
+      "start": 3963.2,
+      "duration": 3.839
+    },
+    {
+      "text": "straightforward. Conflict resolution is",
+      "start": 3964.72,
+      "duration": 4.319
+    },
+    {
+      "text": "interesting.",
+      "start": 3967.039,
+      "duration": 3.921
+    },
+    {
+      "text": "Sometimes you can resolve conflict by",
+      "start": 3969.039,
+      "duration": 3.601
+    },
+    {
+      "text": "reading the rest of the text, the",
+      "start": 3970.96,
+      "duration": 5.599
+    },
+    {
+      "text": "context and the outputs.",
+      "start": 3972.64,
+      "duration": 5.76
+    },
+    {
+      "text": "But what if you come across a statement",
+      "start": 3976.559,
+      "duration": 4.56
+    },
+    {
+      "text": "that is unresolvable",
+      "start": 3978.4,
+      "duration": 6.12
+    },
+    {
+      "text": "A and B?",
+      "start": 3981.119,
+      "duration": 3.401
+    },
+    {
+      "text": "This conflict resolution in this paper",
+      "start": 3984.799,
+      "duration": 7.121
+    },
+    {
+      "text": "says it must resolve the conflict.",
+      "start": 3988.4,
+      "duration": 6.8
+    },
+    {
+      "text": "So if both the statements the corpus",
+      "start": 3991.92,
+      "duration": 7.439
+    },
+    {
+      "text": "doesn't support one more than the other",
+      "start": 3995.2,
+      "duration": 6.32
+    },
+    {
+      "text": "or there is no support for these two",
+      "start": 3999.359,
+      "duration": 3.44
+    },
+    {
+      "text": "statements they are standalone",
+      "start": 4001.52,
+      "duration": 3.839
+    },
+    {
+      "text": "statements. How will a LLM resolve it?",
+      "start": 4002.799,
+      "duration": 5.76
+    },
+    {
+      "text": "If it is forced to resolve it, it will",
+      "start": 4005.359,
+      "duration": 7.041
+    },
+    {
+      "text": "remember from its parametric memory,",
+      "start": 4008.559,
+      "duration": 6.56
+    },
+    {
+      "text": "right? It will use it statistical prior",
+      "start": 4012.4,
+      "duration": 5.679
+    },
+    {
+      "text": "belief, a prior belief, from its",
+      "start": 4015.119,
+      "duration": 5.601
+    },
+    {
+      "text": "training data to lean one way or the",
+      "start": 4018.079,
+      "duration": 5.52
+    },
+    {
+      "text": "other. So that is somewhat equivalent to",
+      "start": 4020.72,
+      "duration": 6.399
+    },
+    {
+      "text": "a judge not able to resolve both sides.",
+      "start": 4023.599,
+      "duration": 5.52
+    },
+    {
+      "text": "remember something",
+      "start": 4027.119,
+      "duration": 3.841
+    },
+    {
+      "text": "instead of judging it on the merits of",
+      "start": 4029.119,
+      "duration": 4.24
+    },
+    {
+      "text": "the case remembers something and judges",
+      "start": 4030.96,
+      "duration": 6.0
+    },
+    {
+      "text": "it. You see that right? So I I felt that",
+      "start": 4033.359,
+      "duration": 6.161
+    },
+    {
+      "text": "that was a weakness in the paper. Uh one",
+      "start": 4036.96,
+      "duration": 4.0
+    },
+    {
+      "text": "of the things that I'll teach you in",
+      "start": 4039.52,
+      "duration": 3.92
+    },
+    {
+      "text": "this course is that conflicts are first",
+      "start": 4040.96,
+      "duration": 5.68
+    },
+    {
+      "text": "class citizens. Honor them because they",
+      "start": 4043.44,
+      "duration": 5.84
+    },
+    {
+      "text": "show a problem with the corpus.",
+      "start": 4046.64,
+      "duration": 6.32
+    },
+    {
+      "text": "It is not the job of AI or LLM",
+      "start": 4049.28,
+      "duration": 6.88
+    },
+    {
+      "text": "to wipe the conflict under the rug and",
+      "start": 4052.96,
+      "duration": 5.68
+    },
+    {
+      "text": "go one way or the other. It needs a",
+      "start": 4056.16,
+      "duration": 4.56
+    },
+    {
+      "text": "human in the loop.",
+      "start": 4058.64,
+      "duration": 4.8
+    },
+    {
+      "text": "You see that, right? So, it's a missed",
+      "start": 4060.72,
+      "duration": 5.119
+    },
+    {
+      "text": "opportunity because conflicts are not",
+      "start": 4063.44,
+      "duration": 5.76
+    },
+    {
+      "text": "nuisances to be brushed aside. They are",
+      "start": 4065.839,
+      "duration": 6.561
+    },
+    {
+      "text": "gems to be harvested so you can improve",
+      "start": 4069.2,
+      "duration": 7.08
+    },
+    {
+      "text": "the quality of your corpus.",
+      "start": 4072.4,
+      "duration": 3.88
+    },
+    {
+      "text": "See that? So that was a missed",
+      "start": 4076.4,
+      "duration": 4.8
+    },
+    {
+      "text": "opportunity in my view. So now look at",
+      "start": 4078.559,
+      "duration": 4.56
+    },
+    {
+      "text": "this.",
+      "start": 4081.2,
+      "duration": 4.0
+    },
+    {
+      "text": "There is a triplet which says agent",
+      "start": 4083.119,
+      "duration": 4.72
+    },
+    {
+      "text": "extracts element, agent detects problem,",
+      "start": 4085.2,
+      "duration": 4.96
+    },
+    {
+      "text": "agent resolves problem. Therefore the",
+      "start": 4087.839,
+      "duration": 5.361
+    },
+    {
+      "text": "three agents.",
+      "start": 4090.16,
+      "duration": 4.8
+    },
+    {
+      "text": "So it's a community of three agents they",
+      "start": 4093.2,
+      "duration": 3.599
+    },
+    {
+      "text": "use internally. Have you noticed that",
+      "start": 4094.96,
+      "duration": 4.319
+    },
+    {
+      "text": "this rack already is using agents?",
+      "start": 4096.799,
+      "duration": 3.92
+    },
+    {
+      "text": "That's become pretty contemporary. Most",
+      "start": 4099.279,
+      "duration": 3.601
+    },
+    {
+      "text": "rack techniques now have agents baked",
+      "start": 4100.719,
+      "duration": 4.48
+    },
+    {
+      "text": "in. And we'll learn about agentigrad",
+      "start": 4102.88,
+      "duration": 8.12
+    },
+    {
+      "text": "quite a bit uh in a due course of time.",
+      "start": 4105.199,
+      "duration": 5.801
+    },
+    {
+      "text": "Now what is the frequency of their of",
+      "start": 4114.719,
+      "duration": 4.96
+    },
+    {
+      "text": "their ontological triplets that they",
+      "start": 4117.839,
+      "duration": 3.681
+    },
+    {
+      "text": "belong to? Extraction agent, conflict",
+      "start": 4119.679,
+      "duration": 4.08
+    },
+    {
+      "text": "agent and conflict detection and",
+      "start": 4121.52,
+      "duration": 3.759
+    },
+    {
+      "text": "conflict resolution. Do you notice that",
+      "start": 4123.759,
+      "duration": 4.161
+    },
+    {
+      "text": "they belong to",
+      "start": 4125.279,
+      "duration": 5.92
+    },
+    {
+      "text": "schemas whose frequency is one?",
+      "start": 4127.92,
+      "duration": 5.759
+    },
+    {
+      "text": "Likewise useless things like CC by4.0",
+      "start": 4131.199,
+      "duration": 4.64
+    },
+    {
+      "text": "Auto license",
+      "start": 4133.679,
+      "duration": 6.08
+    },
+    {
+      "text": "the copyright or licensing part noise",
+      "start": 4135.839,
+      "duration": 6.48
+    },
+    {
+      "text": "also has a frequency of one nothing can",
+      "start": 4139.759,
+      "duration": 5.52
+    },
+    {
+      "text": "have frequency below one right so what",
+      "start": 4142.319,
+      "duration": 5.281
+    },
+    {
+      "text": "does that mean is there any value of",
+      "start": 4145.279,
+      "duration": 5.681
+    },
+    {
+      "text": "cutoff that you can choose which won't",
+      "start": 4147.6,
+      "duration": 6.0
+    },
+    {
+      "text": "lose significant information of vital",
+      "start": 4150.96,
+      "duration": 5.64
+    },
+    {
+      "text": "information",
+      "start": 4153.6,
+      "duration": 3.0
+    },
+    {
+      "text": "any think of a value of town",
+      "start": 4158.08,
+      "duration": 7.36
+    },
+    {
+      "text": "threshold will two work",
+      "start": 4161.199,
+      "duration": 5.841
+    },
+    {
+      "text": "not.",
+      "start": 4165.44,
+      "duration": 4.08
+    },
+    {
+      "text": "That's is the pro and if you even set",
+      "start": 4167.04,
+      "duration": 5.84
+    },
+    {
+      "text": "the cut off at two practically all the",
+      "start": 4169.52,
+      "duration": 5.679
+    },
+    {
+      "text": "core ideas of this paper half of them",
+      "start": 4172.88,
+      "duration": 5.359
+    },
+    {
+      "text": "will be lost.",
+      "start": 4175.199,
+      "duration": 5.6
+    },
+    {
+      "text": "It is somewhat like entering a pharmacy",
+      "start": 4178.239,
+      "duration": 5.6
+    },
+    {
+      "text": "store. There is this wonderful medicine",
+      "start": 4180.799,
+      "duration": 6.321
+    },
+    {
+      "text": "with a high price tag",
+      "start": 4183.839,
+      "duration": 5.041
+    },
+    {
+      "text": "but you have no idea which disease it",
+      "start": 4187.12,
+      "duration": 4.76
+    },
+    {
+      "text": "cures.",
+      "start": 4188.88,
+      "duration": 3.0
+    },
+    {
+      "text": "Right? It vitates the purpose of that",
+      "start": 4192.64,
+      "duration": 5.92
+    },
+    {
+      "text": "what v of medicine isn't it? It's",
+      "start": 4195.76,
+      "duration": 4.959
+    },
+    {
+      "text": "somewhat like that. So what happens is",
+      "start": 4198.56,
+      "duration": 4.56
+    },
+    {
+      "text": "that if you did this technique on this",
+      "start": 4200.719,
+      "duration": 4.801
+    },
+    {
+      "text": "paper you wouldn't be able to answer",
+      "start": 4203.12,
+      "duration": 6.92
+    },
+    {
+      "text": "some vital some core questions.",
+      "start": 4205.52,
+      "duration": 4.52
+    },
+    {
+      "text": "So what was the error that I felt that",
+      "start": 4211.36,
+      "duration": 7.92
+    },
+    {
+      "text": "existed? Frequency is not importance.",
+      "start": 4214.239,
+      "duration": 7.841
+    },
+    {
+      "text": "In STEM field especially",
+      "start": 4219.28,
+      "duration": 5.919
+    },
+    {
+      "text": "we have a Zion distribution",
+      "start": 4222.08,
+      "duration": 5.04
+    },
+    {
+      "text": "very often quoted things are simple",
+      "start": 4225.199,
+      "duration": 4.48
+    },
+    {
+      "text": "concepts. Most of the high value things",
+      "start": 4227.12,
+      "duration": 5.119
+    },
+    {
+      "text": "are said once or twice",
+      "start": 4229.679,
+      "duration": 6.52
+    },
+    {
+      "text": "is part of the long tail.",
+      "start": 4232.239,
+      "duration": 3.96
+    },
+    {
+      "text": "It's part of a very very long heavy stem",
+      "start": 4239.199,
+      "duration": 6.321
+    },
+    {
+      "text": "fields have a long and heavy chain.",
+      "start": 4241.28,
+      "duration": 7.12
+    },
+    {
+      "text": "And if you were to do this, you would",
+      "start": 4245.52,
+      "duration": 4.88
+    },
+    {
+      "text": "have a long tail of things that are just",
+      "start": 4248.4,
+      "duration": 5.04
+    },
+    {
+      "text": "once or twice",
+      "start": 4250.4,
+      "duration": 6.64
+    },
+    {
+      "text": "there. The schemas or the ontological",
+      "start": 4253.44,
+      "duration": 6.56
+    },
+    {
+      "text": "tripletters that are rare.",
+      "start": 4257.04,
+      "duration": 5.84
+    },
+    {
+      "text": "That's the weakness of this paper,",
+      "start": 4260.0,
+      "duration": 4.8
+    },
+    {
+      "text": "right? I But it's a curable weakness.",
+      "start": 4262.88,
+      "duration": 4.319
+    },
+    {
+      "text": "This paper is wonderful, but it has a",
+      "start": 4264.8,
+      "duration": 5.439
+    },
+    {
+      "text": "curable weakness. Uh take it as an",
+      "start": 4267.199,
+      "duration": 5.681
+    },
+    {
+      "text": "assignment. See if you if instead of",
+      "start": 4270.239,
+      "duration": 4.321
+    },
+    {
+      "text": "frequency",
+      "start": 4272.88,
+      "duration": 3.279
+    },
+    {
+      "text": "do you have another measure of",
+      "start": 4274.56,
+      "duration": 4.32
+    },
+    {
+      "text": "importance for triplet? Can you think of",
+      "start": 4276.159,
+      "duration": 4.481
+    },
+    {
+      "text": "that?",
+      "start": 4278.88,
+      "duration": 3.52
+    },
+    {
+      "text": ">> Think of it. I'll let you as a exercise",
+      "start": 4280.64,
+      "duration": 5.64
+    },
+    {
+      "text": "to come up with some proposals.",
+      "start": 4282.4,
+      "duration": 3.88
+    },
+    {
+      "text": ">> Come again.",
+      "start": 4287.679,
+      "duration": 2.56
+    },
+    {
+      "text": ">> IDF inverse document frequency which",
+      "start": 4288.4,
+      "duration": 4.24
+    },
+    {
+      "text": "ranks the weightage of",
+      "start": 4290.239,
+      "duration": 4.161
+    },
+    {
+      "text": ">> No,",
+      "start": 4292.64,
+      "duration": 4.24
+    },
+    {
+      "text": "you want to apply IDF to triplets. How",
+      "start": 4294.4,
+      "duration": 4.4
+    },
+    {
+      "text": "would you do that? I'm just thinking",
+      "start": 4296.88,
+      "duration": 3.92
+    },
+    {
+      "text": ">> yeah but something like that you need to",
+      "start": 4298.8,
+      "duration": 5.04
+    },
+    {
+      "text": "create this see this this paper has in",
+      "start": 4300.8,
+      "duration": 5.76
+    },
+    {
+      "text": "some sense a split personality in the",
+      "start": 4303.84,
+      "duration": 7.359
+    },
+    {
+      "text": "graph building phase it says right",
+      "start": 4306.56,
+      "duration": 7.599
+    },
+    {
+      "text": "high frequency is good it's important in",
+      "start": 4311.199,
+      "duration": 5.121
+    },
+    {
+      "text": "the second half of the paper it",
+      "start": 4314.159,
+      "duration": 4.721
+    },
+    {
+      "text": "suppresses uses hub suppression to",
+      "start": 4316.32,
+      "duration": 4.64
+    },
+    {
+      "text": "suppress things that are frequent it",
+      "start": 4318.88,
+      "duration": 5.92
+    },
+    {
+      "text": "uses the information density",
+      "start": 4320.96,
+      "duration": 6.4
+    },
+    {
+      "text": "term which has a idea built in again",
+      "start": 4324.8,
+      "duration": 4.96
+    },
+    {
+      "text": "that DV value is frequent. So first half",
+      "start": 4327.36,
+      "duration": 4.879
+    },
+    {
+      "text": "of the paper values frequency calls",
+      "start": 4329.76,
+      "duration": 4.72
+    },
+    {
+      "text": "frequency as signal in the second half",
+      "start": 4332.239,
+      "duration": 4.96
+    },
+    {
+      "text": "of the paper you consider frequency as",
+      "start": 4334.48,
+      "duration": 4.96
+    },
+    {
+      "text": "noise.",
+      "start": 4337.199,
+      "duration": 4.721
+    },
+    {
+      "text": "You see the the split personality in the",
+      "start": 4339.44,
+      "duration": 5.279
+    },
+    {
+      "text": "paper. So the second part is fine. The",
+      "start": 4341.92,
+      "duration": 4.96
+    },
+    {
+      "text": "first part we need to substitute",
+      "start": 4344.719,
+      "duration": 4.321
+    },
+    {
+      "text": "something else for frequency as a",
+      "start": 4346.88,
+      "duration": 4.319
+    },
+    {
+      "text": "measure of importance.",
+      "start": 4349.04,
+      "duration": 4.72
+    },
+    {
+      "text": "I leave it as a fun exercise for you",
+      "start": 4351.199,
+      "duration": 5.921
+    },
+    {
+      "text": "guys to think what that could be. Now,",
+      "start": 4353.76,
+      "duration": 5.36
+    },
+    {
+      "text": "today was an unusual day because we had",
+      "start": 4357.12,
+      "duration": 4.559
+    },
+    {
+      "text": "to do graph and it was a little hard to",
+      "start": 4359.12,
+      "duration": 4.96
+    },
+    {
+      "text": "give you in-class exercises especially",
+      "start": 4361.679,
+      "duration": 4.081
+    },
+    {
+      "text": "because today is 4th of July and I",
+      "start": 4364.08,
+      "duration": 4.56
+    },
+    {
+      "text": "wanted to keep the day short, right? How",
+      "start": 4365.76,
+      "duration": 4.88
+    },
+    {
+      "text": "many of you are watching the World Cup",
+      "start": 4368.64,
+      "duration": 3.039
+    },
+    {
+      "text": "soccer?",
+      "start": 4370.64,
+      "duration": 2.16
+    },
+    {
+      "text": ">> It's done already.",
+      "start": 4371.679,
+      "duration": 3.04
+    },
+    {
+      "text": ">> It's done. Okay. So, some of you have",
+      "start": 4372.8,
+      "duration": 5.76
+    },
+    {
+      "text": "been watching that also on the side. So,",
+      "start": 4374.719,
+      "duration": 6.721
+    },
+    {
+      "text": "uh I'll end here. The labs are very",
+      "start": 4378.56,
+      "duration": 4.56
+    },
+    {
+      "text": "good. Chandra has created some really",
+      "start": 4381.44,
+      "duration": 6.4
+    },
+    {
+      "text": "good labs. I hope you do that.",
+      "start": 4383.12,
+      "duration": 4.72
+    },
+    {
+      "text": "and you learn something uh from that.",
+      "start": 4388.88,
+      "duration": 5.04
+    },
+    {
+      "text": "Use it. Graph techniques are very",
+      "start": 4391.679,
+      "duration": 4.401
+    },
+    {
+      "text": "useful. I would suggest that things like",
+      "start": 4393.92,
+      "duration": 5.68
+    },
+    {
+      "text": "hippoor and lazy graph rag etc. are very",
+      "start": 4396.08,
+      "duration": 6.639
+    },
+    {
+      "text": "usable but use it as a sidecar.",
+      "start": 4399.6,
+      "duration": 5.52
+    },
+    {
+      "text": "Don't use it as a",
+      "start": 4402.719,
+      "duration": 4.801
+    },
+    {
+      "text": "main pipeline. It will be very",
+      "start": 4405.12,
+      "duration": 5.4
+    },
+    {
+      "text": "expensive.",
+      "start": 4407.52,
+      "duration": 3.0
+    },
+    {
+      "text": "Don't do it on all your documents.",
+      "start": 4411.199,
+      "duration": 4.281
+    },
+    {
+      "text": "So that ends our derivative artifact",
+      "start": 4415.52,
+      "duration": 4.639
+    },
+    {
+      "text": "series guys. Now we move on to the",
+      "start": 4418.0,
+      "duration": 6.159
+    },
+    {
+      "text": "architecture part. From next week we",
+      "start": 4420.159,
+      "duration": 6.801
+    },
+    {
+      "text": "have just done all the derivative",
+      "start": 4424.159,
+      "duration": 6.161
+    },
+    {
+      "text": "artifacts we can make out of a document.",
+      "start": 4426.96,
+      "duration": 6.96
+    },
+    {
+      "text": "Fair enough. Lot of them. Factoids",
+      "start": 4430.32,
+      "duration": 7.839
+    },
+    {
+      "text": "QA summaries abstractive summarization",
+      "start": 4433.92,
+      "duration": 8.08
+    },
+    {
+      "text": "and graph based techniques. Lot of them.",
+      "start": 4438.159,
+      "duration": 6.56
+    },
+    {
+      "text": "Use all of it. Next we we ask this",
+      "start": 4442.0,
+      "duration": 6.48
+    },
+    {
+      "text": "question. How do we build a proper",
+      "start": 4444.719,
+      "duration": 5.761
+    },
+    {
+      "text": "knowledge architecture? Agentic",
+      "start": 4448.48,
+      "duration": 4.4
+    },
+    {
+      "text": "knowledge architecture.",
+      "start": 4450.48,
+      "duration": 5.28
+    },
+    {
+      "text": "Instead of using the word rag,",
+      "start": 4452.88,
+      "duration": 5.76
+    },
+    {
+      "text": "I will use the word agentic knowledge",
+      "start": 4455.76,
+      "duration": 5.6
+    },
+    {
+      "text": "architecture.",
+      "start": 4458.64,
+      "duration": 5.84
+    },
+    {
+      "text": "How do we do that? We'll start with that",
+      "start": 4461.36,
+      "duration": 6.48
+    },
+    {
+      "text": "from next week.",
+      "start": 4464.48,
+      "duration": 7.8
+    },
+    {
+      "text": "Any questions before I end today?",
+      "start": 4467.84,
+      "duration": 4.44
+    },
+    {
+      "text": "asked if I'm working on that legislative",
+      "start": 4472.48,
+      "duration": 6.08
+    },
+    {
+      "text": "ctographer where I need to pull the zone",
+      "start": 4474.88,
+      "duration": 6.16
+    },
+    {
+      "text": "and all those codes and details and in",
+      "start": 4478.56,
+      "duration": 4.159
+    },
+    {
+      "text": "that capstone document what you shared",
+      "start": 4481.04,
+      "duration": 5.679
+    },
+    {
+      "text": "is like to have a graph rag and yes so",
+      "start": 4482.719,
+      "duration": 5.841
+    },
+    {
+      "text": "but now I'm confused when I'm seeing at",
+      "start": 4486.719,
+      "duration": 4.161
+    },
+    {
+      "text": "the data say one of the data is like",
+      "start": 4488.56,
+      "duration": 4.24
+    },
+    {
+      "text": "parking regulations",
+      "start": 4490.88,
+      "duration": 4.0
+    },
+    {
+      "text": "and then some other data talks about",
+      "start": 4492.8,
+      "duration": 5.359
+    },
+    {
+      "text": "like u uh if I have to like street and",
+      "start": 4494.88,
+      "duration": 5.52
+    },
+    {
+      "text": "sidewalks or something so these two are",
+      "start": 4498.159,
+      "duration": 4.961
+    },
+    {
+      "text": "totally different entities So I create a",
+      "start": 4500.4,
+      "duration": 4.88
+    },
+    {
+      "text": "graph rack just for parking regulations",
+      "start": 4503.12,
+      "duration": 4.559
+    },
+    {
+      "text": "and then I create a graph flag for like",
+      "start": 4505.28,
+      "duration": 4.16
+    },
+    {
+      "text": "sidewalks or streets or something like",
+      "start": 4507.679,
+      "duration": 5.881
+    },
+    {
+      "text": "that or how does it work?",
+      "start": 4509.44,
+      "duration": 4.12
+    },
+    {
+      "text": ">> No. See",
+      "start": 4513.84,
+      "duration": 1.44
+    },
+    {
+      "text": ">> no",
+      "start": 4514.88,
+      "duration": 4.08
+    },
+    {
+      "text": ">> unless the regulations are conflicting",
+      "start": 4515.28,
+      "duration": 6.16
+    },
+    {
+      "text": "you don't have to you can put it in the",
+      "start": 4518.96,
+      "duration": 4.64
+    },
+    {
+      "text": "same graph like typically city",
+      "start": 4521.44,
+      "duration": 4.56
+    },
+    {
+      "text": "regulations can be sometimes conflicting",
+      "start": 4523.6,
+      "duration": 5.68
+    },
+    {
+      "text": "but generally not.",
+      "start": 4526.0,
+      "duration": 5.679
+    },
+    {
+      "text": "So you're saying like oh I have all I",
+      "start": 4529.28,
+      "duration": 4.08
+    },
+    {
+      "text": "collect all the corpus of details and",
+      "start": 4531.679,
+      "duration": 3.281
+    },
+    {
+      "text": "create one graph",
+      "start": 4533.36,
+      "duration": 4.24
+    },
+    {
+      "text": ">> in your case your your city problem I",
+      "start": 4534.96,
+      "duration": 4.32
+    },
+    {
+      "text": "would do that see you are asking this",
+      "start": 4537.6,
+      "duration": 4.559
+    },
+    {
+      "text": "simple question an entrepreneur wants to",
+      "start": 4539.28,
+      "duration": 4.32
+    },
+    {
+      "text": "do something",
+      "start": 4542.159,
+      "duration": 4.481
+    },
+    {
+      "text": ">> how many regulations impact",
+      "start": 4543.6,
+      "duration": 5.599
+    },
+    {
+      "text": "what is the regulatory impact on his",
+      "start": 4546.64,
+      "duration": 4.64
+    },
+    {
+      "text": "business idea",
+      "start": 4549.199,
+      "duration": 3.841
+    },
+    {
+      "text": ">> it needs to construct everything just",
+      "start": 4551.28,
+      "duration": 3.2
+    },
+    {
+      "text": "not one entity",
+      "start": 4553.04,
+      "duration": 4.8
+    },
+    {
+      "text": ">> yeah it needs to construct",
+      "start": 4554.48,
+      "duration": 3.36
+    },
+    {
+      "text": "Okay.",
+      "start": 4557.92,
+      "duration": 4.08
+    },
+    {
+      "text": ">> All right. Nice.",
+      "start": 4558.88,
+      "duration": 5.04
+    },
+    {
+      "text": "Anybody else needs advice with their",
+      "start": 4562.0,
+      "duration": 5.48
+    },
+    {
+      "text": "capstone projects?",
+      "start": 4563.92,
+      "duration": 3.56
+    },
+    {
+      "text": "All right guys, so uh those of you who",
+      "start": 4571.199,
+      "duration": 4.241
+    },
+    {
+      "text": "do need advice can stay back. If anybody",
+      "start": 4572.719,
+      "duration": 4.801
+    },
+    {
+      "text": "wants to do a demo can do otherwise",
+      "start": 4575.44,
+      "duration": 4.88
+    },
+    {
+      "text": "we'll close the session. I will be here",
+      "start": 4577.52,
+      "duration": 5.679
+    },
+    {
+      "text": "and I can talk to you guys.",
+      "start": 4580.32,
+      "duration": 6.0
+    },
+    {
+      "text": "I wish you a very happy 4th of July.",
+      "start": 4583.199,
+      "duration": 3.601
+    },
+    {
+      "text": ">> Fourth of July.",
+      "start": 4586.32,
+      "duration": 1.919
+    },
+    {
+      "text": ">> How many of you are going to some",
+      "start": 4586.8,
+      "duration": 4.919
+    },
+    {
+      "text": "fireworks show?",
+      "start": 4588.239,
+      "duration": 3.48
+    },
+    {
+      "text": ">> Yeah, we have a firework show in our",
+      "start": 4591.76,
+      "duration": 3.12
+    },
+    {
+      "text": "city. It will be fun.",
+      "start": 4593.36,
+      "duration": 2.799
+    },
+    {
+      "text": ">> In",
+      "start": 4594.88,
+      "duration": 4.319
+    },
+    {
+      "text": ">> Fremont. Yeah.",
+      "start": 4596.159,
+      "duration": 5.841
+    },
+    {
+      "text": "And we have like we live close to the",
+      "start": 4599.199,
+      "duration": 5.921
+    },
+    {
+      "text": "bay, so we get to see the fireworks all",
+      "start": 4602.0,
+      "duration": 4.64
+    },
+    {
+      "text": "around the bay in the different cities",
+      "start": 4605.12,
+      "duration": 4.0
+    },
+    {
+      "text": "of the bay.",
+      "start": 4606.64,
+      "duration": 4.72
+    },
+    {
+      "text": ">> Nice. All right, guys. So, I'll end the",
+      "start": 4609.12,
+      "duration": 3.28
+    },
+    {
+      "text": "recording.",
+      "start": 4611.36,
+      "duration": 4.799
+    },
+    {
+      "text": ">> How do you You can end the recording.",
+      "start": 4612.4,
+      "duration": 4.96
+    },
+    {
+      "text": ">> So,",
+      "start": 4616.159,
+      "duration": 2.641
+    },
+    {
+      "text": ">> yeah, I mean it's a different question.",
+      "start": 4617.36,
+      "duration": 3.2
+    },
+    {
+      "text": "You can end the recording. Okay, I'll",
+      "start": 4618.8,
+      "duration": 4.16
+    },
+    {
+      "text": "let them",
+      "start": 4620.56,
+      "duration": 2.4
+    }
+  ]
+}

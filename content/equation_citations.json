@@ -1,0 +1,536 @@
+{
+  "w1-01-retrieval-bottleneck": [
+    {
+      "title": "Week 6 Main Class (video)",
+      "section": "35:03",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=EZ8qJ5NrGg8&t=2103s",
+      "score": 0.5383
+    }
+  ],
+  "w1-02-semantic-vs-lexical": [
+    {
+      "title": "Week 2 Lesson Plan \u2014 The Shape of a Decision",
+      "section": "pages 29-29",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5443
+    }
+  ],
+  "w1-03-course-map": [],
+  "w1-04-language-models-seq2seq": [
+    {
+      "title": "Week 1 Main Class (video)",
+      "section": "21:48",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=yWvvkfQL1vk&t=1308s",
+      "score": 0.4643
+    },
+    {
+      "title": "Week 1 Lesson Plan \u2014 When Meaning Becomes Geometry",
+      "section": "pages 9-9",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.4821
+    }
+  ],
+  "w1-05-attention": [
+    {
+      "title": "Week 1 Summary Class (video)",
+      "section": "40:42",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=KFxi-ezE3yM&t=2442s",
+      "score": 0.4612
+    },
+    {
+      "title": "Week 1 Lesson Plan \u2014 When Meaning Becomes Geometry",
+      "section": "pages 10-10",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.6979
+    }
+  ],
+  "w1-06-machinese": [
+    {
+      "title": "Week 1 Lesson Plan \u2014 When Meaning Becomes Geometry",
+      "section": "pages 11-11",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5627
+    },
+    {
+      "title": "Week 1 Lesson Plan \u2014 When Meaning Becomes Geometry",
+      "section": "pages 11-11",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5641
+    }
+  ],
+  "w1-07-polysemy": [
+    {
+      "title": "Week 2 Summary Class (video)",
+      "section": "24:25",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=x5Igx2wkpGY&t=1465s",
+      "score": 0.5186
+    }
+  ],
+  "w1-08-querying-weights": [],
+  "w1-09-embeddings-highdim": [
+    {
+      "title": "Week 1 Main Class (video)",
+      "section": "17:58",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=_ZwxZuNk7BY&t=1078s",
+      "score": 0.5772
+    }
+  ],
+  "w1-10-curse-of-dimensionality": [
+    {
+      "title": "Week 1 Lesson Plan \u2014 When Meaning Becomes Geometry",
+      "section": "pages 15-15",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5596
+    }
+  ],
+  "w1-11-concentration-of-measure": [
+    {
+      "title": "Week 2 Summary Class (video)",
+      "section": "10:42",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=x5Igx2wkpGY&t=642s",
+      "score": 0.4788
+    }
+  ],
+  "w1-12-anisotropy": [],
+  "w1-13-naive-rag-pathologies": [],
+  "w2-01-softmax-temperature": [
+    {
+      "title": "Week 2 Recap",
+      "section": "pages 18-18",
+      "kind": "recap",
+      "url": null,
+      "score": 0.5097
+    },
+    {
+      "title": "Week 2 Recap",
+      "section": "pages 18-18",
+      "kind": "recap",
+      "url": null,
+      "score": 0.6104
+    },
+    {
+      "title": "Week 2 Summary Class (video)",
+      "section": "32:22",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=x5Igx2wkpGY&t=1942s",
+      "score": 0.5374
+    }
+  ],
+  "w2-02-surprise-entropy-crossentropy": [
+    {
+      "title": "Week 2 Main Class (video)",
+      "section": "09:48",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=QlInj9Qr9sQ&t=588s",
+      "score": 0.6259
+    },
+    {
+      "title": "Week 2 Recap",
+      "section": "pages 16-16",
+      "kind": "recap",
+      "url": null,
+      "score": 0.6421
+    },
+    {
+      "title": "Week 2 Summary Class (video)",
+      "section": "28:07",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=x5Igx2wkpGY&t=1687s",
+      "score": 0.5356
+    },
+    {
+      "title": "Week 2 Lesson Plan \u2014 The Shape of a Decision",
+      "section": "pages 10-10",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5177
+    },
+    {
+      "title": "Week 2 Lesson Plan \u2014 The Shape of a Decision",
+      "section": "pages 10-10",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.602
+    }
+  ],
+  "w2-03-mle-gradient-calibration": [
+    {
+      "title": "Week 2 Lesson Plan \u2014 The Shape of a Decision",
+      "section": "pages 12-12",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.4565
+    },
+    {
+      "title": "Week 2 Recap",
+      "section": "pages 16-16",
+      "kind": "recap",
+      "url": null,
+      "score": 0.564
+    },
+    {
+      "title": "Week 2 Lesson Plan \u2014 The Shape of a Decision",
+      "section": "pages 14-14",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.6429
+    }
+  ],
+  "w2-04-fuzzy-lookup": [],
+  "w2-05-tokenization-manifold": [],
+  "w2-06-self-attention-qkv": [
+    {
+      "title": "Week 2 Main Class (video)",
+      "section": "139:08",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=QlInj9Qr9sQ&t=8348s",
+      "score": 0.5256
+    },
+    {
+      "title": "Week 2 Main Class (video)",
+      "section": "64:38",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=QlInj9Qr9sQ&t=3878s",
+      "score": 0.4932
+    },
+    {
+      "title": "Week 2 Lesson Plan \u2014 The Shape of a Decision",
+      "section": "pages 23-23",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.573
+    }
+  ],
+  "w2-07-pooling-residual-stream": [],
+  "w2-08-masked-language-modelling": [],
+  "w2-09-anisotropy-contrastive": [
+    {
+      "title": "Week 1 Summary Class (video)",
+      "section": "14:28",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=KFxi-ezE3yM&t=868s",
+      "score": 0.4043
+    },
+    {
+      "title": "Week 2 Main Class (video)",
+      "section": "15:57",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=QlInj9Qr9sQ&t=957s",
+      "score": 0.4392
+    }
+  ],
+  "w2-10-bi-cross-encoder-sphere": [
+    {
+      "title": "Week 2 Main Class (video)",
+      "section": "145:42",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=QlInj9Qr9sQ&t=8742s",
+      "score": 0.533
+    }
+  ],
+  "w2-11-search-motion-globe": [
+    {
+      "title": "Week 2 Summary Class (video)",
+      "section": "10:42",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=x5Igx2wkpGY&t=642s",
+      "score": 0.4501
+    }
+  ],
+  "w3-01-first-projection-is-irreversible": [
+    {
+      "title": "Week 3 Lesson Plan \u2014 Measuring the Size of Thoughts",
+      "section": "pages 7-7",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5711
+    }
+  ],
+  "w3-02-why-we-chunk-atoms-of-thought": [],
+  "w3-03-boundary-problem-512-default": [],
+  "w3-04-endophora-broken-references": [],
+  "w3-05-discourse-structure-severed-relations": [],
+  "w3-06-negation-trap-scope-failures": [],
+  "w3-07-lexical-cohesion-definition-use-chains": [],
+  "w3-08-bridging-inference-genre-blindness": [],
+  "w3-09-pathologies-embedding-space": [],
+  "w3-10-taxonomy-of-chunking-strategies": [],
+  "w3-11-contextual-and-late-chunking": [
+    {
+      "title": "Week 3 Main Class (video)",
+      "section": "107:15",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=d4-ldaNUTx8&t=6435s",
+      "score": 0.6274
+    }
+  ],
+  "w3-12-practical-chunking-pipeline": [],
+  "w3-13-no-chunking-visual-retrieval": [],
+  "w4-01-search-native-text": [],
+  "w4-02-meera-and-ravi": [],
+  "w4-03-six-costumes": [],
+  "w4-04-central-provocation": [
+    {
+      "title": "Week 4 Lesson Plan \u2014 The Understudy",
+      "section": "pages 7-7",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5393
+    },
+    {
+      "title": "Week 4 Lesson Plan \u2014 The Understudy",
+      "section": "pages 7-7",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5259
+    },
+    {
+      "title": "Week 1 Main Class (video)",
+      "section": "119:31",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=nW48P0ryJ7c&t=7171s",
+      "score": 0.423
+    }
+  ],
+  "w4-05-factoids": [],
+  "w4-06-prml-bakeoff": [],
+  "w4-07-centroid-tug-of-war": [],
+  "w4-08-passage-rewrites": [],
+  "w4-09-qa-pairs": [],
+  "w4-10-core-pattern": [],
+  "w4-11-abstractive-summarization": [],
+  "w4-12-raptor-construction": [],
+  "w4-13-definitive-articles": [],
+  "w5-01-seven-bridges-and-the-graph": [
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "82:40",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=kGu6gqyiAuA&t=4960s",
+      "score": 0.4704
+    }
+  ],
+  "w5-02-adjacency-matrix-and-degree": [
+    {
+      "title": "Week 5 Recap",
+      "section": "pages 17-17",
+      "kind": "recap",
+      "url": null,
+      "score": 0.5702
+    },
+    {
+      "title": "Week 5 Recap",
+      "section": "pages 17-17",
+      "kind": "recap",
+      "url": null,
+      "score": 0.5598
+    }
+  ],
+  "w5-03-erdos-renyi-vs-barabasi-albert": [
+    {
+      "title": "Week 5 Lesson Plan \u2014 When the Library Becomes a City",
+      "section": "pages 9-9",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.6472
+    },
+    {
+      "title": "Week 5 Recap",
+      "section": "pages 14-14",
+      "kind": "recap",
+      "url": null,
+      "score": 0.6803
+    }
+  ],
+  "w5-04-small-worlds-and-fractal-knowledge": [],
+  "w5-05-modularity-louvain-leiden": [
+    {
+      "title": "Week 5 Lesson Plan \u2014 When the Library Becomes a City",
+      "section": "pages 14-14",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.6421
+    }
+  ],
+  "w5-06-the-laplacian": [
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "126:06",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=kGu6gqyiAuA&t=7566s",
+      "score": 0.632
+    },
+    {
+      "title": "Week 5 Lesson Plan \u2014 When the Library Becomes a City",
+      "section": "pages 16-16",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.6931
+    }
+  ],
+  "w5-07-knowledge-graphs-and-triplets": [
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "56:53",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=kGu6gqyiAuA&t=3413s",
+      "score": 0.7337
+    },
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "33:56",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=Uvmk2Ap9o0Y&t=2036s",
+      "score": 0.5594
+    },
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "33:56",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=Uvmk2Ap9o0Y&t=2036s",
+      "score": 0.5816
+    }
+  ],
+  "w5-08-extraction-noise-and-generic-hubs": [],
+  "w5-09-neighbor-expansion-to-microsoft-graphrag": [],
+  "w5-10-lazy-light-hippo-graphrag": [],
+  "w5-11-memgraphrag-diseases-and-construction": [
+    {
+      "title": "Week 5 Lesson Plan \u2014 When the Library Becomes a City",
+      "section": "pages 26-26",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5058
+    }
+  ],
+  "w5-12-the-experiment-running-the-paper-on-itself": [],
+  "w5-13-three-cities-and-the-honey": [
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "44:52",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=Uvmk2Ap9o0Y&t=2692s",
+      "score": 0.5708
+    },
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "46:32",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=Uvmk2Ap9o0Y&t=2792s",
+      "score": 0.408
+    },
+    {
+      "title": "Week 5 Lesson Plan \u2014 When the Library Becomes a City",
+      "section": "pages 29-29",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.4722
+    },
+    {
+      "title": "Week 5 Main Class (video)",
+      "section": "57:51",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=Uvmk2Ap9o0Y&t=3471s",
+      "score": 0.558
+    }
+  ],
+  "w5-14-three-critiques-preserve-then-decide": [],
+  "w5-15-patterns-anti-patterns-and-the-sidecar": [],
+  "w6-01-two-gates-two-virtues": [],
+  "w6-02-family-a-malformed-evasive-input": [],
+  "w6-03-family-b-adversarial-intent": [],
+  "w6-04-indirect-injection-poisoned-retrieval": [],
+  "w6-05-family-c-access-and-identity": [],
+  "w6-06-family-d-abuse-economics-length-gate": [],
+  "w6-07-query-memory-duplicates-stuffing-frustration": [
+    {
+      "title": "Week 6 Lesson Plan",
+      "section": "pages 18-18",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5281
+    },
+    {
+      "title": "Week 6 Lesson Plan",
+      "section": "pages 18-18",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5284
+    }
+  ],
+  "w6-08-domain-gate-and-toxicity-layer": [],
+  "w6-09-false-positive-tax-and-orchestration": [
+    {
+      "title": "Week 6 Lesson Plan",
+      "section": "pages 23-23",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.6942
+    }
+  ],
+  "w6-10-wizards-curtain-ragas-triad": [
+    {
+      "title": "Week 6 Lesson Plan",
+      "section": "pages 27-27",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.6168
+    },
+    {
+      "title": "Week 6 Main Class (video)",
+      "section": "05:17",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=EZ8qJ5NrGg8&t=317s",
+      "score": 0.6701
+    },
+    {
+      "title": "Week 6 Main Class (video)",
+      "section": "14:46",
+      "kind": "transcript",
+      "url": "https://www.youtube.com/watch?v=EZ8qJ5NrGg8&t=886s",
+      "score": 0.5771
+    }
+  ],
+  "w6-11-assertion-evidence-bipartite-graph": [],
+  "w6-12-two-verifiers-escalation-ladder": [
+    {
+      "title": "Week 6 Lesson Plan",
+      "section": "pages 32-32",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5672
+    },
+    {
+      "title": "Week 6 Lesson Plan",
+      "section": "pages 32-32",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5963
+    }
+  ],
+  "w6-13-citation-faithfulness-and-guarding-the-guard": [],
+  "w6-14-three-doors-refusal-and-humility": [],
+  "w6-15-verbalized-uncertainty-signal-sources": [],
+  "w6-16-conformal-abstention-and-calibration": [
+    {
+      "title": "Week 6 Lesson Plan",
+      "section": "pages 40-40",
+      "kind": "lesson_plan",
+      "url": null,
+      "score": 0.5463
+    }
+  ],
+  "w6-17-laboratory-sessions-overview": []
+}

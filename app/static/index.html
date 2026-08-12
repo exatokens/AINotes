@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SupportVector NoteAI</title>
+  <link rel="stylesheet" href="/static/vendor/katex.min.css">
+  <link rel="stylesheet" href="/static/vendor/highlight.min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+  <aside id="sidebar">
+    <div class="side-head">
+      <h1>SupportVector NoteAI</h1>
+      <input id="search-box" type="search" placeholder="Semantic search…  (press Enter)" autocomplete="off">
+    </div>
+    <nav id="tree"></nav>
+    <div id="search-results" class="hidden"></div>
+  </aside>
+
+  <div id="sidebar-resizer" title="Drag to resize"></div>
+
+  <main id="reader">
+    <article id="page-content">
+      <p class="loading">Loading…</p>
+    </article>
+  </main>
+
+  <div id="chat-resizer" title="Drag to resize"></div>
+
+  <aside id="chat-panel">
+    <div class="chat-head">
+      <h2>Ask the course</h2>
+      <p class="subtitle">RAG over the whole textbook</p>
+    </div>
+    <div id="chat-messages">
+      <div class="msg assistant">
+        <div class="bubble">Hi! Ask me anything from the five weeks of the course —
+        embeddings, chunking, hybrid search, re-ranking, RAPTOR, GraphRAG,
+        guardrails, grounding, evaluation… I answer from the textbook and cite
+        the pages I used.</div>
+      </div>
+    </div>
+    <form id="chat-form">
+      <textarea id="chat-input" rows="2" placeholder="e.g. Why are raw BERT embeddings anisotropic?"></textarea>
+      <button type="submit" id="chat-send">Ask</button>
+    </form>
+  </aside>
+
+  <script src="/static/vendor/marked.min.js"></script>
+  <script src="/static/vendor/katex.min.js"></script>
+  <script src="/static/vendor/highlight.min.js"></script>
+  <script src="/static/vendor/mermaid.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
