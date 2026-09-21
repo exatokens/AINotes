@@ -40,11 +40,11 @@ re-indexed when you run the ingest scripts.
 
 ## Architecture, in one paragraph
 
-Three Qdrant collections now support different jobs. `siva_beyond_rag_pages`
+Three Qdrant collections now support different jobs. `ainotes_pages`
 holds the hand-authored concept pages (`content/pages/*.md`) and backs the
-sidebar's "search the textbook" box. `siva_beyond_rag_sources` holds raw
+sidebar's "search the textbook" box. `ainotes_sources` holds raw
 chunked lesson-plan PDFs, recap PDFs, and YouTube transcripts, and is what
-actually grounds the chat in the lecture material. `siva_beyond_rag_labs`
+actually grounds the chat in the lecture material. `ainotes_labs`
 holds practical lab docs and implementation examples from the separate
 `$RAG_LABS_ROOT` (default `../rag-labs`) codebase, enabling the chat to answer
 "how do I build this in production?" style questions. The chat pipeline itself
@@ -75,7 +75,7 @@ python -m ingest.index_labs
 ```
 
 This indexes the practical lab material under the collection named
-`siva_beyond_rag_labs` using the repo at
+`ainotes_labs` using the repo at
 `$RAG_LABS_ROOT` (default `../rag-labs`).
 
 ### Rebuild the textbook page search index
@@ -138,11 +138,11 @@ ingest/
   fetch_transcripts.py youtube_video_links.yaml, agents_notes/all_weeks_classes_theory
                           -> content/sources/{transcripts,agents_transcripts}/*.json
   fetch_blogs.py        config.AGENTS_BLOG_SOURCES  -> content/sources/agents_blogs/*.txt
-  index_sources.py     content/sources/**           -> Qdrant (siva_beyond_rag_sources) — grounds chat
+  index_sources.py     content/sources/**           -> Qdrant (ainotes_sources) — grounds chat
                           (both courses, tagged by "course" field)
-  index_labs.py        rag-labs -> Qdrant (siva_beyond_rag_labs) — practical patterns
+  index_labs.py        rag-labs -> Qdrant (ainotes_labs) — practical patterns
   build_tree.py        content/pages/*.md           -> content/tree.json — sidebar nav (courses -> weeks -> topics)
-  index_qdrant.py      content/pages/*.md           -> Qdrant (siva_beyond_rag_pages) — page search
+  index_qdrant.py      content/pages/*.md           -> Qdrant (ainotes_pages) — page search
   link_equations.py    content/pages/*.md + sources -> content/equation_citations.json
 content/
   pages/               hand-authored concept pages: w{N}-*.md (Beyond RAG), a{N}-*.md (AI Agents Bootcamp)
@@ -413,9 +413,9 @@ app/
 ingest/
   extract_pdfs.py      lesson_plans/*.pdf, recap/*.pdf  ->  content/sources/{lesson_plans,recap}/*.txt
   fetch_transcripts.py youtube_video_links.yaml         ->  content/sources/transcripts/*.json
-  index_sources.py     content/sources/**               ->  Qdrant (siva_beyond_rag_sources) — grounds chat
+  index_sources.py     content/sources/**               ->  Qdrant (ainotes_sources) — grounds chat
   build_tree.py        content/pages/*.md               ->  content/tree.json — sidebar nav
-  index_qdrant.py       content/pages/*.md              ->  Qdrant (siva_beyond_rag_pages) — page search
+  index_qdrant.py       content/pages/*.md              ->  Qdrant (ainotes_pages) — page search
   link_equations.py     content/pages/*.md + sources     ->  content/equation_citations.json
 content/
   pages/               hand-authored concept pages (the textbook itself)

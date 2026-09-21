@@ -27,9 +27,9 @@ CHAT_MODEL = "openai/gpt-oss-20b"
 #   COLLECTION_SOURCES - raw chunked lesson plans, recaps, and video transcripts,
 #                        used to ground the RAG chat in the actual course material.
 QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
-COLLECTION_PAGES = os.getenv("QDRANT_COLLECTION_PAGES", "siva_beyond_rag_pages")
-COLLECTION_SOURCES = os.getenv("QDRANT_COLLECTION_SOURCES", "siva_beyond_rag_sources")
-COLLECTION_LABS = os.getenv("QDRANT_COLLECTION_LABS", "siva_beyond_rag_labs")
+COLLECTION_PAGES = os.getenv("QDRANT_COLLECTION_PAGES", "ainotes_pages")
+COLLECTION_SOURCES = os.getenv("QDRANT_COLLECTION_SOURCES", "ainotes_sources")
+COLLECTION_LABS = os.getenv("QDRANT_COLLECTION_LABS", "ainotes_labs")
 EMBED_DIM = 384
 
 # ── Server ───────────────────────────────────────────────────────────────────
