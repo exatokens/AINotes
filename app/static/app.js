@@ -1,5 +1,5 @@
 /**
- * Beyond RAG digital textbook — frontend.
+ * AINotes digital textbook — frontend.
  *
  * Three panes: topic tree (left), rendered concept page (center), RAG chat
  * (right). Talks to the FastAPI backend at /api/*. Markdown is rendered with
@@ -165,6 +165,50 @@ async function renderMarkdown(el, md) {
   } catch (e) {
     console.warn("mermaid render failed", e);
   }
+  enhanceTextbookSections(el);
+}
+
+function slugifySection(label) {
+  return label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+function enhanceTextbookSections(container) {
+  const textbookTitles = new Set([
+    "core intuition",
+    "why it matters",
+    "instructor framing",
+    "worked example",
+    "math explained step by step",
+    "practical pattern",
+    "common traps",
+    "takeaways",
+  ]);
+
+  const headings = [...container.querySelectorAll("h2")];
+  headings.forEach((heading) => {
+    const key = heading.textContent.trim().toLowerCase();
+    if (!textbookTitles.has(key)) {
+      heading.classList.add("plain-section-heading");
+      return;
+    }
+
+    heading.classList.add("textbook-section-heading");
+    const section = document.createElement("section");
+    section.className = "learning-section";
+    section.dataset.section = slugifySection(key);
+
+    const nodes = [];
+    let next = heading.nextElementSibling;
+    while (next && !next.matches("h2")) {
+      nodes.push(next);
+      next = next.nextElementSibling;
+    }
+
+    if (!nodes.length) return;
+
+    nodes.forEach((node) => section.appendChild(node));
+    heading.insertAdjacentElement("afterend", section);
+  });
 }
 
 /* ── Tree ─────────────────────────────────────────────────────────────── */
@@ -174,33 +218,46 @@ async function loadTree() {
   TREE = await (await fetch("/api/tree")).json();
   FLAT = [];
   treeEl.innerHTML = "";
-  for (const week of TREE.weeks) {
-    const weekDiv = document.createElement("div");
-    weekDiv.className = "week";
-    const label = document.createElement("button");
-    label.className = "week-label";
-    label.innerHTML = `<span class="wk">Week ${week.week}</span>${week.title}`;
-    label.onclick = () => weekDiv.classList.toggle("collapsed");
-    weekDiv.appendChild(label);
-    const body = document.createElement("div");
-    body.className = "week-body";
-    for (const topic of week.topics) {
-      const t = document.createElement("div");
-      t.className = "topic-label";
-      t.textContent = topic.title;
-      body.appendChild(t);
-      for (const c of topic.concepts) {
-        FLAT.push({ id: c.id, title: c.title, week: week.week });
-        const a = document.createElement("a");
-        a.className = "concept";
-        a.dataset.id = c.id;
-        a.textContent = c.title;
-        a.href = `#${c.id}`;
-        body.appendChild(a);
+  for (const course of TREE.courses) {
+    const courseDiv = document.createElement("div");
+    courseDiv.className = "course";
+    const courseLabel = document.createElement("button");
+    courseLabel.className = "course-label";
+    courseLabel.textContent = course.title;
+    courseLabel.onclick = () => courseDiv.classList.toggle("collapsed");
+    courseDiv.appendChild(courseLabel);
+    const courseBody = document.createElement("div");
+    courseBody.className = "course-body";
+    for (const week of course.weeks) {
+      const weekDiv = document.createElement("div");
+      weekDiv.className = "week";
+      const label = document.createElement("button");
+      label.className = "week-label";
+      label.innerHTML = `<span class="wk">Week ${week.week}</span>${week.title}`;
+      label.onclick = () => weekDiv.classList.toggle("collapsed");
+      weekDiv.appendChild(label);
+      const body = document.createElement("div");
+      body.className = "week-body";
+      for (const topic of week.topics) {
+        const t = document.createElement("div");
+        t.className = "topic-label";
+        t.textContent = topic.title;
+        body.appendChild(t);
+        for (const c of topic.concepts) {
+          FLAT.push({ id: c.id, title: c.title, week: week.week, course: course.course });
+          const a = document.createElement("a");
+          a.className = "concept";
+          a.dataset.id = c.id;
+          a.textContent = c.title;
+          a.href = `#${c.id}`;
+          body.appendChild(a);
+        }
       }
+      weekDiv.appendChild(body);
+      courseBody.appendChild(weekDiv);
     }
-    weekDiv.appendChild(body);
-    treeEl.appendChild(weekDiv);
+    courseDiv.appendChild(courseBody);
+    treeEl.appendChild(courseDiv);
   }
 }
 
@@ -234,6 +291,10 @@ async function showPage(id) {
   pageEl.append(crumb, h1, summary, body);
   await renderMarkdown(body, p.markdown);
   attachEquationCitations(body, p.equation_citations || []);
+  const chapterMeta = document.createElement("div");
+  chapterMeta.className = "chapter-meta";
+  chapterMeta.innerHTML = "<span>Intuition</span><span>Example</span><span>Math</span><span>Practice</span>";
+  pageEl.insertBefore(chapterMeta, body);
 
   const nav = document.createElement("div");
   nav.className = "pagenav";

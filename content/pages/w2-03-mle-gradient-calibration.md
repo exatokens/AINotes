@@ -7,6 +7,29 @@ order: 3
 summary: Softmax paired with negative log-likelihood yields a gradient of disarming simplicity, predicted minus actual, and that same logarithm turns out to be forced rather than chosen — the only continuous repair that keeps a billion-term likelihood product computable at all.
 ---
 
+## Core intuition
+
+The softmax and the negative log-likelihood are a matched pair. The softmax turns raw scores into probabilities, and the log-loss converts those probabilities into a training signal that teaches the model how wrong it was.
+
+This is one of the reasons neural networks became practical: the learning signal is not messy or ad hoc. It is a clean “predicted minus actual” correction, and that simplicity is exactly what made the whole optimisation pipeline tractable.
+
+## Why it matters
+
+Without this pairing, training would be unstable and the gradients would be awkward or impossible to optimize. The design choice is not arbitrary — it is exactly what makes gradient descent on deep networks work at scale.
+
+This is also why the model can be trained from data: the loss measures how surprised it was by the true outcome, and the gradient tells it how to reduce that surprise.
+
+## Instructor framing
+
+This chapter is the bridge from probability to learning. We have seen how the model makes a decision; now we see how it learns from the mismatch between its decision and the truth.
+
+## Worked example
+
+
+If the model predicts a distribution $p=[0.7, 0.2, 0.1]$ for a correct class whose target is $y=[1,0,0]$, then the gradient on the correct class is $0.7-1=-0.3$, while the wrong classes receive positive updates. This means the model is nudged upward on the correct answer and downward on the alternatives.
+
+The learning rule is therefore direct and mathematically clean.
+
 ## The gradient the softmax allows
 
 Why did softmax-in-front, negative-log-likelihood-behind become the universal pairing in virtually every classifier on earth? Let the true answer be a one-hot vector $y$ (a one on the correct class, zeros elsewhere), let $p=\text{softmax}(z)$ be the predicted distribution, and let the loss be the cross-entropy $-\sum_i y_i \log p_i$. The gradient of that loss with respect to the logits is
@@ -70,3 +93,37 @@ print("raw product (underflows toward 0):", product)
 print("sum of logs (perfectly representable):", round(log_sum, 3))
 print("exp(sum of logs) recovers the product:", math.exp(log_sum))
 ```
+
+
+
+## Math explained step by step
+
+The page states the punchline, $\partial L/\partial z = p - y$; derive it from the chain rule so the "disarming simplicity" is earned, not asserted.
+
+**Step 1 — set up the chain rule.** The loss depends on the logits $z$ only through the probabilities $p=\text{softmax}(z)$, so $\dfrac{\partial L}{\partial z_i} = \sum_k \dfrac{\partial L}{\partial p_k}\dfrac{\partial p_k}{\partial z_i}$ — every probability that depends on $z_i$ contributes a term.
+
+**Step 2 — differentiate the cross-entropy loss w.r.t. the probabilities.** With $L=-\sum_k y_k \log p_k$, $\dfrac{\partial L}{\partial p_k} = -\dfrac{y_k}{p_k}$.
+
+**Step 3 — differentiate the softmax itself.** This is the one genuinely subtle step, because $p_k$ depends on *every* logit through the shared normalising sum, not just $z_k$. Direct differentiation of $p_k = e^{z_k}/\sum_j e^{z_j}$ gives two cases: $\dfrac{\partial p_k}{\partial z_i} = p_k(1-p_i)$ when $k=i$ (raising $z_i$ raises $p_i$ but also inflates the shared denominator, which pulls $p_i$ back down slightly), and $\dfrac{\partial p_k}{\partial z_i} = -p_k p_i$ when $k\ne i$ (raising $z_i$ only inflates the shared denominator, which pulls every *other* probability down).
+
+**Step 4 — combine the two cases in the sum from Step 1.** Splitting the sum into the $k=i$ term and the $k\ne i$ terms: $\dfrac{\partial L}{\partial z_i} = -\dfrac{y_i}{p_i}\cdot p_i(1-p_i) \;-\!\!\sum_{k\ne i} \left(-\dfrac{y_k}{p_k}\right)(-p_k p_i) = -y_i(1-p_i) - p_i\sum_{k\ne i} y_k$.
+
+**Step 5 — collapse using $\sum_k y_k = 1$.** Since $y$ is one-hot, $\sum_{k\ne i} y_k = 1-y_i$. Substituting: $\dfrac{\partial L}{\partial z_i} = -y_i + y_i p_i - p_i(1-y_i) = -y_i + y_ip_i - p_i + p_iy_i = p_i - y_i$ — the two $y_ip_i$ terms cancel exactly, and everything else collapses to the clean difference. The elaborate softmax derivative and the elaborate cross-entropy derivative were built so that, multiplied together and summed, almost everything cancels — that cancellation, not coincidence, is why this pairing became universal.
+
+## Practical pattern
+
+In practice, the model is trained to minimize the cross-entropy, and the gradient is the simple difference between predicted and target probabilities. That is the reason neural networks can learn from large datasets without any bespoke manual rule for each class.
+
+## Common traps
+
+- interpreting logits as probabilities;
+- ignoring calibration and overconfidence;
+- mistaking a large probability for true correctness;
+- forgetting that the log transform is used because it makes products tractable and additive.
+
+## Takeaways
+
+- Softmax + cross-entropy gives a clean learning signal.
+- The gradient is simply predicted minus target.
+- Maximum likelihood requires a representable objective, which forces the logarithm.
+- Calibration matters because probabilities are only useful when they track reality.

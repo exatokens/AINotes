@@ -1,10 +1,12 @@
-"""Extract text from lesson-plan and recap PDFs into content/sources/.
+"""Extract text from lesson-plan, recap, and AI-Agents-summary PDFs into
+content/sources/.
 
 This is the first step whenever you add new course material as a PDF: drop
-the file into lesson_plans/ or recap/ (the top-level repo dirs) and run this
-script. It writes page-marked text to content/sources/lesson_plans/*.txt or
-content/sources/recap/*.txt, which ingest/index_sources.py then chunks and
-indexes.
+the file into lesson_plans/, recap/, or agents_notes/ (the top-level repo
+dirs) and run this script. It writes page-marked text to
+content/sources/lesson_plans/*.txt, content/sources/recap/*.txt, or
+content/sources/agents_recap/*.txt, which ingest/index_sources.py then
+chunks and indexes.
 
 Skips PDFs whose extracted .txt already exists and is newer than the PDF —
 pass --force to re-extract everything regardless.
@@ -57,6 +59,7 @@ def main():
     for pdf_dir, out_dir in [
         (config.LESSON_PLANS_PDF_DIR, config.LESSON_PLANS_TEXT_DIR),
         (config.RECAP_PDF_DIR, config.RECAP_TEXT_DIR),
+        (config.AGENTS_RECAP_PDF_DIR, config.AGENTS_RECAP_TEXT_DIR),
     ]:
         for pdf in sorted(pdf_dir.glob("*.pdf")):
             written += extract_one(pdf, out_dir, force=args.force)

@@ -9,11 +9,43 @@ summary: Lexical search matches strings; semantic search matches meaning rendere
 
 Ask a collection of images, *in words*, about "learning to love an animal", and back comes a photograph of a child with a dog — though the word "dog" never appears in the query and no caption was matched. This should be unsettling if you picture search as string-matching: no substring of the query occurs in the pixels of a photograph. **Something has been matched, but it is not text. What has been compared is meaning, rendered as position in a space.**
 
-## The bi-encoder picture
+This is the first major shift in the course: the system is no longer asking whether two strings look alike. It is asking whether two points sit near one another in a geometry of meaning.
+
+## Core intuition
+
+Lexical search answers: "Which strings look similar?" Semantic search answers: "Which points are near in meaning?"
+
+That sounds simple, but it changes the entire architecture of search. A lexical engine sees words; a **bi-encoder** — a model that encodes the query and the documents *separately*, each into its own vector, so the two never see each other during encoding — sees geometry. The same query may retrieve an item containing none of the same tokens because the meaning sits near it in vector space. The system is not matching strings; it is ranking by representation.
+
+## Why it matters
+
+This is the first big conceptual split in the course: keyword systems work when the exact language matches, while semantic systems work when the intent or concept matches.
+
+The problem is not merely that semantic search is clever. It is that real questions are often abstract, emotional, or indirect. A user may ask for something that does not literally contain their words. If the retriever is lexical-only, the system misses the relevant evidence and answers from the wrong evidence.
+
+## Instructor framing
+
+This chapter is the bridge between the idea of retrieval and the practice of representation learning. The course is teaching that information is not stored in strings alone but in coordinates. The vector space is not decoration; it is the actual substrate on which retrieval happens.
+
+The important point is not that semantic matching is “more clever” than lexical matching. It is that the two systems solve different problems. Lexical search is excellent at exact, literal overlap; semantic search is useful when the user is asking for a concept whose words may be different from the evidence that satisfies it.
+
+## Worked example
+
+A query like "regulatory pressure on a company" may match passages mentioning FDA letters, compliance reviews, or authority notices. Those passages share meaning, not string overlap.
+
+Likewise, a question like "something melancholy" may retrieve a poem or an article about grief, even though the literal tokens do not overlap. Here semantic matching is doing the useful work: it is aligning by effect and mood, not by exact words.
+
+## Math explained step by step
 
 Here is the mechanism in one breath. An encoder turns the query into a vector $e_q$; the same kind of encoder has already turned every document into a vector $e_d$; all of these live in **one shared space**; and we retrieve the documents whose vectors are closest to the query's:
 
 $$\text{retrieve} = \arg\max_{d}\; \text{sim}(e_q, e_d)$$
+
+The key idea is that we are not matching on text tokens; we are matching on the geometry of representation. A common similarity function is cosine similarity:
+
+$$\text{sim}(e_q, e_d) = \frac{e_q \cdot e_d}{\|e_q\|\,\|e_d\|}$$
+
+This puts both query and document into the same coordinate system and ranks them by angular closeness.
 
 ```mermaid
 flowchart LR
@@ -25,6 +57,31 @@ flowchart LR
 ```
 
 **Dense Passage Retrieval (DPR)** is the canonical *trained* version of exactly this idea. When the query is text and the documents are images, we use a model trained to place both modalities in one shared space — the trick behind **CLIP-style** image–text retrieval, which is why words can find pictures.
+
+## Practical pattern
+
+In production, the standard pattern is:
+
+1. encode the query with the same embedding model used for documents;
+2. place each document in the same vector space;
+3. retrieve the nearest neighbors by similarity;
+4. use lexical search for identifiers or formulaic text where exact matching matters.
+
+That is why modern systems usually do not choose “semantic vs lexical” as a religion. They build a hybrid system: lexical handles exact, high-precision matches; semantic handles meaning and paraphrase.
+
+## Common traps
+
+- assuming semantic search replaces lexical search entirely;
+- forgetting that rare identifiers like part numbers are often lexical-first cases;
+- over-trusting embeddings when the query is extremely specific and literal;
+- ignoring that semantic search can also fail on polysemy and ambiguous terms.
+
+## Takeaways
+
+- Semantic search compares meaning in a shared embedding space, not literal strings.
+- The bi-encoder pattern is the core retrieval primitive behind many modern RAG systems.
+- Lexical search is still valuable for exact matches and identifiers.
+- The real win comes from hybrid retrieval, not from choosing just one side.
 
 ## Three families where lexical and semantic diverge
 

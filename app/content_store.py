@@ -9,11 +9,15 @@ Pages live in content/pages/*.md, each with a simple YAML-ish frontmatter block:
     topic: "Act I: The Magic, and the Map"
     order: 2
     summary: One-line summary used in search results and the tree tooltip.
+    course: beyond_rag
     ---
     (markdown body)
 
 The frontmatter is intentionally flat key: value pairs, parsed without a YAML
-dependency.
+dependency. ``course`` distinguishes the two courses sharing this reader
+(config.BEYOND_RAG_COURSE / config.AGENTS_COURSE) and defaults to
+beyond_rag when omitted, since that's every page written before the AI
+Agents Bootcamp content was added.
 """
 
 import json
@@ -52,6 +56,7 @@ def parse_frontmatter(text):
     for key in ("week", "order"):
         if key in meta:
             meta[key] = int(meta[key])
+    meta.setdefault("course", config.BEYOND_RAG_COURSE)
     return meta, m.group(2).strip()
 
 

@@ -7,7 +7,59 @@ order: 8
 summary: A model's knowledge is geometry in its weights, and tools like LARQL can query it almost like a database — the doorway to mechanistic interpretability, and why a RAG engineer should never treat the model as an oracle.
 ---
 
-Meaning is geometry in the embedding space — and here is the provocation that closes Act II: **meaning is geometry inside the model's own weights, too**, and we can now query it almost as we would a database. This is the doorway to *mechanistic interpretability*, the study of what the computations inside a model actually represent.
+Meaning is geometry in the embedding space — and here is the provocation that closes Act II: **meaning is geometry inside the model's own weights, too**, and we can now query it almost as we would a database. This is the doorway to *mechanistic interpretability*, the study of what the computations inside a model actually represent. The intellectual move is simple but profound: if knowledge lives in geometry, then it is also possible to inspect the geometry directly.
+
+## Core intuition
+
+The model is not a black box in the strongest sense. Its knowledge is distributed across weights, layers, and directions in activation space. It can be probed, examined, and partially queried as a structured object. The internal state of a model is not mystical; it is a rich mathematical object that can be examined more closely.
+
+This does not mean the model is perfectly interpretable. It means that the notion of “knowledge as geometry” extends beyond embeddings and into the internals of the model itself.
+
+## Why it matters
+
+For RAG engineers, this matters because it changes how you think about the model. It is not an oracle that emits truth by magic. It is a computation graph with internal structure, and that structure can be inspected.
+
+The practical lesson is humility: good retrieval and good guardrails are required because the model is a genuinely fallible, high-capacity approximation machine.
+
+## Instructor framing
+
+This chapter opens a door to mechanistic interpretability without pretending the door is fully opened. The point is not to become a neuroscientist of transformers; it is to become aware that a model's “memory” is distributed geometry, not mystical competence.
+
+## Worked example
+
+Ask the model to complete the phrase “The capital of France is.” The model does not retrieve a factual record from a database. Instead, it follows a path through layers; the concept “Paris” gains increasing probability as it moves through the residual stream until it becomes the most likely output token.
+
+This is not a magical answer; it is a structured calculation in high-dimensional space.
+
+## Math explained step by step
+
+The core idea is that knowledge is not concentrated in a single giant switch. It is spread across depth and direction. A query-language such as LARQL treats the transformer's weights as a browseable structure:
+
+- gate vectors become a nearest-neighbour index;
+- embeddings become a token lookup;
+- output projections become labelled edges between concepts.
+
+Concretely, this means you can ask the weights themselves a question and get a structured answer with a *location* attached — not just "the model knows France's capital" but "the fact is anchored at layer 27." The worked query and its output are shown in full below, in "LARQL: the model is the database" — the point to hold onto here is that the layer number is not decoration: it tells you *where in the computation* that piece of knowledge becomes available, which is exactly the kind of thing you cannot ask of a model you only ever treat as an opaque API.
+
+## Practical pattern
+
+The practical takeaway is to treat the model as a structured system that can be probed, but never as a trustworthy oracle by default.
+
+This is why evidence scoring, grounding checks, and guardrails matter. A model may be rich in internal geometry, but it still needs external discipline to remain honest and usefully aligned with the task.
+
+## Common traps
+
+- treating the model as a perfect fact store;
+- assuming interpretability demos prove full transparency;
+- overestimating how cleanly features are represented;
+- ignoring that superposition creates entanglement and ambiguity even inside the model.
+
+## Takeaways
+
+- Knowledge inside a model is distributed, not centralized.
+- Mechanistic interpretability helps reveal the geometry of that knowledge.
+- The residual stream is the path along which a concept becomes a prediction.
+- RAG must still add external evidence and verification because the model remains fallible.
 
 ## LARQL: "the model is the database"
 

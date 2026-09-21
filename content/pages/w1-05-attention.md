@@ -7,9 +7,31 @@ order: 5
 summary: Attention began as a cure for the seq2seq bottleneck — soft alignment over encoder states — and the transformer made alignment the whole machine: a soft, differentiable lookup over keys and values.
 ---
 
-The key discovery that made modern representations possible has a two-part history, and both parts are worth telling.
+The key discovery that made modern representations possible has a two-part history, and both parts are worth telling. One part solved a practical memory problem; the other redefined the architecture itself.
 
-## Part 1 — Bahdanau's alignment: a cure for the bottleneck
+## Core intuition
+
+The reason transformer models work so well is that they do not force a sentence into one compressed bottleneck. Instead, at each step, they decide which parts of the input are relevant to the part being produced.
+
+That is attention: a soft, learned routing of information from the earlier tokens to the current decision. It is not a hack bolted onto the model; it is the mechanism by which the model keeps access to what matters while discarding what does not.
+
+## Why it matters
+
+A fixed-size hidden state can forget earlier words or details. Attention fixes this by letting every output step look back across the sequence and focus on the most relevant pieces.
+
+This is the conceptual leap that made modern language models possible. It turned sequence modeling from a compression problem into a selective access problem.
+
+## Instructor framing
+
+This is the moment the course moves from simple sequence modeling to the actual machinery behind transformers. It explains why an LLM can handle long, context-rich prompts and why the model is not just “memorising tokens.” It is selecting which context elements matter at each step.
+
+## Worked example
+
+Suppose the decoder is generating the next word in: “The bank is near the ...”. The model may need to use the earlier token “river” more than the earlier token “loan.” Attention weightings decide this dynamically. The same mechanism also helps the model tie pronouns back to earlier nouns and maintain coherence across a long sentence.
+
+## Math explained step by step
+
+### Part 1 — Bahdanau's alignment: a cure for the bottleneck
 
 Instead of forcing the whole input through one latent, Bahdanau, Cho & Bengio let the decoder, at each output step $i$, form a **weighted average of all the encoder's hidden states** $h_j$:
 
@@ -19,7 +41,7 @@ The weights $\alpha_{ij}$ are a softmax over learned *alignment scores* $e_{ij}$
 
 Concretely, with just two input positions: say $h_1 = 2$ and $h_2 = 10$ (one number per hidden state, to keep the arithmetic visible), and the model has learned alignment scores $e_{i1} = 1$, $e_{i2} = 2$ for the output word it is about to generate. Softmax turns those scores into weights: $\alpha_{i1} = e^1 / (e^1 + e^2) \approx 0.27$ and $\alpha_{i2} = e^2 / (e^1 + e^2) \approx 0.73$. The context vector is then $c_i = 0.27 \times 2 + 0.73 \times 10 \approx 7.8$ — mostly $h_2$, because the model scored position 2 as more relevant to this output word than position 1.
 
-## Part 2 — The transformer: alignment becomes the whole machine
+### Part 2 — The transformer: alignment becomes the whole machine
 
 Vaswani and colleagues asked a radical question: if attention is so powerful, what if we throw away the recurrence entirely and build the whole model out of attention? The resulting architecture — the **transformer** — is organised around *scaled dot-product attention*:
 
@@ -36,6 +58,26 @@ Read this as a **soft, differentiable lookup**:
 The dot product $QK^\top$ scores every query against every key; the $\sqrt{d_k}$ keeps those scores from exploding as dimension grows; the softmax turns them into attention weights; and the weighted sum of values is what each token carries forward.
 
 > **The $\sqrt{d_k}$ rescaling is our first quiet encounter with high-dimensional geometry**: dot products of long vectors grow with dimension, and without rescaling the softmax would saturate. The same "things get big and concentrated in high dimensions" theme returns, far more dramatically, in Act III.
+
+## Practical pattern
+
+In practice, attention is a dynamic routing mechanism. The model calculates which earlier tokens matter, then uses that information to update each token's representation. This is what allows a transformer to model long-range dependencies and context-sensitive meaning.
+
+The practical importance for RAG is direct: retrieved context is relevant only if the model can weight it appropriately, which is exactly what attention is for.
+
+## Common traps
+
+- thinking attention is “just a fancy weighting” without appreciating that it is learned;
+- forgetting that softmax turns scores into a distribution over all positions;
+- ignoring the $\sqrt{d_k}$ scaling issue in high dimensions;
+- treating attention as a single mechanism instead of a family of learned routing patterns.
+
+## Takeaways
+
+- Attention solves the seq2seq bottleneck by letting the decoder look back.
+- The transformer generalises this idea into a full architecture built on attention.
+- Attention is a soft lookup over relevant context, not a hand-coded heuristic.
+- This is the real engine behind modern retrieval-conditioned generation.
 
 ```mermaid
 flowchart LR

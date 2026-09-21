@@ -7,21 +7,42 @@ order: 7
 summary: Static embeddings strand ambiguous words between clusters; contextual embeddings read the sentence and move the point — and inside models, superposition is the same pressure one level deeper.
 ---
 
-Words have more than one meaning. A *bank* is a place for money and also the edge of a river; a *monarch* is a sovereign and also a butterfly; *spring* is a season, a coil, and a source of water. This is **polysemy**, and it is not a rare edge case — **the most common words are the most polysemous**.
+Words have more than one meaning. A *bank* is a place for money and also the edge of a river; a *monarch* is a sovereign and also a butterfly; *spring* is a season, a coil, and a source of water. This is **polysemy**, and it is not a rare edge case — **the most common words are the most polysemous**. Ambiguity is not a defect of language; it is a fact of how human meaning works.
 
-## Why static embeddings fail
+## Core intuition
 
-The first generation of embeddings (word2vec, GloVe) was **static**: one vector per word *type*, computed once and frozen. Such a vector is forced to be a compromise — the single point for "bank" is dragged toward both "money" and "river" and ends up stranded between them, near neither.
+The same word can point to different neighborhoods depending on context. A static embedding treats each word as one fixed point; a contextual embedding moves that point as the sentence changes. The model’s representation must therefore be sensitive to the sentence in which the word appears, not merely to the word as a type.
 
-> For retrieval this is poison: a query about river ecology and a query about interest rates would both match the same muddled "bank" vector.
+This is why ambiguity is such a serious challenge in retrieval: if the representation is too rigid, the system cannot distinguish meaningfully different uses of the same word.
 
-## The fix: contextual embeddings
+## Why it matters
 
-A transformer encoder (BERT and its descendants) reads the **whole sentence before placing any token**, so the vector for "bank" in *"she sat on the river bank"* lands far from the vector for "bank" in *"she deposited it at the bank"*. Attention is what makes this possible: each token's representation is a weighted blend of its neighbours, so **context literally moves the point**.
+A query about river ecology and a query about interest rates might both contain the word “bank,” but they refer to completely different concepts. If the retriever maps both to the same static point, it will confuse the evidence and produce weak or wrong retrieval results.
+
+This is one of the main reasons high-quality enterprise search cannot rely on naive word vectors alone.
+
+## Instructor framing
+
+This chapter is the first clear demonstration that context changes the geometry of meaning. The course is teaching a broad fact: the representation of meaning must depend on the surroundings, not only the token spelling.
+
+## Worked example
+
+Compare these sentences:
+
+- “She sat on the river bank watching the water flow.”
+- “He deposited the cheque at the bank before noon.”
+
+The word “bank” has two very different meanings. A contextual model reads the whole sentence and places the token in different regions of the representation space depending on the surrounding words and structure.
+
+## Math explained step by step
+
+The difference between static and contextual embeddings is the function they represent:
 
 $$\text{static: } w \mapsto e_w \qquad \text{vs.} \qquad \text{contextual: } (w, \text{sentence}) \mapsto e_{w \mid \text{sentence}}$$
 
-Meaning is no longer a property of a word; it is a property of **a word in a place**.
+In static embeddings, one vector is assigned to a word type. In contextual embeddings, the vector is a function of both the word and the sentence in which it appears.
+
+That means each occurrence of a word can be placed in a different location in the same representation space, depending on its surrounding context.
 
 ```mermaid
 flowchart LR
@@ -57,6 +78,26 @@ print("river-bank  vs deposit-bank :", round(cos(v[0], v[1]), 3))  # low
 print("deposit-bank vs rates-bank  :", round(cos(v[1], v[2]), 3))  # high
 # the two financial sentences huddle together; the river drifts away
 ```
+
+## Practical pattern
+
+In modern retrieval, the practical pattern is to use contextual embeddings whenever the system must handle ambiguity, syntactic structure, or nuanced meaning.
+
+That is the reason sentence-level encoders and transformer-based document representations dominate modern enterprise search.
+
+## Common traps
+
+- assuming one vector per word is sufficient for modern retrieval;
+- thinking ambiguous words will self-resolve without context;
+- ignoring that the same token may belong to different semantic neighborhoods in different contexts;
+- forgetting that context changes the geometry of meaning.
+
+## Takeaways
+
+- Polysemy is a major reason static word embeddings are limited.
+- Contextual embeddings resolve ambiguity by moving the point according to sentence structure.
+- Retrieval quality depends on representing meaning in context, not just by token type.
+- Polysemy and superposition are two sides of the same geometry problem.
 
 ## The Monarch exercise
 

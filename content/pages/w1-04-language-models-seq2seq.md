@@ -13,9 +13,66 @@ $$p(y_1, y_2, \ldots, y_T) = \prod_{t=1}^{T} p\left(y_t \mid y_1, \ldots, y_{t-1
 
 Read the $\prod$ (product) as "multiply the per-step probabilities together." Concretely: suppose that after reading "The capital of France is", the model assigns $p(\text{Paris}) = 0.62$ to the next token; then, having appended "Paris", it assigns $p(\text{"."} \mid \ldots \text{Paris}) = 0.90$ to the token after that. The probability of producing the two-token continuation "Paris." is just the product of those two steps: $0.62 \times 0.90 \approx 0.56$. Nothing more exotic is happening in the formula above — it is that same multiplication, carried out for every token in the sequence.
 
+The pedagogical point is simple but important: the model does not consult a static memory of facts; it updates a probability distribution one token at a time, guided by the text seen so far.
+
 Generation is **autoregressive**: predict $y_t$, append it, condition on it, predict $y_{t+1}$. Each factor is a distribution over the entire vocabulary, and "writing" is repeatedly sampling from it.
 
 > This factorisation is why a language model can be *steered by context*: everything to the left — including the documents RAG inserts — conditions every probability that follows. Retrieval works precisely because the model attends to the evidence we place in $y_1, \ldots, y_{t-1}$.
+
+## Core intuition
+
+A language model is not a magical database. It is a probability machine over sequences. It predicts the next token, one step at a time, in a context-dependent way.
+
+That matters for RAG because the context we add to the model is what decides which tokens are plausible. The retrieved evidence is not only information; it is a conditioning signal working directly on the probability distribution of the answer.
+
+## Why it matters
+
+If you do not understand the autoregressive pattern, it is easy to think of LLMs as “writing from memory” in a vague way. In reality, they are repeatedly using the visible context to choose what should come next.
+
+This is why RAG works at all: the system injects the right chunk before the answer begins, shifting the probability distribution toward evidence-grounded responses.
+
+## Instructor framing
+
+This chapter is the conceptual bridge between representation and generation. The embedder places meaning in a space; the generator consumes context and writes the answer. They are different jobs, different models, and different failure modes.
+
+## Worked example
+
+Suppose the model sees: "The capital of France is".
+
+It does not do a dictionary lookup. It conditionally assigns probability to each possible next token. The highest-probability next token is likely "Paris". Once that token is appended, the process continues. The model is not “knowing” a fact in a static sense; it is rolling forward through a sequence of conditional choices.
+
+## Math explained step by step
+
+The formula is a product of conditional probabilities:
+
+$$p(y_1, y_2, \ldots, y_T) = \prod_{t=1}^{T} p\left(y_t \mid y_1, \ldots, y_{t-1}\right)$$
+
+Each factor says: given the tokens seen so far, what is the probability of the next token? The product multiplies all these step-wise probabilities. That is exactly how the model assigns a likelihood to a whole sentence.
+
+## Practical pattern
+
+In a RAG system, the practical pattern is:
+
+1. retrieve the relevant chunks;
+2. place them before the user question in the prompt;
+3. let the decoder generate from this modified context;
+4. finally, verify or cite the evidence used.
+
+Context is not just “more text”; it is the model's conditioning signal.
+
+## Common traps
+
+- imagining the LLM is a search engine rather than a conditional generator;
+- forgetting that retrieval changes the model's probability distribution;
+- conflating embedding models with generation models;
+- treating prompt length as a substitute for evidence quality.
+
+## Takeaways
+
+- A language model is a sequence probability machine.
+- RAG works by placing evidence in context before generation.
+- The embedder and the generator serve different roles.
+- The same model family can do both jobs, but they are not the same abstraction.
 
 ```python
 # autoregressive generation, spelled out — the loop IS the idea

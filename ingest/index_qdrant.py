@@ -97,6 +97,7 @@ def main():
                     "payload": {
                         "page_id": page["id"],
                         "title": page["title"],
+                        "course": page["course"],
                         "week": page["week"],
                         "section": section,
                         "text": text,

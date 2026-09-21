@@ -9,6 +9,24 @@ summary: Conformal prediction turns a raw uncertainty score into a threshold wit
 
 When the system decides to answer rather than hedge, how often is it wrong to do so — and can that rate be bounded *in advance*? Most uncertainty methods can't make that promise; they give a score and leave the threshold to a nervous guess.
 
+## Core intuition
+
+A good abstention policy does not rely on intuition. It turns uncertainty into a statistical threshold with a guarantee about how often the system is willing to be wrong.
+
+## Why it matters
+
+This is the final rigor step: we stop guessing at a safety threshold and instead choose one that preserves a known error rate. The system becomes accountable to a measurable standard.
+
+## Instructor framing
+
+Students want to hear "5% error rate" as a soft aspiration, tuned until the demo looks good. Push back hard on that reading: $\alpha$ is a contract, derived mechanically from a calibration set via the quantile formula below, not a number chosen because it feels responsible. The moment $\alpha$ stops being read off real held-out data and starts being adjusted until a dashboard looks acceptable, the guarantee is gone — you have a number that *sounds* like conformal prediction and carries none of its promise.
+
+## Worked example
+
+Two teams both claim "we abstain when confidence is low." Team A eyeballs a scatter plot of groundedness residues and picks 0.3 because "it looks like where the bad ones start." Team B runs the calibration procedure below on nine held-out questions, fixes $\alpha = 0.2$, and gets $\hat q = 0.30$ — the same number, but derived, not eyeballed. Six months later the retriever changes and the residue distribution shifts. Team A's 0.3 is now stale and nobody notices until complaints roll in. Team B reruns the same nine-line calibration on fresh data and gets a new $\hat q$ automatically, because the number was always a function of the current calibration set, never a fixed constant. Same threshold value on day one; only one of the two methods survives day one hundred and eighty.
+
+The point of calibration is not to sound precise; it is to say, plainly, what rate of wrong answers the system is willing to tolerate.
+
 ## The conformal recipe
 
 **Conformal prediction** can make the promise, and with almost no assumptions: no distributional model, no claim that the score is a true probability — only that the future looks statistically like a held-out calibration set.
@@ -66,3 +84,39 @@ It would be easy to read this whole week as a catalog of prohibitions — keep t
 Return, one last time, to the curtain. The Wizard's failure was never a lack of magic — it was the arrangement of the whole city to keep Dorothy from seeing how little stood behind the voice. Every negative guardrail this week pulls a corner of that curtain aside. Humility pulls it all the way back and narrates the view: here is what I actually have, here is what I am inferring, here is where I have nothing, and I am telling you which is which.
 
 > The measure of greatness is not the volume of the voice but the honesty of what stands behind it. A system with both gates knows the one thing Oz never learned — that the point was never to sound great, but to be worth believing.
+
+## Math explained step by step
+
+The recipe above tells you *how* to compute $\hat q$; this walks through *why* that computation delivers a guarantee at all.
+
+**Step 1 — treat the new question's score as one more draw from the same pile.** Exchangeability means: if you pooled the $n$ calibration scores with the new question's score $s_{\text{new}}$ into one set of $n+1$ numbers, you'd have no way to tell, from the values alone, which one arrived "new" — every ordering of that pile is equally likely. This is a weaker assumption than "identically distributed and independent"; it only asks that the new point doesn't systematically stand apart from the calibration pile.
+
+**Step 2 — under that assumption, the new score's rank is uniform.** If all $n+1$ orderings are equally likely, then $s_{\text{new}}$'s rank among the pooled set — 1st smallest, 2nd smallest, …, $(n{+}1)$th smallest — is uniformly distributed over those $n+1 $ possibilities. It has exactly a $\frac{1}{n+1}$ chance of landing in any given rank slot.
+
+**Step 3 — see why that pins down a coverage probability.** Setting $\hat q$ at the $\lceil (n+1)(1-\alpha)\rceil$-th smallest calibration score means: $s_{\text{new}} \le \hat q$ fails only if $s_{\text{new}}$'s rank lands in the top $\lfloor (n+1)\alpha \rfloor$ slots of the pooled pile. Since every rank is equally likely (Step 2), the probability of landing in those top slots is at most $\alpha$ — which is exactly $\Pr[s_{\text{new}} > \hat q] \le \alpha$, i.e. abstaining is not needed on a truly-answerable question with probability at least $1-\alpha$, and *answering* is wrong with probability at most $\alpha$.
+
+**Step 4 — verify against the hand-worked numbers.** With $n=9$ and $\alpha=0.2$, $(n+1)\alpha = 2$, so at most the top 2 of the 10 pooled ranks (2 slots out of 10, i.e. $\le 20\%$) can put $s_{\text{new}}$ above $\hat q=0.30$ — matching the $\alpha=0.2$ target exactly, not approximately, because the rank argument in Steps 1–3 is exact combinatorics, not a large-sample approximation.
+
+**Step 5 — see what this doesn't derive.** Nothing in this argument says the nonconformity score $s_i$ is a *good* signal — a useless, random score still produces a valid $1-\alpha$ coverage guarantee, just an abstention set that's uselessly large or small. The guarantee is about calibration, not about power; a strong signal (groundedness residue) plus this guarantee is what makes the threshold both correct *and* useful.
+
+## Practical pattern
+
+Deploying a conformal abstention gate:
+
+1. hold out a calibration set that is genuinely representative of production traffic — exchangeability is the one assumption the whole guarantee rests on, so a calibration set skewed toward easy questions invalidates the coverage promise on day one;
+2. pick $\alpha$ as a product decision driven by the domain's cost asymmetry (Step 5 of the framing above), not as a number tuned until a demo looks good;
+3. recompute $\hat q$ whenever the retriever, embedding model, or corpus changes — the threshold is a function of the current calibration distribution, and a stale $\hat q$ silently loses its guarantee the moment the underlying system shifts;
+4. monitor empirical coverage on live, labeled traffic on an ongoing basis (not just at launch) to catch the moment the exchangeability assumption breaks — a new attack pattern or a corpus migration is exactly the kind of shift the guarantee cannot survive silently.
+
+## Common traps
+
+- treating $\alpha$ as a soft dial adjusted until the abstention rate "feels right," instead of a contract derived mechanically from a calibration run — this quietly turns a provable guarantee into an ordinary heuristic that merely looks like one;
+- calibrating once at launch and never refreshing $\hat q$ — a retriever upgrade, corpus migration, or new attack pattern invalidates the calibration silently, and the system keeps reporting a guarantee it no longer holds;
+- assuming a strong coverage guarantee means a good detector — a random, uninformative nonconformity score still yields valid $1-\alpha$ coverage, just an abstention set with no discriminative value; the guarantee is about calibration, not about signal quality;
+- setting one global $\alpha$ across domains with different cost asymmetries (medical advice and creative brainstorming should not share a threshold, even if they share a signal).
+
+## Takeaways
+
+- Conformal prediction turns "how sure are we?" into a number with a provable guarantee — $\Pr[\text{answered question should have been abstained}] \le \alpha$ — derived from a held-out calibration set, not asserted.
+- The guarantee only holds if tomorrow's questions look statistically like the calibration set (exchangeability) — refresh $\hat q$ whenever the retriever, model, or corpus changes.
+- Concretely: pick $\alpha$ from the domain's cost asymmetry (tight for medical/legal, loose for brainstorming), and monitor empirical coverage on live traffic to catch a guarantee that has silently gone stale.

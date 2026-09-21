@@ -1,4 +1,4 @@
-"""FastAPI server for SupportVector NoteAI.
+"""FastAPI server for AINotes.
 
 Serves the single-page reader UI plus a small JSON API:
 
@@ -19,7 +19,7 @@ from pydantic import BaseModel
 
 from . import config, content_store, rag
 
-app = FastAPI(title="Beyond RAG Textbook")
+app = FastAPI(title="AINotes")
 
 
 class ChatRequest(BaseModel):

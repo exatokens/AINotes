@@ -14,6 +14,27 @@ Now a subtle and crucial distinction — the one most often muddled.
 
 The two are not the same. A distribution is **isotropic** if it spreads roughly evenly in all directions; it is **anisotropic** if it crowds into a narrow region — say, a thin cone — leaving most directions unused.
 
+## Core intuition
+
+Concentration tells us the space has a global geometry, but anisotropy tells us how the model has actually used that space. Real embeddings are not random; they are learned. And if the learned cloud collapses into a narrow cone, semantic discrimination becomes weak.
+
+This is the difference between a space that can support meaningful retrieval and a space that merely has many dimensions.
+
+## Why it matters
+
+If an embedding model is anisotropic in the wrong direction, all unrelated texts start looking vaguely similar. That makes retrieval both less discriminative and less calibrated. The model has not failed at the whole idea of vectors; it has failed to spread the concepts apart in a useful way.
+
+## Instructor framing
+
+This chapter is the practical correction to the geometric picture. The world is not just “high-dimensional”; it is “high-dimensional plus learned.” The learning step decides whether the space is open and separable or collapsed and unhelpful.
+
+## Worked example
+
+
+Imagine three subjects — physics, biology, and history. In a raw contextual embedding space, the points may all cluster into the same cone. In a retrieval-trained embedding model, they separate into distinct neighborhoods.
+
+That separation is not decorative. It is the difference between a system that can answer a user’s question and one that cannot tell what the question is about.
+
 ## Measuring it
 
 One clean way: take many random pairs of *real* embeddings and average their cosine similarity.
@@ -69,6 +90,38 @@ flowchart LR
 ```
 
 The space has become more isotropic and, crucially, **more separated**.
+
+
+
+## Math explained step by step
+
+Here is how "a few directions soak up most of the variance" becomes a measurable, step-by-step fact rather than a vibe.
+
+**Step 1 — collect the embeddings into a cloud.** Take every real embedding in your corpus (not random vectors — actual sentences) and stack them as rows of a matrix $E$. The cloud's shape is described by its covariance matrix $C = E^\top E$ (after centring), an average of how each coordinate co-varies with every other.
+
+**Step 2 — decompose that shape into directions and their sizes.** Eigendecompose $C$ into eigenvectors (directions in the space) and eigenvalues (how much variance the cloud has along each direction). If the cloud were isotropic, the eigenvalues would all be roughly equal — variance spread evenly over every direction, like a sphere. If the cloud is anisotropic, a handful of eigenvalues dwarf the rest — the cloud is a cigar or a pancake, not a sphere: almost all the spread lives along one or two directions, and every other direction is nearly flat.
+
+**Step 3 — connect that shape to the cosine score.** Because $s(q,d) = \cos\theta$ measures the angle between two vectors, and because every vector in an anisotropic cloud is dragged toward the same one or two dominant directions, two *unrelated* embeddings end up pointing nearly the same way anyway — not because they mean the same thing, but because the model gave the space almost no room to point elsewhere. The average cosine of unrelated pairs, which should sit near $0$ in an isotropic space (previous page), instead sits noticeably above $0$.
+
+**Step 4 — see why this breaks ranking.** Once background similarity is inflated, the *gap* between "this chunk is what you asked about" and "this chunk is something else entirely" shrinks. Retrieval does not merely get noisier — its whole scoring scale gets compressed toward the top, which is exactly what the physics/biology/history cone in the Embedding Projector demo shows visually: everything crowds close together because the model never learned to use the directions that would keep them apart.
+
+## Practical pattern
+
+The engineering lesson is simple: choose an embedding model that spreads the semantic cloud appropriately, not merely one that makes a vector of the right dimension. A good embedding space creates separation; a bad one compresses everything toward a cone.
+
+## Common traps
+
+- assuming a high-dimensional embedder is automatically useful;
+- using raw transformer embeddings without measuring the cloud geometry;
+- trusting cosine similarity when the embedding distribution is collapsed;
+- ignoring that training and fine-tuning may be the main lever for improving retrieval.
+
+## Takeaways
+
+- The space’s global geometry and the learned distribution are different concepts.
+- Anisotropy can collapse unrelated meanings together.
+- Retrieval-trained embeddings explicitly combat this collapse.
+- The right embedding model is part of the system design, not a default assumption.
 
 ## The lesson for a practitioner
 

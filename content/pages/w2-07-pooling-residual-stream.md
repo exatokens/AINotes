@@ -7,6 +7,29 @@ order: 7
 summary: Self-attention gives one contextual vector per token, but a search index wants one vector per chunk — mean-pooling bridges the gap, and stacking many attention layers over a residual stream is how that vector's meaning deepens.
 ---
 
+## Core intuition
+
+The model produces a vector for every token, but a search index needs one vector per chunk. Pooling collapses many token vectors into one chunk embedding without losing the essential information.
+
+The residual stream then carries the evolving meaning of each token across many transformer layers, allowing the representation to deepen without forgetting what it already knows.
+
+## Why it matters
+
+This is the technical bridge from token-level language modeling to document-level retrieval. Without pooling, the system would not have a single search vector. Without residual streams, the model would lose gradual refinement across depth.
+
+These two ideas are what make embedding-based retrieval practical.
+
+## Instructor framing
+
+This chapter connects the architecture to the retrieval system. We are moving from “how does a token attend?” to “how do we turn this entire chunk into a single embedding?”
+
+## Worked example
+
+
+For a sentence like “She swam across the river to the other bank,” each token gets a contextual vector. The chunk vector is then the mean of those token vectors, which yields a single embedding representing the entire phrase in a retrieval-friendly form.
+
+That is the practical representation used for downstream search.
+
 ## The missing rung: from words to a single vector
 
 Self-attention gives us a contextual vector for every word in a chunk — nine words in, nine context-aware vectors out. But when we build a retrieval system, what goes into Qdrant? Not nine vectors per chunk — one. A search index wants a single point per document, so a single query point can find it.
@@ -53,3 +76,37 @@ flowchart LR
 ```
 
 This additive design is what lets gradients flow cleanly down a very deep stack — the update is a small correction, never a wholesale overwrite — and it's the structure mechanistic interpretability reads when researchers claim to find a direction in a model's weights encoding "this text is in French" or "this entity is a person." Empirically, lower layers track syntax and the higher layers track semantics — the model rediscovers, on its own, the linguist's ladder from form to meaning.
+
+
+
+## Math explained step by step
+
+The page claims residual connections let "gradients flow cleanly down a very deep stack." Derive why, by comparing the two architectures' calculus directly.
+
+**Step 1 — write a plain (non-residual) stack's output.** If each layer replaces its input outright, $x_L = f_L(f_{L-1}(\cdots f_1(x_0)\cdots))$, and by the chain rule the gradient back to the input is a **product** of $L$ Jacobians: $\dfrac{\partial x_L}{\partial x_0} = \dfrac{\partial f_L}{\partial x_{L-1}}\cdot\dfrac{\partial f_{L-1}}{\partial x_{L-2}}\cdots\dfrac{\partial f_1}{\partial x_0}$.
+
+**Step 2 — see why a long product of Jacobians is dangerous.** If each Jacobian has typical scale slightly below 1 (very common with squashing nonlinearities), the product of $L$ of them shrinks geometrically — with each layer scaling by $0.9$, twenty layers scale the gradient by $0.9^{20}\approx 0.12$, and fifty layers by $0.9^{50}\approx 0.005$. The earliest layers receive a gradient signal that has been multiplicatively crushed to near-nothing: the vanishing-gradient problem.
+
+**Step 3 — write the residual stack's output instead.** Each layer now *adds* its computation back: $x_l = x_{l-1} + f_l(x_{l-1})$. Unrolling, $x_L = x_0 + \sum_{l=1}^{L} f_l(x_{l-1})$ — the input survives as a literal additive term, not something every layer must faithfully retransmit.
+
+**Step 4 — differentiate the sum instead of the product.** $\dfrac{\partial x_L}{\partial x_0} = I + \sum_{l=1}^{L}\dfrac{\partial f_l(x_{l-1})}{\partial x_0}$ — an **identity matrix plus corrections**, not a product of $L$ terms that can each shrink the signal. Even if every correction term is small, the leading $I$ guarantees the gradient reaching layer $0$ is never smaller than the gradient that would reach it with zero layers at all.
+
+**Step 5 — connect this back to the worked example.** This is the same arithmetic as $(0.62,0.38)+(0.05,0.12)=(0.67,0.50)$ from the worked example, run in reverse: because the forward pass only ever *adds* a correction, the backward pass only ever *adds* a gradient contribution — nothing downstream is ever multiplicatively responsible for transmitting the upstream signal faithfully, which is exactly what makes stacking dozens of layers trainable at all.
+
+## Practical pattern
+
+The real production pattern is this: tokenize, embed, stack attention layers, add residual updates, pool the final token states into a single chunk vector, and store that vector in a vector database. This is the direct bridge between transformer internals and search infrastructure.
+
+## Common traps
+
+- assuming the final token vector alone captures the whole chunk;
+- ignoring the importance of residual connections for deep models;
+- forgetting that pooling is a design choice with real semantic consequences;
+- treating transformer depth as a black box rather than as repeated contextual refinement.
+
+## Takeaways
+
+- Mean pooling turns many token vectors into one chunk embedding.
+- Residual streams preserve previous information while adding new context.
+- Layer depth refines representations progressively.
+- Retrieval depends on this conversion from token-level meaning to chunk-level geometry.

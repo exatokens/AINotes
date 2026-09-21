@@ -7,6 +7,29 @@ order: 6
 summary: A word resolves its own ambiguity by scoring a query formed from itself against the keys of its sentence-mates and reading back a softmax-weighted blend of their values — the fuzzy dictionary lookup, turned inward and made differentiable.
 ---
 
+## Core intuition
+
+Self-attention is the same fuzzy lookup principle, but now the dictionary lives inside the sentence itself. A token asks, “Which nearby tokens matter most to me, in this context?” and then blends their information into a new contextual representation.
+
+This is how a model resolves ambiguity: it does not decide the meaning of “bank” in advance; it computes it from the observed context.
+
+## Why it matters
+
+This chapter is the heart of the transformer. The model is not just storing vectors; it is dynamically selecting which context to read and how much weight to give each source.
+
+That mechanism is what enables contextual meaning, disambiguation, and the step from static embeddings to powerful language models.
+
+## Instructor framing
+
+This is the moment where the earlier fuzzy-dictionary intuition becomes the actual transformer computation. The course is moving from “words are vectors” to “words are queries over their context.”
+
+## Worked example
+
+
+Take the sentence “She swam across the river to the other bank.” Here, the word “bank” should be interpreted as a riverside edge, not a financial institution. Self-attention gives it a contextual meaning by attending to nearby words like “river” and “across.”
+
+That contextualization is the engine behind the machine’s ability to understand polysemy.
+
 ## A word looks up its own meaning
 
 In the dictionary exercises, the keys were an external reference book. Now the move that changed everything: consider
@@ -76,3 +99,35 @@ $$p(y_1,\dots,y_T) = \prod_{t=1}^{T} p(y_t \mid y_{<t}, x)$$
 A real transformer runs several attention heads in parallel, each projecting into its own subspace and attending for its own kind of relationship, then concatenates the results — several specialist dictionaries consulted at once. And raw attention, as written above, is permutation-blind: shuffle the sentence and the weights don't change, which is why **positional encoding** (stamping each token with its place in line) is needed to restore word order.
 
 > **Why the $\sqrt{d}$?** The paper's own modest reason: it keeps dot products from growing too large and saturating the softmax. A sharper reason follows from concentration of measure (Week 1): the dot product of two random $d$-dimensional vectors has a typical spread of order $\sqrt{d}$. Left undivided, attention scores would grow colder — snapping harder onto a single key — as dimension increases. Dividing by $\sqrt{d_k}$ holds the softmax's temperature constant as $d$ grows. It is not a numerical footnote; it is a thermostat.
+
+
+
+## Math explained step by step
+
+Recap the *bank* computation above as the four moves of $\text{Attention}(Q,K,V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$, each with its "why":
+
+**Step 1 — project, don't reuse, the raw vector.** *Bank* doesn't ask its question with its own raw embedding; it applies a learned matrix, $q = W_Q x$, to produce a query. Why bother? Because the same underlying vector needs to play three different roles (asking, matching, contributing), and one fixed vector cannot ask a good question and also be a good answer — separate projections let it specialise.
+
+**Step 2 — score against every key with a dot product, then rescale.** $\langle q, k_i \rangle$ measures alignment between what *bank* is looking for and what each neighbour offers ($1.0$ for *river*, $0.1$ for *money*, in the worked numbers above). Dividing by $\sqrt{d_k}$ exists because — as concentration of measure showed in Week 1 — dot products of longer vectors grow larger just from having more terms, not from being more relevant; without the rescale, the softmax below would saturate for the wrong reason as dimension grows.
+
+**Step 3 — softmax the scores into real weights.** $0.707$ and $0.071$ become $0.654$ and $0.346$: a genuine distribution, so "how much does each neighbour matter" is answerable as a number that sums to one, not an unbounded score.
+
+**Step 4 — read off a blend of values, not keys.** The output is $\sum_i s_i v_i$, using each word's *value*, not its key. This is why splitting key from value matters: a word can be the right match (high key-score) while contributing a payload (value) that differs from what made it match — the catalogue card is not the book.
+
+## Practical pattern
+
+In an actual transformer, each layer computes several attention heads in parallel and projects the result into multiple subspaces. This allows the model to attend for different kinds of relations at the same time: syntax, coreference, semantics, and more.
+
+## Common traps
+
+- forgetting that the query, key, and value roles are distinct;
+- assuming attention is just a direct similarity matrix with no learned projections;
+- ignoring that the temperature scaling by $\sqrt{d_k}$ matters for stability;
+- treating attention as “magic” rather than a weighted lookup over context.
+
+## Takeaways
+
+- Self-attention is contextual fuzzy lookup.
+- Query, key, and value projections define what is searched, how similarity is scored, and what is aggregated.
+- The softmax distribution determines how much each token contributes.
+- Transformer layers then stack these contextual updates across depth.

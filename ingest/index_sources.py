@@ -1,17 +1,28 @@
-"""Chunk and index the RAW course material — lesson plans, recaps, and video
-transcripts — into Qdrant, to ground the RAG chat in the actual course content
-(as opposed to the hand-authored textbook pages, which are indexed separately
-by index_qdrant.py and used only for sidebar page search).
+"""Chunk and index the RAW course material — lesson plans, recaps, video
+transcripts, and blog posts — into Qdrant, to ground the RAG chat in the
+actual course content (as opposed to the hand-authored textbook pages, which
+are indexed separately by index_qdrant.py and used only for sidebar page
+search).
 
-Sources (see README.md "Adding new data" for how each gets here):
-  content/sources/lesson_plans/*.txt - from ingest/extract_pdfs.py
-  content/sources/recap/*.txt        - from ingest/extract_pdfs.py
-  content/sources/transcripts/*.json - from ingest/fetch_transcripts.py
+Two courses share this one collection, distinguished by a "course" field on
+every payload (config.BEYOND_RAG_COURSE / config.AGENTS_COURSE) since both
+reuse Week 1-13 numbering:
+
+  Beyond RAG (see README.md "Adding new data" for how each gets here):
+    content/sources/lesson_plans/*.txt - from ingest/extract_pdfs.py
+    content/sources/recap/*.txt        - from ingest/extract_pdfs.py
+    content/sources/transcripts/*.json - from ingest/fetch_transcripts.py
+
+  AI Agents Bootcamp:
+    content/sources/agents_recap/*.txt       - from ingest/extract_pdfs.py
+    content/sources/agents_transcripts/*.json - from ingest/fetch_transcripts.py
+    content/sources/agents_blogs/*.txt        - from ingest/fetch_blogs.py
 
 Each lesson-plan/recap file's week and title are auto-inferred from its
-filename (see config.DOC_WEEK_OVERRIDES / config.DOC_TITLE_OVERRIDES for the
-rare edge cases that need a manual override) — adding a new, sensibly-named
-PDF requires no code changes here at all.
+filename (see config.DOC_WEEK_OVERRIDES / config.DOC_TITLE_OVERRIDES, and the
+AI Agents equivalent config.AGENTS_DOC_WEEK_OVERRIDES, for filenames that
+need a manual override) — adding a new, sensibly-named PDF requires no code
+changes here at all.
 
 Each chunk's payload carries enough to cite it precisely: for PDFs, a page
 range; for transcripts, a timestamp and a direct "jump to this moment" URL.
@@ -31,13 +42,16 @@ from app.rag import embed
 WEEK_RE = re.compile(r"week[-_]?(\d+)", re.IGNORECASE)
 
 
-def infer_week(stem):
+def infer_week(stem, overrides=config.DOC_WEEK_OVERRIDES):
     """Work out which course week a lesson-plan/recap file belongs to.
 
     Parameters
     ----------
     stem : str
         Filename without extension, e.g. "week-3-summer-lesson-plan".
+    overrides : dict[str, int]
+        Manual stem -> week overrides to check first (defaults to the
+        Beyond RAG table; pass config.AGENTS_DOC_WEEK_OVERRIDES for AI Agents).
 
     Returns
     -------
@@ -46,21 +60,20 @@ def infer_week(stem):
     Raises
     ------
     ValueError
-        If the filename has no "weekN" pattern and isn't listed in
-        config.DOC_WEEK_OVERRIDES.
+        If the filename has no "weekN" pattern and isn't listed in overrides.
     """
-    if stem in config.DOC_WEEK_OVERRIDES:
-        return config.DOC_WEEK_OVERRIDES[stem]
+    if stem in overrides:
+        return overrides[stem]
     m = WEEK_RE.search(stem)
     if not m:
         raise ValueError(
             f"can't infer week for {stem!r} (no 'weekN' in the filename) — "
-            f"add it to config.DOC_WEEK_OVERRIDES"
+            f"add it to the relevant *_WEEK_OVERRIDES table in app/config.py"
         )
     return int(m.group(1))
 
 
-def infer_title(stem, week, kind):
+def infer_title(stem, week, kind, course=config.BEYOND_RAG_COURSE):
     """Work out a display title for a lesson-plan/recap file.
 
     Parameters
@@ -69,6 +82,10 @@ def infer_title(stem, week, kind):
     week : int
     kind : str
         "lesson_plan" or "recap".
+    course : str
+        Prefixed onto the title for non-Beyond-RAG courses, since both
+        courses reuse Week 1-13 and a bare "Week 5 Recap" would otherwise be
+        ambiguous in chat citations.
 
     Returns
     -------
@@ -79,7 +96,10 @@ def infer_title(stem, week, kind):
     if stem in config.DOC_TITLE_OVERRIDES:
         return config.DOC_TITLE_OVERRIDES[stem]
     label = "Lesson Plan" if kind == "lesson_plan" else "Recap"
-    return f"Week {week} {label}"
+    title = f"Week {week} {label}"
+    if course != config.BEYOND_RAG_COURSE:
+        title = f"AI Agents — {title}"
+    return title
 
 
 def chunk_doc_text(text):
@@ -121,6 +141,32 @@ def chunk_doc_text(text):
     return chunks
 
 
+def chunk_blog_text(text):
+    """Split a blog post's plain text into ~config.SOURCE_CHUNK_CHARS chunks.
+
+    Parameters
+    ----------
+    text : str
+        Plain prose (no page markers), paragraphs separated by blank lines.
+
+    Returns
+    -------
+    list[str]
+    """
+    paragraphs = [p.strip() for p in text.split("\n") if p.strip()]
+    chunks, buf = [], ""
+    for p in paragraphs:
+        candidate = f"{buf}\n\n{p}".strip() if buf else p
+        if len(candidate) > config.SOURCE_CHUNK_CHARS and buf:
+            chunks.append(buf.strip())
+            buf = p
+        else:
+            buf = candidate
+    if buf.strip():
+        chunks.append(buf.strip())
+    return chunks
+
+
 def chunk_transcript(segments):
     """Group transcript segments into ~config.TRANSCRIPT_CHUNK_CHARS windows.
 
@@ -159,40 +205,60 @@ def gather_points():
     -------
     list[dict]
         Each with an ``_embed`` key (text to embed) plus the final payload
-        fields (kind, week, title, section, text, url).
+        fields (course, kind, week, title, section, text, url).
     """
     points = []
 
-    for kind, text_dir in [
-        ("lesson_plan", config.LESSON_PLANS_TEXT_DIR),
-        ("recap", config.RECAP_TEXT_DIR),
+    for course, kind, text_dir, overrides in [
+        (config.BEYOND_RAG_COURSE, "lesson_plan", config.LESSON_PLANS_TEXT_DIR, config.DOC_WEEK_OVERRIDES),
+        (config.BEYOND_RAG_COURSE, "recap", config.RECAP_TEXT_DIR, config.DOC_WEEK_OVERRIDES),
+        (config.AGENTS_COURSE, "recap", config.AGENTS_RECAP_TEXT_DIR, config.AGENTS_DOC_WEEK_OVERRIDES),
     ]:
         for f in sorted(text_dir.glob("*.txt")):
-            week = infer_week(f.stem)
-            title = infer_title(f.stem, week, kind)
+            week = infer_week(f.stem, overrides)
+            title = infer_title(f.stem, week, kind, course)
             for section, text in chunk_doc_text(f.read_text()):
                 points.append({
                     "payload": {
-                        "kind": kind, "week": week, "title": title,
+                        "course": course, "kind": kind, "week": week, "title": title,
                         "section": section, "text": text, "url": None,
                     },
                     "_embed": f"{title} — {section}. {text}",
                 })
 
-    for f in sorted(config.TRANSCRIPTS_DIR.glob("*.json")):
-        data = json.loads(f.read_text())
-        m = re.match(r"Week_(\d+)_(Main|Summary)_class", data["label"], re.IGNORECASE)
-        week = int(m.group(1)) if m else 0
-        kind_label = "Main Class" if m and m.group(2).lower() == "main" else "Summary Class"
-        title = f"Week {week} {kind_label} (video)"
-        for section, start_s, text in chunk_transcript(data["segments"]):
+    for course, transcripts_dir, label_re in [
+        (config.BEYOND_RAG_COURSE, config.TRANSCRIPTS_DIR, re.compile(r"Week_(\d+)_(Main|Summary)_class", re.IGNORECASE)),
+        (config.AGENTS_COURSE, config.AGENTS_TRANSCRIPTS_DIR, re.compile(r"AgentsWeek_(\d+)", re.IGNORECASE)),
+    ]:
+        for f in sorted(transcripts_dir.glob("*.json")):
+            data = json.loads(f.read_text())
+            m = label_re.match(data["label"])
+            week = int(m.group(1)) if m else 0
+            kind_label = "Main Class" if (m and m.re.groups > 1 and m.group(2).lower() == "main") else "Class"
+            title = f"Week {week} {kind_label} (video)"
+            if course != config.BEYOND_RAG_COURSE:
+                title = f"AI Agents — {title}"
+            for section, start_s, text in chunk_transcript(data["segments"]):
+                points.append({
+                    "payload": {
+                        "course": course, "kind": "transcript", "week": week, "title": title,
+                        "section": section, "text": text,
+                        "url": f"{data['url']}&t={int(start_s)}s",
+                    },
+                    "_embed": f"{title} — {section}. {text}",
+                })
+
+    for f in sorted(config.AGENTS_BLOGS_TEXT_DIR.glob("*.txt")):
+        raw = f.read_text()
+        title, url, *rest = raw.split("\n", 2)
+        body = rest[0] if rest else ""
+        for i, text in enumerate(chunk_blog_text(body), start=1):
             points.append({
                 "payload": {
-                    "kind": "transcript", "week": week, "title": title,
-                    "section": section, "text": text,
-                    "url": f"{data['url']}&t={int(start_s)}s",
+                    "course": config.AGENTS_COURSE, "kind": "blog", "week": None,
+                    "title": title, "section": f"part {i}", "text": text, "url": url,
                 },
-                "_embed": f"{title} — {section}. {text}",
+                "_embed": f"{title} — part {i}. {text}",
             })
 
     return points
@@ -210,7 +276,7 @@ def main():
     r.raise_for_status()
 
     points = gather_points()
-    print(f"{len(points)} chunks from lesson plans + recaps + transcripts; embedding…")
+    print(f"{len(points)} chunks from lesson plans + recaps + transcripts + blogs; embedding…")
     for i in range(0, len(points), 32):
         batch = points[i:i + 32]
         vecs = embed([p.pop("_embed") for p in batch])

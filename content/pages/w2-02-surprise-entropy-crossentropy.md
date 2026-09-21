@@ -9,6 +9,31 @@ summary: Surprise is a decreasing function of the probability you assigned to wh
 
 A belief is worthless until the world tests it, and the test has a feeling attached: surprise. Suppose you believed, 99% confident, that it would rain — and it rained. Barely a flicker. Now suppose you judged rain a 1% long shot — and it poured. You're astonished. Surprise is a **decreasing function of the probability you assigned to the thing that actually happened.**
 
+The mathematics of surprise is the grammar of learning. Every time a model is wrong, the loss is not vague; it is the exact amount of surprise caused by the misjudgement.
+
+## Core intuition
+
+Surprise measures how badly the world violated your expectations. A very likely event causes little surprise when it occurs. A very unlikely event causes massive surprise when it occurs.
+
+The logarithm is the right math for this because it turns a probability scale into a stable, additive measure of information.
+
+## Why it matters
+
+This chapter underlies model training. The objective used to train language models is built from surprise: the model is punished more heavily when it assigns a tiny probability to the correct outcome.
+
+That is why the negative log-likelihood is so central to ML. It directly measures how badly the model was surprised by the data.
+
+## Instructor framing
+
+This chapter gives the probabilistic core of learning. The course is telling you that training is not magic; it is a process of minimizing expected surprise until the model assigns high probability to the data it actually sees.
+
+## Worked example
+
+
+If a model assigns probability 0.1 to the token that actually appears, the surprise is $-\log_2(0.1) \approx 3.32$ bits. That is a dramatic failure. If it assigns 0.9, the surprise is only 0.15 bits.
+
+The loss is therefore dominated by confident errors, which is exactly what we want from a learning rule.
+
 ## Why the logarithm is forced
 
 The simplest function that decreases as $p$ grows and blows up as $p\to 0$ is the inverse, $1/p$. It's a good guess — a 1% rain that ruins the picnic gives surprise 100. But it has a fatal flaw: at $p=1$, the event you were sure of, $1/p = 1$, not zero. The floor is in the wrong place; the inverse's range is $[1,\infty)$ when we need $[0,\infty)$.
@@ -75,3 +100,37 @@ $$\text{PPL} = 2^{H}$$
 the effective number of equally-likely options you're choosing among. A model with average surprise of three bits is as confused as someone guessing uniformly among $2^3=8$ possibilities. A player spreading chips evenly over ten candidate words scores $\log_2 10 \approx 3.32$ bits — perplexity ten, the whole vocabulary, no narrowing at all. A fluent player scores near zero bits — perplexity near one, effectively certain.
 
 > **Entropy** is the surprise you'd feel with correct beliefs; **cross-entropy** is the surprise you actually feel with your beliefs. The gap between them — always non-negative, zero only when you're exactly right — is the **Kullback–Leibler divergence**. It measures the distance between distributions on a curved surface, and we'll meet it again when we get to search as motion on a globe.
+
+
+
+## Math explained step by step
+
+Derive the KL divergence mentioned above from the entropy and cross-entropy already built, so "the gap between them" is shown, not just asserted.
+
+**Step 1 — write both quantities side by side.** Entropy is $H(p) = -\sum_i p_i \log p_i$; cross-entropy is $H(p,q) = -\sum_i p_i \log q_i$. Both are averages over the *true* distribution $p$ — the only difference is which distribution sits inside the logarithm.
+
+**Step 2 — subtract them.** $H(p,q) - H(p) = -\sum_i p_i \log q_i - \left(-\sum_i p_i \log p_i\right) = \sum_i p_i \log\frac{p_i}{q_i}$. This is, by definition, the **Kullback–Leibler divergence** $D_{KL}(p\|q)$ — the average, under the truth, of the log-ratio between what's true and what you believe.
+
+**Step 3 — see why it can never be negative.** By concavity of $\log$, Jensen's inequality gives $\sum_i p_i \log\frac{q_i}{p_i} \le \log\sum_i p_i \cdot \frac{q_i}{p_i} = \log\sum_i q_i \le \log 1 = 0$. Flipping the sign, $D_{KL}(p\|q) = -\sum_i p_i\log\frac{q_i}{p_i} \ge 0$ — with equality exactly when $q_i=p_i$ for every $i$ (the log-ratio is zero everywhere).
+
+**Step 4 — read off the consequence for training.** Since $H(p,q) = H(p) + D_{KL}(p\|q)$ and $H(p)$ doesn't depend on the model at all (it's a fixed property of the data), minimising cross-entropy $H(p,q)$ over $q$ is *identical* to minimising $D_{KL}(p\|q)$ — training is, exactly and not just metaphorically, the act of pulling the model's distribution toward the true one, and cross-entropy sits at its theoretical minimum, $H(p)$, only once $q=p$.
+
+**Step 5 — connect to perplexity.** Because $D_{KL}\ge 0$, cross-entropy $H(p,q) \ge H(p)$ always — a model literally cannot beat the data's own irreducible entropy, no matter how well trained. This is why a language model's perplexity has a theoretical floor: it can approach the true entropy of natural language, never fall meaningfully below it.
+
+## Practical pattern
+
+When training a classifier or language model, the loss is usually a cross-entropy between the target distribution and the model's predicted distribution. Minimizing that loss means matching the model's probabilities to the observed reality as closely as possible.
+
+## Common traps
+
+- confusing entropy with cross-entropy;
+- treating NLL as a vague “error” rather than a principled surprise measure;
+- forgetting that the model is penalized more for confident mistakes;
+- mistaking perplexity for a literal number of choices rather than an effective uncertainty measure.
+
+## Takeaways
+
+- Surprise is measured by $-\log p$.
+- NLL is total surprise over a dataset.
+- Entropy is the irreducible uncertainty under the true distribution.
+- Cross-entropy is the actual training loss when the model's distribution differs from the truth.

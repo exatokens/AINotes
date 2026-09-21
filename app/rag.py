@@ -289,6 +289,37 @@ def search_sources(query, limit=config.RETRIEVAL_LIMIT_SOURCES):
     return hits
 
 
+def search_labs(query, limit=6):
+    """Semantic search over the practical lab codebase and docs.
+
+    This intentionally indexes the practical implementation patterns that the
+    lecture material does not cover: testing, pipelines, evals, architecture,
+    deployment, and scaling patterns.
+    """
+    vec = embed([query])[0]
+    r = requests.post(
+        f"{config.QDRANT_URL}/collections/{config.COLLECTION_LABS}/points/search",
+        json={"vector": vec, "limit": limit, "with_payload": True},
+        timeout=30,
+    )
+    r.raise_for_status()
+    hits = []
+    for h in r.json()["result"]:
+        p = h["payload"]
+        hits.append(
+            {
+                "kind": p.get("kind", "lab"),
+                "week": p.get("week", 0),
+                "title": p.get("title", "Lab"),
+                "section": p.get("section", ""),
+                "text": p["text"],
+                "path": p.get("path"),
+                "score": round(h["score"], 4),
+            }
+        )
+    return hits
+
+
 def chat(question, history=None, limit=config.RETRIEVAL_LIMIT_SOURCES):
     """Answer a question with retrieval-augmented generation.
 
@@ -311,9 +342,25 @@ def chat(question, history=None, limit=config.RETRIEVAL_LIMIT_SOURCES):
         (shown in the UI so a bad rewrite is visible, not silently wrong).
     """
     search_query = rewrite_query(question, history=history)
-    hits = search_sources(search_query, limit=limit)
+    lecture_hits = search_sources(search_query, limit=limit)
+    implementation_hits = search_labs(search_query, limit=max(3, limit // 2))
+
+    ql = search_query.lower()
+    implementation_terms = {
+        "implement", "implementation", "how", "pipeline", "testing", "evaluate",
+        "quality", "deploy", "scale", "production", "pattern", "architecture",
+        "debug", "code", "lab", "example"
+    }
+    if any(term in ql for term in implementation_terms):
+        combined = lecture_hits + implementation_hits
+        combined.sort(key=lambda h: (h["score"] + (0.25 if h["kind"] == "lab" else 0.0)), reverse=True)
+    else:
+        combined = lecture_hits + implementation_hits
+        combined.sort(key=lambda h: h["score"], reverse=True)
+
+    hits = combined[:limit + max(2, len(implementation_hits))]
     context = "\n\n".join(
-        f"[{i + 1}] (from “{h['title']}” — {h['section']})\n{h['text']}"
+        f"[{i + 1}] (from “{h['title']}” — {h['kind']} / {h['section']})\n{h['text']}"
         for i, h in enumerate(hits)
     )
 

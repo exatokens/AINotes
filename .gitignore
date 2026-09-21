@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+.vscode/
+.env
+.env.*
+*.pem
+*.key
+
+# proprietary course material (kept locally, not published)
+content/sources/
+lesson_plans/
+recap/
+agents_notes/
